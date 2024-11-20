@@ -1,10 +1,13 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/model-to-model-evaluation-code)](https://api.reuse.software/info/github.com/SAP-samples/model-to-model-evaluation-code)
 
-# BPMN model to model evaluation
+# Round-trip-correctness to evaluate BPMN generation
 
 ## Description
-This repository contains code for a multiset, model to model evaluation method for bpmn models.
-The evaluation method is based on semantic similarity of multisets within a bpmn model and stems from this [master thesis](https://github.com/SAP-samples/multimodal-generative-ai-for-bpm).
+This repository tests the idea of a proxy evaluation method for text to BPMN model pipeline.
+The proxy evaluation involves a round-trip pipeline, "text to bpmn to text" and calculating an average text to text similarity in the absence of a ground truth BPMN.
+To show if the proxy method is effective, we first must investigate how the existing BPMN to BPMN evaluation from [model_evaluation](./model_evaluation) module correlates with the proxy text to text method.
+This work is inspired by [this](https://arxiv.org/abs/2402.08699) publication on text to code round-tripping.  
+
 
 
 ## Requirements and set up
@@ -17,10 +20,8 @@ poetry install
 
 ## Getting started
 
-This [notebook](./notebooks/code_usage.ipynb) shows how the evaluation module can be used to obtain a model to model similarity score. At a first step Signavio json models will be parsed into a minimal json format following this minimal bpmn [schema](./bpmn_schema.py.).
+The jupyter notebooks provide usage examples and pipeline tests.
 
-Multisets will then be extracted from the minimal json and an overall similarity score will be calculated.\
-The similarity score is an adjusted dice or jaccard score. Additionally an adjusted precision, recall and f1 score can also be calculated. 
 
 ## Known Issues
 No known issue.
