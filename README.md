@@ -20,7 +20,11 @@ poetry install
 
 ## Getting started
 
-The jupyter notebooks provide usage examples and pipeline tests.
+To run the pipeline, use a command similar to this:
+```shell
+screen -d -m python genai_gpt_pipeline.py --model-path ./data/pet/ground_json --text-path ./data/pet/process_descriptions --example pet --direction t2t 
+```
+The csv files are written to the results directory. The jupyter notebooks are used to visualize the results. 
 
 
 ## Known Issues
