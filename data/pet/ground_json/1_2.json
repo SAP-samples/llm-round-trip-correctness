@@ -1,196 +1,192 @@
 {
+    "tasks": [
+        {
+            "id": "sid-3103C8F9-D41A-401A-A387-6FEB39AD3564",
+            "name": "customer brings a defective computer",
+            "type": "Task"
+        },
+        {
+            "id": "sid-68EBD1BD-9814-42A0-88BB-5962548129F8",
+            "name": "CRS checks the defect",
+            "type": "Task"
+        },
+        {
+            "id": "sid-8D33F946-3F2A-432B-A418-BD6676EAFA1F",
+            "name": "CRS hands out a repair cost calculation",
+            "type": "Task"
+        },
+        {
+            "id": "sid-419D89E5-DD0B-44B5-8ECA-C4FEB80352D7",
+            "name": "customer takes computer home",
+            "type": "Task"
+        },
+        {
+            "id": "sid-F47BF51E-5EEE-4BF9-8659-79B357DD1B8A",
+            "name": "CRS checks  the hardware",
+            "type": "Task"
+        },
+        {
+            "id": "sid-0D756A4A-5FCC-4F43-85B6-5CF9D6338275",
+            "name": "CRS checks the software",
+            "type": "Task"
+        },
+        {
+            "id": "sid-6DB31534-C873-4E9B-BADE-EDF6D9E72D7D",
+            "name": "CRS tests  system functionality",
+            "type": "Task"
+        },
+        {
+            "id": "sid-750D22EE-FF2E-4CBB-AD63-018ED4D6024E",
+            "name": "CRS repairs the hardware",
+            "type": "Task"
+        },
+        {
+            "id": "sid-46A5CB4E-1576-4292-BEA1-156EA2EFE6A3",
+            "name": "CRS configures the software",
+            "type": "Task"
+        }
+    ],
     "events": [
         {
-            "id": "0",
-            "name": "start",
+            "id": "sid-04382630-F0D4-4733-B2AD-AF5DE642C209",
+            "name": "",
             "type": "StartNoneEvent"
         },
         {
-            "id": "17",
-            "name": "end",
+            "id": "sid-47FD64AF-500F-41D5-95C9-343FEF7C544A",
+            "name": "",
             "type": "EndNoneEvent"
         }
     ],
     "gateways": [
         {
-            "id": "4",
+            "id": "sid-451D05FF-4D15-467A-B71B-F9E9C9B3926C",
+            "name": "costs?",
             "type": "Exclusive"
         },
         {
-            "id": "6",
-            "type": "Exclusive"
-        },
-        {
-            "id": "15",
-            "type": "Exclusive"
-        },
-        {
-            "id": "7",
+            "id": "sid-ACA219F1-0195-4246-B74F-A2060A24A6AB",
             "type": "Parallel"
         },
         {
-            "id": "13",
+            "id": "sid-37FFB714-C8AB-4942-82C7-AA66E33F87BD",
+            "type": "Parallel"
+        },
+        {
+            "id": "sid-64652661-E15F-4B37-9D49-6B2EEAA32951",
+            "name": "errors?",
             "type": "Exclusive"
         },
         {
-            "id": "14",
-            "type": "Parallel"
+            "id": "sid-EE3AA62E-BABF-4D0D-A3A8-F75FCC2FC43E",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-1E33AB15-3806-46F8-B627-C21D01B33159",
+            "type": "Exclusive"
         }
     ],
-    "messageFlows": [],
     "pools": [],
+    "messageFlows": [],
     "sequenceFlows": [
         {
-            "id": "sf0",
-            "sourceRef": "0",
-            "targetRef": "1"
+            "id": "sid-60878035-83BC-47E3-8105-2EF8F558AA99",
+            "targetRef": "sid-3103C8F9-D41A-401A-A387-6FEB39AD3564",
+            "sourceRef": "sid-04382630-F0D4-4733-B2AD-AF5DE642C209"
         },
         {
-            "id": "sf1",
-            "sourceRef": "1",
-            "targetRef": "2"
+            "id": "sid-4637A5DF-FF45-4E2F-AD7D-AF71C1E7F3C9",
+            "targetRef": "sid-68EBD1BD-9814-42A0-88BB-5962548129F8",
+            "sourceRef": "sid-3103C8F9-D41A-401A-A387-6FEB39AD3564"
         },
         {
-            "id": "sf2",
-            "sourceRef": "2",
-            "targetRef": "3"
+            "id": "sid-07C388D9-99EF-4925-8BB8-02D8FDCCA107",
+            "targetRef": "sid-8D33F946-3F2A-432B-A418-BD6676EAFA1F",
+            "sourceRef": "sid-68EBD1BD-9814-42A0-88BB-5962548129F8"
         },
         {
-            "id": "sf3",
-            "sourceRef": "3",
-            "targetRef": "4"
+            "id": "sid-41DF6629-B670-4750-99FF-26033709F45B",
+            "targetRef": "sid-451D05FF-4D15-467A-B71B-F9E9C9B3926C",
+            "sourceRef": "sid-8D33F946-3F2A-432B-A418-BD6676EAFA1F"
         },
         {
-            "id": "sf4",
-            "sourceRef": "4",
-            "targetRef": "5"
+            "id": "sid-297BF9AB-0E29-406C-A364-F6C00AAB0F7D",
+            "targetRef": "sid-F47BF51E-5EEE-4BF9-8659-79B357DD1B8A",
+            "sourceRef": "sid-ACA219F1-0195-4246-B74F-A2060A24A6AB"
         },
         {
-            "id": "sf5",
-            "sourceRef": "5",
-            "targetRef": "6"
+            "id": "sid-FC1762C0-E973-4EAC-A75F-3CD323C6E0D9",
+            "targetRef": "sid-0D756A4A-5FCC-4F43-85B6-5CF9D6338275",
+            "sourceRef": "sid-ACA219F1-0195-4246-B74F-A2060A24A6AB"
         },
         {
-            "id": "sf6",
-            "sourceRef": "4",
-            "targetRef": "15"
+            "id": "sid-6C436800-9EF6-48E1-B1B6-61C6653E0A22",
+            "targetRef": "sid-750D22EE-FF2E-4CBB-AD63-018ED4D6024E",
+            "sourceRef": "sid-F47BF51E-5EEE-4BF9-8659-79B357DD1B8A"
         },
         {
-            "id": "sf7",
-            "sourceRef": "15",
-            "targetRef": "7"
+            "id": "sid-E24B1E7F-4F59-443E-8A0C-6EE33C78FF08",
+            "targetRef": "sid-64652661-E15F-4B37-9D49-6B2EEAA32951",
+            "sourceRef": "sid-6DB31534-C873-4E9B-BADE-EDF6D9E72D7D"
         },
         {
-            "id": "sf8",
-            "sourceRef": "7",
-            "targetRef": "8"
+            "id": "sid-457CB2D8-D9C1-4C97-A6F1-D0F09E0F6E66",
+            "targetRef": "sid-46A5CB4E-1576-4292-BEA1-156EA2EFE6A3",
+            "sourceRef": "sid-0D756A4A-5FCC-4F43-85B6-5CF9D6338275"
         },
         {
-            "id": "sf9",
-            "sourceRef": "8",
-            "targetRef": "9"
+            "id": "sid-4D812095-6ADB-4C61-83F9-DCA1974143DC",
+            "targetRef": "sid-6DB31534-C873-4E9B-BADE-EDF6D9E72D7D",
+            "sourceRef": "sid-37FFB714-C8AB-4942-82C7-AA66E33F87BD"
         },
         {
-            "id": "sf10",
-            "sourceRef": "7",
-            "targetRef": "10"
+            "id": "sid-4EAE6DB9-7B89-4559-9AA3-65EBAD619DCC",
+            "targetRef": "sid-ACA219F1-0195-4246-B74F-A2060A24A6AB",
+            "sourceRef": "sid-EE3AA62E-BABF-4D0D-A3A8-F75FCC2FC43E"
         },
         {
-            "id": "sf11",
-            "sourceRef": "10",
-            "targetRef": "11"
+            "id": "sid-7A97F9AC-4FAD-4A4C-975A-2030C6A130E5",
+            "targetRef": "sid-37FFB714-C8AB-4942-82C7-AA66E33F87BD",
+            "sourceRef": "sid-750D22EE-FF2E-4CBB-AD63-018ED4D6024E"
         },
         {
-            "id": "sf12",
-            "sourceRef": "12",
-            "targetRef": "13"
+            "id": "sid-95090BE8-F2EB-4A46-9A97-BC8ADF15C599",
+            "targetRef": "sid-37FFB714-C8AB-4942-82C7-AA66E33F87BD",
+            "sourceRef": "sid-46A5CB4E-1576-4292-BEA1-156EA2EFE6A3"
         },
         {
-            "id": "sf13",
-            "sourceRef": "13",
-            "targetRef": "16"
+            "id": "sid-02E79C8C-53BD-49E0-8D18-86795D149C31",
+            "targetRef": "sid-47FD64AF-500F-41D5-95C9-343FEF7C544A",
+            "sourceRef": "sid-1E33AB15-3806-46F8-B627-C21D01B33159"
         },
         {
-            "id": "sf14",
-            "sourceRef": "13",
-            "targetRef": "15"
+            "id": "sid-054B729B-4444-475A-8E58-B0A1CCD49380",
+            "targetRef": "sid-1E33AB15-3806-46F8-B627-C21D01B33159",
+            "sourceRef": "sid-419D89E5-DD0B-44B5-8ECA-C4FEB80352D7"
         },
         {
-            "id": "sf15",
-            "sourceRef": "14",
-            "targetRef": "12"
+            "id": "sid-DB35FB90-14BD-4AAD-8795-FE5A4020C28F",
+            "targetRef": "sid-419D89E5-DD0B-44B5-8ECA-C4FEB80352D7",
+            "condition": "not acceptable",
+            "sourceRef": "sid-451D05FF-4D15-467A-B71B-F9E9C9B3926C"
         },
         {
-            "id": "sf16",
-            "sourceRef": "16",
-            "targetRef": "6"
+            "id": "sid-227D33A0-87BE-40A8-BF25-A010895956FA",
+            "targetRef": "sid-EE3AA62E-BABF-4D0D-A3A8-F75FCC2FC43E",
+            "condition": "acceptable",
+            "sourceRef": "sid-451D05FF-4D15-467A-B71B-F9E9C9B3926C"
         },
         {
-            "id": "sf17",
-            "sourceRef": "9",
-            "targetRef": "14"
+            "id": "sid-9F2097EC-F05D-495D-B1E9-BCA3AFD09890",
+            "targetRef": "sid-EE3AA62E-BABF-4D0D-A3A8-F75FCC2FC43E",
+            "condition": "yes",
+            "sourceRef": "sid-64652661-E15F-4B37-9D49-6B2EEAA32951"
         },
         {
-            "id": "sf18",
-            "sourceRef": "11",
-            "targetRef": "14"
-        },
-        {
-            "id": "sf19",
-            "sourceRef": "6",
-            "targetRef": "17"
-        }
-    ],
-    "tasks": [
-        {
-            "id": "1",
-            "name": "customer brings defective computer",
-            "type": "User"
-        },
-        {
-            "id": "2",
-            "name": "the crs checks the defect",
-            "type": "User"
-        },
-        {
-            "id": "3",
-            "name": "the crs hands out repair cost calculation",
-            "type": "User"
-        },
-        {
-            "id": "5",
-            "name": "customer takes computer home",
-            "type": "User"
-        },
-        {
-            "id": "8",
-            "name": "check the hardware",
-            "type": "User"
-        },
-        {
-            "id": "9",
-            "name": "repair the hardware",
-            "type": "User"
-        },
-        {
-            "id": "10",
-            "name": "checks the software",
-            "type": "User"
-        },
-        {
-            "id": "11",
-            "name": "configures the software",
-            "type": "User"
-        },
-        {
-            "id": "12",
-            "name": "test system functionality",
-            "type": "User"
-        },
-        {
-            "id": "16",
-            "name": "repair is finished",
-            "type": "User"
+            "id": "sid-33196652-802E-421F-A038-1D3A8E2FA9D8",
+            "targetRef": "sid-1E33AB15-3806-46F8-B627-C21D01B33159",
+            "condition": "no",
+            "sourceRef": "sid-64652661-E15F-4B37-9D49-6B2EEAA32951"
         }
     ]
 }
