@@ -1,120 +1,165 @@
 {
-    "events": [
+    "tasks": [
         {
-            "id": "0",
-            "name": "start",
-            "type": "StartNoneEvent"
+            "id": "sid-DABB6653-4C26-4394-8114-A2AD51A1380A",
+            "name": "register the requirement",
+            "type": "Task"
         },
         {
-            "id": "10",
-            "name": "end",
+            "id": "sid-A51FCF4A-A591-4D2C-92A6-B76A925D5DCE",
+            "name": "return application to employee",
+            "type": "Task"
+        },
+        {
+            "id": "sid-DDE98803-6BF3-4CCE-A18F-FA8940FEB7E7",
+            "name": "generate notification for HR representative",
+            "type": "Task"
+        },
+        {
+            "id": "sid-953B398F-82D8-4D59-B0CC-56F21A1A2C78",
+            "name": "submit a vacation request",
+            "type": "Task"
+        },
+        {
+            "id": "sid-61D7D59B-02CB-4AE0-A335-D80AB796929E",
+            "name": "receive the request",
+            "type": "Task"
+        },
+        {
+            "id": "sid-9716A730-5E18-409C-AF4E-3525021770B1",
+            "name": "review request",
+            "type": "Task"
+        },
+        {
+            "id": "sid-4FB9B4EF-6267-4B8C-AE24-C7D9C2049352",
+            "name": "HR representative completes the procedure",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-FFB2DF9A-01A8-4841-84BC-ADF581BA54E4",
+            "name": "",
             "type": "EndNoneEvent"
+        },
+        {
+            "id": "sid-B6151C66-DC01-4307-8607-F611837FE8D4",
+            "name": "",
+            "type": "StartNoneEvent"
         }
     ],
     "gateways": [
         {
-            "id": "5",
+            "id": "sid-C33102D6-B8E9-43C2-80BD-4931E145C883",
+            "name": "approved?",
             "type": "Exclusive"
         },
         {
-            "id": "7",
+            "id": "sid-EEAAFEB0-B2F4-4418-B964-C26C4154AA4B",
             "type": "Exclusive"
+        }
+    ],
+    "pools": [
+        {
+            "id": "sid-C851AE0A-3A88-4A45-A365-4E31C13A4534",
+            "name": "Organization",
+            "lanes": [
+                {
+                    "id": "sid-CE846066-4074-47D1-862F-723BC86958CE",
+                    "name": "System",
+                    "elemRefs": [
+                        "sid-DABB6653-4C26-4394-8114-A2AD51A1380A",
+                        "sid-A51FCF4A-A591-4D2C-92A6-B76A925D5DCE",
+                        "sid-DDE98803-6BF3-4CCE-A18F-FA8940FEB7E7",
+                        "sid-FFB2DF9A-01A8-4841-84BC-ADF581BA54E4",
+                        "sid-C33102D6-B8E9-43C2-80BD-4931E145C883",
+                        "sid-EEAAFEB0-B2F4-4418-B964-C26C4154AA4B"
+                    ]
+                },
+                {
+                    "id": "sid-B3308969-6D10-47EB-B6F1-B32726F4D4CA",
+                    "name": "Employee",
+                    "elemRefs": [
+                        "sid-953B398F-82D8-4D59-B0CC-56F21A1A2C78",
+                        "sid-B6151C66-DC01-4307-8607-F611837FE8D4"
+                    ]
+                },
+                {
+                    "id": "sid-56C049A2-77D6-4143-8D6C-8EBCCE0E5967",
+                    "name": "Immediate Supervisor",
+                    "elemRefs": [
+                        "sid-61D7D59B-02CB-4AE0-A335-D80AB796929E",
+                        "sid-9716A730-5E18-409C-AF4E-3525021770B1"
+                    ]
+                },
+                {
+                    "id": "sid-EC9C630F-6D49-47E8-B7BA-8A6EC6BEDB55",
+                    "name": "HR Representative",
+                    "elemRefs": [
+                        "sid-4FB9B4EF-6267-4B8C-AE24-C7D9C2049352"
+                    ]
+                }
+            ]
         }
     ],
     "messageFlows": [],
-    "pools": [],
     "sequenceFlows": [
         {
-            "id": "sf0",
-            "sourceRef": "0",
-            "targetRef": "1"
+            "id": "sid-A140D668-7854-45B8-9BDA-A2587AAD95BC",
+            "targetRef": "sid-953B398F-82D8-4D59-B0CC-56F21A1A2C78",
+            "sourceRef": "sid-B6151C66-DC01-4307-8607-F611837FE8D4"
         },
         {
-            "id": "sf1",
-            "sourceRef": "1",
-            "targetRef": "2"
+            "id": "sid-6B0B5462-3B0C-4E2C-9D5C-EBFB0BEAD9EB",
+            "targetRef": "sid-9716A730-5E18-409C-AF4E-3525021770B1",
+            "sourceRef": "sid-61D7D59B-02CB-4AE0-A335-D80AB796929E"
         },
         {
-            "id": "sf2",
-            "sourceRef": "2",
-            "targetRef": "3"
+            "id": "sid-483B2C86-A6F9-46D5-8088-4FEF23E7841C",
+            "targetRef": "sid-EEAAFEB0-B2F4-4418-B964-C26C4154AA4B",
+            "sourceRef": "sid-4FB9B4EF-6267-4B8C-AE24-C7D9C2049352"
         },
         {
-            "id": "sf3",
-            "sourceRef": "3",
-            "targetRef": "4"
+            "id": "sid-D3F96F96-20EF-48D9-924A-F84D0F2DF681",
+            "targetRef": "sid-EEAAFEB0-B2F4-4418-B964-C26C4154AA4B",
+            "sourceRef": "sid-A51FCF4A-A591-4D2C-92A6-B76A925D5DCE"
         },
         {
-            "id": "sf4",
-            "sourceRef": "4",
-            "targetRef": "5"
+            "id": "sid-D3CAC984-AC4E-4908-987C-E504E0EA0943",
+            "targetRef": "sid-DABB6653-4C26-4394-8114-A2AD51A1380A",
+            "sourceRef": "sid-953B398F-82D8-4D59-B0CC-56F21A1A2C78"
         },
         {
-            "id": "sf5",
-            "sourceRef": "5",
-            "targetRef": "6"
+            "id": "sid-E7297451-0719-4CA8-A160-06A22DFE8436",
+            "targetRef": "sid-61D7D59B-02CB-4AE0-A335-D80AB796929E",
+            "sourceRef": "sid-DABB6653-4C26-4394-8114-A2AD51A1380A"
         },
         {
-            "id": "sf6",
-            "sourceRef": "5",
-            "targetRef": "8"
+            "id": "sid-C278085E-BF54-4DDA-A312-91D4C05859F3",
+            "targetRef": "sid-C33102D6-B8E9-43C2-80BD-4931E145C883",
+            "sourceRef": "sid-9716A730-5E18-409C-AF4E-3525021770B1"
         },
         {
-            "id": "sf7",
-            "sourceRef": "6",
-            "targetRef": "7"
+            "id": "sid-DE5A23C3-84FB-4959-B40C-985A13A1E55A",
+            "targetRef": "sid-A51FCF4A-A591-4D2C-92A6-B76A925D5DCE",
+            "condition": "no",
+            "sourceRef": "sid-C33102D6-B8E9-43C2-80BD-4931E145C883"
         },
         {
-            "id": "sf8",
-            "sourceRef": "8",
-            "targetRef": "9"
+            "id": "sid-747FD33F-CCEC-4B73-8994-1B555CB87F25",
+            "targetRef": "sid-FFB2DF9A-01A8-4841-84BC-ADF581BA54E4",
+            "sourceRef": "sid-EEAAFEB0-B2F4-4418-B964-C26C4154AA4B"
         },
         {
-            "id": "sf9",
-            "sourceRef": "9",
-            "targetRef": "7"
+            "id": "sid-C6A55198-7ADE-42D8-B6D0-6714074A97A8",
+            "targetRef": "sid-4FB9B4EF-6267-4B8C-AE24-C7D9C2049352",
+            "sourceRef": "sid-DDE98803-6BF3-4CCE-A18F-FA8940FEB7E7"
         },
         {
-            "id": "sf10",
-            "sourceRef": "7",
-            "targetRef": "10"
-        }
-    ],
-    "tasks": [
-        {
-            "id": "1",
-            "name": "employee submits vacation request",
-            "type": "User"
-        },
-        {
-            "id": "2",
-            "name": "register the requirement",
-            "type": "User"
-        },
-        {
-            "id": "3",
-            "name": "supervisor receives the request",
-            "type": "User"
-        },
-        {
-            "id": "4",
-            "name": "supervisor approves the request",
-            "type": "User"
-        },
-        {
-            "id": "6",
-            "name": "return application",
-            "type": "User"
-        },
-        {
-            "id": "8",
-            "name": "generate notification",
-            "type": "User"
-        },
-        {
-            "id": "9",
-            "name": "HR completes the respective management procedures",
-            "type": "User"
+            "id": "sid-15E2D35F-401E-4854-93F8-40E2ABD7CB17",
+            "targetRef": "sid-DDE98803-6BF3-4CCE-A18F-FA8940FEB7E7",
+            "condition": "yes",
+            "sourceRef": "sid-C33102D6-B8E9-43C2-80BD-4931E145C883"
         }
     ]
 }
