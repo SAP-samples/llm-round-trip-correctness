@@ -1,0 +1,24 @@
+The process begins.
+
+Following this, a BKR check and a Jane Doe check are performed simultaneously by the risk management.
+
+Next, the credibility check is confirmed.
+
+Once these checks are completed, the senior risk management confirms the credibility check.
+
+If the assessment is rejected, a rejection letter is sent to the client by the administration, and the process ends.
+
+If the assessment is accepted, the client is called by the customer contact to complement information.
+
+If the call was not picked up, the client is called again after one hour. This repeats until the client picks up.
+
+If the call was picked up, a loan offer is created and sent to the client.
+
+In case two hours pass, the client is reminded, until finance receives the accepted offer.
+
+Upon receiving the accepted offer, a welcome letter is sent by the administration, and the loan application is activated by finance.
+
+The activation is then validated and the initial payment is executed.
+
+After the initial payment, the documents are returned to the client by the administration, and the process concludes.
+

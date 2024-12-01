@@ -1,0 +1,23 @@
+The process of the request fulfillment begins with the start event, after which the request is verified by the incident manager. 
+
+Next, where the order is sent for request handling.
+
+The order is then received by the 1st level support.
+
+Following, the request is logged and categorized.
+
+If the request is not authorized, the process returns to the first step.
+
+If the request is authorized, the request monitoring and escalation is done by the incident manager and 1st level support.
+
+Simultaneously, the model execution is requested by the service request fulfillment group and 1st level support.
+
+These tasks are then merged back into a single flow.
+
+Following the merge, the closure and evaluation is requested.
+
+After the closure and evaluation are requested, it is checked if there was a problem with the request processing or the request record.
+
+If there was no problem, the process moves to request fulfillment support, leading to a successful end of the process.
+
+If there was a problem, the incident manager is contacted about the problem, and the process ends.

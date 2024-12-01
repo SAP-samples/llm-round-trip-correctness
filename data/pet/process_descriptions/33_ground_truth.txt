@@ -1,0 +1,15 @@
+Der Prozess von SoKnow beginnt mit der Analyse des Technologiebedarfs durch einen Mitarbeiter
+.
+Danach werden parallel eine Marktanalyse vom Mitarbeiter durchgeführt und die Entwickler finden Ideen.
+
+Nach dem finden der Ideen erfolgt eine Überprüfung der Ideen durch die Mitarbeiter.
+
+Nach der Überprüfung der Ideen und der durchführung der Marktanalyse, wrid die Idee an die Projektleitung weitergegeben.
+
+Dort wird entschieden ob die Idee genehmigt wird oder nicht.
+
+Wenn nein, wird die Idee nicht genehmigt.
+
+Wenn ja, wird dies ebenfalls vermerkt und der Prozess geht weiter.
+
+Der Prozess endet darin, dass neue Technologien werden herausgefunden wurden.

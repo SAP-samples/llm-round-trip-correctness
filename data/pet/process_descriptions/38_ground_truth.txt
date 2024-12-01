@@ -1,0 +1,17 @@
+Der Prozess im Einkauf beginnt damit, dass der Kunde Online die Ware auswählt und kauft.
+
+Danach wird durch die Finanzabteilung geprüft, ob eine Kreditwürdigkeitsprüfung erforderlich ist.
+
+Falls ja, werden die notwendigen Informationen angefordert und die Kreditwürdigkeit geprüft.
+
+Wenn der Kunde als kreditwürdig eingestuft wird, wird das Lager über den Versand informiert.
+
+Falls der Kunde als nicht kreditwürdig eingestuft wird, wird er über die Ablehnung informiert und der Prozess endet.
+
+Wenn keine Kreditwürdigkeitsprüfung erforderlich ist oder der Kunde als kreditwürdig eingestuft wurde, wird das Lager über den Versand informiert und geprüft, ob der Artikel im Lager vorhanden ist.
+
+Falls nein, wird eine Nachbestellung ausgelöst und anschließend erneut geprüft, solange bis der Artikel vorhanden ist.
+
+Falls ja, wird der Artikel verpackt und versendet, und der Kunde erhält die Verkaufs- und Verstandbestätigung.
+
+Anschließend endet der Prozess.

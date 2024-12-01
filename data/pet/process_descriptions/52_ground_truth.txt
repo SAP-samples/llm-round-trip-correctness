@@ -1,0 +1,17 @@
+Zuerst ruft der Sachbearbeiter von ZV-Personal das Anforderungsprofil ab.
+
+Anschließend wird die Stellenausschreibung abgerufen.
+
+Danach wird ein Mitzeichnungsvermerk erstellt und weitergeleitet.
+
+Der Sachgebietsleiter prüft den Vermerk und entscheidet, ob Anmerkungen vorhanden sind.
+
+Wenn Anmerkungen vorhanden sind, wird der Vermerk an den Sachbearbeiter zurückgegeben, der wieder ein Mitzeichnungsvermerk erstellt und weitergeleitet.
+
+Wenn der Sachgebietsleiter keine Anmerkungen hat, wird der Vermerk an den Referatsleiter weitergeleitet, der ihn erneut prüft.
+
+Falls der Referatsleiter keine Anmerkungen hat, endet der Prozess.
+
+Wenn der Referatsleiter Anmerkungen hat, wird der Vermerk zurück an den Sachgebietsleiter gesendet, der erneut ein Mitzeichnungsvermerk erstellt und weitergeleitet.
+
+Der Prozess endet, wenn keine weiteren Anmerkungen vom Referatsleiter vorhanden sind.

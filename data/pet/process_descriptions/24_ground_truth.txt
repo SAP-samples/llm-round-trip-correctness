@@ -1,0 +1,18 @@
+Der Prozess von SoKnow beginnt, wenn in der Marketingabteilung festgestellt wird, dass die vorhandene Webseite veraltet ist.
+
+Zunächst analysiert die Marketingabteilung die aktuellen Inhalte.
+
+Danach reviewed die Entwicklungsabteilung diese Inhalte.
+
+Anschließenden werden von der Entwicklungsabteilung neue Inhalte entworfen und vorhandene Inhalte aktualisiert.
+
+
+Nachdem neue Inhalte entworfen wurden und die vorhandene Inhalte aktualisiert wurden, werden die Inhalte dauerhaft aktualisiert und der Prozess endet darin das die Webseit aktuell ist.
+
+Gleichzeitig werden die Inhalte von der Marketingabteilung bewertet.
+
+Beide Aufgaben werden parallel durchgeführt.
+
+Wenn die Inhalte positiv bewertet werden, wird die Geschäftsleitung informiert und der Prozess endet damit, dass die Webseite aktuell keine Verbesserungen benötigt.
+
+Wenn die Überprüfung negativ ausfällt, wird der Prozess nach dem reviewen der aktuellen Inhalte erneut durchlaufen.

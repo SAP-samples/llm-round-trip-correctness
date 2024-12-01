@@ -1,0 +1,13 @@
+The process begins with the creation of an application.
+
+Once the application is created, it is received by the loan provider.
+
+The document is then controlled to ensure all necessary information is present.
+
+An exclusive decision is made based on the completeness of the document.
+
+If the document is complete, it is accepted, and the process concludes with the completion of providing.
+
+If the document is incomplete, it is returned to the applicant to complete the missing information.
+
+After the applicant completes the missing information, the document is admitted, and the process finishes with the providing.

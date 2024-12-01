@@ -1,0 +1,29 @@
+The process begins with the application for IMIS by an Undergraduate Student.
+
+The student first goes to the fh-swf website.
+
+Once there, they define their search criteria.
+
+Next, they simultaneously select their Master Study Course, select Informatics and Digitalisation as subject area and select Campus Soest.
+
+After that, they click on "Find a Study Course." Following this, they click on "Learn more" on the IMIS banner.
+
+They then select the Master Study Course and click on "See how to apply here."
+
+At this point, they need to determine if they are an EU applicant or not.
+
+If they are a non-EU / international applicant, they proceed to apply via Uni-Assist.
+
+After applying, they check the application procedure and send the required documents to Uni-Assist.
+
+they then wait to get a decision within 10-12 weeks.
+
+If they are an EU applicant, they apply via the FH-SWF Online Portal.
+
+After applying, they send the required documents and contact the IMIS office.
+
+If they are an FH-SWF student or graduate, they apply via the FH-SWF Online Portal and contact the IMIS office.
+
+FH-SWF Students/Graduates and EU-applicant get a decision within 4-6 weeks after they contacted the IMIS office.
+
+Finally, the process end with the receipt of a admission/rejection letter.
