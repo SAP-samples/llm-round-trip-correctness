@@ -1,0 +1,15 @@
+The process at MyMuffin begins with the receipt of a new order.
+
+Once the order is received, the phase 1 tasks in MyMuffin commence simultaneously.
+
+These tasks include preparing the dough, setting up the delivery, and preparing the cooking paper.
+
+After these phase 1 tasks are completed, the process moves to phase 2, where the muffins are prepared.
+
+Following the preparation of the muffins, they are cooked.
+
+Once the muffins are cooked, the process advances to phase 3, where the requirements for this phase are met.
+
+This includes initiating the payment process and dispatching the muffins.
+
+Once the payment is completed and the muffins are dispatched, phase 3 is ended, marking the end of the process.

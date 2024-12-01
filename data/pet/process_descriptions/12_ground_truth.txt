@@ -1,0 +1,23 @@
+The process begins with the project start.
+The project team first conducts a cost calculation.
+Following this, they create a planning document.
+An event-based decision point then determines whether there are new customer requirements or if the requirements remain unchanged.
+If new customer requirements are identified, the project team adjusts the prices accordingly.
+If the requirements remain unchanged, the process continues without changes.
+
+
+After the price adjustment, an exclusive decision point directs the flow towards documenting the payments.
+Once the payment documentation is completed, the project is carried out.
+During the project execution, if there is an escalation due to late payments, a subprocess is triggered to handle these late payments.
+After handling the late payments, the situation is evaluated.
+
+
+An exclusive decision point then assesses whether to continue the project.
+If the decision is to continue, the project proceeds to the acceptance phase.
+If the decision is not to continue, the project is terminated.
+
+
+Upon project acceptance, the customer participates in the acceptance process.
+Following the acceptance, the project team identifies potential follow-up projects.
+Finally, the process concludes with the project closure.
+Throughout the process, communication with the customer occurs to capture new requirements and to involve them in the project acceptance phase.

@@ -1,0 +1,27 @@
+Zuest wird Stückliste in der Lagerhaltung des Startup TUd-03 erstellt.
+
+Dann werden die Waren bestellt.
+
+Für den Fall, dass der Lieferanten eine Rückfrage übermittelt wird die Frage mit der Fachabteilung geklärt und auf die Lieferung gewartet.
+
+Für den Fall, dass die nicht innerhalb von fünf Werktagen erfolgt, wird der Lieferant kontaktiert und geprüft ob ein unmittelbarer Versand möglich ist.
+
+Fall nein endet der Prozess mit einer Eskalation der Lieferprobleme.
+
+Falls ja, wird auf die Lieferung gewartet.
+
+Für den Fall, dass die Teile vom Lieferanten geliefert wurden, wird die Menge und Qualität überprüft.
+
+Anschließend wird die Menge und Qualität der gelieferten Teile überprüft.
+
+Wenn die Menge und Qualität nicht bestanden haben, wird eine Ersatzlieferung angefordert und an den Lieferant übermittelt.
+
+Anschließend wird erneut gewartet.
+
+Wenn die Menge und Qualität bestanden haben, werden die Waren eingelagert.
+
+Nach dem Einlagern der Waren übermittelt der Verkauf die Bestellung.
+
+Danach werden die Waren vorbereitet und verpackt.
+
+Schließlich erfolgt der Versand bzw. die Warenausgabe.

@@ -1,0 +1,9 @@
+Der Prozess von SoKnow beginnt mit der Organisation der Mitarbeitergespräche durch die Personalabteilung.
+
+Zunächst werden Terminvorschläge gesendet.
+
+Danach verzweigt der Prozess: Einerseits wird das Mitarbeitergespräch durchgeführt, in dessen Rahmen ein Training zugeordnet wird, und andererseits erfolgen regelmäßige Nachfragen zur Sicherstellung des Fortschritts.
+
+Zeitgleich muss der Mitarbeiter den Termin bestätigen, am Mitarbeitergespräch teilnehmen und das Training absolvieren.
+
+Schließlich wird das Training abgeschlossen und das Mitarbeitergespräch als durchgeführt markiert.

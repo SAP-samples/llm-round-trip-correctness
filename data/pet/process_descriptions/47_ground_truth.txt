@@ -1,0 +1,19 @@
+Der Prozess beginnt mit der Festlegung des Bedarfs durch durch das Einkaufs Team.
+
+Anschließend wird die Auswahl der Lizenzen bestimmt.
+
+Danach wird überprüft, ob das System ausgeführt wurde.
+
+Wenn ja, wird eine Lizenz gekauft, andernfalls wird eine Testlizenz gekauft.
+
+Nach dem Kauf der Lizenz oder Testlizenz werden Rahmenverträge vereinbart und ein Lizenzkaufvertrag angelegt.
+
+Dann stellt das System die Lizenzkaufvertragsdaten bereit und parallel dazu werden die Vertragsinformationen aktualisiert.
+
+Anschließend wird eine Bestellung aufgegeben.
+
+Nachdem die Bestellung aufgegeben wurden, erfolgt die Danach erfolgt die Endabnahme der Lieferung, das Review der Rahmenverträge und die Aktualisierung des Systems. Somit wurde die Lizenz gekauft
+
+Parllel dazu wird die Zahlung weitergeleitet, und eine Nachricht wird an die Abteilung Accounting/Controlling gesendet, um die Zahlung durchzuführen.
+
+Der Prozess endet mit der Bestätigung, dass die Lizenz gekauft wurde und die Zahlung durchgeführt wurde.

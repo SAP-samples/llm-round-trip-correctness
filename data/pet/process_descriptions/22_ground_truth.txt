@@ -1,0 +1,11 @@
+The process of clerks begins when a patient registers at the hospital.
+
+The clerk starts by recording the data of each patient.
+
+Once the data is recorded, the patient's SSN is registered, the patient's name is registered and the patient's surname is registered. These tasks are performed simultaneously.
+
+After these registrations are completed, the process converges, and the clerk proceeds to print the referral document.
+
+Following the printing, the record is archived in the file system.
+
+Finally, the registration process is completed, marking the end of the procedure.

@@ -1,0 +1,12 @@
+
+The process begins when the patient enters short-term treatment in the designated treatment chambers, initiated by the doctor.
+
+The first step is to evaluate the condition of the patient.
+
+After the evaluation, the patient is sent to the laboratory for testing performed by the technicans.
+
+Once the laboratory tests are completed, the patient is treated by the doctor based on the test results.
+
+Following the treatment, the doctor prescribes the necessary medicines.
+
+The process concludes when the prescription is delivered to the patient.

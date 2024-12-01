@@ -1,0 +1,40 @@
+The process begins when a patient receives a prescription.
+
+If the prescription is not for the patient themself, the client is unable to provide additional signatures or documents and the prescription remains unfilled.
+If the prescription is for the patient themself, the patient shows their Medicare card and prescriptions.
+
+The pharmacist at the NewTown Health Chemist Dispensing Process receives and checks the script details.
+
+If the prescription is not valid the prescription remains unfilled.
+If the prescription is valid, the patient profile is opened and reviewed in the pharmacy information system.
+
+Next, the prescription info is ready to view.
+
+The pharmacist then checks if the patient is suspicious
+
+If the patient is suspicious, the pharmacist contacts the GP (doctor) for advice.
+The doctor replies via email/call to the pharmacist and the pharmacist is provied with advice/recommendation.
+Next, the deciison is confirmed and the prescription remain unfilled.
+
+If the patient is not suspicious, the pharmacist checks the patient's status in person, including any allergies, pregnancy, and past history.
+
+The pharmacist then check if the patient passed the status check.
+
+If the status check does not pass, the pharmacist offers alternatives with a lower dosage level to the patient.
+
+If the patient agrees, the pharmacist adds a short memo.
+If the patient does not agree, the prescription remains unfilled.
+
+If the status check passes, the pharmacist selects the correct prescribed dosage and checks the prescription inventory.
+
+If the medication is out of stock, the pharmacist informs the patient about alternatives.
+If the medication is in stock, the pharmacist  double-checks and collects the correct drugs.
+
+The system calculates the Medicare costs waivers and total fees.
+
+The pharmacist then prints and attaches labels with Consumer Medicine Information (CMI), which are send to the patient.
+
+The patient receives the counseltation and recommendation on time and proceeds to pay the prescription fees.
+
+After payment, the patient receives the prescriptions, and the dispensing process ends.
+

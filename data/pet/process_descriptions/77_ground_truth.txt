@@ -1,0 +1,13 @@
+Der Prozess der TAS AG beginnt mit dem Öffnen des Datenblatts.
+
+Zuerst klickt der Roboter auf "Start".
+
+Danach klickt er auf "Format".
+
+Anschließend wählt er die Option "Einblenden und Ausblenden".
+
+Daraufhin klickt er auf "Blatt einblenden".
+
+Schließlich drückt der Roboter die Enter-Taste.
+
+Der Prozess endet, wenn das Datenblatt erfolgreich geöffnet wurde.

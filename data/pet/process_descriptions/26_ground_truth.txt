@@ -1,0 +1,25 @@
+Der Prozess von SoKnown beginnt wenn eine verspätete Zahlung in der Finanzabteilung eintrifft.
+
+Daraufhin wird die Geschäftsleitung informiert.
+
+Es wird geprüft, ob bereits eine Mahnung gesendet wurde.
+
+Wenn ja, wird beim Kunden nachgefragt und eine Nachfrage-Email an das Kudenunternehmen gesendet.
+
+Falls eine Antwort erhalten wird, wird eine Prüfung im Online Banking durchgeführt.
+
+Wenn die Prüfung durchgeführt wurde, wird die Zahlung verbucht und der Prozess endet mit der Zahlung bearbeitet.
+
+Falls keine Antwort erhalten wird, wird ein Rechtsanwalt benachrichtigt und eine Anfrage nach Rechtsbeistand wir an einen externen Rechtsanwalt versendet.
+
+Anschließend wird das Mahnverfahren durchlaufen (Soll-Prozess) und der Prozess endet mit der Zahlung bearbeitet.
+
+Wenn noch nicht gemahnt wurde, wird eine Mahnung von Rechtsabteilung erstellt, die dann an das Kudenunternehmen gesendet wird.
+
+Es wird geprüft, ob die Zahlung erfolgt ist.
+
+Wenn ja, wird das Mahnverfahren beendet und gleichzeit die Zahlung wie bereits beschrieben verbucht und endet mit der Zahlung bearbeitet.
+
+Wenn nein, wird erneut eine Mahnung erstellt.
+
+Falls die dritte Mahnung erfolglos bleibt, wird die Finanzabteilung benachrichtigt und ebenfalls der Rechtsanwalt wie bereits oben beschrieben benachrichtigt.

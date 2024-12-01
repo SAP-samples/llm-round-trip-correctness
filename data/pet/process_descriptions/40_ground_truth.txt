@@ -1,0 +1,27 @@
+Der Prozess startet wenn eine Bewerbung beim Recruitment der ADOmoney Bank eingeht.
+
+Zuerst werden die Bewerbungsunterlagen gesichtet und eine Vorselektion wird durchgeführt.
+
+Entweder wird eine Absage nach der Vorselektion erstellt und an den Bewerber geschickt, womit der Prozess damit endet, dass der Bewerber nach der Vorselektion abgelehnt wurde, order die Bewerbungsunterlagen werden detaillierter geprüft.
+
+Dann wird geprüft ob es sich um eine Bewerbung für eine Schlüsselposition handelt.
+
+Falls ja, wird ein Telefoninterview durchgeführt und anschließend ein Termin für ein persönliches Interview via Email kommuniziert.
+
+Falls nein, wird direkt ein Termin für ein persönliches Interview via Email kommuniziert.
+
+Der Termin für ein persönliches Interview wird solange via Email kommuniziert bis ein passender Termin gefunden wurde.
+
+Wenn ein passender Termin gefunden wurde, wird der Termin und die Bewerbungsunterlagen an die Fachabtilung weitergeleitet.
+
+Danach wird das persönliche Interview durchgeführt und entschieden, ob der Bewerber für das Assessment Center geeignet ist.
+
+Wenn ja, wird ein Termin mit dem Bewerber für das Assessment Center vereinbart und parallel das Assessment Center geplant und vorbereitet.
+
+Wurde ein Termin vereinbart und das Assessment Center vorbereitet, wird das assessment Center durchgeführt und anschließend wird über den Bewerber abgestimmt.
+
+Wenn der Bewerber nicht für das Assessment Center geeignet ist wird direkt über den Bewerber abgestimmt.
+
+Wenn der Bewerber angenommen wird, wird eine Zusage verfasst und an den Bewerber geschickt.
+
+Wenn der Bewerber nach dem Assessment Center abgelehnt wird, wird eine Absage verfasst und an den Bewerber geschickt.

@@ -1,0 +1,27 @@
+Der Prozess im Einkauf von Büromaterial beginnt mit der Bedarfaufnahme.
+
+Anschließend werden Angebote eingeholt und geprüft.
+
+Wenn das Angebot mehr als 2000 € beträgt, muss es genehmigt werden, andernfalls muss es nicht genehmigt werden.
+
+Anschließend wird die Ware bestellt.
+
+Es wird überpürft ob die Lieferung rechtzeitig erfolgt.
+
+Falls die Lieferung nicht rechtzeitig erfolgt, wird eine neue Lieferungsfrist
+
+Falls die Lieferung rechtzeitig erfolgt, wird eine Endabnahme durchgeführt und die Ware geht in den Wareneingang.
+
+Danach wird die Lieferung geprüft.
+
+Wenn die Lieferung vollständig ist, stimmt die Lieferung.
+
+Die Zahlung wird eingeleitet und an das Accounting / Controlling übermittelt.
+
+Der Prozess endet mit dem Kauf des Büromaterials.
+
+Wenn die Lieferung nicht vollständig ist, wird der Lieferant kontaktiert.
+
+Der Lieferant wird  um eine neue Lieferung gebeten und erneut überpürft ob die Lieferung rechtzeitig erfolgt.
+
+Der Prozess wiederholt sich, bis die Lieferung vollständig ist.

@@ -1,0 +1,31 @@
+Der Prozess von SoKnow beginnt mit dem Auftragseingang in der Entwicklungsabteilung.
+
+Anschließend werden die Anforderungen beschrieben.
+
+Danach wird ein Workshop durchgeführt, auf dessen Grundlage eine Projektskizze angefertigt wird.
+
+Sobald der Projektentwurf abgeschlossen ist, wir auf das Empfangen der Terminbestätigung des Kundenunternehmens gewartet.
+
+Daraufhin wird ein Kundengespräch durchgeführt und anschließend das Lastenheft geschrieben.
+
+Nach der Fertigstellung des Lastenhefts wird dieses an den Kunden gesendet.
+
+Der Kunde gibt anschließend Feedback, welches empfangen wird.
+
+Daraufhin wird die Projekt- und Kapazitätsplanung durchgeführt.
+
+Als Nächstes werden Standard-Open-Source-Produkte geprüft.
+
+Auf Basis dieser Prüfung werden Use-Cases definiert und die Kosten kalkuliert.
+
+Es wird entschieden, ob neue Produkte entwickelt oder bestehende verwendet werden.
+
+Falls bestehende Produkte ausgewählt werden, erfolgt die Anpassung der Wissensmanagementsysteme (Soll-Prozess).
+
+Falls neue Produkte entwickelt werden, wird das Produkt entwickelt (Soll-Prozess).
+
+Nach der Anpassung der Wissensmanagementsysteme oder der Entwicklung des neuen Produkts wird die Prduktabnahme unter Teilnahme des Kundenunternehmens durchgeführt.
+
+Anschließend wird Kundenfeedback vom Kunden eingeholt.
+
+Abschließend werden Folgeprojekte identifiziert, und der Auftrag wird abgeschlossen.
