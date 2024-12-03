@@ -1,0 +1,39 @@
+Der Prozess bei AO-Software beginnt mit dem Programmstart in der UI-Auswahl.
+
+Drauf hin startet das Programm beim Spieler.
+
+Sobald das Programm gestartet ist, wird der Benutzer in der UI-Auswahl gefragt, ob der das Tutorial starten will.
+
+Wenn der Benutzer sich für Nein entscheidet, beginnt er mit der Standard-Tastenbelegung.
+
+Wenn der Benutzer sich für Ja entscheidet, beginnt er ein Tutorial zu den Controller-Funktionen.
+
+Nachdem er die Einfürhung beendet hat, kann der Spieler die
+
+Der Benutzer kann wählen, ein Spiel fortzusetzen, ein gespeichertes Spiel zu laden, ein neues Spiel zu starten oder auf die Spieleinstellungen zuzugreifen.
+
+Wenn der Benutzer sich dafür entscheidet, ein Spiel fortzusetzen, wird das Spiel an der Stelle fortgesetzt, an der es zuletzt beendet wurde.
+
+Wenn der Benutzer sich entscheidet, ein gespeichertes Spiel zu laden, werden die gespeicherten Spieldaten abgerufen und das Spiel wird an der gespeicherten Stelle fortgesetzt.
+
+
+
+Wenn der Benutzer sich dafür entscheidet, mit den Standard-Tastenbelegungen zu beginnen, fährt das Spiel mit dem nächsten Schritt fort.
+
+Wenn der Benutzer das Tutorial auswählt, wird er durch das Tutorial zu den Controller-Funktionen geführt.
+
+Nach dem Tutorial wird der Benutzer gefragt, ob er das Spiel mit den Standard-Tastenbelegungen starten möchte.
+
+Wenn er dies nicht wählt, kehrt der Prozess zur Menüauswahl zurück.
+
+Wenn er sich entscheidet, das Spiel zu starten, fährt das Spiel mit dem nächsten Schritt fort.
+
+Sobald das Spiel startet, generiert das System Umgebungsgeräusche und spielt Hintergrundmusik ab.
+
+Diese Aufgaben werden parallel ausgeführt.
+
+Nachdem die Umgebungsgeräusche und die Hintergrundmusik eingerichtet sind, wird das Spiel geladen.
+
+Sobald das Spiel geladen ist, fordert das System den Benutzer zur Eingabe auf.
+
+Nachdem der Benutzer die Eingabe vorgenommen hat, beginnt das Spiel und der Prozess endet.

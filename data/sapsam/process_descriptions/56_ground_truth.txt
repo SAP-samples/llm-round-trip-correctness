@@ -1,0 +1,41 @@
+Der Prozess startet wenn der Kunden von The Bike Zone eine Anfrage beginnt.
+
+Der Vertrieb (SD) hat nach Beginn des Prozesses "Kunden-Auftrag" die Kundenstammdaten angelegt und die Kundendaten geändert.
+
+Zuerst wird die Anfrage des Kunden an der Vertrieb (SD) des GBI gesendet.
+
+Diese Anfrage wird vom Vertrieb (SD) des GBI angenommen und bearbeitet.
+
+Danach wird das Angebot bearbeitet.
+
+Danach wird ein Angebot in den Auftrag kopiert und an den Kunden gesendet.
+
+Der Kunde nimmt das Angebot an und bearbeitet es.
+
+Dann bestellt der Kunde die Fahrräder und sendet eine Bestellung zurück an den Vertrieb (SD).
+
+Der Vertrieb nimmt die Bestellung an bearbeitet sie.
+
+Die Materialwirtschaft (MM) des GBI prüft darauf hin den Lagerbestand
+
+Wenn das Produkt im Lager vorhanden ist, wird es angefordert.
+
+Falls nicht, wird die Ware besorgt/bestellt.
+
+Nach der Anforderung oder Bestellung des Produkts wird der Kundenauftrag wieder vom Vertrieb (SD) bearbeitet und ein Auslieferungsbeleg erstellt.
+
+Nachdem der Auslieferungsbeleg erstellt wurde macht die Materialwirtschaft (MM) eine Bestandskontrolle.
+
+Nach der Bestandskontrolle wird das Material von Vertrieb (SD) kommissioniert, das Material verpackt und die Ware an den Kunden gesendet.
+
+Der Wareneingang wird vom Kunden registriert.
+
+Nachdem die Ware an den Kunden gesendet wurde, überprüft die Materialwirtschaft (MM) den Bestand, woraufhin das Finanzwesen (FI) die Rechnung erstellt.
+
+Drauf hin wird die Rechnung vom Finanzwesen (FI) an den Kunden gesendet.
+
+Der Kunde empfängt die Rechnung. 
+
+Die Rechnung wird vom Kunden beglichen wroaufhin der Auftrag beendet wird und der Zahlungseingang wid vom Finanzwesen (FI) bearbeitet.
+
+Schließlich wird der Belegfluss vom Vertrieb bearbeitet und angezeigt, und der Prozess wird beendet.

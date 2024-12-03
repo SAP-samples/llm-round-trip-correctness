@@ -1,0 +1,12 @@
+Der Prozess der Harro H\u00f6fliger Verpackungsmaschinen GmbH beginnt mit der Generierung des Software- und Dokumentenentwurfs druch das Produktion / Design und Entwicklungs Team.
+
+Anschließend wird ein Überblick über die Maschine verschafft.
+
+Danach werden parallel mehrere Aufgaben durchgeführt: 
+Das SPS-Projekt wird stationsweise vervollständigt, das HMI-Projekt wird stationsweise vervollständigt und das Safety-Projekt wird vervollständigt.
+
+Sobald alle Programme fertig sind, wird die Software getestet.
+
+Anschließend wird ein Software Design-Review durchgeführt.
+
+Schließlich ist die Software bereit für die Inbetriebnahme.

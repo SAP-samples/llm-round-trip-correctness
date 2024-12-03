@@ -1,0 +1,13 @@
+Der Prozess er Bibliothek beginnt damit, dass der Student die Bibliothek betritt.
+
+Zuerst geht er zum PC, um nach Büchern zu suchen.
+
+Nachdem eine gewisse Zeit vergangen ist, such er Bücher und geht er zur Ausleihtheke.
+
+Dort prüft das Bibliothekspersonal den Ausweis des Studenten.
+
+Es wird überprüft, ob der Ausweis gültig ist.
+
+Wenn der Ausweis gültig ist, bekommt der Student die Bücher und verlässt die Bibliothek.
+
+Wenn der Ausweis nicht gültig ist, bekommt der Student keine Bücher und verlässt die Bibliothek ebenfalls.
