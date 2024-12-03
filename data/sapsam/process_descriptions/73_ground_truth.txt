@@ -1,0 +1,25 @@
+Der Prozess der Ausleihe beginnt, wenn ein Benutzer in die Bibliothek kommt.
+
+Zuerst wird der Benutzer angemeldet.
+
+Danach wird der Wunsch des Benutzers ermittelt.
+
+Wenn der Benutzer Medien verlängern möchte, wird der Vorgang zur Verlängerung der Medien gestartet.
+
+Wenn ja, endet der Prozess mit der Bestätigung, dass die Medien verlängert wurden.
+
+Wenn nein, wird der Prozess mit der Rückgabe des Mediums abgeschlossen.
+
+Wenn der Benutzer ein Medium ausleihen möchte, wählt er zunächst das gewünschte Medium aus.
+
+Anschließend wird das Medium in der Datenbank gesucht.
+
+Wenn das Medium vorhanden ist, wird der Benutzer identifiziert.
+
+Danach wird das Medium verliehen und der Prozess endet.
+
+Wenn das Medium nicht vorhanden ist, wird eine entsprechende Nachricht an den Nutzer der Bibliothek der nicht zur HTW gehört gesendet.
+
+Falls der Benutzer das Medium reservieren möchte, empängt die Ausleihe ein Bestätigung und wird der Reservierungsvorgang gestartet und der Prozess endet.
+
+Empängt die Ausleihe ein Ablehung wird der Verleihvorgang abgebrochen und der Prozess endet.

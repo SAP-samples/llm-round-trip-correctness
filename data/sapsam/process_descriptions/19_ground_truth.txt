@@ -1,0 +1,25 @@
+The process at the DLL begins is started by the risk manager.
+
+The risk manager initiates the process by performing a BKR check and a Jane Doe check in parallel.
+
+If both assessments are accepted, the process continues with a credibility check.
+
+If the credibility check is confirmed, the senior risk manager reviews the credibility assessment.
+
+If the assessment is accepted, the process moves forward; otherwise, a rejection letter is sent to the client by the administrator, and the process ends.
+
+If the credibility assessment is accepted, the customer relation team calls the client to complement information.
+
+If the client picks up the call, the process  proceeds to create a loan offer. 
+If the client does not pick up the call, the customer relation team waits one hour to and calls again until the customer picks up the call.
+If the client picks up the call the process continues as described above.
+
+After creating the loan offer, the loan offer is checked and then send to the client.
+
+The process waits for the client to accept the offer.
+If the offer is accepted, a welcome letter is sent by the administrator and the loan application is activated by the finance department.
+The finance team then validates the loan activation and executes the initial payment.
+Finally, the documents are returned to the client by the administrator, and the process ends.
+
+If the client does not accept the offer within one our, the client is reminded again.
+If the client accepts the offer the process continues as described above.

@@ -1,0 +1,33 @@
+Der Prozess der Sparkasse beginnt wenn die Bewerbung eines Bewerbers im Personalteam eintrifft.
+
+Nachdem die Bewerbung eingetroffen ist wird eine Eingangsbestätigung an den Bewerber gesendet.
+
+Danach wird die Bewerbung geprüft.
+
+Falls nein, wird der Bewerber abgelehnt und eine Absage wird an den Bewerber gesendet.
+
+Falls ja, wird die Bewerbung von der IT-Abteilung beurteilt.
+
+Ist der Bewerber nicht geeignet, wird der Bewerber abgelehnt und eine Absage wird an den Bewerber gesendet.
+
+Ist der Bewerber geeignet, wird er eingeladen und ein Bewerbungsgespräch wird vorbereitet und durchgeführt.
+
+Sollte der Bewerber die Einladung abgelehnt, wird der Prozess eskaliert und die Bewerbungsunterlagen werden archiviert.
+
+Nach dem Gespräch wird entschieden, ob der Bewerber gut ist.
+
+Wenn der Bewerber gut ist, wird er auf die Liste gesetzt und ausgewählt.
+
+Danach wird eine Genehmigung vom Vorstand eingeholt.
+
+Wenn die Genehmigung erteilt wird, sagt das Personalteam dem Bewerber zugesagzut und bereitet einen Vertrag vor.
+
+Der Vertrag wird unterzeichnet und der Bewerber auf die Stelle gesetzt, woraufhin die Stelle im Sytem belegt ist.
+
+Schließlich wird das Bewerbungsverfahren abgeschlossen und der Bewerber wurde eingestellt.
+
+Wenn der Bewerber nicht gut ist oder die Genehmigung nicht erteilt wird, wird der Bewerber abgelehnt, eine Absage wird gesendet und die die Bewerbungsunterlagen werden archiviert.
+
+Wenn der Bewerber die Stelle ablehnt, werden die Bewerbungsunterlagen archiviert.
+
+Nach der Archivierung endet der Prozess damit das der Bewerber abgelehnt wurde.

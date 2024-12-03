@@ -1,0 +1,15 @@
+Der Prozess bei SoKnow beginnt wenn bei einem Mitarbeiter ein Konflikt tritt auf.
+
+Daraufhin sucht der  Mitarbeiter den Konfliktschlichter auf.
+
+Danach hört die Personalabteilung den Mitarbeiter an und vereinbart einen Termin.
+
+Der Mitarbeiter nimmt den Termin wahr und schildert den Konflikt.
+
+Anschließend wird eine Lösung für den Konflikt gesucht.
+
+Es wird überprüft, ob der Konflikt gelöst ist.
+
+Wenn der Konflikt nicht gelöst ist, wird ein neuer Termin vereinbart, und der Prozess beginnt von vorne mit der Findung einer Konfliktlösung.
+
+Wenn der Konflikt gelöst ist, endet der Prozess darin das der Konflikt gelöst wurde.

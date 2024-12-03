@@ -1,0 +1,23 @@
+The process begins when a sales enquiry from a customer is received by Accentis.
+
+Depending on whether the customer is inbound or outbound, either a contact is created or the enquiry is updated.
+
+Upon receiving the sales enquiry request, the enquiry is created.
+
+If a contact is created, the process moves to an exclusive decision point.
+
+If the enquiry is updated, it also moves to the same decision point.
+
+Next, the price is qualified as OK and there is interest and the customer approval ist sent.
+
+Then the customer approval is received back by Accentis.
+
+If the price is not approved, the enquiry status is updated to reflect that the client does not approve, and the process ends there.
+
+If the price is approved, the process moves to the task of creating a quote.
+
+Once the quote is created, a qualified requirements analysis is conducted.
+
+Following the requirements analysis, the enquiry status is updated again.
+
+After updating the enquiry status, a job is created, and the process ends with the job creation.

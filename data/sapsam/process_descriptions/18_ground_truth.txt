@@ -1,0 +1,23 @@
+Der Prozess des PC Zusammenbaus beginnt mit der Vorbereitung des Arbeitsplatzes, indem eine Antistatik-Matte, Werkzeuge und Handschuhe bereitgestellt werden.
+
+Anschließend wird das Motherboard auf die Antistatik-Matte gelegt.
+
+Danach wird die CPU in den Prozessor eingesetzt.
+
+Im nächsten Schritt wird Wärmeleitpaste aufgetragen.
+
+Nun wird überprüft, ob die Installation möglich ist.
+
+Falls dies der Fall ist, wird der Prozess beendet.
+
+Wenn die Installation nicht möglich ist, wir das weitere Vorgehen wie folgt entschieden:
+Wenn kein Bild angezeigt wird, wird der entsprechende Schritt zur Fehlerbehebung durchgeführt.
+Wenn die Festplatte nicht erkannt wird, wird der entsprechende Schritt zur Fehlerbehebung durchgeführt.
+Wenn kein Strom vorhanden ist, wird der entsprechende Schritt zur Fehlerbehebung durchgeführt.
+Wenn ein Boot loop auftritt, wird der entsprechende Schritt zur Fehlerbehebung durchgeführt.
+
+Nach der Fehlerbehebung wird erneut überprüft, ob die Installation möglich ist.
+
+Wenn die Installation nicht möglich ist, wir das weitere Vorgehen wie zuvor entschieden, bis die Installation möglich ist.
+
+Wenn die Installation möglich ist, wird der Prozess beendet.

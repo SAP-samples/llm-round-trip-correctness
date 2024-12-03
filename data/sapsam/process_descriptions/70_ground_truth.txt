@@ -1,0 +1,15 @@
+Der Prozess beginnt mit der Erfassung eines Kundenantrags im Service.
+
+Anschließend wird der Auftrag erfasst.
+
+Danach werden die Kundendaten von der Finanzabteilung geprüft.
+
+Wenn die Daten korrekt sind, wird der Auftrag freigegeben und an den Service kommuniziert.
+
+Andernfalls wird der Auftrag zurückgewiesen und der Kunde vom Service informiert.
+
+Nach der Freigabe des Auftrags wird dieser vom Service empfangen und weiterbearbeitet.
+
+Der weiterbearbeitete Auftrag wird dann ausgedruckt und anschließend weitergeleitet.
+
+Der Prozess endet entweder mit der Information des Kunden oder der Weiterleitung des Kundenauftrags.

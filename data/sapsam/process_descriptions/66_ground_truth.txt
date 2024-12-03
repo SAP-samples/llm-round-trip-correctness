@@ -1,0 +1,13 @@
+Der Prozess beginnt mit dem Ereignis, dass der Kunde Hunger hat.
+
+Daraufhin wählt der Kunde eine Pizza aus der Speisekarte aus.
+
+Nachdem die Wahl getroffen wurde, bestellt der Kunde die Pizza telefonisch.
+
+An diesem Punkt gibt es zwei mögliche Szenarien: Entweder wartet der Kunde 60 Minuten, oder er ruft bei der Pizzeria an und fragt nach dem Status der Bestellung.
+
+Wenn der Kunde 60 Minuten gewartet hat, kann es sein, dass die Pizza angekommen ist, oder er muss erneut bei der Pizzeria anrufen und nachfragen.
+
+Sobald die Pizza angekommen ist, bezahlt der Kunde den Lieferjungen.
+
+Danach isst der Kunde die Pizza und der Hunger wurde gestillt.

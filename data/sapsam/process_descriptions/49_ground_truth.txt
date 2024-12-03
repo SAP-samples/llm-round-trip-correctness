@@ -1,0 +1,17 @@
+The process begins with the customer placing an order for food to a waiter. 
+
+The order is communicated to the waiter.
+
+The waiter then sents the order to the sous chef in the kitchen.
+
+The sous chef manages the order of cooking and then passes the task to the chef, who starts cooking the food.
+
+Once the cooking is done, the chef sends the food to the sous chef for checking.
+
+The sous chef checks the food and then calls the waiter to grab the food.
+
+The waiter then sends and communicates the food to the customer.
+
+The customer receives the food and enjoys it.
+
+Finally, the process ends.

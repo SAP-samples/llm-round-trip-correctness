@@ -1,0 +1,18 @@
+The process at the FMCG Company begins when a request for sample products is made to the warehouse supervisor.
+
+The supplier then provides the sample products, which are evaluated by the warehouse supervisor to determine if they meet the requirements.
+
+If the sample meets the requirements, the product is selected, and a purchase order is sent.
+If the sample does not meet the requirements, the product specifications are adjusted, and the process of providing sample products is repeated.
+
+Once the purchase order is sent, the supplier checks the stock availability.
+
+If the stock is available, the product is sent to the warehouse supervisor, who then receives the product.
+If the stock is not available, the inventory is restocked, and the stock availability is checked again.
+
+After receiving the product, the warehouse supervisor checks the products to ensure they match the order.
+
+If the order and physical product match, payment authorization is sent, and the payment is processed.
+If the order and physical product do not match, the missing products are requested, and the process of checking the stock availability is repeated.
+
+Finally, after the payment is processed, the supplier is notified, marking the end of the process.
