@@ -1,0 +1,203 @@
+{
+    "tasks": [
+        {
+            "id": "sid-2F36B3B1-80A4-40A4-BCCF-FCEE1598ED6F",
+            "name": "send a warrant possession request",
+            "type": "Task"
+        },
+        {
+            "id": "sid-E59626F5-7832-414B-9782-EC5CF2D0A6E5",
+            "name": "receive the request",
+            "type": "Task"
+        },
+        {
+            "id": "sid-2288768A-A48E-4500-9B70-E719E06F5032",
+            "name": "retrieve the SCT file",
+            "type": "Task"
+        },
+        {
+            "id": "sid-EA5DAC1B-F052-4EE9-9F5D-D3A77D63EEF8",
+            "name": "forward the SCT Warrant Possession to Queensland Police",
+            "type": "Task"
+        },
+        {
+            "id": "sid-F5B24686-2AD7-4034-BE64-2CF8D076C525",
+            "name": "store the SCT physical file",
+            "type": "Task"
+        },
+        {
+            "id": "sid-8365FA01-F73E-4C4D-91B0-3C454401736E",
+            "name": "await a Police report",
+            "type": "Task"
+        },
+        {
+            "id": "sid-8B24E60C-A3C5-4308-B4A1-CA69C8E50962",
+            "name": "receive the report",
+            "type": "Task"
+        },
+        {
+            "id": "sid-8BAB57A1-0FA4-47C7-A37D-E68C4704DF33",
+            "name": "retrieve the respective SCT file",
+            "type": "Task"
+        },
+        {
+            "id": "sid-CB2731BC-0589-4355-8E4D-CC8C6633B43C",
+            "name": "attache the new SCT document",
+            "type": "Task"
+        },
+        {
+            "id": "sid-E01A6CE1-C4E3-4924-9BC4-A60685EFC7E5",
+            "name": "store the expanded SCT physical file",
+            "type": "Task"
+        },
+        {
+            "id": "sid-C3C390DF-9713-42C0-AD47-CCA0D4BAA3C6",
+            "name": "receive the physical SCT file",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-34BD5559-772E-4DF1-8C4B-2FFA544C2F2F",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "sid-1C3E43E2-AECF-415F-9971-C70FEA7669E7",
+            "name": "",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "sid-4A7C125D-8A3C-467F-9D20-5AD5D48D09D5",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "sid-F4F4EC6B-3703-4049-AC48-D00346460D5D",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [],
+    "pools": [
+        {
+            "id": "sid-910E4DEE-E55A-4897-92A4-4FCE37F3336F",
+            "name": "Party",
+            "lanes": [
+                {
+                    "id": "sid-0C9AD9F9-296D-4567-ABB5-33CA151A8DCC",
+                    "name": "",
+                    "elemRefs": [
+                        "sid-2F36B3B1-80A4-40A4-BCCF-FCEE1598ED6F",
+                        "sid-34BD5559-772E-4DF1-8C4B-2FFA544C2F2F",
+                        "sid-1C3E43E2-AECF-415F-9971-C70FEA7669E7"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "sid-84B0FE2A-1E34-4F58-8262-3FF97C15DB2D",
+            "name": "Small Claims Registry Operations",
+            "lanes": [
+                {
+                    "id": "sid-F8DC1FD4-886A-478C-B439-60CFE626FDC1",
+                    "name": "Client Service Back Office",
+                    "elemRefs": [
+                        "sid-E59626F5-7832-414B-9782-EC5CF2D0A6E5",
+                        "sid-2288768A-A48E-4500-9B70-E719E06F5032",
+                        "sid-EA5DAC1B-F052-4EE9-9F5D-D3A77D63EEF8",
+                        "sid-F5B24686-2AD7-4034-BE64-2CF8D076C525",
+                        "sid-8365FA01-F73E-4C4D-91B0-3C454401736E",
+                        "sid-8B24E60C-A3C5-4308-B4A1-CA69C8E50962",
+                        "sid-8BAB57A1-0FA4-47C7-A37D-E68C4704DF33",
+                        "sid-CB2731BC-0589-4355-8E4D-CC8C6633B43C",
+                        "sid-E01A6CE1-C4E3-4924-9BC4-A60685EFC7E5",
+                        "sid-4A7C125D-8A3C-467F-9D20-5AD5D48D09D5"
+                    ]
+                },
+                {
+                    "id": "sid-83D31B38-F0CF-469A-B454-7B677B4D0425",
+                    "name": "MC internal staff",
+                    "elemRefs": [
+                        "sid-C3C390DF-9713-42C0-AD47-CCA0D4BAA3C6",
+                        "sid-F4F4EC6B-3703-4049-AC48-D00346460D5D"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageFlows": [
+        {
+            "id": "sid-E09DBC92-5D65-4BB2-83E3-9E69D083D602",
+            "targetRef": "sid-E59626F5-7832-414B-9782-EC5CF2D0A6E5",
+            "sourceRef": "sid-2F36B3B1-80A4-40A4-BCCF-FCEE1598ED6F"
+        }
+    ],
+    "sequenceFlows": [
+        {
+            "id": "sid-F5DF2239-B2DD-4202-A039-DFC022EB75A8",
+            "targetRef": "sid-2F36B3B1-80A4-40A4-BCCF-FCEE1598ED6F",
+            "sourceRef": "sid-34BD5559-772E-4DF1-8C4B-2FFA544C2F2F"
+        },
+        {
+            "id": "sid-C137997C-9E53-4F04-BB28-12B8607D3CB5",
+            "targetRef": "sid-2288768A-A48E-4500-9B70-E719E06F5032",
+            "sourceRef": "sid-E59626F5-7832-414B-9782-EC5CF2D0A6E5"
+        },
+        {
+            "id": "sid-FFDD41CB-9BCF-47F5-8BA1-2CE65308C9A2",
+            "targetRef": "sid-EA5DAC1B-F052-4EE9-9F5D-D3A77D63EEF8",
+            "sourceRef": "sid-2288768A-A48E-4500-9B70-E719E06F5032"
+        },
+        {
+            "id": "sid-65595265-9F3F-4DE7-BA93-1377054FFFFE",
+            "targetRef": "sid-F5B24686-2AD7-4034-BE64-2CF8D076C525",
+            "sourceRef": "sid-EA5DAC1B-F052-4EE9-9F5D-D3A77D63EEF8"
+        },
+        {
+            "id": "sid-19F525A4-BDA2-49D6-8B8A-785E07ABEED5",
+            "targetRef": "sid-8B24E60C-A3C5-4308-B4A1-CA69C8E50962",
+            "sourceRef": "sid-8365FA01-F73E-4C4D-91B0-3C454401736E"
+        },
+        {
+            "id": "sid-271AE3F4-805F-4A66-A4D0-0D31513D28B5",
+            "targetRef": "sid-8BAB57A1-0FA4-47C7-A37D-E68C4704DF33",
+            "sourceRef": "sid-8B24E60C-A3C5-4308-B4A1-CA69C8E50962"
+        },
+        {
+            "id": "sid-0FFE2A0F-CDF0-4EEF-9D73-BDC32D1A237A",
+            "targetRef": "sid-CB2731BC-0589-4355-8E4D-CC8C6633B43C",
+            "sourceRef": "sid-8BAB57A1-0FA4-47C7-A37D-E68C4704DF33"
+        },
+        {
+            "id": "sid-E20A1803-FB59-4E3D-BA91-AC8C1FD9C563",
+            "targetRef": "sid-E01A6CE1-C4E3-4924-9BC4-A60685EFC7E5",
+            "sourceRef": "sid-CB2731BC-0589-4355-8E4D-CC8C6633B43C"
+        },
+        {
+            "id": "sid-26FA744D-8F77-430B-B4CA-51F0B8C53135",
+            "targetRef": "sid-8365FA01-F73E-4C4D-91B0-3C454401736E",
+            "sourceRef": "sid-F5B24686-2AD7-4034-BE64-2CF8D076C525"
+        },
+        {
+            "id": "sid-EC22A1B2-6BF4-4074-AD41-B886835E915D",
+            "targetRef": "sid-C3C390DF-9713-42C0-AD47-CCA0D4BAA3C6",
+            "sourceRef": "sid-E01A6CE1-C4E3-4924-9BC4-A60685EFC7E5"
+        },
+        {
+            "id": "sid-AEF36750-E1E9-4BB8-BC2A-7001441516D6",
+            "targetRef": "sid-F4F4EC6B-3703-4049-AC48-D00346460D5D",
+            "sourceRef": "sid-C3C390DF-9713-42C0-AD47-CCA0D4BAA3C6"
+        },
+        {
+            "id": "sid-D3DDCCA9-3FE5-4255-A3C0-1A0ECC4084F6",
+            "targetRef": "sid-1C3E43E2-AECF-415F-9971-C70FEA7669E7",
+            "sourceRef": "sid-2F36B3B1-80A4-40A4-BCCF-FCEE1598ED6F"
+        },
+        {
+            "id": "sid-B00588F1-39A0-48E4-9A10-D0B97F6B7ADE",
+            "targetRef": "sid-E59626F5-7832-414B-9782-EC5CF2D0A6E5",
+            "sourceRef": "sid-4A7C125D-8A3C-467F-9D20-5AD5D48D09D5"
+        }
+    ]
+}

@@ -1,0 +1,219 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "provide the bank statement to the lender",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "complete the loan application by borrower",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "give the written notice to applicant",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "send application back to the applicant",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "check for the completeness",
+            "type": "User"
+        },
+        {
+            "id": 10,
+            "name": "begin the underwriting process",
+            "type": "User"
+        },
+        {
+            "id": 11,
+            "name": "check the credit score and risk score",
+            "type": "User"
+        },
+        {
+            "id": 14,
+            "name": "reduce loan amount",
+            "type": "User"
+        },
+        {
+            "id": 15,
+            "name": "change the interest rate",
+            "type": "User"
+        },
+        {
+            "id": 17,
+            "name": "receive the loans fund",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 18,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 19,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 2,
+            "type": "Parallel"
+        },
+        {
+            "id": 5,
+            "type": "Inclusive"
+        },
+        {
+            "id": 6,
+            "type": "Inclusive"
+        },
+        {
+            "id": 8,
+            "type": "Parallel"
+        },
+        {
+            "id": 9,
+            "type": "Parallel"
+        },
+        {
+            "id": 12,
+            "type": "Parallel"
+        },
+        {
+            "id": 13,
+            "type": "Parallel"
+        },
+        {
+            "id": 16,
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 4,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 7
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 7,
+            "targetRef": 6
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 3,
+            "targetRef": 8
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 6,
+            "targetRef": 8
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 8,
+            "targetRef": 9
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 9,
+            "targetRef": 10
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 9,
+            "targetRef": 11
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 10,
+            "targetRef": 12
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 11,
+            "targetRef": 12
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 12,
+            "targetRef": 13
+        },
+        {
+            "id": "sf16",
+            "sourceRef": 13,
+            "targetRef": 14
+        },
+        {
+            "id": "sf17",
+            "sourceRef": 13,
+            "targetRef": 15
+        },
+        {
+            "id": "sf18",
+            "sourceRef": 14,
+            "targetRef": 16
+        },
+        {
+            "id": "sf19",
+            "sourceRef": 15,
+            "targetRef": 16
+        },
+        {
+            "id": "sf20",
+            "sourceRef": 16,
+            "targetRef": 17
+        },
+        {
+            "id": "sf21",
+            "sourceRef": 18,
+            "targetRef": 0
+        },
+        {
+            "id": "sf22",
+            "sourceRef": 17,
+            "targetRef": 19
+        }
+    ],
+    "messageFlows": []
+}

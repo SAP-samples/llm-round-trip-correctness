@@ -1,0 +1,322 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "confirm the basic information",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "confirm if the process requires optimization",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "identify the process's components",
+            "type": "User"
+        },
+        {
+            "id": 6,
+            "name": "define how long it takes to complete the process",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "look to see if the process can be simplified",
+            "type": "User"
+        },
+        {
+            "id": 8,
+            "name": "assess if any steps are confusing",
+            "type": "User"
+        },
+        {
+            "id": 10,
+            "name": "write the potential process improvements",
+            "type": "User"
+        },
+        {
+            "id": 11,
+            "name": "get approval for processing improvements",
+            "type": "User"
+        },
+        {
+            "id": 13,
+            "name": "use the updated process",
+            "type": "User"
+        },
+        {
+            "id": 14,
+            "name": "define what would make the improvements successful",
+            "type": "User"
+        },
+        {
+            "id": 15,
+            "name": "determine what improvements should go forward",
+            "type": "User"
+        },
+        {
+            "id": 17,
+            "name": "update the process documents",
+            "type": "User"
+        },
+        {
+            "id": 18,
+            "name": "add feedback on the updated process",
+            "type": "User"
+        },
+        {
+            "id": 20,
+            "name": "choose who will test the updated process",
+            "type": "User"
+        },
+        {
+            "id": 23,
+            "name": "determine how the process will be monitored",
+            "type": "User"
+        },
+        {
+            "id": 24,
+            "name": "schedule the next process review and optimization",
+            "type": "User"
+        },
+        {
+            "id": 25,
+            "name": "implement the process changes",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 27,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 28,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 1,
+            "type": "Inclusive"
+        },
+        {
+            "id": 4,
+            "type": "Inclusive"
+        },
+        {
+            "id": 5,
+            "type": "Inclusive"
+        },
+        {
+            "id": 9,
+            "type": "Inclusive"
+        },
+        {
+            "id": 12,
+            "type": "Inclusive"
+        },
+        {
+            "id": 16,
+            "type": "Inclusive"
+        },
+        {
+            "id": 19,
+            "type": "Inclusive"
+        },
+        {
+            "id": 21,
+            "type": "Inclusive"
+        },
+        {
+            "id": 22,
+            "type": "Parallel"
+        },
+        {
+            "id": 26,
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 1,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 3,
+            "targetRef": 4
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 4,
+            "targetRef": 5
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 5,
+            "targetRef": 7
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 7,
+            "targetRef": 8
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 6,
+            "targetRef": 9
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 8,
+            "targetRef": 9
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 9,
+            "targetRef": 10
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 10,
+            "targetRef": 11
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 11,
+            "targetRef": 12
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 12,
+            "targetRef": 13
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 12,
+            "targetRef": 14
+        },
+        {
+            "id": "sf16",
+            "sourceRef": 12,
+            "targetRef": 15
+        },
+        {
+            "id": "sf17",
+            "sourceRef": 13,
+            "targetRef": 16
+        },
+        {
+            "id": "sf18",
+            "sourceRef": 16,
+            "targetRef": 17
+        },
+        {
+            "id": "sf19",
+            "sourceRef": 16,
+            "targetRef": 18
+        },
+        {
+            "id": "sf20",
+            "sourceRef": 17,
+            "targetRef": 19
+        },
+        {
+            "id": "sf21",
+            "sourceRef": 18,
+            "targetRef": 19
+        },
+        {
+            "id": "sf22",
+            "sourceRef": 15,
+            "targetRef": 20
+        },
+        {
+            "id": "sf23",
+            "sourceRef": 19,
+            "targetRef": 21
+        },
+        {
+            "id": "sf24",
+            "sourceRef": 14,
+            "targetRef": 21
+        },
+        {
+            "id": "sf25",
+            "sourceRef": 20,
+            "targetRef": 21
+        },
+        {
+            "id": "sf26",
+            "sourceRef": 21,
+            "targetRef": 22
+        },
+        {
+            "id": "sf27",
+            "sourceRef": 22,
+            "targetRef": 23
+        },
+        {
+            "id": "sf28",
+            "sourceRef": 22,
+            "targetRef": 24
+        },
+        {
+            "id": "sf29",
+            "sourceRef": 22,
+            "targetRef": 25
+        },
+        {
+            "id": "sf30",
+            "sourceRef": 23,
+            "targetRef": 26
+        },
+        {
+            "id": "sf31",
+            "sourceRef": 24,
+            "targetRef": 26
+        },
+        {
+            "id": "sf32",
+            "sourceRef": 25,
+            "targetRef": 26
+        },
+        {
+            "id": "sf33",
+            "sourceRef": 27,
+            "targetRef": 0
+        },
+        {
+            "id": "sf34",
+            "sourceRef": 26,
+            "targetRef": 28
+        }
+    ],
+    "messageFlows": []
+}

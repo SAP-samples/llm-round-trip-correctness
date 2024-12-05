@@ -1,0 +1,244 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "confirm that payment has been received",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "request the ordered products from your inventory",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "get approval",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "attach the shipping label to the packaging",
+            "type": "User"
+        },
+        {
+            "id": 6,
+            "name": "measure products",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "package the items securely",
+            "type": "User"
+        },
+        {
+            "id": 9,
+            "name": "print invoice",
+            "type": "User"
+        },
+        {
+            "id": 10,
+            "name": "print packing slip",
+            "type": "User"
+        },
+        {
+            "id": 15,
+            "name": "load items into the delivery vehicle",
+            "type": "User"
+        },
+        {
+            "id": 16,
+            "name": "arrange the delivery",
+            "type": "User"
+        },
+        {
+            "id": 17,
+            "name": "examine your other orders for delivery overlaps",
+            "type": "User"
+        },
+        {
+            "id": 19,
+            "name": "send a confirmation email to the customer",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 20,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 21,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 2,
+            "type": "Inclusive"
+        },
+        {
+            "id": 5,
+            "type": "Parallel"
+        },
+        {
+            "id": 8,
+            "type": "Inclusive"
+        },
+        {
+            "id": 11,
+            "type": "Inclusive"
+        },
+        {
+            "id": 12,
+            "type": "Parallel"
+        },
+        {
+            "id": 13,
+            "type": "Inclusive"
+        },
+        {
+            "id": 14,
+            "type": "Inclusive"
+        },
+        {
+            "id": 18,
+            "type": "Inclusive"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 3,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 7
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 6,
+            "targetRef": 8
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 8,
+            "targetRef": 9
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 8,
+            "targetRef": 10
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 9,
+            "targetRef": 11
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 10,
+            "targetRef": 11
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 11,
+            "targetRef": 12
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 7,
+            "targetRef": 12
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 12,
+            "targetRef": 13
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 4,
+            "targetRef": 13
+        },
+        {
+            "id": "sf16",
+            "sourceRef": 13,
+            "targetRef": 14
+        },
+        {
+            "id": "sf17",
+            "sourceRef": 14,
+            "targetRef": 15
+        },
+        {
+            "id": "sf18",
+            "sourceRef": 14,
+            "targetRef": 16
+        },
+        {
+            "id": "sf19",
+            "sourceRef": 14,
+            "targetRef": 17
+        },
+        {
+            "id": "sf20",
+            "sourceRef": 15,
+            "targetRef": 18
+        },
+        {
+            "id": "sf21",
+            "sourceRef": 16,
+            "targetRef": 18
+        },
+        {
+            "id": "sf22",
+            "sourceRef": 17,
+            "targetRef": 18
+        },
+        {
+            "id": "sf23",
+            "sourceRef": 18,
+            "targetRef": 19
+        },
+        {
+            "id": "sf24",
+            "sourceRef": 20,
+            "targetRef": 0
+        },
+        {
+            "id": "sf25",
+            "sourceRef": 19,
+            "targetRef": 21
+        }
+    ],
+    "messageFlows": []
+}

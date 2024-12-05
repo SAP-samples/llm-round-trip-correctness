@@ -1,0 +1,234 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "record the buyer's details",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "get approval for post-credit check review",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "send a credit application form to the buyer",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "send the buyer your terms of sale",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "check customer payment terms",
+            "type": "User"
+        },
+        {
+            "id": 8,
+            "name": "send the invoice in your accounting software",
+            "type": "User"
+        },
+        {
+            "id": 11,
+            "name": "record your activity digitally",
+            "type": "User"
+        },
+        {
+            "id": 12,
+            "name": "establish monthly contact with your client",
+            "type": "User"
+        },
+        {
+            "id": 13,
+            "name": "make a second physical copy",
+            "type": "User"
+        },
+        {
+            "id": 16,
+            "name": "record the sales on credit of services",
+            "type": "User"
+        },
+        {
+            "id": 17,
+            "name": "record the sales on credit of goods",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 19,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 20,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 1,
+            "type": "Inclusive"
+        },
+        {
+            "id": 5,
+            "type": "Inclusive"
+        },
+        {
+            "id": 6,
+            "type": "Parallel"
+        },
+        {
+            "id": 9,
+            "type": "Parallel"
+        },
+        {
+            "id": 10,
+            "type": "Inclusive"
+        },
+        {
+            "id": 14,
+            "type": "Inclusive"
+        },
+        {
+            "id": 15,
+            "type": "Inclusive"
+        },
+        {
+            "id": 18,
+            "type": "Inclusive"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 1,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 3,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 2,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 4,
+            "targetRef": 5
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 6,
+            "targetRef": 7
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 6,
+            "targetRef": 8
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 7,
+            "targetRef": 9
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 8,
+            "targetRef": 9
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 9,
+            "targetRef": 10
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 10,
+            "targetRef": 11
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 10,
+            "targetRef": 12
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 10,
+            "targetRef": 13
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 11,
+            "targetRef": 14
+        },
+        {
+            "id": "sf16",
+            "sourceRef": 12,
+            "targetRef": 14
+        },
+        {
+            "id": "sf17",
+            "sourceRef": 13,
+            "targetRef": 14
+        },
+        {
+            "id": "sf18",
+            "sourceRef": 14,
+            "targetRef": 15
+        },
+        {
+            "id": "sf19",
+            "sourceRef": 15,
+            "targetRef": 16
+        },
+        {
+            "id": "sf20",
+            "sourceRef": 15,
+            "targetRef": 17
+        },
+        {
+            "id": "sf21",
+            "sourceRef": 16,
+            "targetRef": 18
+        },
+        {
+            "id": "sf22",
+            "sourceRef": 17,
+            "targetRef": 18
+        },
+        {
+            "id": "sf23",
+            "sourceRef": 19,
+            "targetRef": 0
+        },
+        {
+            "id": "sf24",
+            "sourceRef": 18,
+            "targetRef": 20
+        }
+    ],
+    "messageFlows": []
+}

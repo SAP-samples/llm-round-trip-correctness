@@ -1,58 +1,58 @@
 {
     "tasks": [
         {
-            "id": "sid-8554E04F-CD09-4DA4-804B-54B9FF2A2F44",
-            "name": "send the measurement bill to the GO",
-            "type": "Task"
-        },
-        {
-            "id": "sid-FEAF994F-81BB-4060-93DD-6CC895A5A390",
-            "name": "send the bill for additional readings to the GO",
-            "type": "Task"
-        },
-        {
-            "id": "sid-41694BB2-4456-468F-8D65-0E8B6CD1E702",
-            "name": "send the bill for the equipment acquisition to the GO",
-            "type": "Task"
-        },
-        {
             "id": "sid-454DC8E7-8A7F-4AF5-9CB0-087A7E888146",
-            "name": "send the metering point operations bill to the GO",
+            "name": "MPOO sends the metering point operations bill to the GO",
             "type": "Task"
         },
         {
-            "id": "sid-2F3EE8F4-39C9-4070-938A-135B8ECE7907",
-            "name": "send the bill for the equipment acquisition to the MPON",
-            "type": "Task"
-        },
-        {
-            "id": "sid-B6900079-70DF-483C-9EFE-46E96DA5187C",
-            "name": "confirm the invoice with payment advice",
-            "type": "Task"
-        },
-        {
-            "id": "sid-C137A9B2-9E1B-4E73-8517-14DF386EA7EE",
-            "name": "reject the invoice",
-            "type": "Task"
-        },
-        {
-            "id": "sid-7E384373-DECC-44BA-9F76-18D4F8A716C7",
-            "name": "examine the bill",
+            "id": "sid-8554E04F-CD09-4DA4-804B-54B9FF2A2F44",
+            "name": "MSPO sends the measurement bill to the GO",
             "type": "Task"
         },
         {
             "id": "sid-87EC1576-ACAF-4A6F-BEE6-66CBAE16198B",
-            "name": "examine the bill",
-            "type": "Task"
-        },
-        {
-            "id": "sid-03CA9579-CAA8-4F55-905E-40723D7BD693",
-            "name": "confirm the invoice with payment advice",
+            "name": "the GO examines the bill",
             "type": "Task"
         },
         {
             "id": "sid-FCAC0E3B-35CF-4EDD-968D-76DDB00F1B7D",
-            "name": "reject the invoice",
+            "name": "the GO rejects the invoice",
+            "type": "Task"
+        },
+        {
+            "id": "sid-03CA9579-CAA8-4F55-905E-40723D7BD693",
+            "name": "the GO confirms the invoice with payment advice",
+            "type": "Task"
+        },
+        {
+            "id": "sid-FEAF994F-81BB-4060-93DD-6CC895A5A390",
+            "name": "MSPO sends the bill for additional readings to the GO",
+            "type": "Task"
+        },
+        {
+            "id": "sid-41694BB2-4456-468F-8D65-0E8B6CD1E702",
+            "name": "the MPOO sends the bill for the equipment acquisition to the GO",
+            "type": "Task"
+        },
+        {
+            "id": "sid-2F3EE8F4-39C9-4070-938A-135B8ECE7907",
+            "name": "MPOO sends the bill for the equipment acquisition to the MPON",
+            "type": "Task"
+        },
+        {
+            "id": "sid-7E384373-DECC-44BA-9F76-18D4F8A716C7",
+            "name": "the MPON examines the bill",
+            "type": "Task"
+        },
+        {
+            "id": "sid-C137A9B2-9E1B-4E73-8517-14DF386EA7EE",
+            "name": "the MPON rejects the invoice",
+            "type": "Task"
+        },
+        {
+            "id": "sid-B6900079-70DF-483C-9EFE-46E96DA5187C",
+            "name": "the MPON confirms the invoice with payment advice",
             "type": "Task"
         }
     ],
@@ -78,11 +78,11 @@
             "type": "Exclusive"
         },
         {
-            "id": "sid-CADC5BF2-7A74-45B8-9BDD-820BB5C4B28F",
+            "id": "sid-68820C4F-FF03-435C-B509-738BE8D008DA",
             "type": "Exclusive"
         },
         {
-            "id": "sid-04CEB1BF-C99D-49F3-B937-9BB69AD7FE78",
+            "id": "sid-CADC5BF2-7A74-45B8-9BDD-820BB5C4B28F",
             "type": "Exclusive"
         },
         {
@@ -94,67 +94,15 @@
             "type": "Exclusive"
         },
         {
-            "id": "sid-68820C4F-FF03-435C-B509-738BE8D008DA",
+            "id": "sid-D75D1D07-D9B2-4852-A38F-2C053D87FB9A",
             "type": "Exclusive"
         },
         {
-            "id": "sid-D75D1D07-D9B2-4852-A38F-2C053D87FB9A",
+            "id": "sid-04CEB1BF-C99D-49F3-B937-9BB69AD7FE78",
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-84CC6A88-FC0B-479C-A5C0-D6748392E400",
-            "name": "System",
-            "lanes": [
-                {
-                    "id": "sid-F4EC1D4E-717E-4FEB-AB2A-DEE501B1C4EA",
-                    "name": "MSPO",
-                    "elemRefs": [
-                        "sid-8554E04F-CD09-4DA4-804B-54B9FF2A2F44",
-                        "sid-FEAF994F-81BB-4060-93DD-6CC895A5A390",
-                        "sid-11C80357-51BE-409F-9FAD-79994CFBC8D0",
-                        "sid-6D914E1C-9AA9-4283-9D48-E2F0566F1544"
-                    ]
-                },
-                {
-                    "id": "sid-3C1E8B5B-85AF-44FF-88A9-C8CBB981FB7A",
-                    "name": "MPOO",
-                    "elemRefs": [
-                        "sid-41694BB2-4456-468F-8D65-0E8B6CD1E702",
-                        "sid-454DC8E7-8A7F-4AF5-9CB0-087A7E888146",
-                        "sid-2F3EE8F4-39C9-4070-938A-135B8ECE7907",
-                        "sid-06571202-B4EB-49AA-B0E4-7767EDDCFD4C",
-                        "sid-43735256-7BC1-40A1-9392-FC7C8CCF94F8",
-                        "sid-CADC5BF2-7A74-45B8-9BDD-820BB5C4B28F",
-                        "sid-04CEB1BF-C99D-49F3-B937-9BB69AD7FE78"
-                    ]
-                },
-                {
-                    "id": "sid-28CB5A0E-0F60-47C9-8A66-321F31BC0744",
-                    "name": "MPON",
-                    "elemRefs": [
-                        "sid-B6900079-70DF-483C-9EFE-46E96DA5187C",
-                        "sid-C137A9B2-9E1B-4E73-8517-14DF386EA7EE",
-                        "sid-7E384373-DECC-44BA-9F76-18D4F8A716C7",
-                        "sid-A05BC710-5FF1-4CF0-A717-875BBB1555D5",
-                        "sid-D8A90B12-9A72-4889-A9E7-BA1076928560"
-                    ]
-                },
-                {
-                    "id": "sid-5B9FE2BA-A5DD-4110-82AF-C97DA7D88209",
-                    "name": "GO",
-                    "elemRefs": [
-                        "sid-87EC1576-ACAF-4A6F-BEE6-66CBAE16198B",
-                        "sid-03CA9579-CAA8-4F55-905E-40723D7BD693",
-                        "sid-FCAC0E3B-35CF-4EDD-968D-76DDB00F1B7D",
-                        "sid-68820C4F-FF03-435C-B509-738BE8D008DA",
-                        "sid-D75D1D07-D9B2-4852-A38F-2C053D87FB9A"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
@@ -176,6 +124,11 @@
             "id": "sid-1DA6B2D6-3E65-4F18-9BCB-EFFD1080FE9E",
             "targetRef": "sid-6D914E1C-9AA9-4283-9D48-E2F0566F1544",
             "sourceRef": "sid-8554E04F-CD09-4DA4-804B-54B9FF2A2F44"
+        },
+        {
+            "id": "sid-15F5E80B-88D0-4CDC-A69C-15419E09265F",
+            "targetRef": "sid-87EC1576-ACAF-4A6F-BEE6-66CBAE16198B",
+            "sourceRef": "sid-6D914E1C-9AA9-4283-9D48-E2F0566F1544"
         },
         {
             "id": "sid-0A8883A6-24EB-4B08-B947-95B1506FACA3",
@@ -269,6 +222,11 @@
             "sourceRef": "sid-FCAC0E3B-35CF-4EDD-968D-76DDB00F1B7D"
         },
         {
+            "id": "sid-897D20B3-F43E-4A5A-873F-EB2F17388C71",
+            "targetRef": "sid-04CEB1BF-C99D-49F3-B937-9BB69AD7FE78",
+            "sourceRef": "sid-D75D1D07-D9B2-4852-A38F-2C053D87FB9A"
+        },
+        {
             "id": "sid-28101FCC-507C-4FA3-9A48-DACCC6947616",
             "targetRef": "sid-04CEB1BF-C99D-49F3-B937-9BB69AD7FE78",
             "sourceRef": "sid-D8A90B12-9A72-4889-A9E7-BA1076928560"
@@ -277,16 +235,6 @@
             "id": "sid-E2D99438-2F89-43D8-87C4-D0F0B3327995",
             "targetRef": "sid-43735256-7BC1-40A1-9392-FC7C8CCF94F8",
             "sourceRef": "sid-04CEB1BF-C99D-49F3-B937-9BB69AD7FE78"
-        },
-        {
-            "id": "sid-15F5E80B-88D0-4CDC-A69C-15419E09265F",
-            "targetRef": "sid-87EC1576-ACAF-4A6F-BEE6-66CBAE16198B",
-            "sourceRef": "sid-6D914E1C-9AA9-4283-9D48-E2F0566F1544"
-        },
-        {
-            "id": "sid-897D20B3-F43E-4A5A-873F-EB2F17388C71",
-            "targetRef": "sid-04CEB1BF-C99D-49F3-B937-9BB69AD7FE78",
-            "sourceRef": "sid-D75D1D07-D9B2-4852-A38F-2C053D87FB9A"
         }
     ]
 }

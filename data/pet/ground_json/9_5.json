@@ -1,58 +1,58 @@
 {
     "tasks": [
         {
-            "id": "sid-9B23501C-9F88-491A-991E-B634DD1770C6",
-            "name": "approve the report",
-            "type": "Task"
-        },
-        {
             "id": "sid-DED84BC9-0279-4496-B9BF-657303BF3B86",
-            "name": "receive expense report",
+            "name": "company receives expense report",
             "type": "Task"
         },
         {
             "id": "sid-B1C895FC-1BEC-4B0E-9D3B-51B499A4AFCA",
-            "name": "create new employee  account",
+            "name": "company creates new employee  account",
             "type": "Task"
         },
         {
             "id": "sid-1F83D085-A3A1-456A-9592-B61BB8221C17",
-            "name": "review report for automatic approval",
+            "name": "company reviews report for automatic approval",
             "type": "Task"
         },
         {
             "id": "sid-AAB417D9-F2C7-46B8-B4CA-D88099C8C288",
-            "name": "automatically approve the report",
+            "name": "company automatically approves the report",
+            "type": "Task"
+        },
+        {
+            "id": "sid-9B23501C-9F88-491A-991E-B634DD1770C6",
+            "name": "supervisor approves the report",
             "type": "Task"
         },
         {
             "id": "sid-B800525D-A8C2-4C8D-BC7F-0590B4A958E0",
-            "name": "send reimbursement to employee's bank account",
-            "type": "Task"
-        },
-        {
-            "id": "sid-2937FB24-907F-4229-960E-7F27A3404058",
-            "name": "stop the process",
+            "name": "company sends reimbursement to employee's bank account",
             "type": "Task"
         },
         {
             "id": "sid-0D3E267D-34D5-456D-98BE-BB33C5F90B46",
-            "name": "receive a rejection notice",
+            "name": "employee  receives a rejection notice",
             "type": "Task"
         },
         {
             "id": "sid-66C4C9C4-DE54-4CBB-BD41-F524D99A96EC",
-            "name": "receive an approval in progress  email",
+            "name": "employee  receives an approval in progress  email",
+            "type": "Task"
+        },
+        {
+            "id": "sid-2937FB24-907F-4229-960E-7F27A3404058",
+            "name": "company stops the process",
             "type": "Task"
         },
         {
             "id": "sid-196A1496-C19E-44EA-86E4-0F216A5C6EE9",
-            "name": "receive an email cancellation notice",
+            "name": "employee receives an email cancellation notice",
             "type": "Task"
         },
         {
             "id": "sid-8AFBE19B-6E8E-4509-B7A9-B682846008CD",
-            "name": "re-submit the expense report",
+            "name": "employee re-submits the expense report",
             "type": "Task"
         }
     ],
@@ -70,15 +70,6 @@
     ],
     "gateways": [
         {
-            "id": "sid-65FE2841-6337-4F1C-8EE0-4F1513C83E0C",
-            "name": "approved?",
-            "type": "Exclusive"
-        },
-        {
-            "id": "sid-C4EB3FB9-21B6-4D86-83F0-3F63059588FB",
-            "type": "Exclusive"
-        },
-        {
             "id": "sid-08116F99-464E-4393-A8E7-91211B942471",
             "name": "existing  account?",
             "type": "Exclusive"
@@ -93,11 +84,16 @@
             "type": "Exclusive"
         },
         {
-            "id": "sid-1A357432-21B0-4A27-8261-060328ACC966",
+            "id": "sid-E82BF4B7-AF8E-4ACF-AA09-5AD4AB989561",
             "type": "Exclusive"
         },
         {
-            "id": "sid-E82BF4B7-AF8E-4ACF-AA09-5AD4AB989561",
+            "id": "sid-65FE2841-6337-4F1C-8EE0-4F1513C83E0C",
+            "name": "approved?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-C4EB3FB9-21B6-4D86-83F0-3F63059588FB",
             "type": "Exclusive"
         },
         {
@@ -106,58 +102,15 @@
             "type": "Exclusive"
         },
         {
+            "id": "sid-1A357432-21B0-4A27-8261-060328ACC966",
+            "type": "Exclusive"
+        },
+        {
             "id": "sid-8F097C5C-1CA2-4731-B68D-763EEE4F1A97",
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-0F3DF02D-838B-401D-B215-C1AF32FDBFC9",
-            "name": "company",
-            "lanes": [
-                {
-                    "id": "sid-EE043574-0B45-441C-88C6-8E47D832B62A",
-                    "name": "supervisor",
-                    "elemRefs": [
-                        "sid-9B23501C-9F88-491A-991E-B634DD1770C6",
-                        "sid-65FE2841-6337-4F1C-8EE0-4F1513C83E0C",
-                        "sid-C4EB3FB9-21B6-4D86-83F0-3F63059588FB"
-                    ]
-                },
-                {
-                    "id": "sid-7A696DD3-1B9A-48A8-8D5C-0B128BCA28D3",
-                    "name": "system",
-                    "elemRefs": [
-                        "sid-DED84BC9-0279-4496-B9BF-657303BF3B86",
-                        "sid-B1C895FC-1BEC-4B0E-9D3B-51B499A4AFCA",
-                        "sid-1F83D085-A3A1-456A-9592-B61BB8221C17",
-                        "sid-AAB417D9-F2C7-46B8-B4CA-D88099C8C288",
-                        "sid-B800525D-A8C2-4C8D-BC7F-0590B4A958E0",
-                        "sid-2937FB24-907F-4229-960E-7F27A3404058",
-                        "sid-4FAFCD47-2E42-4536-92D7-5BE3B8103B10",
-                        "sid-72F0664C-CBDA-48BD-82D9-89390CFC95C8",
-                        "sid-08116F99-464E-4393-A8E7-91211B942471",
-                        "sid-F016AF3A-59FE-4C51-9048-B533D816422A",
-                        "sid-B16012F5-12E2-4E20-BDE8-43C744E0C805",
-                        "sid-1A357432-21B0-4A27-8261-060328ACC966",
-                        "sid-E82BF4B7-AF8E-4ACF-AA09-5AD4AB989561",
-                        "sid-EB4839B1-FF50-4F2F-B41B-624D34A1D8DF",
-                        "sid-8F097C5C-1CA2-4731-B68D-763EEE4F1A97"
-                    ]
-                },
-                {
-                    "id": "sid-3FA0932F-1EE9-43D9-93D5-7964E85D4BDC",
-                    "name": "employee",
-                    "elemRefs": [
-                        "sid-0D3E267D-34D5-456D-98BE-BB33C5F90B46",
-                        "sid-66C4C9C4-DE54-4CBB-BD41-F524D99A96EC",
-                        "sid-196A1496-C19E-44EA-86E4-0F216A5C6EE9",
-                        "sid-8AFBE19B-6E8E-4509-B7A9-B682846008CD"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
@@ -198,9 +151,21 @@
             "sourceRef": "sid-1F83D085-A3A1-456A-9592-B61BB8221C17"
         },
         {
+            "id": "sid-31E7E08E-5381-42C5-A45C-74C642792B15",
+            "targetRef": "sid-9B23501C-9F88-491A-991E-B634DD1770C6",
+            "condition": ">=200",
+            "sourceRef": "sid-B16012F5-12E2-4E20-BDE8-43C744E0C805"
+        },
+        {
             "id": "sid-92DEA8F7-C551-4A78-A305-086B1C15F0FE",
             "targetRef": "sid-E82BF4B7-AF8E-4ACF-AA09-5AD4AB989561",
             "sourceRef": "sid-AAB417D9-F2C7-46B8-B4CA-D88099C8C288"
+        },
+        {
+            "id": "sid-AECFED83-3B8F-4C17-B3C0-24F4BE00CC5B",
+            "targetRef": "sid-AAB417D9-F2C7-46B8-B4CA-D88099C8C288",
+            "condition": "< 200",
+            "sourceRef": "sid-B16012F5-12E2-4E20-BDE8-43C744E0C805"
         },
         {
             "id": "sid-D55403C7-3410-4950-820B-302CF0677C4C",
@@ -220,9 +185,36 @@
             "sourceRef": "sid-65FE2841-6337-4F1C-8EE0-4F1513C83E0C"
         },
         {
+            "id": "sid-8D1A8AF8-D13B-4A3C-96E6-FEECFACF9B9C",
+            "targetRef": "sid-C4EB3FB9-21B6-4D86-83F0-3F63059588FB",
+            "sourceRef": "sid-B800525D-A8C2-4C8D-BC7F-0590B4A958E0"
+        },
+        {
             "id": "sid-7D14CAAD-F55B-4D3C-8106-1EABAA597000",
             "targetRef": "sid-C4EB3FB9-21B6-4D86-83F0-3F63059588FB",
             "sourceRef": "sid-0D3E267D-34D5-456D-98BE-BB33C5F90B46"
+        },
+        {
+            "id": "sid-44A039F9-DCEB-436C-9AF4-CCA519446D35",
+            "targetRef": "sid-E82BF4B7-AF8E-4ACF-AA09-5AD4AB989561",
+            "sourceRef": "sid-C4EB3FB9-21B6-4D86-83F0-3F63059588FB"
+        },
+        {
+            "id": "sid-6D24D608-D34C-423E-BF89-9D3DE8624C2C",
+            "targetRef": "sid-EB4839B1-FF50-4F2F-B41B-624D34A1D8DF",
+            "sourceRef": "sid-E82BF4B7-AF8E-4ACF-AA09-5AD4AB989561"
+        },
+        {
+            "id": "sid-980FA23B-90A4-4440-8CD8-AD7FB5511B31",
+            "targetRef": "sid-66C4C9C4-DE54-4CBB-BD41-F524D99A96EC",
+            "condition": "> 7 days,  <30 days",
+            "sourceRef": "sid-EB4839B1-FF50-4F2F-B41B-624D34A1D8DF"
+        },
+        {
+            "id": "sid-C1B409F0-1458-49F1-8A3B-36A591677E55",
+            "targetRef": "sid-2937FB24-907F-4229-960E-7F27A3404058",
+            "condition": ">=30",
+            "sourceRef": "sid-EB4839B1-FF50-4F2F-B41B-624D34A1D8DF"
         },
         {
             "id": "sid-1EC761E6-11E0-4667-8C9F-813AA7C9A4F4",
@@ -250,54 +242,15 @@
             "sourceRef": "sid-66C4C9C4-DE54-4CBB-BD41-F524D99A96EC"
         },
         {
-            "id": "sid-31E7E08E-5381-42C5-A45C-74C642792B15",
-            "targetRef": "sid-9B23501C-9F88-491A-991E-B634DD1770C6",
-            "condition": ">=200",
-            "sourceRef": "sid-B16012F5-12E2-4E20-BDE8-43C744E0C805"
-        },
-        {
-            "id": "sid-AECFED83-3B8F-4C17-B3C0-24F4BE00CC5B",
-            "targetRef": "sid-AAB417D9-F2C7-46B8-B4CA-D88099C8C288",
-            "condition": "< 200",
-            "sourceRef": "sid-B16012F5-12E2-4E20-BDE8-43C744E0C805"
-        },
-        {
-            "id": "sid-8D1A8AF8-D13B-4A3C-96E6-FEECFACF9B9C",
-            "targetRef": "sid-C4EB3FB9-21B6-4D86-83F0-3F63059588FB",
-            "sourceRef": "sid-B800525D-A8C2-4C8D-BC7F-0590B4A958E0"
-        },
-        {
-            "id": "sid-44A039F9-DCEB-436C-9AF4-CCA519446D35",
-            "targetRef": "sid-E82BF4B7-AF8E-4ACF-AA09-5AD4AB989561",
-            "sourceRef": "sid-C4EB3FB9-21B6-4D86-83F0-3F63059588FB"
-        },
-        {
-            "id": "sid-6D24D608-D34C-423E-BF89-9D3DE8624C2C",
-            "targetRef": "sid-EB4839B1-FF50-4F2F-B41B-624D34A1D8DF",
-            "sourceRef": "sid-E82BF4B7-AF8E-4ACF-AA09-5AD4AB989561"
-        },
-        {
-            "id": "sid-395C7BBA-BAE4-4248-B643-A453D6B5FCA7",
-            "targetRef": "sid-1A357432-21B0-4A27-8261-060328ACC966",
-            "sourceRef": "sid-8AFBE19B-6E8E-4509-B7A9-B682846008CD"
-        },
-        {
             "id": "sid-13937294-7CA1-4C94-A741-C1D0ECDE3EC2",
             "targetRef": "sid-8F097C5C-1CA2-4731-B68D-763EEE4F1A97",
             "condition": "<= 7",
             "sourceRef": "sid-EB4839B1-FF50-4F2F-B41B-624D34A1D8DF"
         },
         {
-            "id": "sid-C1B409F0-1458-49F1-8A3B-36A591677E55",
-            "targetRef": "sid-2937FB24-907F-4229-960E-7F27A3404058",
-            "condition": ">=30",
-            "sourceRef": "sid-EB4839B1-FF50-4F2F-B41B-624D34A1D8DF"
-        },
-        {
-            "id": "sid-980FA23B-90A4-4440-8CD8-AD7FB5511B31",
-            "targetRef": "sid-66C4C9C4-DE54-4CBB-BD41-F524D99A96EC",
-            "condition": "> 7 days,  <30 days",
-            "sourceRef": "sid-EB4839B1-FF50-4F2F-B41B-624D34A1D8DF"
+            "id": "sid-395C7BBA-BAE4-4248-B643-A453D6B5FCA7",
+            "targetRef": "sid-1A357432-21B0-4A27-8261-060328ACC966",
+            "sourceRef": "sid-8AFBE19B-6E8E-4509-B7A9-B682846008CD"
         }
     ]
 }

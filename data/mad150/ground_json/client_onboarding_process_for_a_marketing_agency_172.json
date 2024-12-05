@@ -1,0 +1,226 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "send the contract to the client",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "schedule future calls",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "update client's CRM",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "update the project management profile",
+            "type": "User"
+        },
+        {
+            "id": 6,
+            "name": "get approval for the first draft",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "create first draft of the marketing plan ",
+            "type": "User"
+        },
+        {
+            "id": 8,
+            "name": "research the campaign ideas",
+            "type": "User"
+        },
+        {
+            "id": 10,
+            "name": "confirm questionnaire is complete",
+            "type": "User"
+        },
+        {
+            "id": 12,
+            "name": "inform client of project start",
+            "type": "User"
+        },
+        {
+            "id": 14,
+            "name": "make changes based on follow-up call",
+            "type": "User"
+        },
+        {
+            "id": 15,
+            "name": "have a follow-up call",
+            "type": "User"
+        },
+        {
+            "id": 16,
+            "name": "send a post-onboarding survey",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 18,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 19,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 1,
+            "type": "Parallel"
+        },
+        {
+            "id": 5,
+            "type": "Inclusive"
+        },
+        {
+            "id": 9,
+            "type": "Inclusive"
+        },
+        {
+            "id": 11,
+            "type": "Parallel"
+        },
+        {
+            "id": 13,
+            "type": "Parallel"
+        },
+        {
+            "id": 17,
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 1,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 1,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 2,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 7
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 7,
+            "targetRef": 8
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 6,
+            "targetRef": 9
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 8,
+            "targetRef": 9
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 4,
+            "targetRef": 10
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 9,
+            "targetRef": 11
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 3,
+            "targetRef": 11
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 10,
+            "targetRef": 11
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 11,
+            "targetRef": 12
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 12,
+            "targetRef": 13
+        },
+        {
+            "id": "sf16",
+            "sourceRef": 13,
+            "targetRef": 14
+        },
+        {
+            "id": "sf17",
+            "sourceRef": 13,
+            "targetRef": 15
+        },
+        {
+            "id": "sf18",
+            "sourceRef": 13,
+            "targetRef": 16
+        },
+        {
+            "id": "sf19",
+            "sourceRef": 14,
+            "targetRef": 17
+        },
+        {
+            "id": "sf20",
+            "sourceRef": 15,
+            "targetRef": 17
+        },
+        {
+            "id": "sf21",
+            "sourceRef": 16,
+            "targetRef": 17
+        },
+        {
+            "id": "sf22",
+            "sourceRef": 18,
+            "targetRef": 0
+        },
+        {
+            "id": "sf23",
+            "sourceRef": 17,
+            "targetRef": 19
+        }
+    ],
+    "messageFlows": []
+}

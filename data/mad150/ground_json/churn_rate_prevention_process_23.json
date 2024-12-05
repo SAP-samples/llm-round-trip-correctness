@@ -1,0 +1,365 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "record basic details",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "analyze how they use your product",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "determine ways to increase value",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "identify key points of value",
+            "type": "User"
+        },
+        {
+            "id": 5,
+            "name": "quantify the impact of cancellation",
+            "type": "User"
+        },
+        {
+            "id": 8,
+            "name": "confirm call date and time",
+            "type": "User"
+        },
+        {
+            "id": 9,
+            "name": "give them a call",
+            "type": "User"
+        },
+        {
+            "id": 11,
+            "name": "record whether or not the customer responded",
+            "type": "User"
+        },
+        {
+            "id": 12,
+            "name": "record if they are willing to talk",
+            "type": "User"
+        },
+        {
+            "id": 13,
+            "name": "send them an email",
+            "type": "User"
+        },
+        {
+            "id": 17,
+            "name": "summarize why they want to leave",
+            "type": "User"
+        },
+        {
+            "id": 18,
+            "name": "ask open-ended questions",
+            "type": "User"
+        },
+        {
+            "id": 21,
+            "name": "describe your ideas to increase value",
+            "type": "User"
+        },
+        {
+            "id": 22,
+            "name": "present them with a special offer",
+            "type": "User"
+        },
+        {
+            "id": 23,
+            "name": "inform them of key metrics demonstrating value",
+            "type": "User"
+        },
+        {
+            "id": 26,
+            "name": "thank them for their time and feedback",
+            "type": "User"
+        },
+        {
+            "id": 27,
+            "name": "record the customer\u2019s decision",
+            "type": "User"
+        },
+        {
+            "id": 29,
+            "name": "ask if they have any other concerns",
+            "type": "User"
+        },
+        {
+            "id": 30,
+            "name": "note down important learnings from the conversation",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 31,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 32,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 1,
+            "type": "Parallel"
+        },
+        {
+            "id": 6,
+            "type": "Parallel"
+        },
+        {
+            "id": 7,
+            "type": "Parallel"
+        },
+        {
+            "id": 10,
+            "type": "Inclusive"
+        },
+        {
+            "id": 14,
+            "type": "Inclusive"
+        },
+        {
+            "id": 15,
+            "type": "Parallel"
+        },
+        {
+            "id": 16,
+            "type": "Inclusive"
+        },
+        {
+            "id": 19,
+            "type": "Inclusive"
+        },
+        {
+            "id": 20,
+            "type": "Parallel"
+        },
+        {
+            "id": 24,
+            "type": "Parallel"
+        },
+        {
+            "id": 25,
+            "type": "Inclusive"
+        },
+        {
+            "id": 28,
+            "type": "Inclusive"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 1,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 1,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 2,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 3,
+            "targetRef": 6
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 4,
+            "targetRef": 6
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 6,
+            "targetRef": 7
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 7,
+            "targetRef": 8
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 7,
+            "targetRef": 9
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 8,
+            "targetRef": 10
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 10,
+            "targetRef": 11
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 10,
+            "targetRef": 12
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 11,
+            "targetRef": 13
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 13,
+            "targetRef": 14
+        },
+        {
+            "id": "sf16",
+            "sourceRef": 12,
+            "targetRef": 14
+        },
+        {
+            "id": "sf17",
+            "sourceRef": 14,
+            "targetRef": 15
+        },
+        {
+            "id": "sf18",
+            "sourceRef": 9,
+            "targetRef": 15
+        },
+        {
+            "id": "sf19",
+            "sourceRef": 15,
+            "targetRef": 16
+        },
+        {
+            "id": "sf20",
+            "sourceRef": 16,
+            "targetRef": 17
+        },
+        {
+            "id": "sf21",
+            "sourceRef": 16,
+            "targetRef": 18
+        },
+        {
+            "id": "sf22",
+            "sourceRef": 17,
+            "targetRef": 19
+        },
+        {
+            "id": "sf23",
+            "sourceRef": 18,
+            "targetRef": 19
+        },
+        {
+            "id": "sf24",
+            "sourceRef": 19,
+            "targetRef": 20
+        },
+        {
+            "id": "sf25",
+            "sourceRef": 20,
+            "targetRef": 21
+        },
+        {
+            "id": "sf26",
+            "sourceRef": 20,
+            "targetRef": 22
+        },
+        {
+            "id": "sf27",
+            "sourceRef": 20,
+            "targetRef": 23
+        },
+        {
+            "id": "sf28",
+            "sourceRef": 21,
+            "targetRef": 24
+        },
+        {
+            "id": "sf29",
+            "sourceRef": 22,
+            "targetRef": 24
+        },
+        {
+            "id": "sf30",
+            "sourceRef": 23,
+            "targetRef": 24
+        },
+        {
+            "id": "sf31",
+            "sourceRef": 24,
+            "targetRef": 25
+        },
+        {
+            "id": "sf32",
+            "sourceRef": 25,
+            "targetRef": 26
+        },
+        {
+            "id": "sf33",
+            "sourceRef": 25,
+            "targetRef": 27
+        },
+        {
+            "id": "sf34",
+            "sourceRef": 26,
+            "targetRef": 28
+        },
+        {
+            "id": "sf35",
+            "sourceRef": 27,
+            "targetRef": 28
+        },
+        {
+            "id": "sf36",
+            "sourceRef": 28,
+            "targetRef": 29
+        },
+        {
+            "id": "sf37",
+            "sourceRef": 29,
+            "targetRef": 30
+        },
+        {
+            "id": "sf38",
+            "sourceRef": 31,
+            "targetRef": 0
+        },
+        {
+            "id": "sf39",
+            "sourceRef": 30,
+            "targetRef": 32
+        }
+    ],
+    "messageFlows": []
+}

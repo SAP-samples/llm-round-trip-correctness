@@ -1,0 +1,66 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "record basic details for the client",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "confirm questionnaire is complete",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "assign work to the team",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "have a follow-up call",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 4,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 5,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 4,
+            "targetRef": 0
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 3,
+            "targetRef": 5
+        }
+    ],
+    "messageFlows": []
+}

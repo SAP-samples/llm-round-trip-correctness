@@ -1,0 +1,145 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "learn how to identify future failures",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "check location of startup",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "review relationship to founder",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "review expertise",
+            "type": "User"
+        },
+        {
+            "id": 5,
+            "name": "review ability as a team leader",
+            "type": "User"
+        },
+        {
+            "id": 6,
+            "name": "review employee salary and benefits",
+            "type": "User"
+        },
+        {
+            "id": 8,
+            "name": "check quarterly projections",
+            "type": "User"
+        },
+        {
+            "id": 9,
+            "name": "project the market share",
+            "type": "User"
+        },
+        {
+            "id": 10,
+            "name": "check past lawsuits",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 11,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 12,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 2,
+            "type": "Parallel"
+        },
+        {
+            "id": 7,
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 2,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 3,
+            "targetRef": 6
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 6,
+            "targetRef": 7
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 4,
+            "targetRef": 7
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 5,
+            "targetRef": 7
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 7,
+            "targetRef": 8
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 8,
+            "targetRef": 9
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 9,
+            "targetRef": 10
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 11,
+            "targetRef": 0
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 10,
+            "targetRef": 12
+        }
+    ],
+    "messageFlows": []
+}

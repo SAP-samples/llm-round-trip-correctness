@@ -1,0 +1,86 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "provide the bank statement to the lender",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "receive the application by credit department",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "give the written notice to applicant",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "check the credit score and risk score",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "change the interest rate",
+            "type": "User"
+        },
+        {
+            "id": 5,
+            "name": "receive the loans fund",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 6,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 7,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 3,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 4,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 6,
+            "targetRef": 0
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 7
+        }
+    ],
+    "messageFlows": []
+}
