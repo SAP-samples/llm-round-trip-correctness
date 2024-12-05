@@ -17,7 +17,8 @@ def bert_cosine(t1, t2):
     return score[0][0]
 
 
-model = SentenceTransformer("sentence-transformers/stsb-mpnet-base-v2")
+model = SentenceTransformer('Alibaba-NLP/gte-large-en-v1.5', trust_remote_code=True)
+
 cache = {}
 
 

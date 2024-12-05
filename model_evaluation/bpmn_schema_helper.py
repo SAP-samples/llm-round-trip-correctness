@@ -1,10 +1,10 @@
 ### some helper function to get data from the bpmn_schema or transform it into different formats
 
 
-from typing import Any, Dict, List, Tuple, Union
+import json
+from typing import Any, Dict, List, Union
 
 from sapsam_mapping import sapsam_mapping
-import json
 
 BPMNElement = Dict[str, Any]
 BPMNShape = Dict[str, Any]

@@ -6,7 +6,8 @@ import re
 import numpy as np
 
 
-model = SentenceTransformer('sentence-transformers/stsb-mpnet-base-v2')
+model = SentenceTransformer('Alibaba-NLP/gte-large-en-v1.5', trust_remote_code=True)
+
 
 """ this function returns the cosine similarity betweeen 2 documents using TF-IDF """
 def get_cosine(text1,text2):

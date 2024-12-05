@@ -1,23 +1,22 @@
-import os, sys
-import json
-import logging
 import argparse
 import csv
-
+import json
+import logging
+import os
+import sys
 
 sys.path.append("./data/")
-sys.path.append("./model_evaluation")
-sys.path.append("./round_trip")
+sys.path.append("./model_evaluation/")
+sys.path.append("./round_trip/")
 
 
 import bpmn_similarity
-from text_evaluation import text_similarity
 
 from round_trip.llm_connect.gen_ai_llm_call import generate_gpt_with_timeout
 from round_trip.m2t.create_description import generate_prompt_gpt as generate_prompt_gpt_m2t
-from round_trip.m2t.prompt_engineering import bpmn_desc
 from round_trip.t2m.create_model import generate_prompt_gpt as generate_prompt_gpt_t2m
-from round_trip.t2m.prompt_engineering import json_desc, json_format
+from round_trip.t2m.prompt_engineering import json_desc
+from text_evaluation import text_similarity
 
 
 def main_m2m(model_path, text_path):
@@ -35,16 +34,18 @@ def main_m2m(model_path, text_path):
         path_to_json = "./data/prompt_ex_json_pet.json"
         path_to_text = "./data/prompt_ex_text_pet.txt"
     else:
-        path_to_json = "./data/prompt_ex_json_real_set.json"
-        path_to_text = "./data/prompt_ex_text_real_set.txt"
+        path_to_json = "./data/prompt_ex_json_sapsam.json"
+        path_to_text = "./data/prompt_ex_text_sapsam.txt"
 
-    system_prompt_m2t, user_prompt_m2t, assistant_prompt_m2t = generate_prompt_gpt_m2t(path_to_json, path_to_text, bpmn_desc)
-    system_prompt_t2m, user_prompt_t2m, assistant_prompt_t2m = generate_prompt_gpt_t2m(path_to_json, path_to_text, json_desc)
-    print("M2T")
-    print(system_prompt_m2t, user_prompt_m2t, assistant_prompt_m2t)
+    system_prompt_m2t, user_prompt_m2t, assistant_prompt_m2t = generate_prompt_gpt_m2t(path_to_json, path_to_text)
+    system_prompt_t2m, user_prompt_t2m, assistant_prompt_t2m = generate_prompt_gpt_t2m(
+        path_to_json, path_to_text, json_desc
+    )
+    # print("M2T")
+    # print(system_prompt_m2t, user_prompt_m2t, assistant_prompt_m2t)
 
-    print("T2M")
-    print(system_prompt_t2m, user_prompt_t2m, assistant_prompt_t2m)
+    # print("T2M")
+    # print(system_prompt_t2m, user_prompt_t2m, assistant_prompt_t2m)
 
     t2t_eval_1 = {}
     t2t_eval_2 = {}
@@ -98,7 +99,11 @@ def main_m2m(model_path, text_path):
 
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
-                    text_eval_2.append(text_similarity.text_similarity_alternative(description, gen_text, threshold=0.75))
+                    text_eval_2.append(
+                        text_similarity.text_similarity_alternative(
+                            description, gen_text, threshold=0.75
+                        )
+                    )
                     model_eval_1.append(
                         bpmn_similarity.calculate_similarity_scores(
                             model, json.loads(gen_model), method="dice", similarity_threshold=0.75
@@ -132,7 +137,7 @@ def main_m2m(model_path, text_path):
     logger.info('Completed processing all models and texts')
 
     # Write results to CSV
-    with open('./'+ 'gpt_'+ args.example + args.direction + '.csv', 'w', newline='') as csvfile:
+    with open('./results/'+ 'gpt_'+ args.example+'_' + args.direction + '.csv', 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(['model_name', 't2t_eval_1','t2t_eval_2', 'm2m_eval_1', 'm2m_eval_2'])  # Header
 
@@ -159,11 +164,13 @@ def main_t2t(model_path, text_path):
         path_to_json = "./data/prompt_ex_json_pet.json"
         path_to_text = "./data/prompt_ex_text_pet.txt"
     else:
-        path_to_json = "./data/prompt_ex_json_real_set.json"
-        path_to_text = "./data/prompt_ex_text_real_set.txt"
+        path_to_json = "./data/prompt_ex_json_sapsam.json"
+        path_to_text = "./data/prompt_ex_text_sapsam.txt"
 
-    system_prompt_m2t, user_prompt_m2t, assistant_prompt_m2t = generate_prompt_gpt_m2t(path_to_json, path_to_text, bpmn_desc)
-    system_prompt_t2m, user_prompt_t2m, assistant_prompt_t2m = generate_prompt_gpt_t2m(path_to_json, path_to_text, json_desc)
+    system_prompt_m2t, user_prompt_m2t, assistant_prompt_m2t = generate_prompt_gpt_m2t(path_to_json, path_to_text)
+    system_prompt_t2m, user_prompt_t2m, assistant_prompt_t2m = generate_prompt_gpt_t2m(
+        path_to_json, path_to_text, json_desc
+    )
 
 
     t2t_eval_1 = {}
@@ -173,7 +180,7 @@ def main_t2t(model_path, text_path):
     temp_in = 1
     temp_out = 0.1
 
-    model_files = os.listdir(model_path)
+    model_files = os.listdir(model_path)[:1]
     logger.info('Starting the processing of models and texts')
 
     for i, model_file in enumerate(model_files):  # Use enumerate for progress tracking
@@ -203,6 +210,10 @@ def main_t2t(model_path, text_path):
                 if gen_model is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
+                # save the gen_midel to a file as json
+                with open(f'./Temp/gen_model{j+1}.json', 'w') as f:
+                   json.dump(json.loads(gen_model), f)
+                f.close()
 
                 gen_text = generate_gpt_with_timeout(
                     system_prompt_m2t,
@@ -215,10 +226,18 @@ def main_t2t(model_path, text_path):
                 if gen_text is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
+                # write the gen_text to a text file
+                with open(f'./Temp/gen_text{j+1}.txt', 'w') as f:
+                    f.write(gen_text)
+                f.close()
 
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
-                    text_eval_2.append(text_similarity.text_similarity_alternative(description, gen_text, threshold=0.75))
+                    text_eval_2.append(
+                        text_similarity.text_similarity_alternative(
+                            description, gen_text, threshold=0.75
+                        )
+                    )
                     model_eval_1.append(
                         bpmn_similarity.calculate_similarity_scores(
                             model, json.loads(gen_model), method="dice", similarity_threshold=0.75
@@ -230,7 +249,7 @@ def main_t2t(model_path, text_path):
                         )["overall"]
                     )
                 except Exception as e:
-                    logger.error(f"Error during calculations in iteration {j + 1} for file {model_file}: {e}")
+                    logger.error(f"Error during eval calculations in iteration {j + 1} for file {model_file}: {e}")
                     continue
 
             if text_eval_1:
@@ -252,7 +271,7 @@ def main_t2t(model_path, text_path):
     logger.info('Completed processing all models and texts')
 
     # Write results to CSV
-    with open('./'+ 'gpt_'+ args.example + args.direction + '.csv', 'w', newline='') as csvfile:
+    with open('./results/'+ 'gpt_'+ args.example+'_' + args.direction + '.csv', 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(['model_name', 't2t_eval_1','t2t_eval_2', 'm2m_eval_1', 'm2m_eval_2'])  # Header
 
@@ -270,7 +289,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process models and text with retries and timeout.")
     parser.add_argument('--model-path', type=str, required=True, help='Path to the models directory')
     parser.add_argument('--text-path', type=str, required=True, help='Path to the text descriptions directory')
-    parser.add_argument('--example', type=str, required=True, help='pet or real_set')
+    parser.add_argument('--example', type=str, required=True, help='pet or sapsam')
     parser.add_argument('--direction', type=str, required=True, help='m2m or t2t')
 
     args = parser.parse_args()

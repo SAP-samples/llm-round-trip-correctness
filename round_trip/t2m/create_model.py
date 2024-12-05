@@ -3,7 +3,6 @@
 import json
 
 
-
 def generate_prompt_gemini(path_to_json, path_to_text, bpmn_desc):
 
 
@@ -15,8 +14,8 @@ def generate_prompt_gemini(path_to_json, path_to_text, bpmn_desc):
 
     system_prompt = (
         f"You are a BPMN expert. Generate accurate BPMN2.0 models in the form of json from the given textual descriptions. "
+        f"follow these guidlines on BPMN elements below to ensure consistency and accuracy: {bpmn_desc}. "
         f"if an elemnt does not exist in the description, output an empty list for it. "
-        f"follow these guidlines below to ensure consistency and accuracy: {bpmn_desc}. "
         f"Here is an example, follow the logic of the example:"
 
     )
@@ -36,8 +35,8 @@ def generate_prompt_gpt(path_to_json, path_to_text, bpmn_desc):
 
     system_prompt = (
         f"You are a BPMN expert. Generate accurate BPMN2.0 models in the form of json from the given textual descriptions. "
+        f"follow these guidlines on BPMN elements below to ensure consistency and accuracy: {bpmn_desc}. "
         f"if an elemnt does not exist in the description, output an empty list for it. "
-        f"follow these guidlines below to ensure consistency and accuracy: {bpmn_desc}. "
         f"Here is an example, follow the logic of the example:"
 
     )

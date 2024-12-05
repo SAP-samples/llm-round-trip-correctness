@@ -1,9 +1,10 @@
 # similarity functions for comparing two bpmn instances
 
 
+
+
 from bpmn_schema_helper import get_flows_with_values, get_lanes
 from list_similarity import similarity_SFA
-from statistics import mean
 
 
 def weighted_score(array_of_scores_with_weights):
