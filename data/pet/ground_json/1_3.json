@@ -2,62 +2,62 @@
     "tasks": [
         {
             "id": "sid-96EDBD17-A954-4254-9B30-7551D5A03B57",
-            "name": "call room service",
+            "name": "guest calls room service",
             "type": "Task"
         },
         {
             "id": "sid-289D4327-A753-4AC4-A611-B5CFBC7BAF01",
-            "name": "takes down the order",
+            "name": "room service  manager takes down the order",
             "type": "Task"
         },
         {
             "id": "sid-02475C54-8045-49CF-B11D-526C44DE4BFD",
-            "name": "submit an order ticket to a kitchen",
+            "name": "room service  manager  submits an order ticket to a kitchen",
             "type": "Task"
         },
         {
             "id": "sid-BFA936A9-831A-4683-85D8-21D523A1BBF7",
-            "name": "give an order to the sommelier",
+            "name": "room service  manager  gives an order to the sommelier",
             "type": "Task"
         },
         {
             "id": "sid-1816B68F-6C9F-4F70-819E-BE00C4E3929B",
-            "name": "assign the order to the waiter",
+            "name": "room service  manager  assigns the order to the waiter",
             "type": "Task"
         },
         {
             "id": "sid-ECCF4D2C-02CB-449A-AE95-2155BA55556F",
-            "name": "prepare the food",
-            "type": "Task"
-        },
-        {
-            "id": "sid-A5667245-2391-4D24-B007-4BE783321603",
-            "name": "prepare the beverages",
+            "name": "sommelier does own  tasks",
             "type": "Task"
         },
         {
             "id": "sid-FE2022B4-62EC-421B-86EE-231FC2E0AD76",
-            "name": "ready a cart",
+            "name": "waiter readies a cart",
             "type": "Task"
         },
         {
             "id": "sid-E036B2BF-3026-4F96-828D-4A7B4C7403BB",
-            "name": "deliver a cart",
+            "name": "waiter delivers a cart",
             "type": "Task"
         },
         {
             "id": "sid-EE8DB009-638B-4228-8114-002A4F32C828",
-            "name": "return to the room-service station",
+            "name": "waiter returns to the room-service station",
             "type": "Task"
         },
         {
             "id": "sid-08F06024-6F89-43F5-B5B6-FA47E4BD773F",
-            "name": "wait to do the billing",
+            "name": "waiter waits to do the billing",
             "type": "Task"
         },
         {
             "id": "sid-22E98A7E-6EE7-4A0D-A5D6-2579738BFBB5",
-            "name": "debit guest \u2019 s account",
+            "name": "waiter debits guest \u2019 s account",
+            "type": "Task"
+        },
+        {
+            "id": "sid-C24E6812-5459-4577-85C3-90AF087F11A2",
+            "name": "kitchen does own tasks",
             "type": "Task"
         }
     ],
@@ -91,68 +91,18 @@
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-DA053410-CD9C-467D-A0EE-DD5D69CC8AC7",
-            "name": "hotel",
-            "lanes": [
-                {
-                    "id": "sid-C524444E-2A6B-4F91-A79A-E5FFA598C944",
-                    "name": "guest",
-                    "elemRefs": [
-                        "sid-96EDBD17-A954-4254-9B30-7551D5A03B57",
-                        "sid-AB4D0358-29E1-4ED0-8425-6214C1A9E94E"
-                    ]
-                },
-                {
-                    "id": "sid-550A52B7-81D2-4424-9D04-020BC19A12C3",
-                    "name": "room service  manager",
-                    "elemRefs": [
-                        "sid-289D4327-A753-4AC4-A611-B5CFBC7BAF01",
-                        "sid-02475C54-8045-49CF-B11D-526C44DE4BFD",
-                        "sid-BFA936A9-831A-4683-85D8-21D523A1BBF7",
-                        "sid-1816B68F-6C9F-4F70-819E-BE00C4E3929B"
-                    ]
-                },
-                {
-                    "id": "sid-A35E439A-80FB-40FA-850D-801477169F66",
-                    "name": "kitchen",
-                    "elemRefs": [
-                        "sid-ECCF4D2C-02CB-449A-AE95-2155BA55556F"
-                    ]
-                },
-                {
-                    "id": "sid-95273554-1521-4EEC-88A1-0EF6D5635E3A",
-                    "name": "sommelier",
-                    "elemRefs": [
-                        "sid-A5667245-2391-4D24-B007-4BE783321603"
-                    ]
-                },
-                {
-                    "id": "sid-8C55B261-F897-40B7-AA87-990DE4892E44",
-                    "name": "waiter",
-                    "elemRefs": [
-                        "sid-FE2022B4-62EC-421B-86EE-231FC2E0AD76",
-                        "sid-E036B2BF-3026-4F96-828D-4A7B4C7403BB",
-                        "sid-EE8DB009-638B-4228-8114-002A4F32C828",
-                        "sid-08F06024-6F89-43F5-B5B6-FA47E4BD773F",
-                        "sid-22E98A7E-6EE7-4A0D-A5D6-2579738BFBB5",
-                        "sid-837C97E5-655F-42DD-9B6E-A49AF4BCD478",
-                        "sid-94A2FFD9-F687-4089-83AE-51907FA4F7DD",
-                        "sid-61975F1E-0270-41D1-A39F-0DE7396967F9",
-                        "sid-C21BC5CF-C199-4D9B-9EBE-83AD2BA066B8",
-                        "sid-CCF42C06-F052-4D54-BE7D-7BA585D3D58C"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
             "id": "sid-FB896CFF-ACEF-47AC-961F-599DE75C0777",
             "targetRef": "sid-96EDBD17-A954-4254-9B30-7551D5A03B57",
             "sourceRef": "sid-AB4D0358-29E1-4ED0-8425-6214C1A9E94E"
+        },
+        {
+            "id": "sid-7E511A5E-A3F0-425E-B829-45CFE81F6AA8",
+            "targetRef": "sid-289D4327-A753-4AC4-A611-B5CFBC7BAF01",
+            "sourceRef": "sid-96EDBD17-A954-4254-9B30-7551D5A03B57"
         },
         {
             "id": "sid-479E09E7-5884-4EA4-8032-66DFD6645103",
@@ -168,6 +118,11 @@
             "id": "sid-C23674A6-3AF5-4E43-B10C-A225A42B0078",
             "targetRef": "sid-1816B68F-6C9F-4F70-819E-BE00C4E3929B",
             "sourceRef": "sid-BFA936A9-831A-4683-85D8-21D523A1BBF7"
+        },
+        {
+            "id": "sid-2925BB89-37F6-4795-BD0F-F8EFB859DB45",
+            "targetRef": "sid-94A2FFD9-F687-4089-83AE-51907FA4F7DD",
+            "sourceRef": "sid-1816B68F-6C9F-4F70-819E-BE00C4E3929B"
         },
         {
             "id": "sid-2779C66B-6824-423A-8849-F1844508A836",
@@ -232,24 +187,14 @@
             "sourceRef": "sid-C21BC5CF-C199-4D9B-9EBE-83AD2BA066B8"
         },
         {
-            "id": "sid-7E511A5E-A3F0-425E-B829-45CFE81F6AA8",
-            "targetRef": "sid-289D4327-A753-4AC4-A611-B5CFBC7BAF01",
-            "sourceRef": "sid-96EDBD17-A954-4254-9B30-7551D5A03B57"
-        },
-        {
-            "id": "sid-B067A8A6-CAFB-4769-9B9B-B0B15AE0DCEB",
-            "targetRef": "sid-94A2FFD9-F687-4089-83AE-51907FA4F7DD",
-            "sourceRef": "sid-1816B68F-6C9F-4F70-819E-BE00C4E3929B"
-        },
-        {
-            "id": "sid-41D7109F-BAB8-4673-8064-1BC99F2F928F",
-            "targetRef": "sid-A5667245-2391-4D24-B007-4BE783321603",
+            "id": "sid-9D29B314-45A6-4308-9D8D-6865013C04DE",
+            "targetRef": "sid-C24E6812-5459-4577-85C3-90AF087F11A2",
             "sourceRef": "sid-94A2FFD9-F687-4089-83AE-51907FA4F7DD"
         },
         {
-            "id": "sid-F686ADD0-0D20-42A5-A0A1-E6D183847597",
+            "id": "sid-0037588C-4CFB-4483-A7C4-987D8BADCD0B",
             "targetRef": "sid-61975F1E-0270-41D1-A39F-0DE7396967F9",
-            "sourceRef": "sid-A5667245-2391-4D24-B007-4BE783321603"
+            "sourceRef": "sid-C24E6812-5459-4577-85C3-90AF087F11A2"
         }
     ]
 }

@@ -15,7 +15,7 @@ from round_trip.llm_connect.gen_ai_llm_call import generate_gemini_with_timeout
 from round_trip.m2t.create_description import generate_prompt_gemini as generate_prompt_gemini_m2t
 from round_trip.m2t.prompt_engineering import bpmn_desc
 from round_trip.t2m.create_model import generate_prompt_gemini as generate_prompt_gemini_t2m
-from round_trip.t2m.prompt_engineering import json_desc, json_desc_2, json_format
+from round_trip.t2m.prompt_engineering import json_desc, json_format #json_desc_2
 
 
 def main_m2m(model_path, text_path):
@@ -49,6 +49,7 @@ def main_m2m(model_path, text_path):
     t2t_eval_2 = {}
     m2m_eval_1 = {}
     m2m_eval_2 = {}
+    artefacts = {}
     temp_in = 1
     temp_out = 0
 
@@ -68,6 +69,7 @@ def main_m2m(model_path, text_path):
             text_eval_2 = []
             model_eval_1 = []
             model_eval_2 = []
+            artefacts[model_file] = {}
 
             for j in range(3):
                 logger.info(f'Iteration {j + 1} for file: {model_file}')
@@ -93,6 +95,8 @@ def main_m2m(model_path, text_path):
                 if gen_model is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
+
+                artefacts[model_file][j] = {'text':gen_text,'model':json.loads(gen_model)}
 
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
@@ -130,7 +134,7 @@ def main_m2m(model_path, text_path):
     logger.info('Completed processing all models and texts')
 
     # Write results to CSV
-    with open('./'+'gemini' + args.example + args.direction + '.csv', 'w', newline='') as csvfile:
+    with open('./results/gemini_' + args.example + args.direction + '.csv', 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(['model_name', 't2t_eval_1','t2t_eval_2', 'm2m_eval_1', 'm2m_eval_2'])  # Header
 
@@ -142,6 +146,9 @@ def main_m2m(model_path, text_path):
                 m2m_eval_1.get(model_name, 'N/A'),
                 m2m_eval_2.get(model_name, 'N/A')
             ])
+
+    with open('./generated_artefacts/report_gemini_'+ args.example + args.direction + '.json', 'w') as outfile:
+        json.dump(artefacts, outfile, indent=4)
 
 def main_t2t(model_path, text_path):
     # Setup logging
@@ -167,6 +174,7 @@ def main_t2t(model_path, text_path):
     t2t_eval_2 = {}
     m2m_eval_1 = {}
     m2m_eval_2 = {}
+    artefacts = {}
     temp_in = 1
     temp_out = 0
 
@@ -186,6 +194,7 @@ def main_t2t(model_path, text_path):
             text_eval_2 = []
             model_eval_1 = []
             model_eval_2 = []
+            artefacts[model_file] = {}
 
             for j in range(3):
                 logger.info(f'Iteration {j + 1} for file: {model_file}')
@@ -214,6 +223,8 @@ def main_t2t(model_path, text_path):
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
 
+                artefacts[model_file][j] = {'text':gen_text,'model':json.loads(gen_model)}
+
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
                     text_eval_2.append(text_similarity.text_similarity_alternative(description, gen_text, threshold=0.8))
@@ -250,7 +261,7 @@ def main_t2t(model_path, text_path):
     logger.info('Completed processing all models and texts')
 
     # Write results to CSV
-    with open('./'+'gemini' + args.example + args.direction + '.csv', 'w', newline='') as csvfile:
+    with open('./results/gemini_' + args.example + args.direction + '.csv', 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(['model_name', 't2t_eval_1','t2t_eval_2', 'm2m_eval_1', 'm2m_eval_2'])  # Header
 
@@ -262,6 +273,10 @@ def main_t2t(model_path, text_path):
                 m2m_eval_1.get(model_name, 'N/A'),
                 m2m_eval_2.get(model_name, 'N/A')
             ])
+
+    with open('./generated_artefacts/report_gemini_'+ args.example + args.direction + '.json', 'w') as outfile:
+        json.dump(artefacts, outfile, indent=4)
+
 
 
 if __name__ == "__main__":

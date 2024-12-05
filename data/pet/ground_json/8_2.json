@@ -1,56 +1,56 @@
 {
     "tasks": [
         {
+            "id": "sid-7D2D536B-090F-4693-AB69-D9C4E9DEF1BF",
+            "name": "HR receives the vacancy  report",
+            "type": "Task"
+        },
+        {
             "id": "sid-AFBD9067-0912-4C90-8B4D-F2BC11FC9F89",
-            "name": "create a job description",
+            "name": "HR creates a job description",
             "type": "Task"
         },
         {
             "id": "sid-35C67275-CF44-4BBB-8161-3EF62E56313B",
-            "name": "ask the Department",
+            "name": "HR asks the Department",
             "type": "Task"
         },
         {
             "id": "sid-C8A9A36F-BC46-41BB-9A5E-80A9182DB010",
-            "name": "submit the job description for consideration",
+            "name": "HR submits the job description for consideration",
             "type": "Task"
         },
         {
             "id": "sid-372C3A2C-6F2C-49B4-B8CE-F2F9DFC92EA6",
-            "name": "wait for the approval",
-            "type": "Task"
-        },
-        {
-            "id": "sid-FB4F54BF-8B73-4DFB-AAD6-B3780CBA5C7C",
-            "name": "correct the description",
-            "type": "Task"
-        },
-        {
-            "id": "sid-72A6985E-52C6-4BA8-95FB-7F93A8CDBB0D",
-            "name": "post the job",
-            "type": "Task"
-        },
-        {
-            "id": "sid-7D2D536B-090F-4693-AB69-D9C4E9DEF1BF",
-            "name": "report the vacancy to HR",
+            "name": "HR waits for the approval",
             "type": "Task"
         },
         {
             "id": "sid-B035C1AB-1ECC-469D-81CB-0FD2E0DFA9BE",
-            "name": "request a correction",
+            "name": "Department requests a correction",
+            "type": "Task"
+        },
+        {
+            "id": "sid-FB4F54BF-8B73-4DFB-AAD6-B3780CBA5C7C",
+            "name": "HR corrects the description",
+            "type": "Task"
+        },
+        {
+            "id": "sid-72A6985E-52C6-4BA8-95FB-7F93A8CDBB0D",
+            "name": "HR posts the job",
             "type": "Task"
         }
     ],
     "events": [
         {
-            "id": "sid-730C8DE5-95BB-4DF4-98A7-BB8D570639CA",
-            "name": "",
-            "type": "EndNoneEvent"
-        },
-        {
             "id": "sid-8F2FE9F4-0866-4D0A-A3F7-B9BDB876AF4C",
             "name": "",
             "type": "StartNoneEvent"
+        },
+        {
+            "id": "sid-730C8DE5-95BB-4DF4-98A7-BB8D570639CA",
+            "name": "",
+            "type": "EndNoneEvent"
         }
     ],
     "gateways": [
@@ -82,48 +82,18 @@
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-6DB9C6C4-19A3-42F3-9D96-7669A9CA710C",
-            "name": "Orgnization",
-            "lanes": [
-                {
-                    "id": "sid-89318A7C-EDBE-4CD6-8D7F-F7A87F84C610",
-                    "name": "HR clerk",
-                    "elemRefs": [
-                        "sid-AFBD9067-0912-4C90-8B4D-F2BC11FC9F89",
-                        "sid-35C67275-CF44-4BBB-8161-3EF62E56313B",
-                        "sid-C8A9A36F-BC46-41BB-9A5E-80A9182DB010",
-                        "sid-372C3A2C-6F2C-49B4-B8CE-F2F9DFC92EA6",
-                        "sid-FB4F54BF-8B73-4DFB-AAD6-B3780CBA5C7C",
-                        "sid-72A6985E-52C6-4BA8-95FB-7F93A8CDBB0D",
-                        "sid-730C8DE5-95BB-4DF4-98A7-BB8D570639CA",
-                        "sid-9957D6D4-74C6-4868-A50D-EDF1FBEC302F",
-                        "sid-7262D2A6-0448-43E3-8597-D03BD2AA3F90",
-                        "sid-0906303A-90CC-4DC9-892C-77CE8F6FCE70",
-                        "sid-472807A3-FA39-4FCD-8464-8580A32C605D",
-                        "sid-40B6D29D-3C7C-4703-9A9C-64ADB87893BB",
-                        "sid-B863CE7C-6EAE-4024-888F-21ED34BD090C"
-                    ]
-                },
-                {
-                    "id": "sid-3C3DDACC-BA89-4B85-8628-A705AF78DB04",
-                    "name": "Department",
-                    "elemRefs": [
-                        "sid-7D2D536B-090F-4693-AB69-D9C4E9DEF1BF",
-                        "sid-B035C1AB-1ECC-469D-81CB-0FD2E0DFA9BE",
-                        "sid-8F2FE9F4-0866-4D0A-A3F7-B9BDB876AF4C"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
             "id": "sid-01C69AE8-FC63-4326-A560-709AF18C1B7F",
             "targetRef": "sid-7D2D536B-090F-4693-AB69-D9C4E9DEF1BF",
             "sourceRef": "sid-8F2FE9F4-0866-4D0A-A3F7-B9BDB876AF4C"
+        },
+        {
+            "id": "sid-440E77A7-CEF7-4CF4-B719-16D2A71FB315",
+            "targetRef": "sid-AFBD9067-0912-4C90-8B4D-F2BC11FC9F89",
+            "sourceRef": "sid-7D2D536B-090F-4693-AB69-D9C4E9DEF1BF"
         },
         {
             "id": "sid-9446E974-7FD5-493D-989C-88A7AAE13E61",
@@ -167,6 +137,11 @@
             "sourceRef": "sid-0906303A-90CC-4DC9-892C-77CE8F6FCE70"
         },
         {
+            "id": "sid-5613D1F0-CE3E-4D6D-9885-36209D1F4E97",
+            "targetRef": "sid-FB4F54BF-8B73-4DFB-AAD6-B3780CBA5C7C",
+            "sourceRef": "sid-B035C1AB-1ECC-469D-81CB-0FD2E0DFA9BE"
+        },
+        {
             "id": "sid-3828A1F2-ECE9-4062-A271-928BFD2C1E5F",
             "targetRef": "sid-472807A3-FA39-4FCD-8464-8580A32C605D",
             "sourceRef": "sid-0906303A-90CC-4DC9-892C-77CE8F6FCE70"
@@ -202,16 +177,6 @@
             "targetRef": "sid-72A6985E-52C6-4BA8-95FB-7F93A8CDBB0D",
             "condition": "yes",
             "sourceRef": "sid-B863CE7C-6EAE-4024-888F-21ED34BD090C"
-        },
-        {
-            "id": "sid-6D122EAC-644F-4DC1-A5E9-9CBEEF64E59C",
-            "targetRef": "sid-AFBD9067-0912-4C90-8B4D-F2BC11FC9F89",
-            "sourceRef": "sid-7D2D536B-090F-4693-AB69-D9C4E9DEF1BF"
-        },
-        {
-            "id": "sid-5613D1F0-CE3E-4D6D-9885-36209D1F4E97",
-            "targetRef": "sid-FB4F54BF-8B73-4DFB-AAD6-B3780CBA5C7C",
-            "sourceRef": "sid-B035C1AB-1ECC-469D-81CB-0FD2E0DFA9BE"
         }
     ]
 }

@@ -1,0 +1,168 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "record the basic details",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "get approval from finance team",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "create the purchase order",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "inform the supplier the order is ready for approval",
+            "type": "User"
+        },
+        {
+            "id": 6,
+            "name": "get approval from supplier",
+            "type": "User"
+        },
+        {
+            "id": 8,
+            "name": "record the purchase order",
+            "type": "User"
+        },
+        {
+            "id": 9,
+            "name": "send details to the department",
+            "type": "User"
+        },
+        {
+            "id": 10,
+            "name": "confirm the delivery date",
+            "type": "User"
+        },
+        {
+            "id": 11,
+            "name": "file the purchase order",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 13,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 14,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 2,
+            "type": "Inclusive"
+        },
+        {
+            "id": 5,
+            "type": "Inclusive"
+        },
+        {
+            "id": 7,
+            "type": "Inclusive"
+        },
+        {
+            "id": 12,
+            "type": "Inclusive"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 3,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 4,
+            "targetRef": 5
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 6,
+            "targetRef": 7
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 7,
+            "targetRef": 8
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 7,
+            "targetRef": 9
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 7,
+            "targetRef": 10
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 8,
+            "targetRef": 11
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 11,
+            "targetRef": 12
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 9,
+            "targetRef": 12
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 10,
+            "targetRef": 12
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 13,
+            "targetRef": 0
+        },
+        {
+            "id": "sf16",
+            "sourceRef": 12,
+            "targetRef": 14
+        }
+    ],
+    "messageFlows": []
+}

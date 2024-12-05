@@ -50,6 +50,7 @@ def main_m2m(model_path, text_path):
     t2t_eval_2 = {}
     m2m_eval_1 = {}
     m2m_eval_2 = {}
+    artefacts = {}
     temp_in = 1
     temp_out = 0.1
 
@@ -58,6 +59,7 @@ def main_m2m(model_path, text_path):
 
     for i, model_file in enumerate(model_files):  # Use enumerate for progress tracking
         logger.info(f'Processing file: {model_file}')
+        print('--------------------------{}/{}-----------------------------------'.format(i,len(model_files)))
         try:
             with open(os.path.join(model_path, model_file), "r") as infile:
                 model = json.load(infile)
@@ -69,6 +71,7 @@ def main_m2m(model_path, text_path):
             text_eval_2 = []
             model_eval_1 = []
             model_eval_2 = []
+            artefacts[model_file] = {}
 
             for j in range(3):
                 logger.info(f'Iteration {j + 1} for file: {model_file}')
@@ -96,6 +99,8 @@ def main_m2m(model_path, text_path):
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
 
+                artefacts[model_file][j] = {'text':gen_text,'model':json.loads(gen_model)}
+
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
                     text_eval_2.append(text_similarity.text_similarity_alternative(description, gen_text, threshold=0.75))
@@ -109,6 +114,7 @@ def main_m2m(model_path, text_path):
                             model, json.loads(gen_model), method="dice", similarity_threshold=0.75
                         )["overall"]
                     )
+
                 except Exception as e:
                     logger.error(f"Error during calculations in iteration {j + 1} for file {model_file}: {e}")
                     continue
@@ -132,7 +138,7 @@ def main_m2m(model_path, text_path):
     logger.info('Completed processing all models and texts')
 
     # Write results to CSV
-    with open('./'+ 'gpt_'+ args.example + args.direction + '.csv', 'w', newline='') as csvfile:
+    with open('./results/gpt_'+ args.example + args.direction + '.csv', 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(['model_name', 't2t_eval_1','t2t_eval_2', 'm2m_eval_1', 'm2m_eval_2'])  # Header
 
@@ -144,6 +150,9 @@ def main_m2m(model_path, text_path):
                 m2m_eval_1.get(model_name, 'N/A'),
                 m2m_eval_2.get(model_name, 'N/A')
             ])
+
+    with open('./generated_artefacts/report_gpt_'+ args.example + args.direction + '.json', 'w') as outfile:
+        json.dump(artefacts, outfile, indent=4)
 
 def main_t2t(model_path, text_path):
     # Setup logging
@@ -170,6 +179,7 @@ def main_t2t(model_path, text_path):
     t2t_eval_2 = {}
     m2m_eval_1 = {}
     m2m_eval_2 = {}
+    artefacts = {}
     temp_in = 1
     temp_out = 0.1
 
@@ -177,6 +187,7 @@ def main_t2t(model_path, text_path):
     logger.info('Starting the processing of models and texts')
 
     for i, model_file in enumerate(model_files):  # Use enumerate for progress tracking
+        print('--------------------------{}/{}-----------------------------------'.format(i,len(model_files)))
         logger.info(f'Processing file: {model_file}')
         try:
             with open(os.path.join(model_path, model_file), "r") as infile:
@@ -189,6 +200,7 @@ def main_t2t(model_path, text_path):
             text_eval_2 = []
             model_eval_1 = []
             model_eval_2 = []
+            artefacts[model_file] = {}
 
             for j in range(3):
                 logger.info(f'Iteration {j + 1} for file: {model_file}')
@@ -216,6 +228,8 @@ def main_t2t(model_path, text_path):
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
 
+                artefacts[model_file][j] = {'text':gen_text,'model':json.loads(gen_model)}
+
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
                     text_eval_2.append(text_similarity.text_similarity_alternative(description, gen_text, threshold=0.75))
@@ -252,7 +266,7 @@ def main_t2t(model_path, text_path):
     logger.info('Completed processing all models and texts')
 
     # Write results to CSV
-    with open('./'+ 'gpt_'+ args.example + args.direction + '.csv', 'w', newline='') as csvfile:
+    with open('./'+ 'results/gpt_'+ args.example + args.direction + '.csv', 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(['model_name', 't2t_eval_1','t2t_eval_2', 'm2m_eval_1', 'm2m_eval_2'])  # Header
 
@@ -264,6 +278,9 @@ def main_t2t(model_path, text_path):
                 m2m_eval_1.get(model_name, 'N/A'),
                 m2m_eval_2.get(model_name, 'N/A')
             ])
+
+    with open('./generated_artefacts/report_gpt_'+ args.example + args.direction + '.json', 'w') as outfile:
+        json.dump(artefacts, outfile, indent=4)
 
 
 if __name__ == "__main__":

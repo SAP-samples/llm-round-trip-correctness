@@ -2,57 +2,57 @@
     "tasks": [
         {
             "id": "sid-556C4CD9-B937-4B39-A652-B7E07B829899",
-            "name": "report a failure to the MPO",
+            "name": "Fault detector reports a failure to the MPO",
             "type": "Task"
         },
         {
             "id": "sid-2B1662D9-1A3A-4806-9A7B-A66FF8007AEE",
-            "name": "suspect a fault",
+            "name": "MPO has a suspicion of  own fault",
             "type": "Task"
         },
         {
             "id": "sid-B36AD3B2-85F0-43AA-8E76-2B9EC87F2C45",
-            "name": "examine the failure",
-            "type": "Task"
-        },
-        {
-            "id": "sid-DD237CF4-2A88-4020-B14F-52B5F28FF4EF",
-            "name": "confirm the failure of the fault detector",
-            "type": "Task"
-        },
-        {
-            "id": "sid-CA5B8BFB-7635-4159-A4B4-8487E0D307C6",
-            "name": "inform the GO",
-            "type": "Task"
-        },
-        {
-            "id": "sid-1F814560-5AD7-4852-860F-A111817F54B1",
-            "name": "fix the fault at the measuring device",
-            "type": "Task"
-        },
-        {
-            "id": "sid-CAC2B703-91CA-41A4-8993-B31242AD4B17",
-            "name": "share the results of the repairs",
-            "type": "Task"
-        },
-        {
-            "id": "sid-276B99EC-7B1D-461D-8548-00B4605782F7",
-            "name": "inform the GO about the resolution of the interference",
-            "type": "Task"
-        },
-        {
-            "id": "sid-DEA2FDBA-DD64-45B9-A0E6-FA3604A8CA87",
-            "name": "inform the MSP about the resolution of the interference",
-            "type": "Task"
-        },
-        {
-            "id": "sid-D7EBB824-2869-4C5A-9EA0-898F6026B866",
-            "name": "inform the MSP",
+            "name": "MPO  examines the failure",
             "type": "Task"
         },
         {
             "id": "sid-05028FFC-5FD1-4310-B68E-8FDAA0C0A1C0",
-            "name": "reject the failure of the fault detector",
+            "name": "MPO rejects the failure of the fault detector",
+            "type": "Task"
+        },
+        {
+            "id": "sid-DD237CF4-2A88-4020-B14F-52B5F28FF4EF",
+            "name": "MPO confirms the failure of the fault detector",
+            "type": "Task"
+        },
+        {
+            "id": "sid-CA5B8BFB-7635-4159-A4B4-8487E0D307C6",
+            "name": "MPO informes the GO",
+            "type": "Task"
+        },
+        {
+            "id": "sid-1F814560-5AD7-4852-860F-A111817F54B1",
+            "name": "MPO fixes the fault at the measuring device",
+            "type": "Task"
+        },
+        {
+            "id": "sid-CAC2B703-91CA-41A4-8993-B31242AD4B17",
+            "name": "MPO shares the results of the repairs",
+            "type": "Task"
+        },
+        {
+            "id": "sid-276B99EC-7B1D-461D-8548-00B4605782F7",
+            "name": "MPO informs the GO about the resolution of the interference",
+            "type": "Task"
+        },
+        {
+            "id": "sid-DEA2FDBA-DD64-45B9-A0E6-FA3604A8CA87",
+            "name": "MPO informs the MSP about the resolution of the interference",
+            "type": "Task"
+        },
+        {
+            "id": "sid-D7EBB824-2869-4C5A-9EA0-898F6026B866",
+            "name": "MPO informes the MSP",
             "type": "Task"
         }
     ],
@@ -86,43 +86,7 @@
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-0E06DDB6-37C8-4F60-9770-9A26AD108864",
-            "name": "System",
-            "lanes": [
-                {
-                    "id": "sid-FAC0BDD5-AB5A-45E2-A320-AF209D7F1785",
-                    "name": "Fault Detector",
-                    "elemRefs": [
-                        "sid-556C4CD9-B937-4B39-A652-B7E07B829899"
-                    ]
-                },
-                {
-                    "id": "sid-DA979B85-4537-4C36-A85D-56AE27D0FDA2",
-                    "name": "MPO",
-                    "elemRefs": [
-                        "sid-2B1662D9-1A3A-4806-9A7B-A66FF8007AEE",
-                        "sid-B36AD3B2-85F0-43AA-8E76-2B9EC87F2C45",
-                        "sid-DD237CF4-2A88-4020-B14F-52B5F28FF4EF",
-                        "sid-CA5B8BFB-7635-4159-A4B4-8487E0D307C6",
-                        "sid-1F814560-5AD7-4852-860F-A111817F54B1",
-                        "sid-CAC2B703-91CA-41A4-8993-B31242AD4B17",
-                        "sid-276B99EC-7B1D-461D-8548-00B4605782F7",
-                        "sid-DEA2FDBA-DD64-45B9-A0E6-FA3604A8CA87",
-                        "sid-D7EBB824-2869-4C5A-9EA0-898F6026B866",
-                        "sid-05028FFC-5FD1-4310-B68E-8FDAA0C0A1C0",
-                        "sid-82979A08-3D05-4D47-8A6C-4D67A33C9920",
-                        "sid-64233E60-DCB3-447B-8664-76AD8E368164",
-                        "sid-69C0A96C-D7B0-49A3-9281-55D1CFE9AE8E",
-                        "sid-DF63D122-2EC8-4C2A-9CA3-74AF24473157",
-                        "sid-9C01D15B-5F64-4F15-84BE-356ACC81F213",
-                        "sid-4BF34E10-10A0-4857-B69A-61D40BAD6762"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {

@@ -1,0 +1,163 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "confirm the basic information",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "confirm if the process requires optimization",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "identify the process's components",
+            "type": "User"
+        },
+        {
+            "id": 5,
+            "name": "assess if any steps are confusing",
+            "type": "User"
+        },
+        {
+            "id": 6,
+            "name": "write the potential process improvements",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "get approval for processing improvements",
+            "type": "User"
+        },
+        {
+            "id": 9,
+            "name": "determine what improvements should go forward",
+            "type": "User"
+        },
+        {
+            "id": 10,
+            "name": "use the updated process",
+            "type": "User"
+        },
+        {
+            "id": 12,
+            "name": "implement the process changes",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 13,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 14,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 1,
+            "type": "Inclusive"
+        },
+        {
+            "id": 4,
+            "type": "Inclusive"
+        },
+        {
+            "id": 8,
+            "type": "Parallel"
+        },
+        {
+            "id": 11,
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 1,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 3,
+            "targetRef": 4
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 4,
+            "targetRef": 5
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 6,
+            "targetRef": 7
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 7,
+            "targetRef": 8
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 8,
+            "targetRef": 9
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 8,
+            "targetRef": 10
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 9,
+            "targetRef": 11
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 10,
+            "targetRef": 11
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 11,
+            "targetRef": 12
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 13,
+            "targetRef": 0
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 12,
+            "targetRef": 14
+        }
+    ],
+    "messageFlows": []
+}

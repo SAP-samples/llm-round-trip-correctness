@@ -2,68 +2,58 @@
     "tasks": [
         {
             "id": "sid-BA073685-4686-460D-A701-2E4791B90B97",
-            "name": "submit a claim",
+            "name": "Customer submits a claim",
             "type": "Task"
         },
         {
             "id": "sid-224A5CDF-4D16-4C07-BD7F-A4F5A76019A4",
-            "name": "check the documents",
+            "name": "Notification department checks the documents",
             "type": "Task"
         },
         {
             "id": "sid-70B5D2F8-5C02-48A1-AA53-7E8148B8526B",
-            "name": "register the claim",
+            "name": "Notification department registers the claim",
             "type": "Task"
         },
         {
             "id": "sid-D59576B5-20FA-40E7-B213-E6F2E56178BC",
-            "name": "pick up the claim",
+            "name": "Handling department picks up the claim",
             "type": "Task"
         },
         {
             "id": "sid-57A53C30-56A9-4CD3-8540-6F09ED42C29A",
-            "name": "check the insurance",
+            "name": "Handling department checks the insurance",
             "type": "Task"
         },
         {
             "id": "sid-D7719480-C29B-4CE4-BBFD-E4F6E8F63516",
-            "name": "perform assessment",
+            "name": "Handling department performs asessment",
             "type": "Task"
         },
         {
             "id": "sid-E013079C-522B-4343-AEDA-16069D702115",
-            "name": "phone garage to authorize the repairs",
+            "name": "Handling department phones garage to authorise the repairs",
             "type": "Task"
         },
         {
             "id": "sid-60FA0E56-89E3-47A5-AD63-580264C0D348",
-            "name": "schedule the payment",
+            "name": "Handling department  schedules the payment",
             "type": "Task"
         },
         {
             "id": "sid-F3BDF6C4-2B59-4F9B-82CC-2EB9D11852FC",
-            "name": "reject the claim",
+            "name": "Handling department rejects the claim",
             "type": "Task"
         },
         {
             "id": "sid-C983EE7B-F4FD-4E45-BB0C-F1D8A15E1557",
-            "name": "send a letter to the customer",
+            "name": "Handling department sends a letter to the customer",
             "type": "Task"
         }
     ],
     "events": [
         {
             "id": "sid-7FAF35CA-B599-457E-8F78-AF8421013B53",
-            "name": "",
-            "type": "StartNoneEvent"
-        },
-        {
-            "id": "sid-0701896B-F908-439F-90D8-E53EC6314073",
-            "name": "",
-            "type": "EndNoneEvent"
-        },
-        {
-            "id": "sid-860C4DBB-0083-4F40-81A8-690452784A02",
             "name": "",
             "type": "StartNoneEvent"
         },
@@ -83,61 +73,8 @@
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-FF19D9CA-97E4-4DD2-B0D9-21C32C248A0D",
-            "name": "Customer",
-            "lanes": [
-                {
-                    "id": "sid-88B3A891-110D-4166-ADB9-8F070B746503",
-                    "name": "",
-                    "elemRefs": [
-                        "sid-BA073685-4686-460D-A701-2E4791B90B97",
-                        "sid-7FAF35CA-B599-457E-8F78-AF8421013B53",
-                        "sid-0701896B-F908-439F-90D8-E53EC6314073"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "sid-F1706875-2B55-4B59-8534-7603739E6A67",
-            "name": "Car Insurance",
-            "lanes": [
-                {
-                    "id": "sid-34B1A4C7-813A-4935-887F-41CB7635CB03",
-                    "name": "Notification department",
-                    "elemRefs": [
-                        "sid-224A5CDF-4D16-4C07-BD7F-A4F5A76019A4",
-                        "sid-70B5D2F8-5C02-48A1-AA53-7E8148B8526B",
-                        "sid-860C4DBB-0083-4F40-81A8-690452784A02"
-                    ]
-                },
-                {
-                    "id": "sid-EAA710A4-369D-4679-B114-F5ACF6CE50DF",
-                    "name": "Handling department",
-                    "elemRefs": [
-                        "sid-D59576B5-20FA-40E7-B213-E6F2E56178BC",
-                        "sid-57A53C30-56A9-4CD3-8540-6F09ED42C29A",
-                        "sid-D7719480-C29B-4CE4-BBFD-E4F6E8F63516",
-                        "sid-E013079C-522B-4343-AEDA-16069D702115",
-                        "sid-60FA0E56-89E3-47A5-AD63-580264C0D348",
-                        "sid-F3BDF6C4-2B59-4F9B-82CC-2EB9D11852FC",
-                        "sid-C983EE7B-F4FD-4E45-BB0C-F1D8A15E1557",
-                        "sid-4FE9450F-1A7C-49A4-96AB-BD08118B377D",
-                        "sid-76642E3D-EDC0-4233-BC5E-B88139F97294",
-                        "sid-E726D431-91D2-4347-A15A-7D0324455CC2"
-                    ]
-                }
-            ]
-        }
-    ],
-    "messageFlows": [
-        {
-            "id": "sid-D484F474-9BFC-45DB-88B5-E0AB3E773D56",
-            "targetRef": "sid-224A5CDF-4D16-4C07-BD7F-A4F5A76019A4",
-            "sourceRef": "sid-BA073685-4686-460D-A701-2E4791B90B97"
-        }
-    ],
+    "pools": [],
+    "messageFlows": [],
     "sequenceFlows": [
         {
             "id": "sid-355D6903-9ABE-401F-900B-0F126F3BB640",
@@ -145,9 +82,19 @@
             "sourceRef": "sid-7FAF35CA-B599-457E-8F78-AF8421013B53"
         },
         {
+            "id": "sid-12AE6D06-3C8B-4BC0-9B11-1722E2F82799",
+            "targetRef": "sid-224A5CDF-4D16-4C07-BD7F-A4F5A76019A4",
+            "sourceRef": "sid-BA073685-4686-460D-A701-2E4791B90B97"
+        },
+        {
             "id": "sid-77D33F34-0837-4757-9981-0858794D976E",
             "targetRef": "sid-70B5D2F8-5C02-48A1-AA53-7E8148B8526B",
             "sourceRef": "sid-224A5CDF-4D16-4C07-BD7F-A4F5A76019A4"
+        },
+        {
+            "id": "sid-5C118463-B9D6-4D0F-851F-119E383A9804",
+            "targetRef": "sid-D59576B5-20FA-40E7-B213-E6F2E56178BC",
+            "sourceRef": "sid-70B5D2F8-5C02-48A1-AA53-7E8148B8526B"
         },
         {
             "id": "sid-97869A91-81C8-42E4-BA9D-D6E5E89FF607",
@@ -200,21 +147,6 @@
             "id": "sid-9AD99DB4-B367-4043-9ACD-97B6503E44A4",
             "targetRef": "sid-4FE9450F-1A7C-49A4-96AB-BD08118B377D",
             "sourceRef": "sid-C983EE7B-F4FD-4E45-BB0C-F1D8A15E1557"
-        },
-        {
-            "id": "sid-44F83727-0134-4B52-BFAD-D6D3F6CE2C90",
-            "targetRef": "sid-0701896B-F908-439F-90D8-E53EC6314073",
-            "sourceRef": "sid-BA073685-4686-460D-A701-2E4791B90B97"
-        },
-        {
-            "id": "sid-5C118463-B9D6-4D0F-851F-119E383A9804",
-            "targetRef": "sid-D59576B5-20FA-40E7-B213-E6F2E56178BC",
-            "sourceRef": "sid-70B5D2F8-5C02-48A1-AA53-7E8148B8526B"
-        },
-        {
-            "id": "sid-63B26872-4436-4296-9CE7-B6EABC44757B",
-            "targetRef": "sid-224A5CDF-4D16-4C07-BD7F-A4F5A76019A4",
-            "sourceRef": "sid-860C4DBB-0083-4F40-81A8-690452784A02"
         }
     ]
 }

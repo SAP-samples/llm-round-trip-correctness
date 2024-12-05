@@ -2,27 +2,27 @@
     "tasks": [
         {
             "id": "sid-381389B2-A735-4AB4-A944-6E39F0341A12",
-            "name": "send the order to the supplier",
-            "type": "Task"
-        },
-        {
-            "id": "sid-805B5A4E-DA93-4FC0-B638-00A5909FDD2E",
-            "name": "place an order with the supplier",
-            "type": "Task"
-        },
-        {
-            "id": "sid-D39DF576-D89F-4CBA-8508-D916AEFC6D19",
-            "name": "receive the invoice",
+            "name": "Assembler AG sends the order to the supplier",
             "type": "Task"
         },
         {
             "id": "sid-1CD88C9D-9ECF-4854-ACD9-31215F5B4015",
-            "name": "process the order",
+            "name": "The supplier processes the order",
             "type": "Task"
         },
         {
             "id": "sid-3DB77561-1947-4A37-920C-EF766E22F5EF",
-            "name": "send an invoice to Assembler AG",
+            "name": "The supplier sends an invoice to Assembler AG",
+            "type": "Task"
+        },
+        {
+            "id": "sid-D39DF576-D89F-4CBA-8508-D916AEFC6D19",
+            "name": "Assembler AG receives the invoice",
+            "type": "Task"
+        },
+        {
+            "id": "sid-805B5A4E-DA93-4FC0-B638-00A5909FDD2E",
+            "name": "Assembler AG places an order with the supplier",
             "type": "Task"
         }
     ],
@@ -39,35 +39,24 @@
         }
     ],
     "gateways": [],
-    "pools": [
-        {
-            "id": "sid-17767608-E6A1-4010-80C0-97350528B18F",
-            "name": "Organization",
-            "lanes": [
-                {
-                    "id": "sid-95D20F6E-78CD-4D18-99E8-56FF04835D2F",
-                    "name": "Assembler AG",
-                    "elemRefs": [
-                        "sid-381389B2-A735-4AB4-A944-6E39F0341A12",
-                        "sid-805B5A4E-DA93-4FC0-B638-00A5909FDD2E",
-                        "sid-D39DF576-D89F-4CBA-8508-D916AEFC6D19",
-                        "sid-891A5668-B6DB-4173-849B-E9A27A4C8A90",
-                        "sid-A1EA147F-B250-43CB-B916-5A22F0D38B95"
-                    ]
-                },
-                {
-                    "id": "sid-A53276EC-AE95-4D07-805B-A23A17448629",
-                    "name": "Supplier",
-                    "elemRefs": [
-                        "sid-1CD88C9D-9ECF-4854-ACD9-31215F5B4015",
-                        "sid-3DB77561-1947-4A37-920C-EF766E22F5EF"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
+        {
+            "id": "sid-FB052FDA-27EB-44E0-86A1-45812B767760",
+            "targetRef": "sid-1CD88C9D-9ECF-4854-ACD9-31215F5B4015",
+            "sourceRef": "sid-381389B2-A735-4AB4-A944-6E39F0341A12"
+        },
+        {
+            "id": "sid-1CB282BF-13ED-4083-A5F4-22F589CA9E86",
+            "targetRef": "sid-3DB77561-1947-4A37-920C-EF766E22F5EF",
+            "sourceRef": "sid-1CD88C9D-9ECF-4854-ACD9-31215F5B4015"
+        },
+        {
+            "id": "sid-3BA43E6F-8347-4B84-836B-B20DA90B36C8",
+            "targetRef": "sid-D39DF576-D89F-4CBA-8508-D916AEFC6D19",
+            "sourceRef": "sid-3DB77561-1947-4A37-920C-EF766E22F5EF"
+        },
         {
             "id": "sid-D1853FB4-DDF0-4961-BA4D-950F73799082",
             "targetRef": "sid-A1EA147F-B250-43CB-B916-5A22F0D38B95",
@@ -82,21 +71,6 @@
             "id": "sid-181AC102-5EC3-4B3D-BA54-2CF5BA270313",
             "targetRef": "sid-381389B2-A735-4AB4-A944-6E39F0341A12",
             "sourceRef": "sid-805B5A4E-DA93-4FC0-B638-00A5909FDD2E"
-        },
-        {
-            "id": "sid-60569663-A779-4108-BE7F-8254BA27DB86",
-            "targetRef": "sid-3DB77561-1947-4A37-920C-EF766E22F5EF",
-            "sourceRef": "sid-1CD88C9D-9ECF-4854-ACD9-31215F5B4015"
-        },
-        {
-            "id": "sid-3CFC70D5-1BAB-48E7-9E9E-DC3FA5A35078",
-            "targetRef": "sid-1CD88C9D-9ECF-4854-ACD9-31215F5B4015",
-            "sourceRef": "sid-381389B2-A735-4AB4-A944-6E39F0341A12"
-        },
-        {
-            "id": "sid-1D61D049-FA0B-46B3-BA9E-4062BE84FA73",
-            "targetRef": "sid-D39DF576-D89F-4CBA-8508-D916AEFC6D19",
-            "sourceRef": "sid-3DB77561-1947-4A37-920C-EF766E22F5EF"
         }
     ]
 }

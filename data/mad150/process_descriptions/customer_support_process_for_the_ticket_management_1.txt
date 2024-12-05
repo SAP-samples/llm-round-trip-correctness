@@ -1,0 +1,1 @@
+The following description is about the customer support process for the ticket management. It starts with checking the ticket type. Once checking the ticket type occurs, you need to Determine ticket type as 'I'm not sure question'. When determining ticket type as 'I'm not sure question' is completed, testing technical issues should be done. The process is now completed.

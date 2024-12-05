@@ -2,32 +2,32 @@
     "tasks": [
         {
             "id": "sid-7D27F8E5-A215-4C8A-8A77-FB70EC6A2108",
-            "name": "search the police report",
+            "name": "Employee  searches the police report",
             "type": "Task"
         },
         {
             "id": "sid-9B24B3B1-D5C0-40F3-A3A1-77CD00BFE55C",
-            "name": "put together claim documentation and police report",
+            "name": "Employee puts together claim documentation and police report",
             "type": "Task"
         },
         {
             "id": "sid-1FC229BA-FB61-43BD-A739-7C28BFA80E75",
-            "name": "calculate an initial claim estimate",
+            "name": "Claims handler calculates an initial claim estimate",
             "type": "Task"
         },
         {
             "id": "sid-0315489D-5FD5-4F32-8C6F-128678BDB4C9",
-            "name": "create an action plan",
+            "name": "Claims handler creates an action plan",
             "type": "Task"
         },
         {
             "id": "sid-1DAC6A3D-C45B-4A02-BEDC-AF569DBD0B5C",
-            "name": "negotiate a settlement on the claim estimate",
+            "name": "Claims manager negotiates a settlement on the claim estimate",
             "type": "Task"
         },
         {
             "id": "sid-A83B057C-6834-4792-AB06-B28DAE826382",
-            "name": "inform claimant of the outcome",
+            "name": "Claims manager informs claimant of the outcome",
             "type": "Task"
         }
     ],
@@ -44,40 +44,7 @@
         }
     ],
     "gateways": [],
-    "pools": [
-        {
-            "id": "sid-843468E5-9493-4652-95E1-31B3AFFF15C4",
-            "name": "company",
-            "lanes": [
-                {
-                    "id": "sid-BDFCEB3A-554F-4775-98CC-4C1CF1083303",
-                    "name": "employee",
-                    "elemRefs": [
-                        "sid-7D27F8E5-A215-4C8A-8A77-FB70EC6A2108",
-                        "sid-9B24B3B1-D5C0-40F3-A3A1-77CD00BFE55C",
-                        "sid-2C06FDCD-C869-465A-B568-EEF9A47332EF"
-                    ]
-                },
-                {
-                    "id": "sid-375DC3CB-7A2E-4DCF-82F2-197E4F90D4FF",
-                    "name": "claims handler",
-                    "elemRefs": [
-                        "sid-1FC229BA-FB61-43BD-A739-7C28BFA80E75",
-                        "sid-0315489D-5FD5-4F32-8C6F-128678BDB4C9"
-                    ]
-                },
-                {
-                    "id": "sid-096D5240-B993-4317-AD9B-147AA421573C",
-                    "name": "claims manager",
-                    "elemRefs": [
-                        "sid-1DAC6A3D-C45B-4A02-BEDC-AF569DBD0B5C",
-                        "sid-A83B057C-6834-4792-AB06-B28DAE826382",
-                        "sid-3094B0A9-CDC6-4B9A-9693-D259A81CA04E"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
@@ -91,6 +58,21 @@
             "sourceRef": "sid-7D27F8E5-A215-4C8A-8A77-FB70EC6A2108"
         },
         {
+            "id": "sid-97A17A5F-98C0-4480-9BC2-6FA47BA1A499",
+            "targetRef": "sid-1FC229BA-FB61-43BD-A739-7C28BFA80E75",
+            "sourceRef": "sid-9B24B3B1-D5C0-40F3-A3A1-77CD00BFE55C"
+        },
+        {
+            "id": "sid-44C1757E-E414-4FF1-94D1-79100B89B713",
+            "targetRef": "sid-0315489D-5FD5-4F32-8C6F-128678BDB4C9",
+            "sourceRef": "sid-1FC229BA-FB61-43BD-A739-7C28BFA80E75"
+        },
+        {
+            "id": "sid-E68813D2-7194-42EC-BA80-4ED2AC23E89D",
+            "targetRef": "sid-1DAC6A3D-C45B-4A02-BEDC-AF569DBD0B5C",
+            "sourceRef": "sid-0315489D-5FD5-4F32-8C6F-128678BDB4C9"
+        },
+        {
             "id": "sid-14BDB65D-ED46-4231-849B-F969A0F32576",
             "targetRef": "sid-A83B057C-6834-4792-AB06-B28DAE826382",
             "sourceRef": "sid-1DAC6A3D-C45B-4A02-BEDC-AF569DBD0B5C"
@@ -99,21 +81,6 @@
             "id": "sid-1CC6BED5-D70C-41CC-9C4D-1760FA4B2FCE",
             "targetRef": "sid-3094B0A9-CDC6-4B9A-9693-D259A81CA04E",
             "sourceRef": "sid-A83B057C-6834-4792-AB06-B28DAE826382"
-        },
-        {
-            "id": "sid-A81B511C-6930-4F7E-95DA-F918CE7807B2",
-            "targetRef": "sid-1FC229BA-FB61-43BD-A739-7C28BFA80E75",
-            "sourceRef": "sid-9B24B3B1-D5C0-40F3-A3A1-77CD00BFE55C"
-        },
-        {
-            "id": "sid-B447E7C4-F4DC-4537-BAFE-46135431A6E3",
-            "targetRef": "sid-1DAC6A3D-C45B-4A02-BEDC-AF569DBD0B5C",
-            "sourceRef": "sid-0315489D-5FD5-4F32-8C6F-128678BDB4C9"
-        },
-        {
-            "id": "sid-44C1757E-E414-4FF1-94D1-79100B89B713",
-            "targetRef": "sid-0315489D-5FD5-4F32-8C6F-128678BDB4C9",
-            "sourceRef": "sid-1FC229BA-FB61-43BD-A739-7C28BFA80E75"
         }
     ]
 }

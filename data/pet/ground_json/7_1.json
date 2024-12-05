@@ -2,32 +2,32 @@
     "tasks": [
         {
             "id": "sid-10BB98F5-55E6-47B9-BF39-727F2F19F385",
-            "name": "check the open leads",
+            "name": "Manager checks the open leads",
             "type": "Task"
         },
         {
             "id": "sid-75D41171-5F2B-41DD-950E-B61114F5668E",
-            "name": "select the top five leads",
+            "name": "Manager selects the top five leads",
             "type": "Task"
         },
         {
             "id": "sid-83385A1D-5CA2-4808-9C31-D3EABA93A140",
-            "name": "tell sales assistant to  contact the leads",
-            "type": "Task"
-        },
-        {
-            "id": "sid-E06304E3-73A8-49E1-AC55-41DA9C752AAB",
-            "name": "process the lead",
+            "name": "Manager tells Sales Assistant to  contact the leads",
             "type": "Task"
         },
         {
             "id": "sid-99800CC3-28C7-45BE-A160-085218A756F4",
-            "name": "call  customer",
+            "name": "Sales Assistant calls  customer",
             "type": "Task"
         },
         {
             "id": "sid-55295656-9228-417B-BE53-E61542ED2CDA",
-            "name": "send a note to the Manager",
+            "name": "Sales Assistant  sends a note to the Manager",
+            "type": "Task"
+        },
+        {
+            "id": "sid-E06304E3-73A8-49E1-AC55-41DA9C752AAB",
+            "name": "Manager  processes the lead",
             "type": "Task"
         }
     ],
@@ -54,47 +54,16 @@
             "type": "Exclusive"
         },
         {
-            "id": "sid-EF293C41-05BF-4377-B22B-E710B9E68AA5",
-            "name": "next customer?",
+            "id": "sid-9F6AE4E3-C88A-475F-99F8-5065ED59AA88",
             "type": "Exclusive"
         },
         {
-            "id": "sid-9F6AE4E3-C88A-475F-99F8-5065ED59AA88",
+            "id": "sid-EF293C41-05BF-4377-B22B-E710B9E68AA5",
+            "name": "next customer?",
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-1C060E51-504C-4C5F-975C-5044605B542C",
-            "name": "Organization",
-            "lanes": [
-                {
-                    "id": "sid-31BFC7B9-F079-4D7A-A013-C29BEC414603",
-                    "name": "Manager",
-                    "elemRefs": [
-                        "sid-10BB98F5-55E6-47B9-BF39-727F2F19F385",
-                        "sid-75D41171-5F2B-41DD-950E-B61114F5668E",
-                        "sid-83385A1D-5CA2-4808-9C31-D3EABA93A140",
-                        "sid-E06304E3-73A8-49E1-AC55-41DA9C752AAB",
-                        "sid-C37112B9-40E3-4913-823D-237E1087495D"
-                    ]
-                },
-                {
-                    "id": "sid-DD4D64E4-0ABA-4142-B92A-5D45FEDFDA80",
-                    "name": "Sales Assistant",
-                    "elemRefs": [
-                        "sid-99800CC3-28C7-45BE-A160-085218A756F4",
-                        "sid-55295656-9228-417B-BE53-E61542ED2CDA",
-                        "sid-6EE748F3-A751-42D0-B639-090CFE9C9B84",
-                        "sid-345B5FA6-891C-4C88-A8C7-B2A792278FB4",
-                        "sid-7862C4AB-771A-467A-B6AA-232151218305",
-                        "sid-EF293C41-05BF-4377-B22B-E710B9E68AA5",
-                        "sid-9F6AE4E3-C88A-475F-99F8-5065ED59AA88"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
@@ -113,6 +82,11 @@
             "sourceRef": "sid-75D41171-5F2B-41DD-950E-B61114F5668E"
         },
         {
+            "id": "sid-D7A2B05F-1E31-4D3A-A2C9-F892CDD57C6D",
+            "targetRef": "sid-9F6AE4E3-C88A-475F-99F8-5065ED59AA88",
+            "sourceRef": "sid-83385A1D-5CA2-4808-9C31-D3EABA93A140"
+        },
+        {
             "id": "sid-E2D30B3D-281C-45A7-8FA5-029E2C8BF533",
             "targetRef": "sid-345B5FA6-891C-4C88-A8C7-B2A792278FB4",
             "sourceRef": "sid-99800CC3-28C7-45BE-A160-085218A756F4"
@@ -122,6 +96,11 @@
             "targetRef": "sid-55295656-9228-417B-BE53-E61542ED2CDA",
             "condition": "yes",
             "sourceRef": "sid-345B5FA6-891C-4C88-A8C7-B2A792278FB4"
+        },
+        {
+            "id": "sid-29E3D3A8-4A9F-4BCB-8794-D830F6995884",
+            "targetRef": "sid-E06304E3-73A8-49E1-AC55-41DA9C752AAB",
+            "sourceRef": "sid-55295656-9228-417B-BE53-E61542ED2CDA"
         },
         {
             "id": "sid-DEEF40FF-870B-41FA-BF9F-712A136DFAE9",
@@ -139,26 +118,16 @@
             "sourceRef": "sid-7862C4AB-771A-467A-B6AA-232151218305"
         },
         {
-            "id": "sid-D2523DDD-E717-4E9E-B197-C75416341D55",
-            "targetRef": "sid-6EE748F3-A751-42D0-B639-090CFE9C9B84",
-            "condition": "no",
-            "sourceRef": "sid-EF293C41-05BF-4377-B22B-E710B9E68AA5"
-        },
-        {
-            "id": "sid-C69013BF-F915-4BC0-868F-A14219D285DD",
-            "targetRef": "sid-9F6AE4E3-C88A-475F-99F8-5065ED59AA88",
-            "sourceRef": "sid-83385A1D-5CA2-4808-9C31-D3EABA93A140"
-        },
-        {
             "id": "sid-3FBD4040-2A8C-4AA3-8E04-048EABCE0E63",
             "targetRef": "sid-7862C4AB-771A-467A-B6AA-232151218305",
             "condition": "no",
             "sourceRef": "sid-345B5FA6-891C-4C88-A8C7-B2A792278FB4"
         },
         {
-            "id": "sid-29E3D3A8-4A9F-4BCB-8794-D830F6995884",
-            "targetRef": "sid-E06304E3-73A8-49E1-AC55-41DA9C752AAB",
-            "sourceRef": "sid-55295656-9228-417B-BE53-E61542ED2CDA"
+            "id": "sid-D2523DDD-E717-4E9E-B197-C75416341D55",
+            "targetRef": "sid-6EE748F3-A751-42D0-B639-090CFE9C9B84",
+            "condition": "no",
+            "sourceRef": "sid-EF293C41-05BF-4377-B22B-E710B9E68AA5"
         },
         {
             "id": "sid-D498A568-08DA-4080-9AE0-6B23FC6FDA0D",

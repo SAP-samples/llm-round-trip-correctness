@@ -27,7 +27,7 @@
         },
         {
             "id": "sid-EEF37B5A-C688-4A14-9E51-85753074C4B3",
-            "name": "claimant returns the forms",
+            "name": "receive the forms from the claimant",
             "type": "Task"
         },
         {
@@ -76,35 +76,7 @@
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-0CA86BA8-868A-4A8D-A7BB-DC2AA64F4440",
-            "name": "Claims Notification Department",
-            "lanes": [
-                {
-                    "id": "sid-12287B36-E556-48E4-9265-AEAC5AB56487",
-                    "name": "",
-                    "elemRefs": [
-                        "sid-D126D9EE-B2D2-4954-97D7-035CCAB74D8D",
-                        "sid-9B4D3989-8C93-4D5A-A7FC-3D8065EEB2CF",
-                        "sid-032A872F-CD5B-4737-A08A-4DCF10D0E641",
-                        "sid-EA2571B6-75E9-409B-8162-14E0127D2F6E",
-                        "sid-BD7A6740-05EB-4397-90F5-944AFA802EF0",
-                        "sid-EEF37B5A-C688-4A14-9E51-85753074C4B3",
-                        "sid-3C8D5E0C-1061-43EF-9CCB-F323783DA36D",
-                        "sid-C20E3208-1294-4E51-AA2E-B612FB35C7F4",
-                        "sid-BB4B3D19-FC92-4087-9788-18A4E677FB0B",
-                        "sid-6BD77A83-449E-4793-9974-C8D130C8953B",
-                        "sid-7A375CBC-6DF3-4E08-A14A-90C24F358063",
-                        "sid-64A84CDB-FA0E-4ADC-B0B9-CB51C03C2CC0",
-                        "sid-380804A1-B1BB-4E6F-8E4C-A4C96873211D",
-                        "sid-C502A29C-8403-4E7E-AA1D-B28B73A3BF07",
-                        "sid-838452B3-5C24-4FB2-A0CF-C9D762A947C0"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {

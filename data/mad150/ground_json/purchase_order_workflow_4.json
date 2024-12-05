@@ -1,0 +1,110 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "record the basic details",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "get approval from finance team",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "create the purchase order",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "inform the supplier the order is ready for approval",
+            "type": "User"
+        },
+        {
+            "id": 6,
+            "name": "get approval from supplier",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "confirm the delivery date",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 8,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 9,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 2,
+            "type": "Parallel"
+        },
+        {
+            "id": 5,
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 3,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 4,
+            "targetRef": 5
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 6,
+            "targetRef": 7
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 8,
+            "targetRef": 0
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 7,
+            "targetRef": 9
+        }
+    ],
+    "messageFlows": []
+}

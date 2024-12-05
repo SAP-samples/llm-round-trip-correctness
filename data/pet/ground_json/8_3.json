@@ -2,32 +2,32 @@
     "tasks": [
         {
             "id": "sid-411DF6B6-6142-4464-A46D-F44BEF978D50",
-            "name": "detect a number of personnel requirements",
+            "name": "HFD detects a number of personnel requirements",
             "type": "Task"
         },
         {
             "id": "sid-D666F005-55C4-4169-97A9-CF416EB914FB",
-            "name": "report the vacancy to Personnel Department",
+            "name": "HFD reports the vacancy to Personnel Department",
             "type": "Task"
         },
         {
             "id": "sid-E99C8855-A6D2-4BC4-9496-A00F2394C1EC",
-            "name": "get the job description for review from Personnel Department",
+            "name": "HFD gets the job description for review from Personnel Department",
             "type": "Task"
         },
         {
             "id": "sid-8C90A295-82A8-4729-9274-6D0D9891D206",
-            "name": "approve the job description",
+            "name": "HFD approves the job description",
             "type": "Task"
         },
         {
             "id": "sid-9AAD972A-E15F-4F6C-983A-43FAC5DCB435",
-            "name": "ask for corrections",
+            "name": "HFD asks for corrections",
             "type": "Task"
         },
         {
             "id": "sid-6D5BD961-0064-43C7-A8A3-A985E8BB8613",
-            "name": "advertise the vacancy",
+            "name": "HFD advertizes the vacancy",
             "type": "Task"
         }
     ],
@@ -54,30 +54,7 @@
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-01DDED2C-F040-4F53-B993-F4F3BD1B8D8B",
-            "name": "Head of the functional department",
-            "lanes": [
-                {
-                    "id": "sid-082CE71A-33E0-483B-ABB7-0D6C93566CCE",
-                    "name": "",
-                    "elemRefs": [
-                        "sid-411DF6B6-6142-4464-A46D-F44BEF978D50",
-                        "sid-D666F005-55C4-4169-97A9-CF416EB914FB",
-                        "sid-E99C8855-A6D2-4BC4-9496-A00F2394C1EC",
-                        "sid-8C90A295-82A8-4729-9274-6D0D9891D206",
-                        "sid-9AAD972A-E15F-4F6C-983A-43FAC5DCB435",
-                        "sid-6D5BD961-0064-43C7-A8A3-A985E8BB8613",
-                        "sid-200786CD-9154-4F5D-92C3-BE4795F24837",
-                        "sid-4AB4DC0A-2F74-4801-8245-7A7CAAA41FAB",
-                        "sid-3FD8540F-FD45-410C-B6FD-C67C1BA24769",
-                        "sid-B2C02C63-6BD4-4CC7-BAC2-27F551F7B97F"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
