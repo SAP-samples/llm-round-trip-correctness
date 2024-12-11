@@ -84,6 +84,9 @@ def main_m2m(model_path, text_path):
                 if gen_text is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
+                with open(f'./Temp/gen_text_m2m_gpt{i}{j+1}.txt', 'w') as f:
+                    f.write(gen_text)
+                f.close()
 
                 gen_model = generate_gpt_with_timeout(
                     system_prompt_t2m,
@@ -96,6 +99,10 @@ def main_m2m(model_path, text_path):
                 if gen_model is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
+
+                with open(f'./Temp/gen_model_m2m_gpt{i}{j+1}.json', 'w') as f:
+                   json.dump(json.loads(gen_model), f)
+                f.close()
 
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
@@ -180,7 +187,7 @@ def main_t2t(model_path, text_path):
     temp_in = 1
     temp_out = 0.1
 
-    model_files = os.listdir(model_path)[:1]
+    model_files = os.listdir(model_path)
     logger.info('Starting the processing of models and texts')
 
     for i, model_file in enumerate(model_files):  # Use enumerate for progress tracking
@@ -211,7 +218,7 @@ def main_t2t(model_path, text_path):
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
                 # save the gen_midel to a file as json
-                with open(f'./Temp/gen_model{j+1}.json', 'w') as f:
+                with open(f'./Temp/gen_model_t2t_gpt{i}{j+1}.json', 'w') as f:
                    json.dump(json.loads(gen_model), f)
                 f.close()
 
@@ -226,8 +233,8 @@ def main_t2t(model_path, text_path):
                 if gen_text is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
-                # write the gen_text to a text file
-                with open(f'./Temp/gen_text{j+1}.txt', 'w') as f:
+                # # write the gen_text to a text file
+                with open(f'./Temp/gen_text_t2t_gpt{i}{j+1}.txt', 'w') as f:
                     f.write(gen_text)
                 f.close()
 

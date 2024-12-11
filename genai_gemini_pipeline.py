@@ -81,17 +81,25 @@ def main_m2m(model_path, text_path):
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
 
+                with open(f'./Temp/gen_text_m2m_gemini{i}{j+1}.txt', 'w') as f:
+                    f.write(gen_text)
+                f.close()
+
                 gen_model = generate_gemini_with_timeout(
                     system_prompt_gemini_t2m,
                     examples_t2m,
                     "Here is the textual description: " + gen_text,
                     temp_out,
-                    response_format=True
-                )
+                    response_format=True)
+
 
                 if gen_model is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
+
+                with open(f'./Temp/gen_model_m2m_gemini{i}{j+1}.json', 'w') as f:
+                   json.dump(json.loads(gen_model), f)
+                f.close()
 
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
@@ -170,7 +178,7 @@ def main_t2t(model_path, text_path):
     m2m_eval_1 = {}
     m2m_eval_2 = {}
     temp_in = 1
-    temp_out = 0
+    temp_out = 0.1
 
     model_files = os.listdir(model_path)
     logger.info('Starting the processing of models and texts')
@@ -199,11 +207,16 @@ def main_t2t(model_path, text_path):
                     response_format=True
                 )
 
-                if gen_model:
-                    print(json.loads(gen_model)['pools'])
+                # if gen_model:
+                #     print(json.loads(gen_model)['pools'])
                 if gen_model is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
+
+                with open(f'./Temp/gen_model_t2t_gemini{i}{j+1}.json', 'w') as f:
+                   json.dump(json.loads(gen_model), f)
+                f.close()
+
 
                 gen_text = generate_gemini_with_timeout(
                     system_prompt_gemini_m2t,
@@ -215,6 +228,10 @@ def main_t2t(model_path, text_path):
                 if gen_text is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
+
+                with open(f'./Temp/gen_text_t2t_gemini{i}{j+1}.txt', 'w') as f:
+                    f.write(gen_text)
+                f.close()
 
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
