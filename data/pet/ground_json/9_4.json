@@ -2,52 +2,52 @@
     "tasks": [
         {
             "id": "sid-1E68336F-5EBB-4382-9364-6196D17AD3AA",
-            "name": "finalize the dates",
-            "type": "Task"
-        },
-        {
-            "id": "sid-BF59DDDB-0E0B-418B-AEA9-0B2A1A86D4CA",
-            "name": "conduct a QA check on the minutes",
-            "type": "Task"
-        },
-        {
-            "id": "sid-73960FAA-56E3-41CB-9533-9264039D212F",
-            "name": "send QA check to all Committee Members",
+            "name": "Coordination Unit finalizes the dates",
             "type": "Task"
         },
         {
             "id": "sid-A895C4FA-BFF9-404A-9210-A528AACD2CFE",
-            "name": "update all group calendars",
+            "name": "Support Officer updates all group calendars",
             "type": "Task"
         },
         {
             "id": "sid-4F31EF18-97C2-41DF-BCE7-670E7857BE19",
-            "name": "create meeting folders",
+            "name": "Support Officer creates meeting folders",
             "type": "Task"
         },
         {
             "id": "sid-EAB8079B-9848-484A-8114-6EA61BE44694",
-            "name": "ensure all appropriate documents are uploaded to system",
+            "name": "Support Officer ensures all appropriate documents are uploaded to system",
             "type": "Task"
         },
         {
             "id": "sid-25189A44-0B38-432B-8235-49B13970F628",
-            "name": "advise Committee Members to read all  documents",
-            "type": "Task"
-        },
-        {
-            "id": "sid-DC4EA5E4-379C-459C-BDAD-CA9DC0E537A5",
-            "name": "produce minutes",
-            "type": "Task"
-        },
-        {
-            "id": "sid-7C7103A8-4314-466E-B10E-4DF56BBC24D0",
-            "name": "update  departmental records",
+            "name": "Support Officer advises Committee Members to read all  documents",
             "type": "Task"
         },
         {
             "id": "sid-EC87C078-0001-4FAA-BF01-6DD9F15C8857",
-            "name": "hold  meeting",
+            "name": "Committee Members hold  meeting",
+            "type": "Task"
+        },
+        {
+            "id": "sid-DC4EA5E4-379C-459C-BDAD-CA9DC0E537A5",
+            "name": "Support Office produces minutes",
+            "type": "Task"
+        },
+        {
+            "id": "sid-BF59DDDB-0E0B-418B-AEA9-0B2A1A86D4CA",
+            "name": "Coordination Unit conducts a QA check on the minutes",
+            "type": "Task"
+        },
+        {
+            "id": "sid-73960FAA-56E3-41CB-9533-9264039D212F",
+            "name": "Coordination Unit sends QA check to all Committee Members",
+            "type": "Task"
+        },
+        {
+            "id": "sid-7C7103A8-4314-466E-B10E-4DF56BBC24D0",
+            "name": "Support Officer updates  departmental records",
             "type": "Task"
         }
     ],
@@ -64,50 +64,18 @@
         }
     ],
     "gateways": [],
-    "pools": [
-        {
-            "id": "sid-A15A9A1E-E95D-4145-8116-2E38C5F87CD3",
-            "name": "Organization",
-            "lanes": [
-                {
-                    "id": "sid-1F6DF9CD-0039-4776-ACA8-421C07E11E20",
-                    "name": "Coordination Unit",
-                    "elemRefs": [
-                        "sid-1E68336F-5EBB-4382-9364-6196D17AD3AA",
-                        "sid-BF59DDDB-0E0B-418B-AEA9-0B2A1A86D4CA",
-                        "sid-73960FAA-56E3-41CB-9533-9264039D212F",
-                        "sid-3085B985-CA3F-4358-9F84-E7CE9D822DF1"
-                    ]
-                },
-                {
-                    "id": "sid-FA9235EF-3314-4711-B724-E3205CCD0895",
-                    "name": "Support Officer",
-                    "elemRefs": [
-                        "sid-A895C4FA-BFF9-404A-9210-A528AACD2CFE",
-                        "sid-4F31EF18-97C2-41DF-BCE7-670E7857BE19",
-                        "sid-EAB8079B-9848-484A-8114-6EA61BE44694",
-                        "sid-25189A44-0B38-432B-8235-49B13970F628",
-                        "sid-DC4EA5E4-379C-459C-BDAD-CA9DC0E537A5",
-                        "sid-7C7103A8-4314-466E-B10E-4DF56BBC24D0",
-                        "sid-2FA44C47-941E-4454-AF11-51DE54E8DDB0"
-                    ]
-                },
-                {
-                    "id": "sid-427891D2-9F3F-4AA0-92A5-4502C8113FBE",
-                    "name": "Committee Members",
-                    "elemRefs": [
-                        "sid-EC87C078-0001-4FAA-BF01-6DD9F15C8857"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
             "id": "sid-FBC15E8A-78FC-4A5B-99CA-C9F1579A161A",
             "targetRef": "sid-1E68336F-5EBB-4382-9364-6196D17AD3AA",
             "sourceRef": "sid-3085B985-CA3F-4358-9F84-E7CE9D822DF1"
+        },
+        {
+            "id": "sid-F61FFA7A-9FA0-4DBE-B440-443D57CF7D0C",
+            "targetRef": "sid-A895C4FA-BFF9-404A-9210-A528AACD2CFE",
+            "sourceRef": "sid-1E68336F-5EBB-4382-9364-6196D17AD3AA"
         },
         {
             "id": "sid-02452691-2E1C-441D-882E-F2A93D362ED8",
@@ -125,39 +93,34 @@
             "sourceRef": "sid-EAB8079B-9848-484A-8114-6EA61BE44694"
         },
         {
+            "id": "sid-0676DA96-D866-4B48-98D6-62F18A9E1247",
+            "targetRef": "sid-EC87C078-0001-4FAA-BF01-6DD9F15C8857",
+            "sourceRef": "sid-25189A44-0B38-432B-8235-49B13970F628"
+        },
+        {
+            "id": "sid-1C14C616-238F-4ABF-B38D-4544395CE78E",
+            "targetRef": "sid-DC4EA5E4-379C-459C-BDAD-CA9DC0E537A5",
+            "sourceRef": "sid-EC87C078-0001-4FAA-BF01-6DD9F15C8857"
+        },
+        {
+            "id": "sid-E699C603-C81D-4E75-A028-0C79703986DB",
+            "targetRef": "sid-BF59DDDB-0E0B-418B-AEA9-0B2A1A86D4CA",
+            "sourceRef": "sid-DC4EA5E4-379C-459C-BDAD-CA9DC0E537A5"
+        },
+        {
             "id": "sid-54A10C95-FE6C-4BE9-806B-68D71E877E5D",
             "targetRef": "sid-73960FAA-56E3-41CB-9533-9264039D212F",
             "sourceRef": "sid-BF59DDDB-0E0B-418B-AEA9-0B2A1A86D4CA"
         },
         {
+            "id": "sid-79FA4E47-77FF-42C6-9863-7F161E8429A5",
+            "targetRef": "sid-7C7103A8-4314-466E-B10E-4DF56BBC24D0",
+            "sourceRef": "sid-73960FAA-56E3-41CB-9533-9264039D212F"
+        },
+        {
             "id": "sid-B951AB0B-D60C-49A5-ACE1-8BBE0A38048F",
             "targetRef": "sid-2FA44C47-941E-4454-AF11-51DE54E8DDB0",
             "sourceRef": "sid-7C7103A8-4314-466E-B10E-4DF56BBC24D0"
-        },
-        {
-            "id": "sid-8EF062E6-169C-4E84-ABB7-77550BCBDD54",
-            "targetRef": "sid-A895C4FA-BFF9-404A-9210-A528AACD2CFE",
-            "sourceRef": "sid-1E68336F-5EBB-4382-9364-6196D17AD3AA"
-        },
-        {
-            "id": "sid-CBD2A79C-0A06-4C2F-BAD7-09EE57F10D0D",
-            "targetRef": "sid-EC87C078-0001-4FAA-BF01-6DD9F15C8857",
-            "sourceRef": "sid-25189A44-0B38-432B-8235-49B13970F628"
-        },
-        {
-            "id": "sid-7137A6CF-0177-40E2-9064-02B1C9EEF343",
-            "targetRef": "sid-DC4EA5E4-379C-459C-BDAD-CA9DC0E537A5",
-            "sourceRef": "sid-EC87C078-0001-4FAA-BF01-6DD9F15C8857"
-        },
-        {
-            "id": "sid-04A97ABD-E253-48A6-AC73-6415CACD7BCC",
-            "targetRef": "sid-BF59DDDB-0E0B-418B-AEA9-0B2A1A86D4CA",
-            "sourceRef": "sid-DC4EA5E4-379C-459C-BDAD-CA9DC0E537A5"
-        },
-        {
-            "id": "sid-65C302EC-2E43-4814-8834-78D45F2494BE",
-            "targetRef": "sid-7C7103A8-4314-466E-B10E-4DF56BBC24D0",
-            "sourceRef": "sid-73960FAA-56E3-41CB-9533-9264039D212F"
         }
     ]
 }

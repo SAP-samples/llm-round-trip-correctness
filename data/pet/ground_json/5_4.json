@@ -1,58 +1,58 @@
 {
     "tasks": [
         {
-            "id": "sid-DC785350-5AC0-45A0-B388-62F781B2F015",
-            "name": "review the expense report",
-            "type": "Task"
-        },
-        {
-            "id": "sid-834F2D06-00E5-4067-B68B-8796853227C2",
-            "name": "approve the report",
-            "type": "Task"
-        },
-        {
-            "id": "sid-D926C323-A771-41E4-889A-EC42A7878482",
-            "name": "move report to the treasurer",
-            "type": "Task"
-        },
-        {
             "id": "sid-23D479D3-FFA5-4B88-9B05-3CC346CD63E1",
-            "name": "purchase a product",
+            "name": "Employee purchases a product",
             "type": "Task"
         },
         {
             "id": "sid-C929E001-C9D3-45C6-A8E3-0696E3D7B561",
-            "name": "submit an expense report with a list of items",
+            "name": "Employee submits an expense report with a list of items",
+            "type": "Task"
+        },
+        {
+            "id": "sid-DC785350-5AC0-45A0-B388-62F781B2F015",
+            "name": "Supervisor reviews the expense report",
             "type": "Task"
         },
         {
             "id": "sid-0318CC48-9A90-47AE-BCFE-7345AD208AA6",
-            "name": "edit the report",
+            "name": "Employee edits the report",
+            "type": "Task"
+        },
+        {
+            "id": "sid-D926C323-A771-41E4-889A-EC42A7878482",
+            "name": "Supervisor moves report to the treasurer",
             "type": "Task"
         },
         {
             "id": "sid-3521031B-4FE9-4DB0-AD60-3A20E82A2841",
-            "name": "check receipts",
+            "name": "Treasurer checks receipts",
             "type": "Task"
         },
         {
             "id": "sid-F533B273-2D47-43DE-8858-6F2F428831F7",
-            "name": "match the items on the list",
+            "name": "Treasurer matches the items on the list",
             "type": "Task"
         },
         {
             "id": "sid-79056AA7-27D8-4963-A7F7-913DC499A2D0",
-            "name": "accept the expenses for processing",
+            "name": "Treasurer accepts the expenses for processing",
             "type": "Task"
         },
         {
             "id": "sid-42C83DD0-09B8-4306-B7FD-28CEACACDE3D",
-            "name": "send report back to the employee",
+            "name": "Treasurer  sends report back to the employee",
             "type": "Task"
         },
         {
             "id": "sid-261F8593-F623-4AE0-BEF3-ABD5E0B60845",
-            "name": "confirm the payment",
+            "name": "Treasurer confirms the payment",
+            "type": "Task"
+        },
+        {
+            "id": "sid-834F2D06-00E5-4067-B68B-8796853227C2",
+            "name": "Supervisor approves the report",
             "type": "Task"
         }
     ],
@@ -75,7 +75,8 @@
             "type": "Exclusive"
         },
         {
-            "id": "sid-9121C21B-EB16-4082-B07A-24CAF7E0B11B",
+            "id": "sid-C6605437-15E5-42C1-BC84-C7AE76EE7C6F",
+            "name": "in order?",
             "type": "Exclusive"
         },
         {
@@ -83,54 +84,11 @@
             "type": "Exclusive"
         },
         {
-            "id": "sid-C6605437-15E5-42C1-BC84-C7AE76EE7C6F",
-            "name": "in order?",
+            "id": "sid-9121C21B-EB16-4082-B07A-24CAF7E0B11B",
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-D7725BF4-17EC-4682-82C6-7829F5427C6F",
-            "name": "company",
-            "lanes": [
-                {
-                    "id": "sid-1804FDB9-5EA6-4F7E-9694-B3ACEC804FA7",
-                    "name": "Supervisor",
-                    "elemRefs": [
-                        "sid-DC785350-5AC0-45A0-B388-62F781B2F015",
-                        "sid-834F2D06-00E5-4067-B68B-8796853227C2",
-                        "sid-D926C323-A771-41E4-889A-EC42A7878482",
-                        "sid-5EF0A37D-A803-4A1B-9A37-EFB7B3F57E69",
-                        "sid-9121C21B-EB16-4082-B07A-24CAF7E0B11B"
-                    ]
-                },
-                {
-                    "id": "sid-1624596E-BD63-47FA-BEF4-D3341EFD8BD2",
-                    "name": "Employee",
-                    "elemRefs": [
-                        "sid-23D479D3-FFA5-4B88-9B05-3CC346CD63E1",
-                        "sid-C929E001-C9D3-45C6-A8E3-0696E3D7B561",
-                        "sid-0318CC48-9A90-47AE-BCFE-7345AD208AA6",
-                        "sid-F0AA23F2-72D5-44BA-A11B-4CB38B212B00",
-                        "sid-7FBB6CF9-10E4-4C3E-AA05-A764286963D6"
-                    ]
-                },
-                {
-                    "id": "sid-9ADB6ECA-36F8-4CE6-81AA-2F07377FC290",
-                    "name": "Treasurer",
-                    "elemRefs": [
-                        "sid-3521031B-4FE9-4DB0-AD60-3A20E82A2841",
-                        "sid-F533B273-2D47-43DE-8858-6F2F428831F7",
-                        "sid-79056AA7-27D8-4963-A7F7-913DC499A2D0",
-                        "sid-42C83DD0-09B8-4306-B7FD-28CEACACDE3D",
-                        "sid-261F8593-F623-4AE0-BEF3-ABD5E0B60845",
-                        "sid-E1FDA369-EEB7-4694-8D74-B6724FEF7DE1",
-                        "sid-C6605437-15E5-42C1-BC84-C7AE76EE7C6F"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
@@ -160,6 +118,11 @@
             "sourceRef": "sid-5EF0A37D-A803-4A1B-9A37-EFB7B3F57E69"
         },
         {
+            "id": "sid-4CA2B9AC-D66E-4972-ACCC-C432AF3656C0",
+            "targetRef": "sid-3521031B-4FE9-4DB0-AD60-3A20E82A2841",
+            "sourceRef": "sid-D926C323-A771-41E4-889A-EC42A7878482"
+        },
+        {
             "id": "sid-2DDAC5A6-6892-4EE9-8318-EFD31C063716",
             "targetRef": "sid-F533B273-2D47-43DE-8858-6F2F428831F7",
             "sourceRef": "sid-3521031B-4FE9-4DB0-AD60-3A20E82A2841"
@@ -168,6 +131,11 @@
             "id": "sid-2C079CAF-9746-44EE-B1C2-56F99A51CE73",
             "targetRef": "sid-C6605437-15E5-42C1-BC84-C7AE76EE7C6F",
             "sourceRef": "sid-F533B273-2D47-43DE-8858-6F2F428831F7"
+        },
+        {
+            "id": "sid-83E15333-29B9-4CB5-B186-B5455F0BB58D",
+            "targetRef": "sid-DC785350-5AC0-45A0-B388-62F781B2F015",
+            "sourceRef": "sid-7FBB6CF9-10E4-4C3E-AA05-A764286963D6"
         },
         {
             "id": "sid-E9FDBBA6-DABA-4882-964B-64EE539E167C",
@@ -183,6 +151,12 @@
             "id": "sid-4F98B9A0-DCDD-4B65-8E0B-56E4FB969804",
             "targetRef": "sid-0318CC48-9A90-47AE-BCFE-7345AD208AA6",
             "sourceRef": "sid-9121C21B-EB16-4082-B07A-24CAF7E0B11B"
+        },
+        {
+            "id": "sid-CC255325-A7DF-42E6-A4F2-A84D11694256",
+            "targetRef": "sid-9121C21B-EB16-4082-B07A-24CAF7E0B11B",
+            "condition": "no",
+            "sourceRef": "sid-5EF0A37D-A803-4A1B-9A37-EFB7B3F57E69"
         },
         {
             "id": "sid-CF20EF22-5231-4561-8EE4-0072391C4CB8",
@@ -204,22 +178,6 @@
             "id": "sid-D603F382-F46E-4A5D-9747-0B53176BBBC4",
             "targetRef": "sid-5EF0A37D-A803-4A1B-9A37-EFB7B3F57E69",
             "sourceRef": "sid-834F2D06-00E5-4067-B68B-8796853227C2"
-        },
-        {
-            "id": "sid-837D0645-F25B-483A-9306-9BA7193C4275",
-            "targetRef": "sid-3521031B-4FE9-4DB0-AD60-3A20E82A2841",
-            "sourceRef": "sid-D926C323-A771-41E4-889A-EC42A7878482"
-        },
-        {
-            "id": "sid-CC255325-A7DF-42E6-A4F2-A84D11694256",
-            "targetRef": "sid-9121C21B-EB16-4082-B07A-24CAF7E0B11B",
-            "condition": "no",
-            "sourceRef": "sid-5EF0A37D-A803-4A1B-9A37-EFB7B3F57E69"
-        },
-        {
-            "id": "sid-83E15333-29B9-4CB5-B186-B5455F0BB58D",
-            "targetRef": "sid-DC785350-5AC0-45A0-B388-62F781B2F015",
-            "sourceRef": "sid-7FBB6CF9-10E4-4C3E-AA05-A764286963D6"
         },
         {
             "id": "sid-30D0E92F-A1DA-43AD-9CDA-E425E89093F8",

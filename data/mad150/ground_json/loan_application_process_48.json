@@ -1,0 +1,178 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "fill in the employment information form",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "complete the loan application by borrower",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "give the written notice to applicant",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "check for the completeness",
+            "type": "User"
+        },
+        {
+            "id": 5,
+            "name": "send application back to the applicant",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "begin the underwriting process",
+            "type": "User"
+        },
+        {
+            "id": 9,
+            "name": "change the interest rate",
+            "type": "User"
+        },
+        {
+            "id": 10,
+            "name": "approve the loan application",
+            "type": "User"
+        },
+        {
+            "id": 11,
+            "name": "reduce loan amount",
+            "type": "User"
+        },
+        {
+            "id": 13,
+            "name": "receive the loans fund",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 14,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 15,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 2,
+            "type": "Inclusive"
+        },
+        {
+            "id": 6,
+            "type": "Inclusive"
+        },
+        {
+            "id": 8,
+            "type": "Inclusive"
+        },
+        {
+            "id": 12,
+            "type": "Inclusive"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 3,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 4,
+            "targetRef": 6
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 6,
+            "targetRef": 7
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 7,
+            "targetRef": 8
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 8,
+            "targetRef": 9
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 8,
+            "targetRef": 10
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 8,
+            "targetRef": 11
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 9,
+            "targetRef": 12
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 10,
+            "targetRef": 12
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 11,
+            "targetRef": 12
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 12,
+            "targetRef": 13
+        },
+        {
+            "id": "sf16",
+            "sourceRef": 14,
+            "targetRef": 0
+        },
+        {
+            "id": "sf17",
+            "sourceRef": 13,
+            "targetRef": 15
+        }
+    ],
+    "messageFlows": []
+}

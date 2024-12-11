@@ -2,27 +2,27 @@
     "tasks": [
         {
             "id": "sid-540CC11F-A308-4D86-87AC-97EDE6CE784D",
-            "name": "tell  INQ about the data change",
+            "name": "EC tells  INQ about the data change",
             "type": "Task"
         },
         {
             "id": "sid-7DE45EF3-D2EC-4798-B3DB-0061F506431C",
-            "name": "notify the IP of the change",
+            "name": "INQ notifies the IP of the change",
             "type": "Task"
         },
         {
             "id": "sid-BA467D1F-3736-40FC-B604-5E4FF16380CD",
-            "name": "check whether the  data can be changed",
+            "name": "IP checks whether the  data can be changed",
             "type": "Task"
         },
         {
             "id": "sid-CB6F00BE-77C5-4EA2-9B41-3C4A0A3A559A",
-            "name": "confirm the changes",
+            "name": "IP confirmes the changes of INQ",
             "type": "Task"
         },
         {
             "id": "sid-90366BDD-E596-44BE-85A4-558C8324DA44",
-            "name": "reject the changes",
+            "name": "IP rejectes the changes of INQ",
             "type": "Task"
         }
     ],
@@ -48,47 +48,23 @@
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-287DC053-66AE-43F4-AC2F-09FA10C582F5",
-            "name": "System",
-            "lanes": [
-                {
-                    "id": "sid-538A33DC-9EE1-4238-A908-348DEAB19954",
-                    "name": "EC",
-                    "elemRefs": [
-                        "sid-540CC11F-A308-4D86-87AC-97EDE6CE784D",
-                        "sid-21D1EB4A-DE37-4B97-B1A0-AC826BC36068"
-                    ]
-                },
-                {
-                    "id": "sid-9E3A5D02-8950-402F-A981-A538F8F1DCF6",
-                    "name": "INQ",
-                    "elemRefs": [
-                        "sid-7DE45EF3-D2EC-4798-B3DB-0061F506431C"
-                    ]
-                },
-                {
-                    "id": "sid-D28FF15D-E8C7-4104-9CC5-4BB1EDF7D639",
-                    "name": "IP",
-                    "elemRefs": [
-                        "sid-BA467D1F-3736-40FC-B604-5E4FF16380CD",
-                        "sid-CB6F00BE-77C5-4EA2-9B41-3C4A0A3A559A",
-                        "sid-90366BDD-E596-44BE-85A4-558C8324DA44",
-                        "sid-AC0073E4-D609-41B7-9A5B-B0942DC12738",
-                        "sid-018A66EC-8EA7-4A9C-912B-FB3E9646DD4D",
-                        "sid-081161DA-CABB-41AB-BD55-4B291F75DA04"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
             "id": "sid-127E6CCF-7025-4FA0-AFD5-CB1398BCD18A",
             "targetRef": "sid-540CC11F-A308-4D86-87AC-97EDE6CE784D",
             "sourceRef": "sid-21D1EB4A-DE37-4B97-B1A0-AC826BC36068"
+        },
+        {
+            "id": "sid-7F15F420-160A-4727-A3B5-57524A3858FB",
+            "targetRef": "sid-7DE45EF3-D2EC-4798-B3DB-0061F506431C",
+            "sourceRef": "sid-540CC11F-A308-4D86-87AC-97EDE6CE784D"
+        },
+        {
+            "id": "sid-E4EB9649-5984-4A0E-B89F-DC89C3442118",
+            "targetRef": "sid-BA467D1F-3736-40FC-B604-5E4FF16380CD",
+            "sourceRef": "sid-7DE45EF3-D2EC-4798-B3DB-0061F506431C"
         },
         {
             "id": "sid-EF969001-6B24-4C2A-8F02-477020149711",
@@ -119,16 +95,6 @@
             "id": "sid-A79AA9CF-F72A-4A5B-BD94-334A9F44BC3A",
             "targetRef": "sid-AC0073E4-D609-41B7-9A5B-B0942DC12738",
             "sourceRef": "sid-081161DA-CABB-41AB-BD55-4B291F75DA04"
-        },
-        {
-            "id": "sid-BE56684F-2362-486C-A124-67D77E35168A",
-            "targetRef": "sid-7DE45EF3-D2EC-4798-B3DB-0061F506431C",
-            "sourceRef": "sid-540CC11F-A308-4D86-87AC-97EDE6CE784D"
-        },
-        {
-            "id": "sid-E08927BC-88A1-4A1C-A64F-F4E020074FBC",
-            "targetRef": "sid-BA467D1F-3736-40FC-B604-5E4FF16380CD",
-            "sourceRef": "sid-7DE45EF3-D2EC-4798-B3DB-0061F506431C"
         }
     ]
 }

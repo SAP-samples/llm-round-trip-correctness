@@ -2,57 +2,57 @@
     "tasks": [
         {
             "id": "sid-CBA2615C-D9E9-461D-A823-7E0F10CA54A9",
-            "name": "select the underwriters",
-            "type": "Task"
-        },
-        {
-            "id": "sid-A723D51F-907C-4590-8FF7-261914E31348",
-            "name": "decide to go public",
+            "name": "Company selects the underwriters",
             "type": "Task"
         },
         {
             "id": "sid-9BA84F4B-ECB2-4F28-BCBF-E12194B834FA",
-            "name": "prepare a registration statement for the approval of SEC",
+            "name": "Underwriters prepare a registration statement for the approval of SEC",
             "type": "Task"
         },
         {
             "id": "sid-49062CB7-3703-4A8F-BEAB-E7AE2549028F",
-            "name": "check the issue's compliance",
+            "name": "Underwriters  check the issue's compliance",
             "type": "Task"
         },
         {
             "id": "sid-B69B3A5A-ED1C-4528-9649-73ECA753CFD9",
-            "name": "begin to firm up the issue price",
+            "name": "Underwriters begin to firm up the issue price",
             "type": "Task"
         },
         {
             "id": "sid-E86F8AEB-4D02-469D-A616-CC45F5B24541",
-            "name": "arrange a road show",
+            "name": "Underwriters arrange a road show",
             "type": "Task"
         },
         {
             "id": "sid-3FCB48B2-E639-4425-8552-D3D05C4E8EE1",
-            "name": "receive clearance from the SEC",
+            "name": "Underwriters receive clearance from the SEC",
             "type": "Task"
         },
         {
             "id": "sid-BE0B2588-CED2-440E-9401-E781FD3D37F0",
-            "name": "fix the issue price",
+            "name": "Underwriters fix the issue price",
             "type": "Task"
         },
         {
             "id": "sid-A99B1810-2852-437B-9A68-2F3E1ED18A0D",
-            "name": "enter into a firm commitment to buy the stock",
+            "name": "Underwriters enter into a firm commitment to buy the stock",
             "type": "Task"
         },
         {
             "id": "sid-F8E3A5A1-40B5-4661-96A6-0D271E8BB236",
-            "name": "offer stock to the public",
+            "name": "Underwriters offer stock to the public",
+            "type": "Task"
+        },
+        {
+            "id": "sid-A723D51F-907C-4590-8FF7-261914E31348",
+            "name": "Company decides to go public",
             "type": "Task"
         },
         {
             "id": "sid-AE995A37-C22D-4A74-A8E7-C2A0A5C92F54",
-            "name": "await approval of registration statement",
+            "name": "Underwriters awaite approval of registration statement",
             "type": "Task"
         }
     ],
@@ -63,19 +63,9 @@
             "type": "StartNoneEvent"
         },
         {
-            "id": "sid-9A3EEAC8-B4DB-402C-A846-CA731BD36CAB",
-            "name": "",
-            "type": "EndNoneEvent"
-        },
-        {
             "id": "sid-A1C603E1-7CCC-43FB-BA1A-CFC35F97F9DF",
             "name": "",
             "type": "EndNoneEvent"
-        },
-        {
-            "id": "sid-3CDFB677-660D-4A97-8376-CB81BC5B0709",
-            "name": "",
-            "type": "StartNoneEvent"
         }
     ],
     "gateways": [
@@ -88,56 +78,8 @@
             "type": "Parallel"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-1DF7FD67-53BE-4EA4-9AB1-C744EC65313A",
-            "name": "Organization",
-            "lanes": [
-                {
-                    "id": "sid-4E9E4DB7-001F-4718-A189-82E382998C07",
-                    "name": "",
-                    "elemRefs": [
-                        "sid-CBA2615C-D9E9-461D-A823-7E0F10CA54A9",
-                        "sid-A723D51F-907C-4590-8FF7-261914E31348",
-                        "sid-5D5EBE5F-59D8-486C-AD98-5260ED2C05F4",
-                        "sid-9A3EEAC8-B4DB-402C-A846-CA731BD36CAB"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "sid-00B4F865-BE0D-4082-B4F9-CEDF74E41149",
-            "name": "Underwriters",
-            "lanes": [
-                {
-                    "id": "sid-40633AF7-3002-4BA2-80B0-5E7980146364",
-                    "name": "",
-                    "elemRefs": [
-                        "sid-9BA84F4B-ECB2-4F28-BCBF-E12194B834FA",
-                        "sid-49062CB7-3703-4A8F-BEAB-E7AE2549028F",
-                        "sid-B69B3A5A-ED1C-4528-9649-73ECA753CFD9",
-                        "sid-E86F8AEB-4D02-469D-A616-CC45F5B24541",
-                        "sid-3FCB48B2-E639-4425-8552-D3D05C4E8EE1",
-                        "sid-BE0B2588-CED2-440E-9401-E781FD3D37F0",
-                        "sid-A99B1810-2852-437B-9A68-2F3E1ED18A0D",
-                        "sid-F8E3A5A1-40B5-4661-96A6-0D271E8BB236",
-                        "sid-AE995A37-C22D-4A74-A8E7-C2A0A5C92F54",
-                        "sid-A1C603E1-7CCC-43FB-BA1A-CFC35F97F9DF",
-                        "sid-3CDFB677-660D-4A97-8376-CB81BC5B0709",
-                        "sid-3390F041-01DB-4B68-87FE-A92964C970A0",
-                        "sid-E45D59BB-69D8-4571-B05A-D2071E521724"
-                    ]
-                }
-            ]
-        }
-    ],
-    "messageFlows": [
-        {
-            "id": "sid-2D30338A-EDCA-41C7-8496-19E4FA1244E9",
-            "targetRef": "sid-9BA84F4B-ECB2-4F28-BCBF-E12194B834FA",
-            "sourceRef": "sid-CBA2615C-D9E9-461D-A823-7E0F10CA54A9"
-        }
-    ],
+    "pools": [],
+    "messageFlows": [],
     "sequenceFlows": [
         {
             "id": "sid-F0F911E8-D419-4A19-AE74-AAAFCF55C75E",
@@ -180,6 +122,11 @@
             "sourceRef": "sid-A723D51F-907C-4590-8FF7-261914E31348"
         },
         {
+            "id": "sid-3FB374B9-B59A-47CA-A2E8-2F930EE2941F",
+            "targetRef": "sid-9BA84F4B-ECB2-4F28-BCBF-E12194B834FA",
+            "sourceRef": "sid-CBA2615C-D9E9-461D-A823-7E0F10CA54A9"
+        },
+        {
             "id": "sid-20825027-9503-4EC9-BCBC-5B83FF4D1973",
             "targetRef": "sid-AE995A37-C22D-4A74-A8E7-C2A0A5C92F54",
             "sourceRef": "sid-3390F041-01DB-4B68-87FE-A92964C970A0"
@@ -208,16 +155,6 @@
             "id": "sid-FD1F65F3-00E0-4B2A-BC94-3FD22A299FE1",
             "targetRef": "sid-F8E3A5A1-40B5-4661-96A6-0D271E8BB236",
             "sourceRef": "sid-A99B1810-2852-437B-9A68-2F3E1ED18A0D"
-        },
-        {
-            "id": "sid-2974CE5C-83B6-43FF-A909-D4842A0E8BF2",
-            "targetRef": "sid-9A3EEAC8-B4DB-402C-A846-CA731BD36CAB",
-            "sourceRef": "sid-CBA2615C-D9E9-461D-A823-7E0F10CA54A9"
-        },
-        {
-            "id": "sid-E265DC88-57E0-4B70-8E79-54743EC4D6B0",
-            "targetRef": "sid-9BA84F4B-ECB2-4F28-BCBF-E12194B834FA",
-            "sourceRef": "sid-3CDFB677-660D-4A97-8376-CB81BC5B0709"
         }
     ]
 }

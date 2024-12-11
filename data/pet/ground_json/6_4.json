@@ -1,6 +1,26 @@
 {
     "tasks": [
         {
+            "id": "sid-E433EB00-85B2-414E-B233-87FA1FDA1D9A",
+            "name": "company determines contact details of potential customers",
+            "type": "Task"
+        },
+        {
+            "id": "sid-59570426-26FE-4643-9CD7-39770DE579C2",
+            "name": "company  buys details for cold calls",
+            "type": "Task"
+        },
+        {
+            "id": "sid-0CC1C0B9-1195-4256-BF1B-4716AF2DFE22",
+            "name": "marketing staff participates in exhibitions",
+            "type": "Task"
+        },
+        {
+            "id": "sid-1E78EDA4-D09B-4586-ABF5-6DF9A2E8FC41",
+            "name": "company knows person interested in the product",
+            "type": "Task"
+        },
+        {
             "id": "sid-D73C2D3F-B398-48F6-A41A-49609C76094E",
             "name": "call center staff calls the customer",
             "type": "Task"
@@ -21,53 +41,33 @@
             "type": "Task"
         },
         {
-            "id": "sid-E433EB00-85B2-414E-B233-87FA1FDA1D9A",
-            "name": "determine contact details of potential customers",
-            "type": "Task"
-        },
-        {
-            "id": "sid-59570426-26FE-4643-9CD7-39770DE579C2",
-            "name": "buy details for cold calls",
-            "type": "Task"
-        },
-        {
-            "id": "sid-1E78EDA4-D09B-4586-ABF5-6DF9A2E8FC41",
-            "name": "know person interested in the product",
-            "type": "Task"
-        },
-        {
-            "id": "sid-DFC06F3B-71D6-4794-86FF-D3D941AC6F3C",
-            "name": "wait for the customer",
-            "type": "Task"
-        },
-        {
-            "id": "sid-AC116867-FFE4-496F-9B59-1588AB4DB8A5",
-            "name": "create a quotation",
-            "type": "Task"
-        },
-        {
             "id": "sid-5F216AEC-0873-4DFD-B880-6BC6BD86FF3A",
-            "name": "acquire the customer",
+            "name": "head of development  acquires the customer",
             "type": "Task"
         },
         {
             "id": "sid-E00B4C34-6356-4A25-BE56-0CF0C523796D",
-            "name": "make  online presentation",
-            "type": "Task"
-        },
-        {
-            "id": "sid-2D512B3B-0075-4382-BCE9-43F58B1DDE03",
-            "name": "call the customer",
+            "name": "sales representative makes  online presentation",
             "type": "Task"
         },
         {
             "id": "sid-7CE8AEAC-1983-4FD2-B017-0711F07C62B6",
-            "name": "make  online presentation",
+            "name": "pre-sales employee makes  online presentation",
             "type": "Task"
         },
         {
-            "id": "sid-0CC1C0B9-1195-4256-BF1B-4716AF2DFE22",
-            "name": "participate in exhibitions",
+            "id": "sid-DFC06F3B-71D6-4794-86FF-D3D941AC6F3C",
+            "name": "company waits for the customer",
+            "type": "Task"
+        },
+        {
+            "id": "sid-2D512B3B-0075-4382-BCE9-43F58B1DDE03",
+            "name": "sales representative calls the customer",
+            "type": "Task"
+        },
+        {
+            "id": "sid-AC116867-FFE4-496F-9B59-1588AB4DB8A5",
+            "name": "company creates a quotation",
             "type": "Task"
         }
     ],
@@ -93,16 +93,13 @@
             "type": "Exclusive"
         },
         {
-            "id": "sid-B84FA34F-0531-407C-8A16-0D649B3A3E39",
-            "name": "customer  contact?",
+            "id": "sid-FB815050-72A7-4659-93C8-3470CE3B659C",
+            "name": "interess?",
             "type": "Exclusive"
         },
         {
-            "id": "sid-A7323D80-82C5-429D-B164-808FAC85C502",
-            "type": "Exclusive"
-        },
-        {
-            "id": "sid-E38CC174-7FC9-44A6-A306-944ADAEBD3FB",
+            "id": "sid-C1E236E2-BA82-4BCB-A0D5-56D74A77A9E9",
+            "name": "low budget?",
             "type": "Exclusive"
         },
         {
@@ -119,86 +116,20 @@
             "type": "Exclusive"
         },
         {
-            "id": "sid-FB815050-72A7-4659-93C8-3470CE3B659C",
-            "name": "interess?",
+            "id": "sid-B84FA34F-0531-407C-8A16-0D649B3A3E39",
+            "name": "customer  contact?",
             "type": "Exclusive"
         },
         {
-            "id": "sid-C1E236E2-BA82-4BCB-A0D5-56D74A77A9E9",
-            "name": "low budget?",
+            "id": "sid-A7323D80-82C5-429D-B164-808FAC85C502",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-E38CC174-7FC9-44A6-A306-944ADAEBD3FB",
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-2D8A8F49-AA84-42F3-9E17-CAB6090F70D3",
-            "name": "Sales Department",
-            "lanes": [
-                {
-                    "id": "sid-C3C57BB7-0E72-48C8-9ADC-9BC968A500A9",
-                    "name": "Call Center Staff",
-                    "elemRefs": [
-                        "sid-D73C2D3F-B398-48F6-A41A-49609C76094E",
-                        "sid-AB26A69F-065D-43B9-AD99-0385328FE750",
-                        "sid-390B21F6-0A0B-4C0E-8830-059C635CED12",
-                        "sid-EC77D7B9-43BD-458F-A81D-A728A38E6DE3"
-                    ]
-                },
-                {
-                    "id": "sid-809F8818-1DE0-4723-8180-6E29B93B2F0D",
-                    "name": "Sales Staff",
-                    "elemRefs": [
-                        "sid-E433EB00-85B2-414E-B233-87FA1FDA1D9A",
-                        "sid-59570426-26FE-4643-9CD7-39770DE579C2",
-                        "sid-1E78EDA4-D09B-4586-ABF5-6DF9A2E8FC41",
-                        "sid-DFC06F3B-71D6-4794-86FF-D3D941AC6F3C",
-                        "sid-AC116867-FFE4-496F-9B59-1588AB4DB8A5",
-                        "sid-341AB28C-6DD4-4B2E-89FC-81E86BC8F3A5",
-                        "sid-2B4DC2AF-0FA3-4F1B-A50B-CA98E5FE7D14",
-                        "sid-562AD96F-524F-4667-B652-D3D67C529DDD",
-                        "sid-F3691155-FAEE-485B-96D4-4DE72FE18A3E",
-                        "sid-B84FA34F-0531-407C-8A16-0D649B3A3E39",
-                        "sid-A7323D80-82C5-429D-B164-808FAC85C502",
-                        "sid-E38CC174-7FC9-44A6-A306-944ADAEBD3FB"
-                    ]
-                },
-                {
-                    "id": "sid-6D53C675-8EA7-45C4-8C39-6A8B8F5649A2",
-                    "name": "Head of Development",
-                    "elemRefs": [
-                        "sid-5F216AEC-0873-4DFD-B880-6BC6BD86FF3A",
-                        "sid-BD0C236F-E166-4333-8304-84CEDECA0E31",
-                        "sid-3CC3EEA7-4C09-44A1-A6AC-2CD0C21CC9FE",
-                        "sid-AF880E13-3FEA-4AD2-A784-C568392FEC29",
-                        "sid-FB815050-72A7-4659-93C8-3470CE3B659C",
-                        "sid-C1E236E2-BA82-4BCB-A0D5-56D74A77A9E9"
-                    ]
-                },
-                {
-                    "id": "sid-8DF7BBD0-D1E0-4BEA-B45F-0A7E2116B5AA",
-                    "name": "Sales Representative",
-                    "elemRefs": [
-                        "sid-E00B4C34-6356-4A25-BE56-0CF0C523796D",
-                        "sid-2D512B3B-0075-4382-BCE9-43F58B1DDE03"
-                    ]
-                },
-                {
-                    "id": "sid-9FC076C4-E492-4AB5-A438-F2DBFD709FD6",
-                    "name": "Pre-Sales Employee",
-                    "elemRefs": [
-                        "sid-7CE8AEAC-1983-4FD2-B017-0711F07C62B6"
-                    ]
-                },
-                {
-                    "id": "sid-8190AF02-0DF9-42D2-AF17-1EF5C17B51B9",
-                    "name": "Marketing Staff",
-                    "elemRefs": [
-                        "sid-0CC1C0B9-1195-4256-BF1B-4716AF2DFE22"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
@@ -240,6 +171,11 @@
             "id": "sid-D4AF7233-5E57-4FDA-8002-40C2241FDD4E",
             "targetRef": "sid-F3691155-FAEE-485B-96D4-4DE72FE18A3E",
             "sourceRef": "sid-1E78EDA4-D09B-4586-ABF5-6DF9A2E8FC41"
+        },
+        {
+            "id": "sid-79EF0ED6-D95C-4000-A46B-DDB026622A3D",
+            "targetRef": "sid-D73C2D3F-B398-48F6-A41A-49609C76094E",
+            "sourceRef": "sid-F3691155-FAEE-485B-96D4-4DE72FE18A3E"
         },
         {
             "id": "sid-AC7BC194-7383-48F8-B980-BF05FE24D769",
@@ -285,9 +221,21 @@
             "sourceRef": "sid-FB815050-72A7-4659-93C8-3470CE3B659C"
         },
         {
+            "id": "sid-F799D8B1-2030-46F5-A804-9B115DAF78F2",
+            "targetRef": "sid-E00B4C34-6356-4A25-BE56-0CF0C523796D",
+            "condition": "no",
+            "sourceRef": "sid-3CC3EEA7-4C09-44A1-A6AC-2CD0C21CC9FE"
+        },
+        {
             "id": "sid-E1D66CDD-FF61-4252-8C05-8446A39E106C",
             "targetRef": "sid-3CC3EEA7-4C09-44A1-A6AC-2CD0C21CC9FE",
             "sourceRef": "sid-BD0C236F-E166-4333-8304-84CEDECA0E31"
+        },
+        {
+            "id": "sid-1E922C79-9A38-4D92-84B6-F8B9117F07AC",
+            "targetRef": "sid-7CE8AEAC-1983-4FD2-B017-0711F07C62B6",
+            "condition": "yes",
+            "sourceRef": "sid-3CC3EEA7-4C09-44A1-A6AC-2CD0C21CC9FE"
         },
         {
             "id": "sid-06F34181-DE53-46F6-8428-F2665330224F",
@@ -310,6 +258,12 @@
             "sourceRef": "sid-DFC06F3B-71D6-4794-86FF-D3D941AC6F3C"
         },
         {
+            "id": "sid-BC7AB5DB-5F43-4E19-9D28-ED6A2813CE33",
+            "targetRef": "sid-2D512B3B-0075-4382-BCE9-43F58B1DDE03",
+            "condition": "no",
+            "sourceRef": "sid-B84FA34F-0531-407C-8A16-0D649B3A3E39"
+        },
+        {
             "id": "sid-1A73B662-4E6B-4DE4-830E-9EB3401B4DE1",
             "targetRef": "sid-A7323D80-82C5-429D-B164-808FAC85C502",
             "sourceRef": "sid-2D512B3B-0075-4382-BCE9-43F58B1DDE03"
@@ -318,6 +272,11 @@
             "id": "sid-E5BE2F34-E58A-406F-B221-D7663ED64449",
             "targetRef": "sid-AC116867-FFE4-496F-9B59-1588AB4DB8A5",
             "sourceRef": "sid-A7323D80-82C5-429D-B164-808FAC85C502"
+        },
+        {
+            "id": "sid-93B7BF0D-3B90-45DF-B399-38BAB2BF1201",
+            "targetRef": "sid-A7323D80-82C5-429D-B164-808FAC85C502",
+            "sourceRef": "sid-B84FA34F-0531-407C-8A16-0D649B3A3E39"
         },
         {
             "id": "sid-578872D3-9C73-4EA2-8C9C-F314CE0FDD00",
@@ -330,39 +289,10 @@
             "sourceRef": "sid-E38CC174-7FC9-44A6-A306-944ADAEBD3FB"
         },
         {
-            "id": "sid-79EF0ED6-D95C-4000-A46B-DDB026622A3D",
-            "targetRef": "sid-D73C2D3F-B398-48F6-A41A-49609C76094E",
-            "sourceRef": "sid-F3691155-FAEE-485B-96D4-4DE72FE18A3E"
-        },
-        {
-            "id": "sid-F3065EC4-A07D-4E9B-A1E8-342C9A88C0B8",
-            "targetRef": "sid-A7323D80-82C5-429D-B164-808FAC85C502",
-            "condition": "yes",
-            "sourceRef": "sid-B84FA34F-0531-407C-8A16-0D649B3A3E39"
-        },
-        {
-            "id": "sid-F799D8B1-2030-46F5-A804-9B115DAF78F2",
-            "targetRef": "sid-E00B4C34-6356-4A25-BE56-0CF0C523796D",
-            "condition": "no",
-            "sourceRef": "sid-3CC3EEA7-4C09-44A1-A6AC-2CD0C21CC9FE"
-        },
-        {
-            "id": "sid-1E922C79-9A38-4D92-84B6-F8B9117F07AC",
-            "targetRef": "sid-7CE8AEAC-1983-4FD2-B017-0711F07C62B6",
-            "condition": "yes",
-            "sourceRef": "sid-3CC3EEA7-4C09-44A1-A6AC-2CD0C21CC9FE"
-        },
-        {
             "id": "sid-B1A94712-16E6-4107-8F98-4D69A820AA76",
             "targetRef": "sid-E38CC174-7FC9-44A6-A306-944ADAEBD3FB",
             "condition": "yes",
             "sourceRef": "sid-C1E236E2-BA82-4BCB-A0D5-56D74A77A9E9"
-        },
-        {
-            "id": "sid-BC7AB5DB-5F43-4E19-9D28-ED6A2813CE33",
-            "targetRef": "sid-2D512B3B-0075-4382-BCE9-43F58B1DDE03",
-            "condition": "no",
-            "sourceRef": "sid-B84FA34F-0531-407C-8A16-0D649B3A3E39"
         }
     ]
 }

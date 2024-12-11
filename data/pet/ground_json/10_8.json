@@ -2,42 +2,42 @@
     "tasks": [
         {
             "id": "sid-C479C1BC-905D-49BE-B95B-6F1FAAFFE1EE",
-            "name": "deregister at the GO",
+            "name": "MSPO deregisters at the GO",
             "type": "Task"
         },
         {
             "id": "sid-4B354B61-47DF-45DF-9044-CCDCBFBC7AB6",
-            "name": "verify the deregistration",
+            "name": "GO verifies the deregistration",
             "type": "Task"
         },
         {
             "id": "sid-FA98797B-EB49-482D-B08E-017A6BA81D59",
-            "name": "reject the deregistration",
+            "name": "GO rejects the deregistration",
             "type": "Task"
         },
         {
             "id": "sid-4DC5D8BF-1958-41B0-A6BB-8764F6BF5D96",
-            "name": "confirm the deregistration",
+            "name": "GO preliminarily confirms the deregistration",
             "type": "Task"
         },
         {
             "id": "sid-FA2AF29B-3C95-4684-A22C-447E3A701250",
-            "name": "assign himself as MSP",
+            "name": "GO assigns himself as MSP",
             "type": "Task"
         },
         {
             "id": "sid-C564CF35-CB9B-4EF0-A48B-A52378D3A024",
-            "name": "inform the MSPO about the state of the assignment",
+            "name": "GO informs the MSPO about the state of the assignment of the GO",
             "type": "Task"
         },
         {
             "id": "sid-70173D39-1B15-495E-B78D-EDFC8C8157A7",
-            "name": "inform the MPO about the assignment",
+            "name": "GO informs the MPO about the assignment of the GO",
             "type": "Task"
         },
         {
             "id": "sid-7C274C37-4944-4C9D-BE39-724C415C410F",
-            "name": "inform the SP about the assignment",
+            "name": "GO informs the SP about the assignment of the GO",
             "type": "Task"
         }
     ],
@@ -63,38 +63,7 @@
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-B7D583A6-B3C2-434B-9194-0B0145AD361B",
-            "name": "System",
-            "lanes": [
-                {
-                    "id": "sid-868D6D6A-B6E7-4F1D-B7B4-8AE3274B2159",
-                    "name": "MSPO",
-                    "elemRefs": [
-                        "sid-C479C1BC-905D-49BE-B95B-6F1FAAFFE1EE",
-                        "sid-F99F309B-23F1-49CE-B7A6-F04695014A0D"
-                    ]
-                },
-                {
-                    "id": "sid-BE521019-37D4-4623-B562-B701DDF33F57",
-                    "name": "GO",
-                    "elemRefs": [
-                        "sid-4B354B61-47DF-45DF-9044-CCDCBFBC7AB6",
-                        "sid-FA98797B-EB49-482D-B08E-017A6BA81D59",
-                        "sid-4DC5D8BF-1958-41B0-A6BB-8764F6BF5D96",
-                        "sid-FA2AF29B-3C95-4684-A22C-447E3A701250",
-                        "sid-C564CF35-CB9B-4EF0-A48B-A52378D3A024",
-                        "sid-70173D39-1B15-495E-B78D-EDFC8C8157A7",
-                        "sid-7C274C37-4944-4C9D-BE39-724C415C410F",
-                        "sid-ABBA7CFD-BEF9-4352-A0B1-165800971294",
-                        "sid-A60BA31A-D807-4C6B-8624-6EC10C44253C",
-                        "sid-2672DB1F-4D1E-44C3-8B30-DF3CCD34A80A"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {

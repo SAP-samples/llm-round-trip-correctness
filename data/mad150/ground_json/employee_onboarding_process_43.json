@@ -1,0 +1,256 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "make an introduction",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "discuss role, goals and projects with supervisor",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "assign training material",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "take out to lunch",
+            "type": "User"
+        },
+        {
+            "id": 6,
+            "name": "hold a welcoming ceremony",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "explain your expectations",
+            "type": "User"
+        },
+        {
+            "id": 8,
+            "name": "tour the office",
+            "type": "User"
+        },
+        {
+            "id": 9,
+            "name": "assign a mentor",
+            "type": "User"
+        },
+        {
+            "id": 10,
+            "name": "induct into company culture",
+            "type": "User"
+        },
+        {
+            "id": 13,
+            "name": "assign first project",
+            "type": "User"
+        },
+        {
+            "id": 15,
+            "name": "plan check-in meetings",
+            "type": "User"
+        },
+        {
+            "id": 16,
+            "name": "explain long-term goals",
+            "type": "User"
+        },
+        {
+            "id": 17,
+            "name": "provide reading material for personal growth",
+            "type": "User"
+        },
+        {
+            "id": 18,
+            "name": "encourage them to socially interact with the team",
+            "type": "User"
+        },
+        {
+            "id": 19,
+            "name": "review onboarding process over the next 60 days",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 21,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 22,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 2,
+            "type": "Parallel"
+        },
+        {
+            "id": 5,
+            "type": "Parallel"
+        },
+        {
+            "id": 11,
+            "type": "Parallel"
+        },
+        {
+            "id": 12,
+            "type": "Parallel"
+        },
+        {
+            "id": 14,
+            "type": "Parallel"
+        },
+        {
+            "id": 20,
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 4,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 7
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 5,
+            "targetRef": 8
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 6,
+            "targetRef": 9
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 7,
+            "targetRef": 10
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 9,
+            "targetRef": 11
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 10,
+            "targetRef": 11
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 8,
+            "targetRef": 11
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 3,
+            "targetRef": 12
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 11,
+            "targetRef": 12
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 12,
+            "targetRef": 13
+        },
+        {
+            "id": "sf16",
+            "sourceRef": 13,
+            "targetRef": 14
+        },
+        {
+            "id": "sf17",
+            "sourceRef": 14,
+            "targetRef": 15
+        },
+        {
+            "id": "sf18",
+            "sourceRef": 14,
+            "targetRef": 16
+        },
+        {
+            "id": "sf19",
+            "sourceRef": 14,
+            "targetRef": 17
+        },
+        {
+            "id": "sf20",
+            "sourceRef": 15,
+            "targetRef": 18
+        },
+        {
+            "id": "sf21",
+            "sourceRef": 17,
+            "targetRef": 19
+        },
+        {
+            "id": "sf22",
+            "sourceRef": 18,
+            "targetRef": 20
+        },
+        {
+            "id": "sf23",
+            "sourceRef": 16,
+            "targetRef": 20
+        },
+        {
+            "id": "sf24",
+            "sourceRef": 19,
+            "targetRef": 20
+        },
+        {
+            "id": "sf25",
+            "sourceRef": 21,
+            "targetRef": 0
+        },
+        {
+            "id": "sf26",
+            "sourceRef": 20,
+            "targetRef": 22
+        }
+    ],
+    "messageFlows": []
+}

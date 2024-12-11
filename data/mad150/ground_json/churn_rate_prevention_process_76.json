@@ -1,0 +1,312 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "record basic details",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "identify key points of value",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "send them an email",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "confirm call date and time",
+            "type": "User"
+        },
+        {
+            "id": 5,
+            "name": "record if they are willing to talk",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "record whether or not the customer responded",
+            "type": "User"
+        },
+        {
+            "id": 8,
+            "name": "give them a call",
+            "type": "User"
+        },
+        {
+            "id": 12,
+            "name": "ask open-ended questions",
+            "type": "User"
+        },
+        {
+            "id": 13,
+            "name": "summarize why they want to leave",
+            "type": "User"
+        },
+        {
+            "id": 14,
+            "name": "identify the root cause(s) of the problem",
+            "type": "User"
+        },
+        {
+            "id": 17,
+            "name": "inform them of key metrics demonstrating value",
+            "type": "User"
+        },
+        {
+            "id": 18,
+            "name": "present them with a special offer",
+            "type": "User"
+        },
+        {
+            "id": 21,
+            "name": "thank them for their time and feedback",
+            "type": "User"
+        },
+        {
+            "id": 22,
+            "name": "record the customer\u2019s decision",
+            "type": "User"
+        },
+        {
+            "id": 24,
+            "name": "ask if they have any other concerns",
+            "type": "User"
+        },
+        {
+            "id": 25,
+            "name": "send learnings to appropriate managers",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 26,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 27,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 2,
+            "type": "Inclusive"
+        },
+        {
+            "id": 6,
+            "type": "Parallel"
+        },
+        {
+            "id": 9,
+            "type": "Parallel"
+        },
+        {
+            "id": 10,
+            "type": "Inclusive"
+        },
+        {
+            "id": 11,
+            "type": "Parallel"
+        },
+        {
+            "id": 15,
+            "type": "Parallel"
+        },
+        {
+            "id": 16,
+            "type": "Parallel"
+        },
+        {
+            "id": 19,
+            "type": "Parallel"
+        },
+        {
+            "id": 20,
+            "type": "Parallel"
+        },
+        {
+            "id": 23,
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 2,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 3,
+            "targetRef": 6
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 6,
+            "targetRef": 7
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 6,
+            "targetRef": 8
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 7,
+            "targetRef": 9
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 8,
+            "targetRef": 9
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 9,
+            "targetRef": 10
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 4,
+            "targetRef": 10
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 5,
+            "targetRef": 10
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 10,
+            "targetRef": 11
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 11,
+            "targetRef": 12
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 11,
+            "targetRef": 13
+        },
+        {
+            "id": "sf16",
+            "sourceRef": 11,
+            "targetRef": 14
+        },
+        {
+            "id": "sf17",
+            "sourceRef": 12,
+            "targetRef": 15
+        },
+        {
+            "id": "sf18",
+            "sourceRef": 13,
+            "targetRef": 15
+        },
+        {
+            "id": "sf19",
+            "sourceRef": 14,
+            "targetRef": 15
+        },
+        {
+            "id": "sf20",
+            "sourceRef": 15,
+            "targetRef": 16
+        },
+        {
+            "id": "sf21",
+            "sourceRef": 16,
+            "targetRef": 17
+        },
+        {
+            "id": "sf22",
+            "sourceRef": 16,
+            "targetRef": 18
+        },
+        {
+            "id": "sf23",
+            "sourceRef": 17,
+            "targetRef": 19
+        },
+        {
+            "id": "sf24",
+            "sourceRef": 18,
+            "targetRef": 19
+        },
+        {
+            "id": "sf25",
+            "sourceRef": 19,
+            "targetRef": 20
+        },
+        {
+            "id": "sf26",
+            "sourceRef": 20,
+            "targetRef": 21
+        },
+        {
+            "id": "sf27",
+            "sourceRef": 20,
+            "targetRef": 22
+        },
+        {
+            "id": "sf28",
+            "sourceRef": 21,
+            "targetRef": 23
+        },
+        {
+            "id": "sf29",
+            "sourceRef": 22,
+            "targetRef": 23
+        },
+        {
+            "id": "sf30",
+            "sourceRef": 23,
+            "targetRef": 24
+        },
+        {
+            "id": "sf31",
+            "sourceRef": 24,
+            "targetRef": 25
+        },
+        {
+            "id": "sf32",
+            "sourceRef": 26,
+            "targetRef": 0
+        },
+        {
+            "id": "sf33",
+            "sourceRef": 25,
+            "targetRef": 27
+        }
+    ],
+    "messageFlows": []
+}

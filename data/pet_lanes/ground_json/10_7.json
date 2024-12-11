@@ -1,0 +1,161 @@
+{
+    "tasks": [
+        {
+            "id": "sid-0CCB5E3B-C414-4EB9-AF6E-715F563D4435",
+            "name": "register the measurement at the GO",
+            "type": "Task"
+        },
+        {
+            "id": "sid-645237F8-AB65-4724-9757-8A94250B12FE",
+            "name": "examine the application of the MSPN",
+            "type": "Task"
+        },
+        {
+            "id": "sid-4BB4DD6B-4972-451F-B336-97605AF06240",
+            "name": "reject the application of the MSPN",
+            "type": "Task"
+        },
+        {
+            "id": "sid-107B2057-6723-4064-8924-0C06239EB701",
+            "name": "confirme the application of the MSPN",
+            "type": "Task"
+        },
+        {
+            "id": "sid-2DF5274E-4AA1-4229-9CB0-C3E5EE245371",
+            "name": "assign the MSPN",
+            "type": "Task"
+        },
+        {
+            "id": "sid-27B497D5-A11C-46FD-B04F-7E3FFA15CA0F",
+            "name": "inform the MSPO about the assignment",
+            "type": "Task"
+        },
+        {
+            "id": "sid-A9ADCC76-33FC-43EC-8CA1-11CA0DF00FDD",
+            "name": "inform the MPO about the assignment",
+            "type": "Task"
+        },
+        {
+            "id": "sid-293F5FBC-D3C0-467E-AE9B-2F6B034884B7",
+            "name": "inform the SP about the assignment",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-59FC8868-6922-44C0-9EA0-B4C7CA581425",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "sid-C7726865-9445-412D-8155-79EDD63A42F6",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "sid-83A65233-085A-429D-8845-EBB922278AF1",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-59EDD1DC-6435-4DEA-81D2-46F4003A1EFB",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [
+        {
+            "id": "sid-8DCCD7BE-E627-412F-B9F1-7F11A4260C9B",
+            "name": "System",
+            "lanes": [
+                {
+                    "id": "sid-F0B8D31D-E10E-4EBA-A4DA-13AF4A2A22F9",
+                    "name": "MSPN",
+                    "elemRefs": [
+                        "sid-0CCB5E3B-C414-4EB9-AF6E-715F563D4435",
+                        "sid-59FC8868-6922-44C0-9EA0-B4C7CA581425"
+                    ]
+                },
+                {
+                    "id": "sid-3BB9BFC1-9C91-4D93-BC81-8C6B4C84A5E6",
+                    "name": "GO",
+                    "elemRefs": [
+                        "sid-645237F8-AB65-4724-9757-8A94250B12FE",
+                        "sid-4BB4DD6B-4972-451F-B336-97605AF06240",
+                        "sid-107B2057-6723-4064-8924-0C06239EB701",
+                        "sid-2DF5274E-4AA1-4229-9CB0-C3E5EE245371",
+                        "sid-27B497D5-A11C-46FD-B04F-7E3FFA15CA0F",
+                        "sid-A9ADCC76-33FC-43EC-8CA1-11CA0DF00FDD",
+                        "sid-293F5FBC-D3C0-467E-AE9B-2F6B034884B7",
+                        "sid-C7726865-9445-412D-8155-79EDD63A42F6",
+                        "sid-83A65233-085A-429D-8845-EBB922278AF1",
+                        "sid-59EDD1DC-6435-4DEA-81D2-46F4003A1EFB"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "sid-95CD6E1E-EA1D-430C-A3E1-80AC07BEA0AD",
+            "targetRef": "sid-0CCB5E3B-C414-4EB9-AF6E-715F563D4435",
+            "sourceRef": "sid-59FC8868-6922-44C0-9EA0-B4C7CA581425"
+        },
+        {
+            "id": "sid-E7F137AE-C29F-4FA1-B1A2-E39CBC8CE6DF",
+            "targetRef": "sid-83A65233-085A-429D-8845-EBB922278AF1",
+            "sourceRef": "sid-645237F8-AB65-4724-9757-8A94250B12FE"
+        },
+        {
+            "id": "sid-33EB3B80-237C-41DD-9EF0-62C46F57A463",
+            "targetRef": "sid-4BB4DD6B-4972-451F-B336-97605AF06240",
+            "sourceRef": "sid-83A65233-085A-429D-8845-EBB922278AF1"
+        },
+        {
+            "id": "sid-9769FD59-51A3-4E00-BC15-10D40D4CBE12",
+            "targetRef": "sid-107B2057-6723-4064-8924-0C06239EB701",
+            "sourceRef": "sid-83A65233-085A-429D-8845-EBB922278AF1"
+        },
+        {
+            "id": "sid-B5021A7A-FDC0-419A-8D7C-7DA36C0E0B65",
+            "targetRef": "sid-59EDD1DC-6435-4DEA-81D2-46F4003A1EFB",
+            "sourceRef": "sid-4BB4DD6B-4972-451F-B336-97605AF06240"
+        },
+        {
+            "id": "sid-4F2A6EB7-286A-48CA-AF39-43E674052655",
+            "targetRef": "sid-59EDD1DC-6435-4DEA-81D2-46F4003A1EFB",
+            "sourceRef": "sid-107B2057-6723-4064-8924-0C06239EB701"
+        },
+        {
+            "id": "sid-CD51DD55-E9FF-467B-B83E-17EA3DC804FB",
+            "targetRef": "sid-2DF5274E-4AA1-4229-9CB0-C3E5EE245371",
+            "sourceRef": "sid-59EDD1DC-6435-4DEA-81D2-46F4003A1EFB"
+        },
+        {
+            "id": "sid-9E3F2540-5B8A-48CF-8C14-702CBBFEF0B1",
+            "targetRef": "sid-27B497D5-A11C-46FD-B04F-7E3FFA15CA0F",
+            "sourceRef": "sid-2DF5274E-4AA1-4229-9CB0-C3E5EE245371"
+        },
+        {
+            "id": "sid-D39A19BA-EF37-4FD7-B9C6-504CED10BC65",
+            "targetRef": "sid-A9ADCC76-33FC-43EC-8CA1-11CA0DF00FDD",
+            "sourceRef": "sid-27B497D5-A11C-46FD-B04F-7E3FFA15CA0F"
+        },
+        {
+            "id": "sid-45D52CC6-C3E6-4A99-8BB1-FDFD302F874A",
+            "targetRef": "sid-293F5FBC-D3C0-467E-AE9B-2F6B034884B7",
+            "sourceRef": "sid-A9ADCC76-33FC-43EC-8CA1-11CA0DF00FDD"
+        },
+        {
+            "id": "sid-28BDDD6A-AB91-41C2-B61E-BB29EB4E05D9",
+            "targetRef": "sid-C7726865-9445-412D-8155-79EDD63A42F6",
+            "sourceRef": "sid-293F5FBC-D3C0-467E-AE9B-2F6B034884B7"
+        },
+        {
+            "id": "sid-277C38EA-949F-44DC-BCF5-E821191F7491",
+            "targetRef": "sid-645237F8-AB65-4724-9757-8A94250B12FE",
+            "sourceRef": "sid-0CCB5E3B-C414-4EB9-AF6E-715F563D4435"
+        }
+    ]
+}

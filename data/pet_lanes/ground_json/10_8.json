@@ -1,0 +1,161 @@
+{
+    "tasks": [
+        {
+            "id": "sid-C479C1BC-905D-49BE-B95B-6F1FAAFFE1EE",
+            "name": "deregister at the GO",
+            "type": "Task"
+        },
+        {
+            "id": "sid-4B354B61-47DF-45DF-9044-CCDCBFBC7AB6",
+            "name": "verify the deregistration",
+            "type": "Task"
+        },
+        {
+            "id": "sid-FA98797B-EB49-482D-B08E-017A6BA81D59",
+            "name": "reject the deregistration",
+            "type": "Task"
+        },
+        {
+            "id": "sid-4DC5D8BF-1958-41B0-A6BB-8764F6BF5D96",
+            "name": "confirm the deregistration",
+            "type": "Task"
+        },
+        {
+            "id": "sid-FA2AF29B-3C95-4684-A22C-447E3A701250",
+            "name": "assign himself as MSP",
+            "type": "Task"
+        },
+        {
+            "id": "sid-C564CF35-CB9B-4EF0-A48B-A52378D3A024",
+            "name": "inform the MSPO about the state of the assignment",
+            "type": "Task"
+        },
+        {
+            "id": "sid-70173D39-1B15-495E-B78D-EDFC8C8157A7",
+            "name": "inform the MPO about the assignment",
+            "type": "Task"
+        },
+        {
+            "id": "sid-7C274C37-4944-4C9D-BE39-724C415C410F",
+            "name": "inform the SP about the assignment",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-F99F309B-23F1-49CE-B7A6-F04695014A0D",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "sid-ABBA7CFD-BEF9-4352-A0B1-165800971294",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "sid-A60BA31A-D807-4C6B-8624-6EC10C44253C",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-2672DB1F-4D1E-44C3-8B30-DF3CCD34A80A",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [
+        {
+            "id": "sid-B7D583A6-B3C2-434B-9194-0B0145AD361B",
+            "name": "System",
+            "lanes": [
+                {
+                    "id": "sid-868D6D6A-B6E7-4F1D-B7B4-8AE3274B2159",
+                    "name": "MSPO",
+                    "elemRefs": [
+                        "sid-C479C1BC-905D-49BE-B95B-6F1FAAFFE1EE",
+                        "sid-F99F309B-23F1-49CE-B7A6-F04695014A0D"
+                    ]
+                },
+                {
+                    "id": "sid-BE521019-37D4-4623-B562-B701DDF33F57",
+                    "name": "GO",
+                    "elemRefs": [
+                        "sid-4B354B61-47DF-45DF-9044-CCDCBFBC7AB6",
+                        "sid-FA98797B-EB49-482D-B08E-017A6BA81D59",
+                        "sid-4DC5D8BF-1958-41B0-A6BB-8764F6BF5D96",
+                        "sid-FA2AF29B-3C95-4684-A22C-447E3A701250",
+                        "sid-C564CF35-CB9B-4EF0-A48B-A52378D3A024",
+                        "sid-70173D39-1B15-495E-B78D-EDFC8C8157A7",
+                        "sid-7C274C37-4944-4C9D-BE39-724C415C410F",
+                        "sid-ABBA7CFD-BEF9-4352-A0B1-165800971294",
+                        "sid-A60BA31A-D807-4C6B-8624-6EC10C44253C",
+                        "sid-2672DB1F-4D1E-44C3-8B30-DF3CCD34A80A"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "sid-6541455A-7A25-4017-90DA-9A773124067B",
+            "targetRef": "sid-C479C1BC-905D-49BE-B95B-6F1FAAFFE1EE",
+            "sourceRef": "sid-F99F309B-23F1-49CE-B7A6-F04695014A0D"
+        },
+        {
+            "id": "sid-F20E1B04-2F41-4B6C-A934-366B0220CC09",
+            "targetRef": "sid-4B354B61-47DF-45DF-9044-CCDCBFBC7AB6",
+            "sourceRef": "sid-C479C1BC-905D-49BE-B95B-6F1FAAFFE1EE"
+        },
+        {
+            "id": "sid-47AB9D04-AB96-43FB-8FC6-F0AFA8583CA2",
+            "targetRef": "sid-A60BA31A-D807-4C6B-8624-6EC10C44253C",
+            "sourceRef": "sid-4B354B61-47DF-45DF-9044-CCDCBFBC7AB6"
+        },
+        {
+            "id": "sid-8FACB0BE-C530-4E37-BE25-8C2C0CC63910",
+            "targetRef": "sid-FA98797B-EB49-482D-B08E-017A6BA81D59",
+            "sourceRef": "sid-A60BA31A-D807-4C6B-8624-6EC10C44253C"
+        },
+        {
+            "id": "sid-B3801A54-CC35-4509-A06E-5B19A134CB50",
+            "targetRef": "sid-4DC5D8BF-1958-41B0-A6BB-8764F6BF5D96",
+            "sourceRef": "sid-A60BA31A-D807-4C6B-8624-6EC10C44253C"
+        },
+        {
+            "id": "sid-5E321304-3F3B-47B4-9305-1C8D98AA0A33",
+            "targetRef": "sid-2672DB1F-4D1E-44C3-8B30-DF3CCD34A80A",
+            "sourceRef": "sid-FA98797B-EB49-482D-B08E-017A6BA81D59"
+        },
+        {
+            "id": "sid-4267D7C5-B3AC-464B-A63B-FA9E951DB17A",
+            "targetRef": "sid-2672DB1F-4D1E-44C3-8B30-DF3CCD34A80A",
+            "sourceRef": "sid-4DC5D8BF-1958-41B0-A6BB-8764F6BF5D96"
+        },
+        {
+            "id": "sid-214A836D-120B-4E6F-A8B1-9E68E2D6DA1F",
+            "targetRef": "sid-FA2AF29B-3C95-4684-A22C-447E3A701250",
+            "sourceRef": "sid-2672DB1F-4D1E-44C3-8B30-DF3CCD34A80A"
+        },
+        {
+            "id": "sid-7AF06914-45FB-4FEF-84B7-10871AC828A4",
+            "targetRef": "sid-C564CF35-CB9B-4EF0-A48B-A52378D3A024",
+            "sourceRef": "sid-FA2AF29B-3C95-4684-A22C-447E3A701250"
+        },
+        {
+            "id": "sid-BBF9D96E-7F90-401C-AA2E-A345B66B27CD",
+            "targetRef": "sid-70173D39-1B15-495E-B78D-EDFC8C8157A7",
+            "sourceRef": "sid-C564CF35-CB9B-4EF0-A48B-A52378D3A024"
+        },
+        {
+            "id": "sid-4F0F8226-C3FE-4BA1-8B02-EB0E84452804",
+            "targetRef": "sid-7C274C37-4944-4C9D-BE39-724C415C410F",
+            "sourceRef": "sid-70173D39-1B15-495E-B78D-EDFC8C8157A7"
+        },
+        {
+            "id": "sid-382FA4FC-F36E-4B5A-9880-4AEA90512CA9",
+            "targetRef": "sid-ABBA7CFD-BEF9-4352-A0B1-165800971294",
+            "sourceRef": "sid-7C274C37-4944-4C9D-BE39-724C415C410F"
+        }
+    ]
+}

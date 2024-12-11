@@ -1,0 +1,133 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "prepare a summary of your content",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "post on Q&A sites",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "deep-link to the content from older posts",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "submit to link roundups",
+            "type": "User"
+        },
+        {
+            "id": 6,
+            "name": "email your subscribers",
+            "type": "User"
+        },
+        {
+            "id": 7,
+            "name": "pay for promotion",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 10,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 11,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 1,
+            "type": "Inclusive"
+        },
+        {
+            "id": 5,
+            "type": "Parallel"
+        },
+        {
+            "id": 8,
+            "type": "Parallel"
+        },
+        {
+            "id": 9,
+            "type": "Inclusive"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 1,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 3,
+            "targetRef": 5
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 7
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 6,
+            "targetRef": 8
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 7,
+            "targetRef": 8
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 4,
+            "targetRef": 9
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 8,
+            "targetRef": 9
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 10,
+            "targetRef": 0
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 9,
+            "targetRef": 11
+        }
+    ],
+    "messageFlows": []
+}

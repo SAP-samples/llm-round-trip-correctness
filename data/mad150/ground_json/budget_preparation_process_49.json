@@ -1,0 +1,163 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "set target date for approval",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "evaluate any significant variances",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "review the most recent budget",
+            "type": "User"
+        },
+        {
+            "id": 5,
+            "name": "prioritize three to five goals",
+            "type": "User"
+        },
+        {
+            "id": 6,
+            "name": "estimate the average monthly cost",
+            "type": "User"
+        },
+        {
+            "id": 8,
+            "name": "list all sources of income",
+            "type": "User"
+        },
+        {
+            "id": 9,
+            "name": "project total annual income",
+            "type": "User"
+        },
+        {
+            "id": 11,
+            "name": "record financial data in a budget spreadsheet",
+            "type": "User"
+        },
+        {
+            "id": 12,
+            "name": "obtain approval from top management",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 13,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 14,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": 1,
+            "type": "Parallel"
+        },
+        {
+            "id": 4,
+            "type": "Parallel"
+        },
+        {
+            "id": 7,
+            "type": "Parallel"
+        },
+        {
+            "id": 10,
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 1,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 2,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 3,
+            "targetRef": 4
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 4,
+            "targetRef": 5
+        },
+        {
+            "id": "sf6",
+            "sourceRef": 5,
+            "targetRef": 6
+        },
+        {
+            "id": "sf7",
+            "sourceRef": 6,
+            "targetRef": 7
+        },
+        {
+            "id": "sf8",
+            "sourceRef": 7,
+            "targetRef": 8
+        },
+        {
+            "id": "sf9",
+            "sourceRef": 7,
+            "targetRef": 9
+        },
+        {
+            "id": "sf10",
+            "sourceRef": 8,
+            "targetRef": 10
+        },
+        {
+            "id": "sf11",
+            "sourceRef": 9,
+            "targetRef": 10
+        },
+        {
+            "id": "sf12",
+            "sourceRef": 10,
+            "targetRef": 11
+        },
+        {
+            "id": "sf13",
+            "sourceRef": 11,
+            "targetRef": 12
+        },
+        {
+            "id": "sf14",
+            "sourceRef": 13,
+            "targetRef": 0
+        },
+        {
+            "id": "sf15",
+            "sourceRef": 12,
+            "targetRef": 14
+        }
+    ],
+    "messageFlows": []
+}

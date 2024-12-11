@@ -2,22 +2,22 @@
     "tasks": [
         {
             "id": "sid-5735D4C2-6C35-4670-A714-07BE228EF096",
-            "name": "send the dismissal",
+            "name": "MPON sents the dismissal",
             "type": "Task"
         },
         {
             "id": "sid-C3842F67-F8D8-4848-BF40-31D76452D9AC",
-            "name": "review the dismissal",
+            "name": "MPOO reviews the dismissal",
             "type": "Task"
         },
         {
             "id": "sid-176C9C37-275C-467C-85F5-88ABDCFA3831",
-            "name": "oppose the dismissal",
+            "name": "MPOO opposes the dismissal",
             "type": "Task"
         },
         {
             "id": "sid-B691A6BE-A31B-465F-BC6B-7173BC1CD7E8",
-            "name": "confirm the dismissal",
+            "name": "MPOO confirmes the dismissal",
             "type": "Task"
         }
     ],
@@ -43,40 +43,18 @@
             "type": "Exclusive"
         }
     ],
-    "pools": [
-        {
-            "id": "sid-E5E72BBF-D6DA-4BE4-8A06-E328CFE77A52",
-            "name": "System",
-            "lanes": [
-                {
-                    "id": "sid-CAD0C0C7-BEB0-4EE7-AEA5-0AEF0EE280E9",
-                    "name": "MPON",
-                    "elemRefs": [
-                        "sid-5735D4C2-6C35-4670-A714-07BE228EF096",
-                        "sid-BD2C7C1D-67D3-43EC-BA25-8C926230AA67"
-                    ]
-                },
-                {
-                    "id": "sid-6948C2A6-94F0-4AEF-9F46-824876E9FC08",
-                    "name": "MPOO",
-                    "elemRefs": [
-                        "sid-C3842F67-F8D8-4848-BF40-31D76452D9AC",
-                        "sid-176C9C37-275C-467C-85F5-88ABDCFA3831",
-                        "sid-B691A6BE-A31B-465F-BC6B-7173BC1CD7E8",
-                        "sid-A8050200-D99E-47CD-8219-502C9448710B",
-                        "sid-71A60AE2-F90F-4BF8-9912-BA7E0CA1CD09",
-                        "sid-DE859F76-2272-4D24-A87F-85489008EE0A"
-                    ]
-                }
-            ]
-        }
-    ],
+    "pools": [],
     "messageFlows": [],
     "sequenceFlows": [
         {
             "id": "sid-62BC1F18-ABAA-44EB-B7F3-CE593CE9A1A6",
             "targetRef": "sid-5735D4C2-6C35-4670-A714-07BE228EF096",
             "sourceRef": "sid-BD2C7C1D-67D3-43EC-BA25-8C926230AA67"
+        },
+        {
+            "id": "sid-71369A09-E17F-4CEE-9723-B7006E65F422",
+            "targetRef": "sid-C3842F67-F8D8-4848-BF40-31D76452D9AC",
+            "sourceRef": "sid-5735D4C2-6C35-4670-A714-07BE228EF096"
         },
         {
             "id": "sid-95981121-B558-4F63-8345-0D7F88105859",
@@ -107,11 +85,6 @@
             "id": "sid-752ECFE5-C168-44DB-AFE2-8D220B89B3EE",
             "targetRef": "sid-A8050200-D99E-47CD-8219-502C9448710B",
             "sourceRef": "sid-DE859F76-2272-4D24-A87F-85489008EE0A"
-        },
-        {
-            "id": "sid-0F2F0F59-3E59-4B44-90D2-A5A9D231C277",
-            "targetRef": "sid-C3842F67-F8D8-4848-BF40-31D76452D9AC",
-            "sourceRef": "sid-5735D4C2-6C35-4670-A714-07BE228EF096"
         }
     ]
 }
