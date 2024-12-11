@@ -48,8 +48,9 @@ def main_m2m(model_path, text_path):
     t2t_eval_2 = {}
     m2m_eval_1 = {}
     m2m_eval_2 = {}
+    artefacts = {}
     temp_in = 1
-    temp_out = 0.1
+    temp_out = 0
 
     model_files = os.listdir(model_path)
     logger.info('Starting the processing of models and texts')
@@ -67,6 +68,7 @@ def main_m2m(model_path, text_path):
             text_eval_2 = []
             model_eval_1 = []
             model_eval_2 = []
+            artefacts[model_file] = {}
 
             for j in range(3):
                 logger.info(f'Iteration {j + 1} for file: {model_file}')
@@ -81,10 +83,6 @@ def main_m2m(model_path, text_path):
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
 
-                with open(f'./Temp/gen_text_m2m_gemini{i}{j+1}.txt', 'w') as f:
-                    f.write(gen_text)
-                f.close()
-
                 gen_model = generate_gemini_with_timeout(
                     system_prompt_gemini_t2m,
                     examples_t2m,
@@ -97,9 +95,7 @@ def main_m2m(model_path, text_path):
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
 
-                with open(f'./Temp/gen_model_m2m_gemini{i}{j+1}.json', 'w') as f:
-                   json.dump(json.loads(gen_model), f)
-                f.close()
+                artefacts[model_file][j] = {'text':gen_text,'model':json.loads(gen_model)}
 
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
@@ -153,6 +149,9 @@ def main_m2m(model_path, text_path):
                 m2m_eval_2.get(model_name, 'N/A')
             ])
 
+    with open('./generated_artefacts/report_gemini_'+ args.example + args.direction + '.json', 'w') as outfile:
+        json.dump(artefacts, outfile, indent=4)
+
 def main_t2t(model_path, text_path):
     # Setup logging
     logging.basicConfig(
@@ -177,8 +176,9 @@ def main_t2t(model_path, text_path):
     t2t_eval_2 = {}
     m2m_eval_1 = {}
     m2m_eval_2 = {}
+    artefacts = {}
     temp_in = 1
-    temp_out = 0.1
+    temp_out = 0
 
     model_files = os.listdir(model_path)
     logger.info('Starting the processing of models and texts')
@@ -196,6 +196,7 @@ def main_t2t(model_path, text_path):
             text_eval_2 = []
             model_eval_1 = []
             model_eval_2 = []
+            artefacts[model_file] = {}
 
             for j in range(3):
                 logger.info(f'Iteration {j + 1} for file: {model_file}')
@@ -213,11 +214,6 @@ def main_t2t(model_path, text_path):
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
 
-                with open(f'./Temp/gen_model_t2t_gemini{i}{j+1}.json', 'w') as f:
-                   json.dump(json.loads(gen_model), f)
-                f.close()
-
-
                 gen_text = generate_gemini_with_timeout(
                     system_prompt_gemini_m2t,
                     examples_m2t,
@@ -229,9 +225,7 @@ def main_t2t(model_path, text_path):
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
 
-                with open(f'./Temp/gen_text_t2t_gemini{i}{j+1}.txt', 'w') as f:
-                    f.write(gen_text)
-                f.close()
+                artefacts[model_file][j] = {'text':gen_text,'model':json.loads(gen_model)}
 
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
@@ -283,6 +277,8 @@ def main_t2t(model_path, text_path):
                 m2m_eval_2.get(model_name, 'N/A')
             ])
 
+    with open('./generated_artefacts/report_gemini_'+ args.example + args.direction + '.json', 'w') as outfile:
+        json.dump(artefacts, outfile, indent=4)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process models and text with retries and timeout.")

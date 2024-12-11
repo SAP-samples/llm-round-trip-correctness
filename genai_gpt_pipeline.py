@@ -51,8 +51,9 @@ def main_m2m(model_path, text_path):
     t2t_eval_2 = {}
     m2m_eval_1 = {}
     m2m_eval_2 = {}
+    artefacts = {}
     temp_in = 1
-    temp_out = 0.1
+    temp_out = 0
 
     model_files = os.listdir(model_path)
     logger.info('Starting the processing of models and texts')
@@ -70,6 +71,9 @@ def main_m2m(model_path, text_path):
             text_eval_2 = []
             model_eval_1 = []
             model_eval_2 = []
+            artefacts[model_file] = {}
+
+
 
             for j in range(3):
                 logger.info(f'Iteration {j + 1} for file: {model_file}')
@@ -84,9 +88,7 @@ def main_m2m(model_path, text_path):
                 if gen_text is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
-                with open(f'./Temp/gen_text_m2m_gpt{i}{j+1}.txt', 'w') as f:
-                    f.write(gen_text)
-                f.close()
+
 
                 gen_model = generate_gpt_with_timeout(
                     system_prompt_t2m,
@@ -100,9 +102,7 @@ def main_m2m(model_path, text_path):
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
 
-                with open(f'./Temp/gen_model_m2m_gpt{i}{j+1}.json', 'w') as f:
-                   json.dump(json.loads(gen_model), f)
-                f.close()
+                artefacts[model_file][j] = {'text':gen_text,'model':json.loads(gen_model)}
 
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
@@ -156,6 +156,9 @@ def main_m2m(model_path, text_path):
                 m2m_eval_1.get(model_name, 'N/A'),
                 m2m_eval_2.get(model_name, 'N/A')
             ])
+    with open('./generated_artefacts/report_gpt_'+ args.example + args.direction + '.json', 'w') as outfile:
+        json.dump(artefacts, outfile, indent=4)
+
 
 def main_t2t(model_path, text_path):
     # Setup logging
@@ -184,8 +187,10 @@ def main_t2t(model_path, text_path):
     t2t_eval_2 = {}
     m2m_eval_1 = {}
     m2m_eval_2 = {}
+    artefacts = {}
+
     temp_in = 1
-    temp_out = 0.1
+    temp_out = 0
 
     model_files = os.listdir(model_path)
     logger.info('Starting the processing of models and texts')
@@ -203,6 +208,8 @@ def main_t2t(model_path, text_path):
             text_eval_2 = []
             model_eval_1 = []
             model_eval_2 = []
+            artefacts[model_file] = {}
+
 
             for j in range(3):
                 logger.info(f'Iteration {j + 1} for file: {model_file}')
@@ -217,10 +224,7 @@ def main_t2t(model_path, text_path):
                 if gen_model is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
-                # save the gen_midel to a file as json
-                with open(f'./Temp/gen_model_t2t_gpt{i}{j+1}.json', 'w') as f:
-                   json.dump(json.loads(gen_model), f)
-                f.close()
+
 
                 gen_text = generate_gpt_with_timeout(
                     system_prompt_m2t,
@@ -233,10 +237,8 @@ def main_t2t(model_path, text_path):
                 if gen_text is None:
                     logger.info(f'Skipping iteration {j + 1} due to timeout for file: {model_file}')
                     continue
-                # # write the gen_text to a text file
-                with open(f'./Temp/gen_text_t2t_gpt{i}{j+1}.txt', 'w') as f:
-                    f.write(gen_text)
-                f.close()
+
+                artefacts[model_file][j] = {'text':gen_text,'model':json.loads(gen_model)}
 
                 try:
                     text_eval_1.append(text_similarity.sts_bert(description, gen_text))
@@ -290,6 +292,9 @@ def main_t2t(model_path, text_path):
                 m2m_eval_1.get(model_name, 'N/A'),
                 m2m_eval_2.get(model_name, 'N/A')
             ])
+    with open('./generated_artefacts/report_gpt_'+ args.example + args.direction + '.json', 'w') as outfile:
+        json.dump(artefacts, outfile, indent=4)
+
 
 
 if __name__ == "__main__":
