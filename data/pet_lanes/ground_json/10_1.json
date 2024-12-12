@@ -1,0 +1,117 @@
+{
+    "tasks": [
+        {
+            "id": "sid-5735D4C2-6C35-4670-A714-07BE228EF096",
+            "name": "send the dismissal",
+            "type": "Task"
+        },
+        {
+            "id": "sid-C3842F67-F8D8-4848-BF40-31D76452D9AC",
+            "name": "review the dismissal",
+            "type": "Task"
+        },
+        {
+            "id": "sid-176C9C37-275C-467C-85F5-88ABDCFA3831",
+            "name": "oppose the dismissal",
+            "type": "Task"
+        },
+        {
+            "id": "sid-B691A6BE-A31B-465F-BC6B-7173BC1CD7E8",
+            "name": "confirm the dismissal",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-BD2C7C1D-67D3-43EC-BA25-8C926230AA67",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "sid-A8050200-D99E-47CD-8219-502C9448710B",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "sid-71A60AE2-F90F-4BF8-9912-BA7E0CA1CD09",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-DE859F76-2272-4D24-A87F-85489008EE0A",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [
+        {
+            "id": "sid-E5E72BBF-D6DA-4BE4-8A06-E328CFE77A52",
+            "name": "System",
+            "lanes": [
+                {
+                    "id": "sid-CAD0C0C7-BEB0-4EE7-AEA5-0AEF0EE280E9",
+                    "name": "MPON",
+                    "elemRefs": [
+                        "sid-5735D4C2-6C35-4670-A714-07BE228EF096",
+                        "sid-BD2C7C1D-67D3-43EC-BA25-8C926230AA67"
+                    ]
+                },
+                {
+                    "id": "sid-6948C2A6-94F0-4AEF-9F46-824876E9FC08",
+                    "name": "MPOO",
+                    "elemRefs": [
+                        "sid-C3842F67-F8D8-4848-BF40-31D76452D9AC",
+                        "sid-176C9C37-275C-467C-85F5-88ABDCFA3831",
+                        "sid-B691A6BE-A31B-465F-BC6B-7173BC1CD7E8",
+                        "sid-A8050200-D99E-47CD-8219-502C9448710B",
+                        "sid-71A60AE2-F90F-4BF8-9912-BA7E0CA1CD09",
+                        "sid-DE859F76-2272-4D24-A87F-85489008EE0A"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "sid-62BC1F18-ABAA-44EB-B7F3-CE593CE9A1A6",
+            "targetRef": "sid-5735D4C2-6C35-4670-A714-07BE228EF096",
+            "sourceRef": "sid-BD2C7C1D-67D3-43EC-BA25-8C926230AA67"
+        },
+        {
+            "id": "sid-95981121-B558-4F63-8345-0D7F88105859",
+            "targetRef": "sid-71A60AE2-F90F-4BF8-9912-BA7E0CA1CD09",
+            "sourceRef": "sid-C3842F67-F8D8-4848-BF40-31D76452D9AC"
+        },
+        {
+            "id": "sid-E8CEDFB9-2F7A-47B4-87A1-EC4796D76BCE",
+            "targetRef": "sid-176C9C37-275C-467C-85F5-88ABDCFA3831",
+            "sourceRef": "sid-71A60AE2-F90F-4BF8-9912-BA7E0CA1CD09"
+        },
+        {
+            "id": "sid-FAA2881C-8C07-49AB-BB2C-D5D2BA37711E",
+            "targetRef": "sid-B691A6BE-A31B-465F-BC6B-7173BC1CD7E8",
+            "sourceRef": "sid-71A60AE2-F90F-4BF8-9912-BA7E0CA1CD09"
+        },
+        {
+            "id": "sid-6E4582BE-B0B5-473C-AAAB-A0E0CECFDC66",
+            "targetRef": "sid-DE859F76-2272-4D24-A87F-85489008EE0A",
+            "sourceRef": "sid-176C9C37-275C-467C-85F5-88ABDCFA3831"
+        },
+        {
+            "id": "sid-71CAF17B-069E-454D-BB82-C2C4478AC3CB",
+            "targetRef": "sid-DE859F76-2272-4D24-A87F-85489008EE0A",
+            "sourceRef": "sid-B691A6BE-A31B-465F-BC6B-7173BC1CD7E8"
+        },
+        {
+            "id": "sid-752ECFE5-C168-44DB-AFE2-8D220B89B3EE",
+            "targetRef": "sid-A8050200-D99E-47CD-8219-502C9448710B",
+            "sourceRef": "sid-DE859F76-2272-4D24-A87F-85489008EE0A"
+        },
+        {
+            "id": "sid-0F2F0F59-3E59-4B44-90D2-A5A9D231C277",
+            "targetRef": "sid-C3842F67-F8D8-4848-BF40-31D76452D9AC",
+            "sourceRef": "sid-5735D4C2-6C35-4670-A714-07BE228EF096"
+        }
+    ]
+}

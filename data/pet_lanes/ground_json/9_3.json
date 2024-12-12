@@ -1,0 +1,152 @@
+{
+    "tasks": [
+        {
+            "id": "sid-1D5DB96A-8E4B-4261-8547-480CA794035F",
+            "name": "draft a schedule of meetings",
+            "type": "Task"
+        },
+        {
+            "id": "sid-B5C641B2-48EB-421C-AFD7-32C0811D0D82",
+            "name": "add draft dates to all calendars",
+            "type": "Task"
+        },
+        {
+            "id": "sid-7D204D22-3445-46FB-881B-D75B9DB77B77",
+            "name": "recheck all dates",
+            "type": "Task"
+        },
+        {
+            "id": "sid-1D39354B-6AFD-4331-B6B1-339C5E43C8B8",
+            "name": "look for potential conflicts",
+            "type": "Task"
+        },
+        {
+            "id": "sid-23727A69-DB82-4151-987A-102291E354DC",
+            "name": "send final schedule to  Committee Members",
+            "type": "Task"
+        },
+        {
+            "id": "sid-F08E965A-23CA-4F9D-AD0E-A47C8C50C676",
+            "name": "check the dates",
+            "type": "Task"
+        },
+        {
+            "id": "sid-58DD3CBB-85B2-496D-B8DE-C9D3B450B3EB",
+            "name": "suggest modifications",
+            "type": "Task"
+        },
+        {
+            "id": "sid-301718FB-F199-4EF6-BCBB-8539FB04432A",
+            "name": "check diaries",
+            "type": "Task"
+        },
+        {
+            "id": "sid-7665FAFC-EA52-4946-B442-BC6B32365922",
+            "name": "advise the Coordination Unit of any conflicts",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-D5DF2BC0-6596-4B4B-AB15-EDD02ECCE87A",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "sid-F95757C2-8725-4E8E-A1F9-6C6E9E8673B9",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [],
+    "pools": [
+        {
+            "id": "sid-BA72F302-C0A0-4F36-AB41-B0A3521E5A1E",
+            "name": "Town Planning Authority",
+            "lanes": [
+                {
+                    "id": "sid-3B365B0D-2E03-4829-8B93-6AAC9325E1BE",
+                    "name": "Coordination Unit",
+                    "elemRefs": [
+                        "sid-1D5DB96A-8E4B-4261-8547-480CA794035F",
+                        "sid-B5C641B2-48EB-421C-AFD7-32C0811D0D82",
+                        "sid-7D204D22-3445-46FB-881B-D75B9DB77B77",
+                        "sid-1D39354B-6AFD-4331-B6B1-339C5E43C8B8",
+                        "sid-23727A69-DB82-4151-987A-102291E354DC",
+                        "sid-D5DF2BC0-6596-4B4B-AB15-EDD02ECCE87A"
+                    ]
+                },
+                {
+                    "id": "sid-B9CC317F-8508-48B0-BA27-872880325F35",
+                    "name": "Support Officer",
+                    "elemRefs": [
+                        "sid-F08E965A-23CA-4F9D-AD0E-A47C8C50C676",
+                        "sid-58DD3CBB-85B2-496D-B8DE-C9D3B450B3EB"
+                    ]
+                },
+                {
+                    "id": "sid-D05C9BE1-7330-4CE9-9DD1-20195004ED1C",
+                    "name": "Committee Members",
+                    "elemRefs": [
+                        "sid-301718FB-F199-4EF6-BCBB-8539FB04432A",
+                        "sid-7665FAFC-EA52-4946-B442-BC6B32365922",
+                        "sid-F95757C2-8725-4E8E-A1F9-6C6E9E8673B9"
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "sid-658F00A6-D711-4A49-8F35-B82BAFC86C5A",
+            "targetRef": "sid-1D5DB96A-8E4B-4261-8547-480CA794035F",
+            "sourceRef": "sid-D5DF2BC0-6596-4B4B-AB15-EDD02ECCE87A"
+        },
+        {
+            "id": "sid-D20BB2EC-8EF1-4DD4-839A-57E5CC952C14",
+            "targetRef": "sid-B5C641B2-48EB-421C-AFD7-32C0811D0D82",
+            "sourceRef": "sid-1D5DB96A-8E4B-4261-8547-480CA794035F"
+        },
+        {
+            "id": "sid-7C83BA90-C48D-4829-9BF5-135EBE92AA92",
+            "targetRef": "sid-58DD3CBB-85B2-496D-B8DE-C9D3B450B3EB",
+            "sourceRef": "sid-F08E965A-23CA-4F9D-AD0E-A47C8C50C676"
+        },
+        {
+            "id": "sid-8C74798B-C881-4EDF-A094-A91C21925A90",
+            "targetRef": "sid-1D39354B-6AFD-4331-B6B1-339C5E43C8B8",
+            "sourceRef": "sid-7D204D22-3445-46FB-881B-D75B9DB77B77"
+        },
+        {
+            "id": "sid-5A183A8F-BBED-4326-9609-FEAA45916492",
+            "targetRef": "sid-23727A69-DB82-4151-987A-102291E354DC",
+            "sourceRef": "sid-1D39354B-6AFD-4331-B6B1-339C5E43C8B8"
+        },
+        {
+            "id": "sid-08217F01-43BE-480D-AD3D-B48AAF975BA3",
+            "targetRef": "sid-7665FAFC-EA52-4946-B442-BC6B32365922",
+            "sourceRef": "sid-301718FB-F199-4EF6-BCBB-8539FB04432A"
+        },
+        {
+            "id": "sid-39898999-5CB6-4129-94D1-67DCB21AE511",
+            "targetRef": "sid-F95757C2-8725-4E8E-A1F9-6C6E9E8673B9",
+            "sourceRef": "sid-7665FAFC-EA52-4946-B442-BC6B32365922"
+        },
+        {
+            "id": "sid-74BE6DF3-66F9-4A12-BE42-42CC62B0FC7D",
+            "targetRef": "sid-F08E965A-23CA-4F9D-AD0E-A47C8C50C676",
+            "sourceRef": "sid-B5C641B2-48EB-421C-AFD7-32C0811D0D82"
+        },
+        {
+            "id": "sid-76B0886A-7A0E-467B-BC78-045F5A99A90B",
+            "targetRef": "sid-7D204D22-3445-46FB-881B-D75B9DB77B77",
+            "sourceRef": "sid-58DD3CBB-85B2-496D-B8DE-C9D3B450B3EB"
+        },
+        {
+            "id": "sid-49FA36AA-947D-4A66-B7D5-2686B4C3C104",
+            "targetRef": "sid-301718FB-F199-4EF6-BCBB-8539FB04432A",
+            "sourceRef": "sid-23727A69-DB82-4151-987A-102291E354DC"
+        }
+    ]
+}

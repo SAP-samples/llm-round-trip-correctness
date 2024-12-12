@@ -1,0 +1,76 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "ensure 'EX' or zero marks are applied as need",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "import gradebook",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "apply any changes",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "export the final grades",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "send examiners grade approval sheet",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 5,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 6,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 3,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 5,
+            "targetRef": 0
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 4,
+            "targetRef": 6
+        }
+    ],
+    "messageFlows": []
+}

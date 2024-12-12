@@ -1,0 +1,76 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "record the buyer's details",
+            "type": "User"
+        },
+        {
+            "id": 1,
+            "name": "send the buyer your terms of sale",
+            "type": "User"
+        },
+        {
+            "id": 2,
+            "name": "generate the invoice",
+            "type": "User"
+        },
+        {
+            "id": 3,
+            "name": "make a second physical copy",
+            "type": "User"
+        },
+        {
+            "id": 4,
+            "name": "record the sales on credit of goods",
+            "type": "User"
+        }
+    ],
+    "events": [
+        {
+            "id": 5,
+            "name": "start",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": 6,
+            "name": "end",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [],
+    "pools": [],
+    "sequenceFlows": [
+        {
+            "id": "sf0",
+            "sourceRef": 0,
+            "targetRef": 1
+        },
+        {
+            "id": "sf1",
+            "sourceRef": 1,
+            "targetRef": 2
+        },
+        {
+            "id": "sf2",
+            "sourceRef": 2,
+            "targetRef": 3
+        },
+        {
+            "id": "sf3",
+            "sourceRef": 3,
+            "targetRef": 4
+        },
+        {
+            "id": "sf4",
+            "sourceRef": 5,
+            "targetRef": 0
+        },
+        {
+            "id": "sf5",
+            "sourceRef": 4,
+            "targetRef": 6
+        }
+    ],
+    "messageFlows": []
+}
