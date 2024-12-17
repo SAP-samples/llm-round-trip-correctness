@@ -1,0 +1,312 @@
+{
+    "tasks": [
+        {
+            "id": "sid-0DD59DA9-CDF8-49F4-8295-2CD6613F0569",
+            "name": "Check patients state",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-55268CA3-E99E-48D5-89EA-DFD37A0CB9F1",
+            "name": "Send patient home",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-3EE1B4CB-541D-40AD-99C1-A7191E694641",
+            "name": "Check if patient is registered in hospital",
+            "type": "User"
+        },
+        {
+            "id": "sid-FDDE57E9-C099-4017-8EEA-02E71597E215",
+            "name": "Register patient",
+            "type": "User"
+        },
+        {
+            "id": "sid-A678FB6D-E69F-4DBA-862D-39E85C28AA2A",
+            "name": "Check insurance",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-EC470F11-D30B-4F64-B487-D0329D0D2A83",
+            "name": "Book patient for doctor",
+            "type": "User"
+        },
+        {
+            "id": "sid-CB93EFE6-0700-4338-A24F-A4D2908E37B2",
+            "name": "Send patient to pharmacy",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-BEE416F0-84E2-4ADB-988B-B3875D3B6D25",
+            "name": "Send patient home",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-1E5E8809-5B63-4C02-BA80-D5210A4AC587",
+            "name": "Hospitalize",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-C08202A0-646C-467F-8BA3-B3F657C70889",
+            "name": "Examine the patient",
+            "type": "Task"
+        },
+        {
+            "id": "sid-DA936480-F161-4E9B-980B-0BA8026BC910",
+            "name": "Come to the hospital",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-873768E8-6C27-4904-8BDC-4EB360698CED",
+            "name": "Pay fee",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-CA052EB5-E180-47B1-94C7-C7540346FDC2",
+            "name": "Stay the front",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-7104998A-A7E6-49AF-B4C5-991FD53C8629",
+            "name": "Visit pharmacy",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-DD642251-8B20-49EE-9BAB-274FA9ED740B",
+            "name": "Visit the nurse",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-656E4E8C-07EF-4257-92B5-D91D477B4C19",
+            "name": "Receive medicine",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-DAD96BD2-88E3-4A3A-ADEF-A8B499A27A2A",
+            "name": "Order medicine",
+            "type": "Manual"
+        },
+        {
+            "id": "sid-1F6555B5-2DC7-49F0-B31A-06764CA92A0D",
+            "name": "Pay medicine",
+            "type": "Manual"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-8D2A0CEA-26E1-43E5-9FEF-783283B3D51B",
+            "name": "",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "sid-957FA55C-5717-4EE4-AFF8-0344DB798FAB",
+            "name": "",
+            "type": "StartNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "sid-1BECB57C-A72F-4682-A49B-035A36C583D0",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-68345878-45A6-46C5-B7EF-A469C7D13AC7",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-CD3C8821-018E-4695-B8B3-E96C81141461",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-E43C45A1-E4E6-493B-A709-60E2D96875FE",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-A44C8BBE-703B-4C45-8B4A-C52F386B9491",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-84CCABC8-E0EA-400B-8C3D-DF512377C48B",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-C71C3CA4-0187-4FE1-828F-47F31E7F89A4",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-0569D621-1216-4AC3-B221-1ADB5D6DB053",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "sid-31E4F856-EDB9-4A34-887A-D5E56C128A48",
+            "targetRef": "sid-DA936480-F161-4E9B-980B-0BA8026BC910",
+            "sourceRef": "sid-957FA55C-5717-4EE4-AFF8-0344DB798FAB"
+        },
+        {
+            "id": "sid-F87B3103-8112-4FCA-BEA3-9C13F125A0A7",
+            "targetRef": "sid-68345878-45A6-46C5-B7EF-A469C7D13AC7",
+            "sourceRef": "sid-0DD59DA9-CDF8-49F4-8295-2CD6613F0569"
+        },
+        {
+            "id": "sid-A1E62AF9-0509-4935-A1F9-2198B22B6E58",
+            "targetRef": "sid-0569D621-1216-4AC3-B221-1ADB5D6DB053",
+            "sourceRef": "sid-BEE416F0-84E2-4ADB-988B-B3875D3B6D25"
+        },
+        {
+            "id": "sid-D0D2C700-47E1-440D-9C50-0BDC2E9F18B4",
+            "targetRef": "sid-1F6555B5-2DC7-49F0-B31A-06764CA92A0D",
+            "sourceRef": "sid-DAD96BD2-88E3-4A3A-ADEF-A8B499A27A2A"
+        },
+        {
+            "id": "sid-611F3658-C47F-4A47-ABEC-4F9CE225516B",
+            "targetRef": "sid-7104998A-A7E6-49AF-B4C5-991FD53C8629",
+            "sourceRef": "sid-CB93EFE6-0700-4338-A24F-A4D2908E37B2"
+        },
+        {
+            "id": "sid-61484ED9-8C8E-4E96-B761-67CF88FA0A54",
+            "targetRef": "sid-CD3C8821-018E-4695-B8B3-E96C81141461",
+            "sourceRef": "sid-3EE1B4CB-541D-40AD-99C1-A7191E694641"
+        },
+        {
+            "id": "sid-F6C46026-7A69-4253-B3D6-980DE663DFE3",
+            "targetRef": "sid-CA052EB5-E180-47B1-94C7-C7540346FDC2",
+            "sourceRef": "sid-DA936480-F161-4E9B-980B-0BA8026BC910"
+        },
+        {
+            "id": "sid-2201E7CE-DD43-4FFA-BBC0-6C1B1B7A7151",
+            "targetRef": "sid-DD642251-8B20-49EE-9BAB-274FA9ED740B",
+            "sourceRef": "sid-CA052EB5-E180-47B1-94C7-C7540346FDC2"
+        },
+        {
+            "id": "sid-F8B0957A-F3F3-4FBB-9233-1DF928B67CC4",
+            "targetRef": "sid-1BECB57C-A72F-4682-A49B-035A36C583D0",
+            "sourceRef": "sid-A678FB6D-E69F-4DBA-862D-39E85C28AA2A"
+        },
+        {
+            "id": "sid-46C5D363-1C1A-4EEB-BC1C-EFBD2B95C643",
+            "targetRef": "sid-55268CA3-E99E-48D5-89EA-DFD37A0CB9F1",
+            "condition": "ok",
+            "sourceRef": "sid-68345878-45A6-46C5-B7EF-A469C7D13AC7"
+        },
+        {
+            "id": "sid-A4357431-ADCD-4207-84A5-C5EACE8A0C8A",
+            "targetRef": "sid-0DD59DA9-CDF8-49F4-8295-2CD6613F0569",
+            "condition": "no",
+            "sourceRef": "sid-1BECB57C-A72F-4682-A49B-035A36C583D0"
+        },
+        {
+            "id": "sid-B7EED025-1F5D-4615-BA90-684DEE3B2257",
+            "targetRef": "sid-873768E8-6C27-4904-8BDC-4EB360698CED",
+            "sourceRef": "sid-E43C45A1-E4E6-493B-A709-60E2D96875FE"
+        },
+        {
+            "id": "sid-A6DEB085-F68E-471B-809D-D49BA57BD5F0",
+            "targetRef": "sid-E43C45A1-E4E6-493B-A709-60E2D96875FE",
+            "sourceRef": "sid-FDDE57E9-C099-4017-8EEA-02E71597E215"
+        },
+        {
+            "id": "sid-938A065A-30A4-4A58-A545-7489D29FF6E3",
+            "targetRef": "sid-FDDE57E9-C099-4017-8EEA-02E71597E215",
+            "condition": "not  registered",
+            "sourceRef": "sid-CD3C8821-018E-4695-B8B3-E96C81141461"
+        },
+        {
+            "id": "sid-3A16D88C-D341-41B5-A0E2-2606C6877BB7",
+            "targetRef": "sid-E43C45A1-E4E6-493B-A709-60E2D96875FE",
+            "condition": "registered",
+            "sourceRef": "sid-CD3C8821-018E-4695-B8B3-E96C81141461"
+        },
+        {
+            "id": "sid-61DBAC0E-7078-43B5-9EF6-96C8226151B7",
+            "targetRef": "sid-3EE1B4CB-541D-40AD-99C1-A7191E694641",
+            "condition": "yes",
+            "sourceRef": "sid-1BECB57C-A72F-4682-A49B-035A36C583D0"
+        },
+        {
+            "id": "sid-A322C2C8-9D64-497C-AA4D-124902525151",
+            "targetRef": "sid-84CCABC8-E0EA-400B-8C3D-DF512377C48B",
+            "sourceRef": "sid-68345878-45A6-46C5-B7EF-A469C7D13AC7"
+        },
+        {
+            "id": "sid-F3F34C13-9CEF-4E38-B34A-BEB894FD1FFE",
+            "targetRef": "sid-1E5E8809-5B63-4C02-BA80-D5210A4AC587",
+            "condition": "need hospitalization",
+            "sourceRef": "sid-C71C3CA4-0187-4FE1-828F-47F31E7F89A4"
+        },
+        {
+            "id": "sid-9F57CCF6-ECD3-45B8-8873-1D04F0D6F1FB",
+            "targetRef": "sid-CB93EFE6-0700-4338-A24F-A4D2908E37B2",
+            "condition": "need medicine",
+            "sourceRef": "sid-C71C3CA4-0187-4FE1-828F-47F31E7F89A4"
+        },
+        {
+            "id": "sid-C3127A6F-9082-41B6-B0E2-5786B8088C4B",
+            "targetRef": "sid-656E4E8C-07EF-4257-92B5-D91D477B4C19",
+            "sourceRef": "sid-1F6555B5-2DC7-49F0-B31A-06764CA92A0D"
+        },
+        {
+            "id": "sid-579C5382-4D42-4FBA-96CB-AAED4C7FC94E",
+            "targetRef": "sid-DAD96BD2-88E3-4A3A-ADEF-A8B499A27A2A",
+            "sourceRef": "sid-7104998A-A7E6-49AF-B4C5-991FD53C8629"
+        },
+        {
+            "id": "sid-D076A0BC-5DE9-4C48-B587-6EB112A91FBA",
+            "targetRef": "sid-8D2A0CEA-26E1-43E5-9FEF-783283B3D51B",
+            "sourceRef": "sid-0569D621-1216-4AC3-B221-1ADB5D6DB053"
+        },
+        {
+            "id": "sid-B7DEA85D-1A0E-4C1E-9807-C3E1DDD01188",
+            "targetRef": "sid-0569D621-1216-4AC3-B221-1ADB5D6DB053",
+            "sourceRef": "sid-656E4E8C-07EF-4257-92B5-D91D477B4C19"
+        },
+        {
+            "id": "sid-77704314-1A35-4B57-AC3B-E86655275AC1",
+            "targetRef": "sid-0569D621-1216-4AC3-B221-1ADB5D6DB053",
+            "sourceRef": "sid-55268CA3-E99E-48D5-89EA-DFD37A0CB9F1"
+        },
+        {
+            "id": "sid-2E42CB9A-5C26-4556-A1B7-AD24BEAD6E9A",
+            "targetRef": "sid-EC470F11-D30B-4F64-B487-D0329D0D2A83",
+            "sourceRef": "sid-A44C8BBE-703B-4C45-8B4A-C52F386B9491"
+        },
+        {
+            "id": "sid-FDF0D68B-9234-4C71-93BB-9365A02FCA8E",
+            "targetRef": "sid-84CCABC8-E0EA-400B-8C3D-DF512377C48B",
+            "sourceRef": "sid-EC470F11-D30B-4F64-B487-D0329D0D2A83"
+        },
+        {
+            "id": "sid-55EF1F7D-9B2B-4805-98E8-0E7C5295EAC9",
+            "targetRef": "sid-A44C8BBE-703B-4C45-8B4A-C52F386B9491",
+            "sourceRef": "sid-873768E8-6C27-4904-8BDC-4EB360698CED"
+        },
+        {
+            "id": "sid-63053B56-8F45-4110-B3EA-CE6A37208914",
+            "targetRef": "sid-C71C3CA4-0187-4FE1-828F-47F31E7F89A4",
+            "sourceRef": "sid-C08202A0-646C-467F-8BA3-B3F657C70889"
+        },
+        {
+            "id": "sid-DD6A0931-E9AB-4D6E-8DF9-1529C7FFFD57",
+            "targetRef": "sid-C08202A0-646C-467F-8BA3-B3F657C70889",
+            "sourceRef": "sid-84CCABC8-E0EA-400B-8C3D-DF512377C48B"
+        },
+        {
+            "id": "sid-232AFCF0-374C-4C15-9EC0-17EA4B13DCD7",
+            "targetRef": "sid-A44C8BBE-703B-4C45-8B4A-C52F386B9491",
+            "sourceRef": "sid-1E5E8809-5B63-4C02-BA80-D5210A4AC587"
+        },
+        {
+            "id": "sid-637E230B-BD0A-43E3-B72C-9D8B7550C82F",
+            "targetRef": "sid-BEE416F0-84E2-4ADB-988B-B3875D3B6D25",
+            "condition": "heathy",
+            "sourceRef": "sid-C71C3CA4-0187-4FE1-828F-47F31E7F89A4"
+        },
+        {
+            "id": "sid-F305BD72-0C56-4ADC-849B-8F229C56DB4C",
+            "targetRef": "sid-A678FB6D-E69F-4DBA-862D-39E85C28AA2A",
+            "sourceRef": "sid-DD642251-8B20-49EE-9BAB-274FA9ED740B"
+        }
+    ]
+}

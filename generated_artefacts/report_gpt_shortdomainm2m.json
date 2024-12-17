@@ -1,0 +1,1653 @@
+{
+    "gdpr_1_data_breach.json": {
+        "0": {
+            "text": "When a data breach occurs, the process to manage it starts. The first action taken is to retrieve the breached data. Following this, the breached subjects (i.e., individuals affected by the data breach) are identified. Both of these initial steps are performed sequentially.\n\nAfter retrieving the breached data and subjects, three activities are initiated simultaneously:\n1. An evaluation of the stolen data is conducted to determine if it's exploitable.\n2. Measures to limit data loss are undertaken to prevent further damage.\n3. The breach is reported to the national authority, including details about the stolen data and the subjects affected.\n\nOnce the data is evaluated, an important decision is made: Are the stolen data exploitable? If the answer is affirmative, a further assessment is required to evaluate the security standards of the data controller (the entity responsible for the data). If the security standards are not high, a request is made to determine whether the breached data needs to be communicated to the affected data subjects. If high security standards are in place, the process moves towards the final stage without informing the data subjects.\n\nIf the stolen data evaluation concludes that it is not exploitable, we skip the security standard evaluation and directly address whether the data subjects need to be notified.\n\nSimultaneously, whether the data loss limitations and national authority notifications are underway, they both lead to the integration and further processing steps as follows:\n- The data loss limitation and national authority notification inputs lead to the final decision-making stages and actions to manage the breach.\n- After evaluating whether the breached data needs to be communicated, a request is dispatched to the national authority, awaiting their notification.\n\nIf the national authority agrees that the data subjects need notification, a 'yes' outcome prompts the process to send notification letters to the affected individuals. This step involves communicating with the affected data subjects directly.\n\nIf the national authority decides that the data subjects do not need notification, a 'no' outcome is noted, and the process jumps to the closing stages.\n\nFinally, all results and decisions funnel together to complete the process effectively. In summary, the process involves a start triggered by a breach event, sequential and parallel tasks to assess and limit the breach's impact, several decisions to manage the notification and communication, and closing steps that ensure all necessary actions are completed and documented. When all activities align, the process concludes, marking the completion of data breach management.",
+            "model": {
+                "tasks": [
+                    {
+                        "id": "id1",
+                        "name": "Retrieve breached data",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id2",
+                        "name": "Identify breached subjects",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id3",
+                        "name": "Evaluate stolen data",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id4",
+                        "name": "Limit data loss",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id5",
+                        "name": "Report breach to national authority",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id6",
+                        "name": "Evaluate security standards of data controller",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id7",
+                        "name": "Determine if breached data needs to be communicated to affected subjects",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id8",
+                        "name": "Send notification letters to affected subjects",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id9",
+                        "name": "Integrate and process further steps",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id10",
+                        "name": "Complete data breach management process",
+                        "type": "User"
+                    }
+                ],
+                "events": [
+                    {
+                        "id": "id11",
+                        "name": "Data breach occurs",
+                        "type": "StartNoneEvent"
+                    },
+                    {
+                        "id": "id12",
+                        "name": "Process completed",
+                        "type": "EndNoneEvent"
+                    }
+                ],
+                "gateways": [
+                    {
+                        "id": "id13",
+                        "name": "Are stolen data exploitable?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id14",
+                        "name": "Are security standards high?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id15",
+                        "name": "Does national authority agree to notify subjects?",
+                        "type": "Exclusive"
+                    }
+                ],
+                "pools": [],
+                "sequenceFlows": [
+                    {
+                        "id": "id16",
+                        "sourceRef": "id11",
+                        "targetRef": "id1"
+                    },
+                    {
+                        "id": "id17",
+                        "sourceRef": "id1",
+                        "targetRef": "id2"
+                    },
+                    {
+                        "id": "id18",
+                        "sourceRef": "id2",
+                        "targetRef": "id19"
+                    },
+                    {
+                        "id": "id19",
+                        "sourceRef": "id19",
+                        "targetRef": "id3"
+                    },
+                    {
+                        "id": "id20",
+                        "sourceRef": "id19",
+                        "targetRef": "id4"
+                    },
+                    {
+                        "id": "id21",
+                        "sourceRef": "id19",
+                        "targetRef": "id5"
+                    },
+                    {
+                        "id": "id22",
+                        "sourceRef": "id3",
+                        "targetRef": "id13"
+                    },
+                    {
+                        "id": "id23",
+                        "sourceRef": "id13",
+                        "targetRef": "id6",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id24",
+                        "sourceRef": "id13",
+                        "targetRef": "id7",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id25",
+                        "sourceRef": "id6",
+                        "targetRef": "id14"
+                    },
+                    {
+                        "id": "id26",
+                        "sourceRef": "id14",
+                        "targetRef": "id7",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id27",
+                        "sourceRef": "id14",
+                        "targetRef": "id9",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id28",
+                        "sourceRef": "id7",
+                        "targetRef": "id15"
+                    },
+                    {
+                        "id": "id29",
+                        "sourceRef": "id15",
+                        "targetRef": "id8",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id30",
+                        "sourceRef": "id15",
+                        "targetRef": "id9",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id31",
+                        "sourceRef": "id8",
+                        "targetRef": "id9"
+                    },
+                    {
+                        "id": "id32",
+                        "sourceRef": "id4",
+                        "targetRef": "id9"
+                    },
+                    {
+                        "id": "id33",
+                        "sourceRef": "id5",
+                        "targetRef": "id9"
+                    },
+                    {
+                        "id": "id34",
+                        "sourceRef": "id9",
+                        "targetRef": "id10"
+                    },
+                    {
+                        "id": "id35",
+                        "sourceRef": "id10",
+                        "targetRef": "id12"
+                    }
+                ],
+                "messageFlows": []
+            }
+        },
+        "1": {
+            "text": "The process of managing a data breach within an organization involves multiple steps and interactions between different entities. Let me walk you through the entire scenario, step by step:\n\nIt all begins when a data breach occurs. Once the breach is identified, the first action taken is to retrieve the breached data. Alongside this, the organization must also retrieve the list of individuals (referred to as breached subjects) affected by the breach.\n\nAfter gathering this essential information, the process splits into two parallel tracks. On one side, efforts are directed toward evaluating the security standards that were in place when the breach occurred. The goal here is to determine if the organization had high security standards. On the other side, the organization proceeds to limit the data loss immediately.\n\nSimultaneously, the national authority needs to be notified about the data breach. This includes providing details of the breached data and the affected subjects. While the organization waits for further instruction from the national authority, it continues with its internal evaluations. \n\nWhen evaluating the stolen data, an important decision must be made: Are the stolen data exploitable? If the answer is 'yes', the organization needs to assess if it has maintained high security standards. This is a critical point because it influences the next steps. If high security standards were not maintained, it becomes necessary to notify the data subjects about the breach. This requires requesting permission from the national authority to communicate with the affected individuals.\n\nUpon receiving the request, the national authority must decide whether or not the data subjects need to be notified. If notification is deemed necessary, a notification is sent to the data subjects. If it\u2019s concluded that the data subjects do not need to be informed, no further notifications are sent.\n\nIn the scenario where high security standards were maintained and the data are found not to be exploitable, another decision is made within the organization to verify if notifying the data subjects is mandatory under such conditions. This decision is again checked by requesting information from the national authority.\n\nFinally, regardless of whether the affected data subjects are notified or not, and upon completing the data evaluation, the organization updates the national authority with the final report. The process culminates once all the necessary actions are carried out, ensuring that both the internal and external protocols for handling data breaches are systematically followed.\n\nThis detailed process ensures that data breaches are managed with due diligence, safeguarding the interests of both the organization and the affected individuals.",
+            "model": {
+                "tasks": [
+                    {
+                        "id": "id1",
+                        "name": "Retrieve breached data",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id2",
+                        "name": "Retrieve list of breached subjects",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id3",
+                        "name": "Evaluate security standards",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id4",
+                        "name": "Limit data loss",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id5",
+                        "name": "Notify national authority",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id6",
+                        "name": "Evaluate stolen data",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id7",
+                        "name": "Assess security standards",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id8",
+                        "name": "Request permission to notify data subjects",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id9",
+                        "name": "Notify data subjects",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id10",
+                        "name": "Update national authority with final report",
+                        "type": "Service"
+                    }
+                ],
+                "events": [
+                    {
+                        "id": "id11",
+                        "name": "Data breach occurs",
+                        "type": "StartNoneEvent"
+                    },
+                    {
+                        "id": "id12",
+                        "name": "Process complete",
+                        "type": "EndNoneEvent"
+                    }
+                ],
+                "gateways": [
+                    {
+                        "id": "id13",
+                        "name": "Parallel split",
+                        "type": "Parallel"
+                    },
+                    {
+                        "id": "id14",
+                        "name": "Are stolen data exploitable?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id15",
+                        "name": "Were high security standards maintained?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id16",
+                        "name": "Notify data subjects?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id17",
+                        "name": "National authority decision",
+                        "type": "Exclusive"
+                    }
+                ],
+                "pools": [],
+                "sequenceFlows": [
+                    {
+                        "id": "id18",
+                        "sourceRef": "id11",
+                        "targetRef": "id1"
+                    },
+                    {
+                        "id": "id19",
+                        "sourceRef": "id1",
+                        "targetRef": "id2"
+                    },
+                    {
+                        "id": "id20",
+                        "sourceRef": "id2",
+                        "targetRef": "id13"
+                    },
+                    {
+                        "id": "id21",
+                        "sourceRef": "id13",
+                        "targetRef": "id3"
+                    },
+                    {
+                        "id": "id22",
+                        "sourceRef": "id13",
+                        "targetRef": "id4"
+                    },
+                    {
+                        "id": "id23",
+                        "sourceRef": "id13",
+                        "targetRef": "id5"
+                    },
+                    {
+                        "id": "id24",
+                        "sourceRef": "id5",
+                        "targetRef": "id6"
+                    },
+                    {
+                        "id": "id25",
+                        "sourceRef": "id6",
+                        "targetRef": "id14"
+                    },
+                    {
+                        "id": "id26",
+                        "sourceRef": "id14",
+                        "targetRef": "id7",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id27",
+                        "sourceRef": "id14",
+                        "targetRef": "id16",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id28",
+                        "sourceRef": "id7",
+                        "targetRef": "id15"
+                    },
+                    {
+                        "id": "id29",
+                        "sourceRef": "id15",
+                        "targetRef": "id8",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id30",
+                        "sourceRef": "id15",
+                        "targetRef": "id16",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id31",
+                        "sourceRef": "id8",
+                        "targetRef": "id17"
+                    },
+                    {
+                        "id": "id32",
+                        "sourceRef": "id17",
+                        "targetRef": "id9",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id33",
+                        "sourceRef": "id17",
+                        "targetRef": "id10",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id34",
+                        "sourceRef": "id16",
+                        "targetRef": "id10",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id35",
+                        "sourceRef": "id9",
+                        "targetRef": "id10"
+                    },
+                    {
+                        "id": "id36",
+                        "sourceRef": "id10",
+                        "targetRef": "id12"
+                    }
+                ],
+                "messageFlows": []
+            }
+        },
+        "2": {
+            "text": "Imagine a situation where a data breach has occurred. This process begins with the incident happening, triggering an immediate response from the Data Controller.\n\nThe first steps involve the Data Controller retrieving any data that has been breached and identifying the subjects whose data has been compromised. This is like quickly gathering all the spilled information and recognizing who it belongs to.\n\nSimultaneously, parallel processes are initiated. One of these is limiting the data loss\u2014taking measures to prevent further data from being exposed. Another is notifying the national authority, responsible for regulations related to data protection and privacy.\n\nAs the situation continues to unfold, the Data Controller evaluates the stolen data to assess its sensitivity and potential for misuse. They also evaluate the current security standards to understand how the breach happened and whether there are any vulnerabilities that need immediate addressing.\n\nThe next decision point is to determine if the stolen data is exploitable. If the data is exploitable, the Data Controller requests a determination on whether the compromised data must be communicated to the affected data subjects.\n\nDepending on this determination:\n- If it is decided that the affected data subjects need to be notified, the Data Controller awaits further notification from the national authority. Once they receive a response, this can result in another decision point to determine if this communication must indeed take place.\n- If it is concluded that there is no need to notify, the process can move towards evaluating the overall situation and preparing for further steps.\n\nIn cases where it is decided that notification is necessary, the Data Controller then sends out notifications to the affected data subjects, informing them about the breach and any recommended steps they should take.\n\nFinally, once these tasks have been completed, the process checks if all necessary actions have been thoroughly executed. If so, the management of the data breach is deemed complete.\n\nThroughout these steps, different determinations and evaluations ensure a comprehensive response to the data breach\u2014aiming to minimize impact and prevent future occurrences. The process is a thorough sequence of assessing, communicating, and resolving all necessary aspects related to the breach.",
+            "model": {
+                "tasks": [
+                    {
+                        "id": "id1",
+                        "name": "Retrieve breached data",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id2",
+                        "name": "Identify compromised subjects",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id3",
+                        "name": "Limit data loss",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id4",
+                        "name": "Notify national authority",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id5",
+                        "name": "Evaluate stolen data sensitivity",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id6",
+                        "name": "Evaluate current security standards",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id7",
+                        "name": "Request determination on communication to affected subjects",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id8",
+                        "name": "Send notifications to affected data subjects",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id9",
+                        "name": "Evaluate overall situation",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id10",
+                        "name": "Prepare for further steps",
+                        "type": "User"
+                    }
+                ],
+                "events": [
+                    {
+                        "id": "id11",
+                        "name": "Incident occurs",
+                        "type": "StartNoneEvent"
+                    },
+                    {
+                        "id": "id12",
+                        "name": "Management of data breach complete",
+                        "type": "EndNoneEvent"
+                    }
+                ],
+                "gateways": [
+                    {
+                        "id": "id13",
+                        "name": "Is stolen data exploitable?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id14",
+                        "name": "Is communication necessary?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id15",
+                        "name": "All necessary actions executed?",
+                        "type": "Exclusive"
+                    }
+                ],
+                "pools": [
+                    {
+                        "id": "id16",
+                        "name": "Data Breach Management",
+                        "lanes": [
+                            {
+                                "id": "id17",
+                                "name": "Data Controller",
+                                "elemRefs": [
+                                    "id1",
+                                    "id2",
+                                    "id3",
+                                    "id4",
+                                    "id5",
+                                    "id6",
+                                    "id7",
+                                    "id8",
+                                    "id9",
+                                    "id10",
+                                    "id11",
+                                    "id12",
+                                    "id13",
+                                    "id14",
+                                    "id15"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "sequenceFlows": [
+                    {
+                        "id": "id18",
+                        "sourceRef": "id11",
+                        "targetRef": "id1"
+                    },
+                    {
+                        "id": "id19",
+                        "sourceRef": "id1",
+                        "targetRef": "id2"
+                    },
+                    {
+                        "id": "id20",
+                        "sourceRef": "id2",
+                        "targetRef": "id3"
+                    },
+                    {
+                        "id": "id21",
+                        "sourceRef": "id2",
+                        "targetRef": "id4"
+                    },
+                    {
+                        "id": "id22",
+                        "sourceRef": "id3",
+                        "targetRef": "id5"
+                    },
+                    {
+                        "id": "id23",
+                        "sourceRef": "id4",
+                        "targetRef": "id5"
+                    },
+                    {
+                        "id": "id24",
+                        "sourceRef": "id5",
+                        "targetRef": "id6"
+                    },
+                    {
+                        "id": "id25",
+                        "sourceRef": "id6",
+                        "targetRef": "id13"
+                    },
+                    {
+                        "id": "id26",
+                        "sourceRef": "id13",
+                        "targetRef": "id7",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id27",
+                        "sourceRef": "id13",
+                        "targetRef": "id9",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id28",
+                        "sourceRef": "id7",
+                        "targetRef": "id14"
+                    },
+                    {
+                        "id": "id29",
+                        "sourceRef": "id14",
+                        "targetRef": "id8",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id30",
+                        "sourceRef": "id14",
+                        "targetRef": "id9",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id31",
+                        "sourceRef": "id8",
+                        "targetRef": "id15"
+                    },
+                    {
+                        "id": "id32",
+                        "sourceRef": "id9",
+                        "targetRef": "id15"
+                    },
+                    {
+                        "id": "id33",
+                        "sourceRef": "id15",
+                        "targetRef": "id10",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id34",
+                        "sourceRef": "id15",
+                        "targetRef": "id12",
+                        "condition": "Yes"
+                    }
+                ],
+                "messageFlows": []
+            }
+        }
+    },
+    "gdpr_2_consent_to_use_the_data.json": {
+        "0": {
+            "text": "This is a detailed process involving a data controller ensuring compliance with personal data regulations. It begins with the necessity to obtain consent for data use, initiating a series of checks and collections of information to ensure the protection of personal data. Here's how the process unfolds:\n\n1. **Consent Request**: The process starts with the requirement to obtain consent for using personal data. To achieve this, the data controller performs multiple tasks simultaneously to ensure all necessary information is ready and compliant with regulations.\n\n2. **Parallel Preparation**: As part of the preparation:\n   - They detail the logic involved in profiling, the significance, and potential consequences of data processing.\n   - They check if it is possible to determine the period for which personal data will be stored. Depending on whether it's possible, they either retrieve the criteria used to determine this period or directly retrieve the period.\n   - They confirm and record the existence of various rights, such as the right to rectify, access, erase personal data, data portability, withdraw consent, and lodge complaints with a supervisory authority.\n  \n3. **Data Origin Check**:\n   - It is checked whether the data was obtained directly from the data subject. If yes, they continue, if no, they retrieve the source from which personal data originated.\n\n4. **International Data Transfer**:\n   - They check if personal data can be transferred internationally. If yes, they prepare a statement indicating that personal data will be transferred internationally.\n\n5. **Recipients and Interests**:\n   - The data controller checks if there are any recipients of the personal data. If yes, they retrieve the details of these recipients.\n   - They also check for and retrieve any legitimate interests that may justify the data processing.\n\n6. **Legal Basis and Purposes**:\n   - They ensure they have documented the legal basis for processing and the purposes of processing.\n   - They retrieve the identity and contact details for inclusion in the documentation.\n\n7. **Interaction with DPO**:\n   - The data controller asks for details from the Data Protection Officer (DPO) and awaits the DPO's identity and contact details. These details are then received and recorded.\n\n8. **Legitimacy Check**:\n   - They perform a legitimacy check to determine if personal data processing activities comply with given standards. They identify legitimate interests or determine if they need to prepare a record of not having legitimate interests.\n\n9. **Consent Interaction**:\n   - After all necessary preparations, they ask for consent. If consent is provided by the data subject, the data controller collects and records this consent information.\n   - In the case where consent is not given, the interaction is noted care how the process should stop.\n\n10. **Finalizing and Documenting**:\n   - If consent is received, they confirm and save this consent. This documentation is a crucial aspect of compliance.\n   - They ensure all collected information is organized and secured in compliance with regulations.\n\n11. **Completion**:\n   - The process reaches its conclusion when all required documentation is completed and verified, either completing with collected consent or noting the lack of consent as a significant decision point.\n\nThis process ensures thorough preparation, compliance checks, and proper record-keeping to align with personal data protection laws, enforcing both the rights of data subjects and the responsibilities of the data controller.",
+            "model": {
+                "tasks": [
+                    {
+                        "id": "id1",
+                        "name": "Obtain consent for data use",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id2",
+                        "name": "Detail logic involved in profiling",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id3",
+                        "name": "Check data storage period",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id4",
+                        "name": "Retrieve criteria for data storage period",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id5",
+                        "name": "Retrieve data storage period",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id6",
+                        "name": "Confirm and record rights",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id7",
+                        "name": "Check data origin",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id8",
+                        "name": "Retrieve data source",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id9",
+                        "name": "Check international data transfer",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id10",
+                        "name": "Prepare international data transfer statement",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id11",
+                        "name": "Check data recipients",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id12",
+                        "name": "Retrieve recipient details",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id13",
+                        "name": "Retrieve legitimate interests",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id14",
+                        "name": "Document legal basis and purposes",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id15",
+                        "name": "Retrieve identity and contact details",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id16",
+                        "name": "Ask for DPO details",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id17",
+                        "name": "Receive and record DPO details",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id18",
+                        "name": "Perform legitimacy check",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id19",
+                        "name": "Identify legitimate interests",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id20",
+                        "name": "Prepare record of no legitimate interests",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id21",
+                        "name": "Ask for consent",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id22",
+                        "name": "Collect and record consent",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id23",
+                        "name": "Note lack of consent",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id24",
+                        "name": "Confirm and save consent",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id25",
+                        "name": "Organize and secure information",
+                        "type": "User"
+                    }
+                ],
+                "events": [
+                    {
+                        "id": "id26",
+                        "name": "Start",
+                        "type": "StartNoneEvent"
+                    },
+                    {
+                        "id": "id27",
+                        "name": "End",
+                        "type": "EndNoneEvent"
+                    }
+                ],
+                "gateways": [
+                    {
+                        "id": "id28",
+                        "name": "Is data storage period determinable?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id29",
+                        "name": "Was data obtained directly from data subject?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id30",
+                        "name": "Can data be transferred internationally?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id31",
+                        "name": "Are there data recipients?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id32",
+                        "name": "Is consent provided?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id33",
+                        "name": "Legitimacy check result",
+                        "type": "Exclusive"
+                    }
+                ],
+                "pools": [
+                    {
+                        "id": "id34",
+                        "name": "Data Controller",
+                        "lanes": [
+                            {
+                                "id": "id35",
+                                "name": "Preparation",
+                                "elemRefs": [
+                                    "id1",
+                                    "id2",
+                                    "id3",
+                                    "id4",
+                                    "id5",
+                                    "id6",
+                                    "id7",
+                                    "id8",
+                                    "id9",
+                                    "id10",
+                                    "id11",
+                                    "id12",
+                                    "id13",
+                                    "id14",
+                                    "id15",
+                                    "id16",
+                                    "id17",
+                                    "id18",
+                                    "id19",
+                                    "id20",
+                                    "id21",
+                                    "id22",
+                                    "id23",
+                                    "id24",
+                                    "id25",
+                                    "id28",
+                                    "id29",
+                                    "id30",
+                                    "id31",
+                                    "id32",
+                                    "id33"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "sequenceFlows": [
+                    {
+                        "id": "id36",
+                        "sourceRef": "id26",
+                        "targetRef": "id1"
+                    },
+                    {
+                        "id": "id37",
+                        "sourceRef": "id1",
+                        "targetRef": "id2"
+                    },
+                    {
+                        "id": "id38",
+                        "sourceRef": "id1",
+                        "targetRef": "id3"
+                    },
+                    {
+                        "id": "id39",
+                        "sourceRef": "id1",
+                        "targetRef": "id6"
+                    },
+                    {
+                        "id": "id40",
+                        "sourceRef": "id2",
+                        "targetRef": "id28"
+                    },
+                    {
+                        "id": "id41",
+                        "sourceRef": "id3",
+                        "targetRef": "id28"
+                    },
+                    {
+                        "id": "id42",
+                        "sourceRef": "id28",
+                        "targetRef": "id4",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id43",
+                        "sourceRef": "id28",
+                        "targetRef": "id5",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id44",
+                        "sourceRef": "id4",
+                        "targetRef": "id7"
+                    },
+                    {
+                        "id": "id45",
+                        "sourceRef": "id5",
+                        "targetRef": "id7"
+                    },
+                    {
+                        "id": "id46",
+                        "sourceRef": "id7",
+                        "targetRef": "id29"
+                    },
+                    {
+                        "id": "id47",
+                        "sourceRef": "id29",
+                        "targetRef": "id8",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id48",
+                        "sourceRef": "id29",
+                        "targetRef": "id9",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id49",
+                        "sourceRef": "id8",
+                        "targetRef": "id9"
+                    },
+                    {
+                        "id": "id50",
+                        "sourceRef": "id9",
+                        "targetRef": "id30"
+                    },
+                    {
+                        "id": "id51",
+                        "sourceRef": "id30",
+                        "targetRef": "id10",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id52",
+                        "sourceRef": "id30",
+                        "targetRef": "id11",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id53",
+                        "sourceRef": "id10",
+                        "targetRef": "id11"
+                    },
+                    {
+                        "id": "id54",
+                        "sourceRef": "id11",
+                        "targetRef": "id31"
+                    },
+                    {
+                        "id": "id55",
+                        "sourceRef": "id31",
+                        "targetRef": "id12",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id56",
+                        "sourceRef": "id31",
+                        "targetRef": "id13",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id57",
+                        "sourceRef": "id12",
+                        "targetRef": "id13"
+                    },
+                    {
+                        "id": "id58",
+                        "sourceRef": "id13",
+                        "targetRef": "id14"
+                    },
+                    {
+                        "id": "id59",
+                        "sourceRef": "id14",
+                        "targetRef": "id15"
+                    },
+                    {
+                        "id": "id60",
+                        "sourceRef": "id15",
+                        "targetRef": "id16"
+                    },
+                    {
+                        "id": "id61",
+                        "sourceRef": "id16",
+                        "targetRef": "id17"
+                    },
+                    {
+                        "id": "id62",
+                        "sourceRef": "id17",
+                        "targetRef": "id18"
+                    },
+                    {
+                        "id": "id63",
+                        "sourceRef": "id18",
+                        "targetRef": "id33"
+                    },
+                    {
+                        "id": "id64",
+                        "sourceRef": "id33",
+                        "targetRef": "id19",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id65",
+                        "sourceRef": "id33",
+                        "targetRef": "id20",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id66",
+                        "sourceRef": "id19",
+                        "targetRef": "id21"
+                    },
+                    {
+                        "id": "id67",
+                        "sourceRef": "id20",
+                        "targetRef": "id21"
+                    },
+                    {
+                        "id": "id68",
+                        "sourceRef": "id21",
+                        "targetRef": "id32"
+                    },
+                    {
+                        "id": "id69",
+                        "sourceRef": "id32",
+                        "targetRef": "id22",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id70",
+                        "sourceRef": "id32",
+                        "targetRef": "id23",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id71",
+                        "sourceRef": "id22",
+                        "targetRef": "id24"
+                    },
+                    {
+                        "id": "id72",
+                        "sourceRef": "id24",
+                        "targetRef": "id25"
+                    },
+                    {
+                        "id": "id73",
+                        "sourceRef": "id25",
+                        "targetRef": "id27"
+                    },
+                    {
+                        "id": "id74",
+                        "sourceRef": "id23",
+                        "targetRef": "id27"
+                    }
+                ],
+                "messageFlows": []
+            }
+        },
+        "1": {
+            "text": "In this process, the journey begins when there's a need to gain consent for using personal data. The initial step involves getting consent to use. Then, a series of checks and information retrieval steps follow to ensure compliance with data protection laws.\n\nFirstly, the system dives into various actions to document essential information about personal data usage. This involves adding details about \"profiling, the logic involved, significance, and potential consequences of processing.\" This step is undertaken in a detailed manner by the responsible entity.\n\nNext, a check is performed to determine whether it is possible to define the period for which personal data will be stored. If it is possible, the period is retrieved. Otherwise, the criteria used to determine the period are obtained. Both scenarios feed into the same subsequent steps.\n\nParallel actions run simultaneously where the system conducts multiple retrieval and documentation tasks. These include:\n1. Adding the existence of the right to rectify personal data.\n2. Adding the right to access personal data.\n3. Ensuring the right to erase personal data is documented.\n4. Including the right to data portability.\n5. Highlighting the right to withdraw consent.\n6. Mentioning the right to lodge a complaint with a supervisory authority.\n\nAdditionally, another check is made to confirm if data was obtained directly from the data subject. If not, the source from which the data originates is retrieved. Depending on the data source confirmation, the details are added, enhancing transparency.\n\nSubsequent tasks include verifying if the personal data can be transferred internationally. If such transfers are permissible, details about the transfer are added.\n\nAnother parallel branch addresses whether there are any recipients of the personal data. If recipients exist, their details are retrieved and documented.\n\nFurther checks ensure that if there are legitimate interests behind processing personal data, these interests are retrieved and documented.\n\nTo complete the legal aspects, processing purposes and legal bases for processing are retrieved and well-documented.\n\nThroughout these steps, identity and contact details are consolidated. There\u2019s also a part where the system asks for Data Protection Officer (DPO) details, with a request sent out and details received back ensuring alignment.\n\nFor consent, the system asks for it and waits for this information to be collected and received. If consent is given, the process continues. If consent is negated, the necessary actions follow to terminate or constrain operations.\n\nTo conclude, once all these aspects are processed, documented, and validated, the journey ends with a final note, ensuring all steps align with legal requirements and best practices for data protection.",
+            "model": {
+                "tasks": [
+                    {
+                        "id": "id1",
+                        "name": "Get consent to use personal data",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id2",
+                        "name": "Document essential information about personal data usage",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id3",
+                        "name": "Retrieve period for which personal data will be stored",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id4",
+                        "name": "Retrieve criteria used to determine the period",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id5",
+                        "name": "Add existence of the right to rectify personal data",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id6",
+                        "name": "Add right to access personal data",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id7",
+                        "name": "Ensure right to erase personal data is documented",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id8",
+                        "name": "Include right to data portability",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id9",
+                        "name": "Highlight right to withdraw consent",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id10",
+                        "name": "Mention right to lodge a complaint with a supervisory authority",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id11",
+                        "name": "Check if data was obtained directly from the data subject",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id12",
+                        "name": "Retrieve source from which the data originates",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id13",
+                        "name": "Verify if personal data can be transferred internationally",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id14",
+                        "name": "Add details about international data transfer",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id15",
+                        "name": "Check if there are any recipients of the personal data",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id16",
+                        "name": "Retrieve and document recipients' details",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id17",
+                        "name": "Retrieve and document legitimate interests behind processing personal data",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id18",
+                        "name": "Retrieve and document processing purposes and legal bases for processing",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id19",
+                        "name": "Consolidate identity and contact details",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id20",
+                        "name": "Request Data Protection Officer (DPO) details",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id21",
+                        "name": "Receive DPO details",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id22",
+                        "name": "Ask for consent",
+                        "type": "User"
+                    },
+                    {
+                        "id": "id23",
+                        "name": "Terminate or constrain operations",
+                        "type": "Service"
+                    }
+                ],
+                "events": [
+                    {
+                        "id": "id24",
+                        "name": "Start",
+                        "type": "StartNoneEvent"
+                    },
+                    {
+                        "id": "id25",
+                        "name": "End",
+                        "type": "EndNoneEvent"
+                    }
+                ],
+                "gateways": [
+                    {
+                        "id": "id26",
+                        "name": "Is it possible to define the period for data storage?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id27",
+                        "name": "Did data originate from data subject?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id28",
+                        "name": "Is international data transfer permissible?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id29",
+                        "name": "Are there any recipients of the personal data?",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id30",
+                        "name": "Is consent given?",
+                        "type": "Exclusive"
+                    }
+                ],
+                "pools": [],
+                "sequenceFlows": [
+                    {
+                        "id": "id31",
+                        "sourceRef": "id24",
+                        "targetRef": "id1"
+                    },
+                    {
+                        "id": "id32",
+                        "sourceRef": "id1",
+                        "targetRef": "id22"
+                    },
+                    {
+                        "id": "id33",
+                        "sourceRef": "id22",
+                        "targetRef": "id30"
+                    },
+                    {
+                        "id": "id34",
+                        "sourceRef": "id30",
+                        "targetRef": "id2",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id35",
+                        "sourceRef": "id30",
+                        "targetRef": "id23",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id36",
+                        "sourceRef": "id2",
+                        "targetRef": "id26"
+                    },
+                    {
+                        "id": "id37",
+                        "sourceRef": "id26",
+                        "targetRef": "id3",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id38",
+                        "sourceRef": "id26",
+                        "targetRef": "id4",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id39",
+                        "sourceRef": "id3",
+                        "targetRef": "id5"
+                    },
+                    {
+                        "id": "id40",
+                        "sourceRef": "id4",
+                        "targetRef": "id5"
+                    },
+                    {
+                        "id": "id41",
+                        "sourceRef": "id5",
+                        "targetRef": "id6"
+                    },
+                    {
+                        "id": "id42",
+                        "sourceRef": "id6",
+                        "targetRef": "id7"
+                    },
+                    {
+                        "id": "id43",
+                        "sourceRef": "id7",
+                        "targetRef": "id8"
+                    },
+                    {
+                        "id": "id44",
+                        "sourceRef": "id8",
+                        "targetRef": "id9"
+                    },
+                    {
+                        "id": "id45",
+                        "sourceRef": "id9",
+                        "targetRef": "id10"
+                    },
+                    {
+                        "id": "id46",
+                        "sourceRef": "id10",
+                        "targetRef": "id27"
+                    },
+                    {
+                        "id": "id47",
+                        "sourceRef": "id27",
+                        "targetRef": "id12",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id48",
+                        "sourceRef": "id27",
+                        "targetRef": "id13",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id49",
+                        "sourceRef": "id12",
+                        "targetRef": "id13"
+                    },
+                    {
+                        "id": "id50",
+                        "sourceRef": "id13",
+                        "targetRef": "id28"
+                    },
+                    {
+                        "id": "id51",
+                        "sourceRef": "id28",
+                        "targetRef": "id14",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id52",
+                        "sourceRef": "id28",
+                        "targetRef": "id15",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id53",
+                        "sourceRef": "id14",
+                        "targetRef": "id15"
+                    },
+                    {
+                        "id": "id54",
+                        "sourceRef": "id15",
+                        "targetRef": "id16",
+                        "condition": "Yes"
+                    },
+                    {
+                        "id": "id55",
+                        "sourceRef": "id15",
+                        "targetRef": "id17",
+                        "condition": "No"
+                    },
+                    {
+                        "id": "id56",
+                        "sourceRef": "id16",
+                        "targetRef": "id17"
+                    },
+                    {
+                        "id": "id57",
+                        "sourceRef": "id17",
+                        "targetRef": "id18"
+                    },
+                    {
+                        "id": "id58",
+                        "sourceRef": "id18",
+                        "targetRef": "id19"
+                    },
+                    {
+                        "id": "id59",
+                        "sourceRef": "id19",
+                        "targetRef": "id20"
+                    },
+                    {
+                        "id": "id60",
+                        "sourceRef": "id20",
+                        "targetRef": "id21"
+                    },
+                    {
+                        "id": "id61",
+                        "sourceRef": "id21",
+                        "targetRef": "id25"
+                    }
+                ],
+                "messageFlows": []
+            }
+        },
+        "2": {
+            "text": "The process begins when consent to use personal data is required. Initially, multiple tasks are initiated simultaneously, triggered by the need for various data elements related to personal data processing. \n\nThe system starts by adding a series of important disclosures about user data rights, such as the right to rectify personal data, access personal data, erase personal data, and data portability. Additionally, it checks for recipients, personal data storage periods, and whether data can be transferred internationally. \n\nFor data storage, if it\u2019s possible to determine the period that personal data will be stored, the period is then retrieved. If not possible, the criteria for determining the period are sought instead.\n\nAnother concurrent task determines whether the data has been obtained from the data subject. If not, the source of the personal data is retrieved. If the data can be transferred internationally, this is noted.\n\nAdditionally, the process includes checking if recipients for the data are present. If present, the recipients are retrieved, otherwise, no further action is taken at this step.\n\nThe process also verifies if legitimate interests are involved in the data processing, and if so, retrieves them. It includes asking for details about the DPO (Data Protection Officer) and collecting consent or negation of consent information.\n\nThe DPO details are requested and received from an external entity, while consent information is similarly collected from the data subject. If consent is granted, it is acted upon; otherwise, alternative actions are taken based on the outcomes of events.\n\nIn the event that personal data is transferred internationally, this is specifically added to the process details. Legal basis for processing is also retrieved and processing purposes are documented.\n\nOnce all the respective data elements and conditions are met, the process checks if any recipients and legitimate interests are present, incorporating them as necessary. Finally, the identity and details of the data subject are consolidated, and consent is either collected or negated.\n\nUpon conclusion of all the parallel tasks, the process reaches a final decision point to verify all necessary conditions and actions have been met before culminating in the end event, marking the completion of the data handling process successfully.",
+            "model": {
+                "tasks": [
+                    {
+                        "id": "id1",
+                        "name": "Add disclosures about user data rights",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id2",
+                        "name": "Check for recipients",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id3",
+                        "name": "Check personal data storage periods",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id4",
+                        "name": "Check if data can be transferred internationally",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id5",
+                        "name": "Determine if data obtained from data subject",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id6",
+                        "name": "Retrieve storage period or criteria",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id7",
+                        "name": "Retrieve source of personal data",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id8",
+                        "name": "Retrieve recipients",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id9",
+                        "name": "Verify legitimate interests",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id10",
+                        "name": "Retrieve legitimate interests",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id11",
+                        "name": "Request DPO details",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id12",
+                        "name": "Receive DPO details",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id13",
+                        "name": "Collect consent information",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id14",
+                        "name": "Act upon consent",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id15",
+                        "name": "Retrieve legal basis for processing",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id16",
+                        "name": "Document processing purposes",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id17",
+                        "name": "Consolidate identity and details of data subject",
+                        "type": "Service"
+                    },
+                    {
+                        "id": "id18",
+                        "name": "Verify all conditions and actions",
+                        "type": "Service"
+                    }
+                ],
+                "events": [
+                    {
+                        "id": "id19",
+                        "name": "Start",
+                        "type": "StartNoneEvent"
+                    },
+                    {
+                        "id": "id20",
+                        "name": "End",
+                        "type": "EndNoneEvent"
+                    }
+                ],
+                "gateways": [
+                    {
+                        "id": "id21",
+                        "type": "Parallel"
+                    },
+                    {
+                        "id": "id22",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id23",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id24",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id25",
+                        "type": "Parallel"
+                    },
+                    {
+                        "id": "id26",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id27",
+                        "type": "Exclusive"
+                    },
+                    {
+                        "id": "id28",
+                        "type": "Exclusive"
+                    }
+                ],
+                "pools": [],
+                "sequenceFlows": [
+                    {
+                        "id": "id29",
+                        "sourceRef": "id19",
+                        "targetRef": "id21"
+                    },
+                    {
+                        "id": "id30",
+                        "sourceRef": "id21",
+                        "targetRef": "id1"
+                    },
+                    {
+                        "id": "id31",
+                        "sourceRef": "id21",
+                        "targetRef": "id2"
+                    },
+                    {
+                        "id": "id32",
+                        "sourceRef": "id21",
+                        "targetRef": "id3"
+                    },
+                    {
+                        "id": "id33",
+                        "sourceRef": "id21",
+                        "targetRef": "id4"
+                    },
+                    {
+                        "id": "id34",
+                        "sourceRef": "id21",
+                        "targetRef": "id5"
+                    },
+                    {
+                        "id": "id35",
+                        "sourceRef": "id3",
+                        "targetRef": "id22"
+                    },
+                    {
+                        "id": "id36",
+                        "sourceRef": "id22",
+                        "targetRef": "id6",
+                        "condition": "Period determined"
+                    },
+                    {
+                        "id": "id37",
+                        "sourceRef": "id22",
+                        "targetRef": "id6",
+                        "condition": "Criteria sought"
+                    },
+                    {
+                        "id": "id38",
+                        "sourceRef": "id5",
+                        "targetRef": "id23"
+                    },
+                    {
+                        "id": "id39",
+                        "sourceRef": "id23",
+                        "targetRef": "id7",
+                        "condition": "Not obtained from data subject"
+                    },
+                    {
+                        "id": "id40",
+                        "sourceRef": "id2",
+                        "targetRef": "id24"
+                    },
+                    {
+                        "id": "id41",
+                        "sourceRef": "id24",
+                        "targetRef": "id8",
+                        "condition": "Recipients present"
+                    },
+                    {
+                        "id": "id42",
+                        "sourceRef": "id4",
+                        "targetRef": "id25"
+                    },
+                    {
+                        "id": "id43",
+                        "sourceRef": "id25",
+                        "targetRef": "id15"
+                    },
+                    {
+                        "id": "id44",
+                        "sourceRef": "id25",
+                        "targetRef": "id16"
+                    },
+                    {
+                        "id": "id45",
+                        "sourceRef": "id9",
+                        "targetRef": "id26"
+                    },
+                    {
+                        "id": "id46",
+                        "sourceRef": "id26",
+                        "targetRef": "id10",
+                        "condition": "Legitimate interests involved"
+                    },
+                    {
+                        "id": "id47",
+                        "sourceRef": "id11",
+                        "targetRef": "id12"
+                    },
+                    {
+                        "id": "id48",
+                        "sourceRef": "id13",
+                        "targetRef": "id27"
+                    },
+                    {
+                        "id": "id49",
+                        "sourceRef": "id27",
+                        "targetRef": "id14",
+                        "condition": "Consent granted"
+                    },
+                    {
+                        "id": "id50",
+                        "sourceRef": "id27",
+                        "targetRef": "id14",
+                        "condition": "Consent not granted"
+                    },
+                    {
+                        "id": "id51",
+                        "sourceRef": "id25",
+                        "targetRef": "id17"
+                    },
+                    {
+                        "id": "id52",
+                        "sourceRef": "id25",
+                        "targetRef": "id18"
+                    },
+                    {
+                        "id": "id53",
+                        "sourceRef": "id18",
+                        "targetRef": "id20"
+                    }
+                ],
+                "messageFlows": []
+            }
+        }
+    }
+}

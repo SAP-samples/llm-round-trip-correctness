@@ -1,0 +1,163 @@
+{
+    "tasks": [
+        {
+            "id": "sid-964FE7D7-E1C3-4E8C-B137-9EDF9D05A881",
+            "name": "Assess patient conditions",
+            "type": "Task"
+        },
+        {
+            "id": "sid-167CC420-ADDA-4F14-A5B3-0D311C078971",
+            "name": "Perform physical examination",
+            "type": "Task"
+        },
+        {
+            "id": "sid-AC8DCA82-1900-455E-9968-FC6964454BA8",
+            "name": "Make diagnosis",
+            "type": "Task"
+        },
+        {
+            "id": "sid-159215E7-1EE3-4A6E-BF7B-5A0F0D4D7C4D",
+            "name": "Surgical intervention",
+            "type": "Task"
+        },
+        {
+            "id": "sid-6D5E2D93-63C4-4627-A4FC-1F4549A556F3",
+            "name": "Discharge patient",
+            "type": "Task"
+        },
+        {
+            "id": "sid-46A8D72D-4364-492F-8445-883175279D91",
+            "name": "Draw blood samples",
+            "type": "Task"
+        },
+        {
+            "id": "sid-DA9DEE8C-565E-446E-B729-F0EFE02EFB9D",
+            "name": "Send analysis to the lab",
+            "type": "Task"
+        },
+        {
+            "id": "sid-8BDB1690-ED7F-40FD-9B4D-EE9FDB72CE9E",
+            "name": "Receive analysis from the lab",
+            "type": "Task"
+        },
+        {
+            "id": "sid-37AFAA21-3242-4223-A590-B2AF9106ABC6",
+            "name": "Plan surgery",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-E7768442-AEDC-4531-99BB-81031D1EC74A",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "sid-EA57CFB4-B0F8-4D30-B970-0EB3FD8DA5B8",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "sid-8D9C7AA9-55A0-4F8A-BA0E-D6FB71A1F9C9",
+            "type": "Parallel"
+        },
+        {
+            "id": "sid-63F3FBD9-E1CF-42C3-82AB-B7F6B814EFDA",
+            "type": "Parallel"
+        },
+        {
+            "id": "sid-2018007C-9B35-4F2F-9911-C50F3B2F445B",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-F2F01988-7B5D-4B90-93D9-CF72BA9D54D6",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "sid-DEB184FD-0F49-4E12-8FE6-6758C3E433F6",
+            "targetRef": "sid-964FE7D7-E1C3-4E8C-B137-9EDF9D05A881",
+            "sourceRef": "sid-E7768442-AEDC-4531-99BB-81031D1EC74A"
+        },
+        {
+            "id": "sid-4D6559F2-5BB1-4910-B48B-CF2F615B3E10",
+            "targetRef": "sid-167CC420-ADDA-4F14-A5B3-0D311C078971",
+            "sourceRef": "sid-8D9C7AA9-55A0-4F8A-BA0E-D6FB71A1F9C9"
+        },
+        {
+            "id": "sid-B8FA9FD7-B67F-4D3F-B623-64E032933E96",
+            "targetRef": "sid-46A8D72D-4364-492F-8445-883175279D91",
+            "sourceRef": "sid-8D9C7AA9-55A0-4F8A-BA0E-D6FB71A1F9C9"
+        },
+        {
+            "id": "sid-75AF3365-A2C3-46D6-AFC0-F756E75B6FC9",
+            "targetRef": "sid-DA9DEE8C-565E-446E-B729-F0EFE02EFB9D",
+            "sourceRef": "sid-46A8D72D-4364-492F-8445-883175279D91"
+        },
+        {
+            "id": "sid-069291B4-573B-4411-AB77-52912D58E4D0",
+            "targetRef": "sid-8BDB1690-ED7F-40FD-9B4D-EE9FDB72CE9E",
+            "sourceRef": "sid-DA9DEE8C-565E-446E-B729-F0EFE02EFB9D"
+        },
+        {
+            "id": "sid-664B1152-8CC4-48DC-AD33-363997640FB9",
+            "targetRef": "sid-63F3FBD9-E1CF-42C3-82AB-B7F6B814EFDA",
+            "sourceRef": "sid-167CC420-ADDA-4F14-A5B3-0D311C078971"
+        },
+        {
+            "id": "sid-1FA617D7-BC6E-45CA-A16E-D9126904316E",
+            "targetRef": "sid-63F3FBD9-E1CF-42C3-82AB-B7F6B814EFDA",
+            "sourceRef": "sid-8BDB1690-ED7F-40FD-9B4D-EE9FDB72CE9E"
+        },
+        {
+            "id": "sid-ED20A527-ECB1-4802-B043-C408E48DA21F",
+            "targetRef": "sid-8D9C7AA9-55A0-4F8A-BA0E-D6FB71A1F9C9",
+            "sourceRef": "sid-964FE7D7-E1C3-4E8C-B137-9EDF9D05A881"
+        },
+        {
+            "id": "sid-C404F1A1-BCDD-4AEC-81CA-2C169931F712",
+            "targetRef": "sid-AC8DCA82-1900-455E-9968-FC6964454BA8",
+            "sourceRef": "sid-63F3FBD9-E1CF-42C3-82AB-B7F6B814EFDA"
+        },
+        {
+            "id": "sid-83B12C97-D1C5-4995-8296-04C1806FB9E9",
+            "targetRef": "sid-2018007C-9B35-4F2F-9911-C50F3B2F445B",
+            "sourceRef": "sid-AC8DCA82-1900-455E-9968-FC6964454BA8"
+        },
+        {
+            "id": "sid-D708C37C-A8E7-42F1-A7F6-48F9B6BC4AFB",
+            "targetRef": "sid-159215E7-1EE3-4A6E-BF7B-5A0F0D4D7C4D",
+            "sourceRef": "sid-2018007C-9B35-4F2F-9911-C50F3B2F445B"
+        },
+        {
+            "id": "sid-147EE958-C117-4322-80BF-C767FB4591F9",
+            "targetRef": "sid-37AFAA21-3242-4223-A590-B2AF9106ABC6",
+            "sourceRef": "sid-2018007C-9B35-4F2F-9911-C50F3B2F445B"
+        },
+        {
+            "id": "sid-C00298BD-7152-46C1-B92F-5151A992E4DD",
+            "targetRef": "sid-F2F01988-7B5D-4B90-93D9-CF72BA9D54D6",
+            "sourceRef": "sid-159215E7-1EE3-4A6E-BF7B-5A0F0D4D7C4D"
+        },
+        {
+            "id": "sid-668E5AE5-EA2F-41B2-A083-321B3813CA27",
+            "targetRef": "sid-F2F01988-7B5D-4B90-93D9-CF72BA9D54D6",
+            "sourceRef": "sid-37AFAA21-3242-4223-A590-B2AF9106ABC6"
+        },
+        {
+            "id": "sid-BA7E6ABA-9C3E-4A5F-A75F-42AFB1AA0785",
+            "targetRef": "sid-6D5E2D93-63C4-4627-A4FC-1F4549A556F3",
+            "sourceRef": "sid-F2F01988-7B5D-4B90-93D9-CF72BA9D54D6"
+        },
+        {
+            "id": "sid-A33F7F13-1DC8-4C76-998D-16CAFF45C174",
+            "targetRef": "sid-EA57CFB4-B0F8-4D30-B970-0EB3FD8DA5B8",
+            "sourceRef": "sid-6D5E2D93-63C4-4627-A4FC-1F4549A556F3"
+        }
+    ]
+}

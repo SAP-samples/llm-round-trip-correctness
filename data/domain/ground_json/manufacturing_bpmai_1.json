@@ -1,0 +1,116 @@
+{
+    "tasks": [
+        {
+            "id": "sid-E135A74C-6223-4AB9-80A9-EF6998BFC074",
+            "name": "Create production plan and process order",
+            "type": "Task"
+        },
+        {
+            "id": "sid-727D581A-3EB1-46DE-BC62-8D4A17D556A1",
+            "name": "Execute MRP",
+            "type": "Task"
+        },
+        {
+            "id": "sid-379189FE-FCE2-47A9-8887-A130F7BA2E27",
+            "name": "Evaluate Capacity",
+            "type": "Task"
+        },
+        {
+            "id": "sid-CEAFA857-7BE7-46BA-AE43-3F13D38A63CE",
+            "name": "Schedule and release proposal",
+            "type": "Task"
+        },
+        {
+            "id": "sid-D3A0774E-2BA5-4201-8663-A7AC20C96954",
+            "name": "Confirm process order",
+            "type": "Task"
+        },
+        {
+            "id": "sid-E228ED7C-EF0D-409E-8A95-9F3DECF1E001",
+            "name": "Create transfer order or good issue",
+            "type": "Task"
+        },
+        {
+            "id": "sid-BD45603D-9FE3-4013-B501-99E3ADFA813C",
+            "name": "Confirm good issue",
+            "type": "Task"
+        },
+        {
+            "id": "sid-70486E50-07FF-474B-8AC8-7D16FE5B55B8",
+            "name": "Good Receipt",
+            "type": "Task"
+        },
+        {
+            "id": "sid-D0AB8FC9-B088-48C7-9C47-DFBB642F706F",
+            "name": "Order Settlement",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-60B9CD35-7BF9-4510-8B8E-CCC6D5577542",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "sid-90811336-EF6A-4A20-A556-40B47D2EA029",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [],
+    "pools": [],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "sid-3A916A90-FE60-4E73-8EC4-EF9EC82F21B5",
+            "targetRef": "sid-E135A74C-6223-4AB9-80A9-EF6998BFC074",
+            "sourceRef": "sid-60B9CD35-7BF9-4510-8B8E-CCC6D5577542"
+        },
+        {
+            "id": "sid-C887FF86-A332-4198-AFA6-B59A33C324C1",
+            "targetRef": "sid-727D581A-3EB1-46DE-BC62-8D4A17D556A1",
+            "sourceRef": "sid-E135A74C-6223-4AB9-80A9-EF6998BFC074"
+        },
+        {
+            "id": "sid-575815DC-C92E-4FB4-8A81-E32C245E0076",
+            "targetRef": "sid-379189FE-FCE2-47A9-8887-A130F7BA2E27",
+            "sourceRef": "sid-727D581A-3EB1-46DE-BC62-8D4A17D556A1"
+        },
+        {
+            "id": "sid-49DA4F0D-6DB7-4B46-9DFE-1156C8DDF28E",
+            "targetRef": "sid-CEAFA857-7BE7-46BA-AE43-3F13D38A63CE",
+            "sourceRef": "sid-379189FE-FCE2-47A9-8887-A130F7BA2E27"
+        },
+        {
+            "id": "sid-D13DA93A-7946-4983-BA6C-B2B2EEDC922D",
+            "targetRef": "sid-D3A0774E-2BA5-4201-8663-A7AC20C96954",
+            "sourceRef": "sid-CEAFA857-7BE7-46BA-AE43-3F13D38A63CE"
+        },
+        {
+            "id": "sid-A03281F0-CA4A-4B2A-B87A-B9BEED70ACA1",
+            "targetRef": "sid-E228ED7C-EF0D-409E-8A95-9F3DECF1E001",
+            "sourceRef": "sid-D3A0774E-2BA5-4201-8663-A7AC20C96954"
+        },
+        {
+            "id": "sid-2E40613A-5912-4FF8-A18C-284B578E9705",
+            "targetRef": "sid-BD45603D-9FE3-4013-B501-99E3ADFA813C",
+            "sourceRef": "sid-E228ED7C-EF0D-409E-8A95-9F3DECF1E001"
+        },
+        {
+            "id": "sid-6AACE724-E27B-444B-86BC-73B407C3B93B",
+            "targetRef": "sid-70486E50-07FF-474B-8AC8-7D16FE5B55B8",
+            "sourceRef": "sid-BD45603D-9FE3-4013-B501-99E3ADFA813C"
+        },
+        {
+            "id": "sid-90EFB43C-B9FA-403D-B978-133247032630",
+            "targetRef": "sid-D0AB8FC9-B088-48C7-9C47-DFBB642F706F",
+            "sourceRef": "sid-70486E50-07FF-474B-8AC8-7D16FE5B55B8"
+        },
+        {
+            "id": "sid-854BE647-F6F3-4903-BDF6-D2DAAAC83B8E",
+            "targetRef": "sid-90811336-EF6A-4A20-A556-40B47D2EA029",
+            "sourceRef": "sid-D0AB8FC9-B088-48C7-9C47-DFBB642F706F"
+        }
+    ]
+}

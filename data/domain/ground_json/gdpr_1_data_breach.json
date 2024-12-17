@@ -1,0 +1,218 @@
+{
+    "tasks": [
+        {
+            "id": "sid-CD9ABA3B-996B-4F9A-A701-7F4C125A91F0",
+            "name": "Retrieve breached data",
+            "type": "Task"
+        },
+        {
+            "id": "sid-20C5FDD3-8014-432D-8595-CD780D866E38",
+            "name": "Retrieve breached subjects",
+            "type": "Task"
+        },
+        {
+            "id": "sid-0F3D7191-F96A-45A1-B616-EC78A870BACF",
+            "name": "Notify national authority",
+            "type": "Task"
+        },
+        {
+            "id": "sid-5E2F853B-87A5-4B76-96E4-EC74EAE1BD8D",
+            "name": "Data loss limitation",
+            "type": "Task"
+        },
+        {
+            "id": "sid-EE741CA5-91A1-40E1-AFEB-76BFE3BDDBF5",
+            "name": "Evaluate stolen data",
+            "type": "Task"
+        },
+        {
+            "id": "sid-9962320B-AB92-456F-A35E-23CE68F5D69E",
+            "name": "Evaluate security standard",
+            "type": "Task"
+        },
+        {
+            "id": "sid-E5471AD9-8669-499B-A1AA-8F0D364DD560",
+            "name": "Request if breached data has to be communicated to the data subject",
+            "type": "Task"
+        },
+        {
+            "id": "sid-7E9D1CDE-4213-49D9-9BC1-335BB1D0D1BA",
+            "name": "Receive notification for the request",
+            "type": "Task"
+        },
+        {
+            "id": "sid-79CCF0F8-CF7E-41E3-948F-CB884C73584F",
+            "name": "Send notification",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-CC421101-EEDB-4967-B2BC-84169BBBD404",
+            "name": "",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "sid-904E9EA3-CE6C-445C-944C-6660C003C48C",
+            "name": "",
+            "type": "StartNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "sid-9FECC45C-033C-4750-9436-4DA0648C4B43",
+            "type": "Parallel"
+        },
+        {
+            "id": "sid-2A55ADCB-C1A7-4681-AA3D-67EB3F324197",
+            "type": "Parallel"
+        },
+        {
+            "id": "sid-EB9C4F6A-BFA4-425F-8F40-4B8C3E57F1C5",
+            "name": "Are stolen  data exploitable?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-87A23A7E-BAFB-4822-B29B-F599CA067C21",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-90392EFF-AD12-45EB-937A-FF9F18C984E3",
+            "name": "Does the data  controller have high security standard?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-9BDEF5A3-5627-499F-A554-536D66314F34",
+            "name": "The data subject  has to be notified?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-C28AADA0-A989-43F2-B900-6DE04077985E",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-97B9CBBE-5825-4C20-864C-F144321A3755",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "sid-546B4F9D-79D6-4E61-9F6B-576FEF21B922",
+            "targetRef": "sid-20C5FDD3-8014-432D-8595-CD780D866E38",
+            "sourceRef": "sid-CD9ABA3B-996B-4F9A-A701-7F4C125A91F0"
+        },
+        {
+            "id": "sid-4642CAB5-D074-4AA7-8021-A31E87A4BDF4",
+            "targetRef": "sid-9FECC45C-033C-4750-9436-4DA0648C4B43",
+            "sourceRef": "sid-20C5FDD3-8014-432D-8595-CD780D866E38"
+        },
+        {
+            "id": "sid-0746A86A-2ED8-4B30-BEBD-B98777E5F976",
+            "targetRef": "sid-90392EFF-AD12-45EB-937A-FF9F18C984E3",
+            "sourceRef": "sid-9962320B-AB92-456F-A35E-23CE68F5D69E"
+        },
+        {
+            "id": "sid-9BA15B59-747E-4AD1-9986-48C273525FCB",
+            "targetRef": "sid-E5471AD9-8669-499B-A1AA-8F0D364DD560",
+            "condition": "yes",
+            "sourceRef": "sid-90392EFF-AD12-45EB-937A-FF9F18C984E3"
+        },
+        {
+            "id": "sid-1FC7DEFC-9314-4171-A008-4684D23CC0CE",
+            "targetRef": "sid-CC421101-EEDB-4967-B2BC-84169BBBD404",
+            "sourceRef": "sid-2A55ADCB-C1A7-4681-AA3D-67EB3F324197"
+        },
+        {
+            "id": "sid-4A41D080-10FD-4858-8D9B-7BAB75015F80",
+            "targetRef": "sid-97B9CBBE-5825-4C20-864C-F144321A3755",
+            "condition": "no",
+            "sourceRef": "sid-9BDEF5A3-5627-499F-A554-536D66314F34"
+        },
+        {
+            "id": "sid-90871C70-AFB9-45A6-8CDE-E306FB0AD052",
+            "targetRef": "sid-CD9ABA3B-996B-4F9A-A701-7F4C125A91F0",
+            "sourceRef": "sid-904E9EA3-CE6C-445C-944C-6660C003C48C"
+        },
+        {
+            "id": "sid-43AE997C-5E6B-4A67-8533-6CAE4A0DCD7A",
+            "targetRef": "sid-2A55ADCB-C1A7-4681-AA3D-67EB3F324197",
+            "sourceRef": "sid-5E2F853B-87A5-4B76-96E4-EC74EAE1BD8D"
+        },
+        {
+            "id": "sid-9DB8EECC-2220-4EF5-9F3C-D56988F3D8D2",
+            "targetRef": "sid-5E2F853B-87A5-4B76-96E4-EC74EAE1BD8D",
+            "sourceRef": "sid-9FECC45C-033C-4750-9436-4DA0648C4B43"
+        },
+        {
+            "id": "sid-694CA9E1-C3D4-4CB3-8439-064C78DB114B",
+            "targetRef": "sid-0F3D7191-F96A-45A1-B616-EC78A870BACF",
+            "sourceRef": "sid-9FECC45C-033C-4750-9436-4DA0648C4B43"
+        },
+        {
+            "id": "sid-61D58D7F-36BC-43C2-98B1-48D6F2338C45",
+            "targetRef": "sid-EE741CA5-91A1-40E1-AFEB-76BFE3BDDBF5",
+            "sourceRef": "sid-0F3D7191-F96A-45A1-B616-EC78A870BACF"
+        },
+        {
+            "id": "sid-0BFDC180-01B7-4B31-B215-1D92C63085E0",
+            "targetRef": "sid-EB9C4F6A-BFA4-425F-8F40-4B8C3E57F1C5",
+            "sourceRef": "sid-EE741CA5-91A1-40E1-AFEB-76BFE3BDDBF5"
+        },
+        {
+            "id": "sid-10A2902D-5B73-4119-82DF-52A782353CF4",
+            "targetRef": "sid-9962320B-AB92-456F-A35E-23CE68F5D69E",
+            "condition": "no",
+            "sourceRef": "sid-EB9C4F6A-BFA4-425F-8F40-4B8C3E57F1C5"
+        },
+        {
+            "id": "sid-C34C86D5-0737-429E-B5BB-BD4D241D46F9",
+            "targetRef": "sid-87A23A7E-BAFB-4822-B29B-F599CA067C21",
+            "condition": "no",
+            "sourceRef": "sid-90392EFF-AD12-45EB-937A-FF9F18C984E3"
+        },
+        {
+            "id": "sid-5AF01B03-1E0A-4B0E-BA96-77F8B51875EE",
+            "targetRef": "sid-C28AADA0-A989-43F2-B900-6DE04077985E",
+            "condition": "yes",
+            "sourceRef": "sid-EB9C4F6A-BFA4-425F-8F40-4B8C3E57F1C5"
+        },
+        {
+            "id": "sid-BD872674-F501-46A6-BCAF-45C587FBFE15",
+            "targetRef": "sid-C28AADA0-A989-43F2-B900-6DE04077985E",
+            "sourceRef": "sid-87A23A7E-BAFB-4822-B29B-F599CA067C21"
+        },
+        {
+            "id": "sid-50468126-5133-485C-AF8F-7E49103BC2F5",
+            "targetRef": "sid-7E9D1CDE-4213-49D9-9BC1-335BB1D0D1BA",
+            "sourceRef": "sid-E5471AD9-8669-499B-A1AA-8F0D364DD560"
+        },
+        {
+            "id": "sid-1B5AD54F-AF43-43D9-8DAD-CC8A3868326B",
+            "targetRef": "sid-9BDEF5A3-5627-499F-A554-536D66314F34",
+            "sourceRef": "sid-7E9D1CDE-4213-49D9-9BC1-335BB1D0D1BA"
+        },
+        {
+            "id": "sid-BBE6CCB5-9EAF-4AC2-A56C-0B3A5B866A3E",
+            "targetRef": "sid-87A23A7E-BAFB-4822-B29B-F599CA067C21",
+            "condition": "yes",
+            "sourceRef": "sid-9BDEF5A3-5627-499F-A554-536D66314F34"
+        },
+        {
+            "id": "sid-539DA113-AF9D-4C3D-9451-1C95F57F9F50",
+            "targetRef": "sid-2A55ADCB-C1A7-4681-AA3D-67EB3F324197",
+            "sourceRef": "sid-97B9CBBE-5825-4C20-864C-F144321A3755"
+        },
+        {
+            "id": "sid-714ADB55-8B35-4CDA-8687-3145590239F1",
+            "targetRef": "sid-97B9CBBE-5825-4C20-864C-F144321A3755",
+            "sourceRef": "sid-79CCF0F8-CF7E-41E3-948F-CB884C73584F"
+        },
+        {
+            "id": "sid-A15594E9-A21C-47AB-9801-DB98A828E87B",
+            "targetRef": "sid-79CCF0F8-CF7E-41E3-948F-CB884C73584F",
+            "sourceRef": "sid-C28AADA0-A989-43F2-B900-6DE04077985E"
+        }
+    ]
+}
