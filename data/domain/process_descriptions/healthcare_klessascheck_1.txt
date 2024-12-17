@@ -1,0 +1,13 @@
+First, a task with the id a1 and the label "Diagnose Non, and the process ends.
+Specific Low
+Back Pain" occurs. Then an exclusive decision with 2 branches occurs. This decision will be furthermore refered to as D1. The first entry in in the first branch of D1 is a task with the id a3 and the label "Apply
+Superficial
+Heat or other
+Nonpharmocol.
+Treatments". Then an exclusive decision with 2 branches occurs. This decision will be furthermore refered to as D2. The only entry in the first branch of D2 is a task with the id a7 and the label "Prescribe
+NSAID or SMR". Following this, all branches of D2 are finished. The first entry in in the second branch of D1 is a task with the id a4 and the label "Apply Exercise
+or other
+Nonpharmacol.
+Treatments". Then an exclusive decision with 2 branches occurs. This decision will be furthermore refered to as D3. The first entry in in the first branch of D3 is a task with the id a10 and the label "Prescribe
+NSAID". Then an exclusive decision with 2 branches occurs. This decision will be furthermore refered to as D4. The only entry in the first branch of D4 is a task with the id a14 and the label "Prescribe
+Opioid". Following this, all branches of D4 are finished. Following this, all branches of D3 are finished. Following this, all branches of D1 are finished. 

@@ -1,0 +1,169 @@
+{
+    "tasks": [
+        {
+            "id": "sid-71F86756-C418-42D6-BD9C-C52EA8E3EB33",
+            "name": "Receive inbound  shipment",
+            "type": "Task"
+        },
+        {
+            "id": "sid-E96CFC2B-F088-4158-A01F-913F81311A37",
+            "name": "Check inbound  shipment",
+            "type": "Task"
+        },
+        {
+            "id": "sid-507340A6-1D63-4B90-8EC5-518E33158206",
+            "name": "Prepare products for   shipment  to particular service station",
+            "type": "Task"
+        },
+        {
+            "id": "sid-7DDE5CEB-69B6-44CA-83CB-582BD610DACA",
+            "name": "Assemble inbound shipment",
+            "type": "Task"
+        },
+        {
+            "id": "sid-8B76DA6C-6BF7-4D35-96C4-115B60DE2E5F",
+            "name": "Send inbound shipment",
+            "type": "Task"
+        },
+        {
+            "id": "sid-2C353A05-2F20-4973-81E7-4DB72F8FAC50",
+            "name": "Check product availability",
+            "type": "Task"
+        },
+        {
+            "id": "sid-467B92B0-5FE0-46EB-9775-6E50E7A0C403",
+            "name": "Receive shipment request",
+            "type": "Task"
+        },
+        {
+            "id": "sid-A6BF069D-004A-4C7F-B978-32EAED8AD3F0",
+            "name": "Check shipment address",
+            "type": "Task"
+        },
+        {
+            "id": "sid-BE060D54-1DD2-4657-A378-7C862BA29448",
+            "name": "Prepare products for regional  shipment",
+            "type": "Task"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-A3CE926A-AD62-470A-BD50-AD06B6F457FC",
+            "name": "",
+            "type": "StartNoneEvent"
+        },
+        {
+            "id": "sid-4F210358-2E24-4981-9397-095B3C996441",
+            "name": "",
+            "type": "EndNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "sid-EA3B1F1C-669B-40E2-93E0-19A0013A7CEA",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-7797E252-3191-4CB7-8024-64CFD98E4956",
+            "name": "Is product available in regional warehouse?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-23E4763C-2AC0-4140-9191-E30AAD8E277A",
+            "name": "Luzern area?",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-22A2965D-AA31-41C2-9E6C-B6026C54D720",
+            "type": "Exclusive"
+        }
+    ],
+    "pools": [],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "sid-FFDA54EF-E54C-4B88-8F41-2030E22AD2E8",
+            "targetRef": "sid-467B92B0-5FE0-46EB-9775-6E50E7A0C403",
+            "sourceRef": "sid-A3CE926A-AD62-470A-BD50-AD06B6F457FC"
+        },
+        {
+            "id": "sid-440BCB81-0DCD-4DFC-9180-48F67E8AAEDA",
+            "targetRef": "sid-8B76DA6C-6BF7-4D35-96C4-115B60DE2E5F",
+            "sourceRef": "sid-7DDE5CEB-69B6-44CA-83CB-582BD610DACA"
+        },
+        {
+            "id": "sid-40141D85-6642-4B7C-8328-25E3ADD0EEB8",
+            "targetRef": "sid-7DDE5CEB-69B6-44CA-83CB-582BD610DACA",
+            "condition": "No",
+            "sourceRef": "sid-23E4763C-2AC0-4140-9191-E30AAD8E277A"
+        },
+        {
+            "id": "sid-6C30764B-977E-4427-8256-342B27FF7719",
+            "targetRef": "sid-E96CFC2B-F088-4158-A01F-913F81311A37",
+            "sourceRef": "sid-71F86756-C418-42D6-BD9C-C52EA8E3EB33"
+        },
+        {
+            "id": "sid-ABE38A1C-6B1E-4E60-8520-1E9A820D0F43",
+            "targetRef": "sid-71F86756-C418-42D6-BD9C-C52EA8E3EB33",
+            "sourceRef": "sid-8B76DA6C-6BF7-4D35-96C4-115B60DE2E5F"
+        },
+        {
+            "id": "sid-DFD2E2B4-17DF-4F00-A1EE-65869D4A3F9C",
+            "targetRef": "sid-A6BF069D-004A-4C7F-B978-32EAED8AD3F0",
+            "condition": "No",
+            "sourceRef": "sid-7797E252-3191-4CB7-8024-64CFD98E4956"
+        },
+        {
+            "id": "sid-C03EE2EE-8EBE-4DCB-BC76-C4AC7447D3B6",
+            "targetRef": "sid-BE060D54-1DD2-4657-A378-7C862BA29448",
+            "condition": "Yes",
+            "sourceRef": "sid-23E4763C-2AC0-4140-9191-E30AAD8E277A"
+        },
+        {
+            "id": "sid-A99836C5-7A80-4285-B6D2-5F7F820CC314",
+            "targetRef": "sid-EA3B1F1C-669B-40E2-93E0-19A0013A7CEA",
+            "condition": "Yes",
+            "sourceRef": "sid-7797E252-3191-4CB7-8024-64CFD98E4956"
+        },
+        {
+            "id": "sid-5C297161-7784-4D2F-BF74-98DCD4255C26",
+            "targetRef": "sid-2C353A05-2F20-4973-81E7-4DB72F8FAC50",
+            "sourceRef": "sid-467B92B0-5FE0-46EB-9775-6E50E7A0C403"
+        },
+        {
+            "id": "sid-40CD42AD-3344-4D40-99D3-2ED44C567F13",
+            "targetRef": "sid-7797E252-3191-4CB7-8024-64CFD98E4956",
+            "sourceRef": "sid-2C353A05-2F20-4973-81E7-4DB72F8FAC50"
+        },
+        {
+            "id": "sid-60D0DC4E-27F7-42D8-AC57-EC6606EC67C3",
+            "targetRef": "sid-23E4763C-2AC0-4140-9191-E30AAD8E277A",
+            "sourceRef": "sid-A6BF069D-004A-4C7F-B978-32EAED8AD3F0"
+        },
+        {
+            "id": "sid-BCF1F603-75CD-4BCC-BBB2-3F176BCBA787",
+            "targetRef": "sid-EA3B1F1C-669B-40E2-93E0-19A0013A7CEA",
+            "sourceRef": "sid-E96CFC2B-F088-4158-A01F-913F81311A37"
+        },
+        {
+            "id": "sid-2584C63A-BEF9-4372-BAB1-883D40C2B2CB",
+            "targetRef": "sid-507340A6-1D63-4B90-8EC5-518E33158206",
+            "sourceRef": "sid-EA3B1F1C-669B-40E2-93E0-19A0013A7CEA"
+        },
+        {
+            "id": "sid-9190A462-399F-4A57-826A-D246C1EC8BD7",
+            "targetRef": "sid-22A2965D-AA31-41C2-9E6C-B6026C54D720",
+            "sourceRef": "sid-BE060D54-1DD2-4657-A378-7C862BA29448"
+        },
+        {
+            "id": "sid-78991917-1908-45F2-9312-AF5C4D4D0A72",
+            "targetRef": "sid-4F210358-2E24-4981-9397-095B3C996441",
+            "sourceRef": "sid-22A2965D-AA31-41C2-9E6C-B6026C54D720"
+        },
+        {
+            "id": "sid-9D7D82C8-2D7C-42DD-B3F1-5AEEB572A933",
+            "targetRef": "sid-22A2965D-AA31-41C2-9E6C-B6026C54D720",
+            "sourceRef": "sid-507340A6-1D63-4B90-8EC5-518E33158206"
+        }
+    ]
+}
