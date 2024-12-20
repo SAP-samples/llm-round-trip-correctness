@@ -1,0 +1,212 @@
+{
+    "tasks": [
+        {
+            "id": "sid-E60AAC92-17BD-422B-99A1-37E2738896A7",
+            "name": "Select starting block",
+            "type": "Service"
+        },
+        {
+            "id": "sid-09011551-C01B-4936-8D89-6F952C965F4D",
+            "name": "Running 5 km",
+            "type": "User"
+        },
+        {
+            "id": "sid-29FB3C8E-3FBF-48BD-BED7-D9391178CD4B",
+            "name": "More training",
+            "type": "User"
+        },
+        {
+            "id": "sid-33B7C2E3-B33B-4439-BEBF-9A77F5BD3CA6",
+            "name": "Good in shape",
+            "type": "Task"
+        },
+        {
+            "id": "sid-849CB944-B746-4D5C-AE38-F592DF07A628",
+            "name": "Get your starting number",
+            "type": "Service"
+        },
+        {
+            "id": "sid-27AFEC20-5B55-4890-BFAE-E964DCF26017",
+            "name": "Go from home",
+            "type": "User"
+        },
+        {
+            "id": "sid-3CAF9F0D-2A47-479A-AFAD-C46E5DFD6EB3",
+            "name": "Go from work",
+            "type": "User"
+        },
+        {
+            "id": "sid-F9B2DAEE-6CF5-47E1-8781-4FAEA32E6F4B",
+            "name": "Way to the run",
+            "type": "User"
+        },
+        {
+            "id": "sid-7B67AA54-6CFE-4363-976D-66A6E0082AC2",
+            "name": "Run",
+            "type": "User"
+        },
+        {
+            "id": "sid-3FB97CFD-92B8-43A6-A198-9246CA05B53B",
+            "name": "Drink",
+            "type": "User"
+        },
+        {
+            "id": "sid-1D07B1D3-3F15-4D5F-A30D-9A28A2DB8D05",
+            "name": "Receive your final running time",
+            "type": "Service"
+        }
+    ],
+    "events": [
+        {
+            "id": "sid-1929ACED-EDF3-4974-99EE-57E9D1DD6921",
+            "name": "Start Vienna Nightrun",
+            "type": "IntermediateTimerEvent"
+        },
+        {
+            "id": "sid-E5CDB734-EA0D-4CF0-AF83-3E1E590DA0B3",
+            "name": "Vienna Night Run end",
+            "type": "EndNoneEvent"
+        },
+        {
+            "id": "sid-EA071ED8-F91B-49C5-B7DD-8E3A5E94F67A",
+            "name": "Start Vienna Night Run process",
+            "type": "StartNoneEvent"
+        }
+    ],
+    "gateways": [
+        {
+            "id": "sid-607CB5BB-A017-4DB7-AF93-2A29BCB8B1CD",
+            "name": "Time",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-93D51177-D26E-4D15-9ECF-3D4A58A43026",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-40066831-1F5F-426B-9D22-B7D34A52F460",
+            "type": "Exclusive"
+        },
+        {
+            "id": "sid-15048804-619A-49A5-9CA0-10E8D859B93A",
+            "type": "Parallel"
+        },
+        {
+            "id": "sid-BF4808C7-F2A3-4A6B-8C7D-7FDC3D36538E",
+            "type": "Parallel"
+        }
+    ],
+    "pools": [],
+    "messageFlows": [],
+    "sequenceFlows": [
+        {
+            "id": "sid-13301771-F6A4-4E2C-8D6E-4D0FF8C451F7",
+            "targetRef": "sid-09011551-C01B-4936-8D89-6F952C965F4D",
+            "sourceRef": "sid-E60AAC92-17BD-422B-99A1-37E2738896A7"
+        },
+        {
+            "id": "sid-D4215F9F-CE74-4294-9248-EC0ACB2CD97F",
+            "targetRef": "sid-607CB5BB-A017-4DB7-AF93-2A29BCB8B1CD",
+            "sourceRef": "sid-09011551-C01B-4936-8D89-6F952C965F4D"
+        },
+        {
+            "id": "sid-9DC5F147-817C-4EF4-951D-5E1D3CFAB637",
+            "targetRef": "sid-F9B2DAEE-6CF5-47E1-8781-4FAEA32E6F4B",
+            "sourceRef": "sid-849CB944-B746-4D5C-AE38-F592DF07A628"
+        },
+        {
+            "id": "sid-BBC3F122-5F20-48CB-847B-59609644CACA",
+            "targetRef": "sid-93D51177-D26E-4D15-9ECF-3D4A58A43026",
+            "sourceRef": "sid-F9B2DAEE-6CF5-47E1-8781-4FAEA32E6F4B"
+        },
+        {
+            "id": "sid-8FBD488F-526C-46B8-80A7-44D974B8F9E8",
+            "targetRef": "sid-1929ACED-EDF3-4974-99EE-57E9D1DD6921",
+            "sourceRef": "sid-40066831-1F5F-426B-9D22-B7D34A52F460"
+        },
+        {
+            "id": "sid-5A11288B-10A4-4EF1-AA7F-FE0E5042217B",
+            "targetRef": "sid-15048804-619A-49A5-9CA0-10E8D859B93A",
+            "sourceRef": "sid-1929ACED-EDF3-4974-99EE-57E9D1DD6921"
+        },
+        {
+            "id": "sid-07347300-9EDF-4C3F-A1ED-A413B7E5A013",
+            "targetRef": "sid-1D07B1D3-3F15-4D5F-A30D-9A28A2DB8D05",
+            "sourceRef": "sid-BF4808C7-F2A3-4A6B-8C7D-7FDC3D36538E"
+        },
+        {
+            "id": "sid-6282CE88-902E-4C2F-AA61-96C98D5F7E17",
+            "targetRef": "sid-E5CDB734-EA0D-4CF0-AF83-3E1E590DA0B3",
+            "sourceRef": "sid-1D07B1D3-3F15-4D5F-A30D-9A28A2DB8D05"
+        },
+        {
+            "id": "sid-301DC409-1CA1-4C3C-91F6-FAB65E61E1A1",
+            "targetRef": "sid-E60AAC92-17BD-422B-99A1-37E2738896A7",
+            "sourceRef": "sid-EA071ED8-F91B-49C5-B7DD-8E3A5E94F67A"
+        },
+        {
+            "id": "sid-A50A8896-03D3-4E15-A7E3-0AF0799F07F0",
+            "targetRef": "sid-849CB944-B746-4D5C-AE38-F592DF07A628",
+            "sourceRef": "sid-33B7C2E3-B33B-4439-BEBF-9A77F5BD3CA6"
+        },
+        {
+            "id": "sid-360DD87D-57E2-4067-81D8-DFB3561D2678",
+            "targetRef": "sid-3FB97CFD-92B8-43A6-A198-9246CA05B53B",
+            "sourceRef": "sid-15048804-619A-49A5-9CA0-10E8D859B93A"
+        },
+        {
+            "id": "sid-883ACEF5-6586-420F-8098-88F73217B6B3",
+            "targetRef": "sid-7B67AA54-6CFE-4363-976D-66A6E0082AC2",
+            "sourceRef": "sid-15048804-619A-49A5-9CA0-10E8D859B93A"
+        },
+        {
+            "id": "sid-390C78D5-27E2-4B1F-8D25-6F1325426FA1",
+            "targetRef": "sid-BF4808C7-F2A3-4A6B-8C7D-7FDC3D36538E",
+            "sourceRef": "sid-7B67AA54-6CFE-4363-976D-66A6E0082AC2"
+        },
+        {
+            "id": "sid-8B33456C-3DAA-4F4F-9EDE-A99AA4975AB3",
+            "targetRef": "sid-09011551-C01B-4936-8D89-6F952C965F4D",
+            "sourceRef": "sid-29FB3C8E-3FBF-48BD-BED7-D9391178CD4B"
+        },
+        {
+            "id": "sid-4A548F30-4051-437B-8058-109208E6155C",
+            "targetRef": "sid-3CAF9F0D-2A47-479A-AFAD-C46E5DFD6EB3",
+            "condition": "time <1hour to start",
+            "sourceRef": "sid-93D51177-D26E-4D15-9ECF-3D4A58A43026"
+        },
+        {
+            "id": "sid-49CE85D2-6F86-44F0-9B31-862C2FAA96CF",
+            "targetRef": "sid-27AFEC20-5B55-4890-BFAE-E964DCF26017",
+            "condition": "time >1hour to start",
+            "sourceRef": "sid-93D51177-D26E-4D15-9ECF-3D4A58A43026"
+        },
+        {
+            "id": "sid-9C3BADFC-5BD3-44C7-B02C-EB4BF0D2FF64",
+            "targetRef": "sid-40066831-1F5F-426B-9D22-B7D34A52F460",
+            "sourceRef": "sid-27AFEC20-5B55-4890-BFAE-E964DCF26017"
+        },
+        {
+            "id": "sid-246C1A86-4235-4096-AE47-27126990BC7B",
+            "targetRef": "sid-40066831-1F5F-426B-9D22-B7D34A52F460",
+            "sourceRef": "sid-3CAF9F0D-2A47-479A-AFAD-C46E5DFD6EB3"
+        },
+        {
+            "id": "sid-C908BF2F-8E7A-4480-90E0-77E9B2BB4C45",
+            "targetRef": "sid-BF4808C7-F2A3-4A6B-8C7D-7FDC3D36538E",
+            "sourceRef": "sid-3FB97CFD-92B8-43A6-A198-9246CA05B53B"
+        },
+        {
+            "id": "sid-EFB98B98-74A6-4831-A09E-FF784EFC1246",
+            "targetRef": "sid-29FB3C8E-3FBF-48BD-BED7-D9391178CD4B",
+            "condition": "over 25min",
+            "sourceRef": "sid-607CB5BB-A017-4DB7-AF93-2A29BCB8B1CD"
+        },
+        {
+            "id": "sid-5AABCE12-B26B-41BA-9300-04794CBCFFF0",
+            "targetRef": "sid-33B7C2E3-B33B-4439-BEBF-9A77F5BD3CA6",
+            "condition": "under 25min",
+            "sourceRef": "sid-607CB5BB-A017-4DB7-AF93-2A29BCB8B1CD"
+        }
+    ]
+}
