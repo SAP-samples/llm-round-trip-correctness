@@ -137,7 +137,7 @@ def main_pipeline(llm, direction, model_path, text_path, example):
     artefacts = {}
     temp_in = 1
     temp_out = 0
-    iterations = 2
+    iterations = 3
 
     if llm == 'gpt':
         gpt_prompt = Prompt(llm, path_to_json, path_to_text, json_desc, temp_in,temp_out)
