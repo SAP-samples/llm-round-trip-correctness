@@ -1,0 +1,41 @@
+The process starts when a customer from The Bike Zone initiates a request.
+
+The Sales Department (SD) creates the customer master data and updates the customer data after the process "Customer Order" begins.
+
+First, the customer's request is sent to the Sales Department (SD) of GBI.
+
+This request is accepted and processed by the Sales Department (SD) of GBI.
+
+Next, the offer is processed.
+
+The offer is then copied to the order and sent to the customer.
+
+The customer accepts and processes the offer.
+
+The customer orders the bicycles and sends an order back to the Sales Department (SD).
+
+The Sales Department accepts and processes the order.
+
+The Material Management (MM) of GBI checks the inventory.
+
+If the product is in stock, it is requested.
+
+If not, the goods are procured/ordered.
+
+After the product is requested or ordered, the customer order is processed again by the Sales Department (SD) and a delivery note is created.
+
+After the delivery note is created, the Material Management (MM) performs an inventory control.
+
+Following the inventory control, the Sales Department (SD) picks the material, packs it, and sends the goods to the customer.
+
+The goods receipt is registered by the customer.
+
+After the goods are sent to the customer, the Material Management (MM) checks the inventory, and the Finance Department (FI) creates the invoice.
+
+The invoice is then sent by the Finance Department (FI) to the customer.
+
+The customer receives the invoice.
+
+The invoice is settled by the customer, after which the order is completed and the incoming payment is processed by the Finance Department (FI).
+
+Finally, the document flow is edited and displayed by the Sales Department, and the process is completed.

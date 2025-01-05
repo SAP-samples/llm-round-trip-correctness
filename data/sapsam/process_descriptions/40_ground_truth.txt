@@ -1,0 +1,27 @@
+The process starts when an application is received by the recruitment department of ADOmoney Bank.
+
+First, the application documents are reviewed, and a preselection is conducted.
+
+Either a rejection is created after the preselection and sent to the applicant, ending the process with the applicant being rejected after the preselection, or the application documents are examined in detail.
+
+Then, it is checked whether the application is for a key position.
+
+If yes, a telephone interview is conducted, and subsequently, an appointment for a personal interview is communicated via email.
+
+If no, an appointment for a personal interview is directly communicated via email.
+
+The appointment for a personal interview is communicated via email until a suitable date is found.
+
+Once a suitable date is found, the appointment and the applicant's documents are forwarded to the relevant department.
+
+After that, the personal interview is conducted, and it is decided whether the applicant is suitable for the assessment center.
+
+If yes, an appointment with the applicant for the assessment center is scheduled, and the assessment center is planned and prepared in parallel.
+
+Once an appointment is scheduled and the assessment center is prepared, the assessment center is conducted, and a vote on the applicant is taken.
+
+If the applicant is not suitable for the assessment center, a vote on the applicant is taken directly.
+
+If the applicant is accepted, an acceptance letter is drafted and sent to the applicant.
+
+If the applicant is rejected after the assessment center, a rejection letter is drafted and sent to the applicant.

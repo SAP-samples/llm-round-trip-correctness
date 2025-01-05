@@ -1,0 +1,13 @@
+The process of TAS AG begins with opening the datasheet.
+
+First, the robot clicks on "Start".
+
+Then, it clicks on "Format".
+
+Next, it selects the option "Show and hide".
+
+After that, it clicks on "Show sheet".
+
+Finally, the robot presses the Enter key.
+
+The process ends when the datasheet has been successfully opened.

@@ -1,0 +1,31 @@
+The SoKnow process begins with the order intake in the development department.
+
+Next, the requirements are described.
+
+A workshop is then conducted, based on which a project sketch is created.
+
+Once the project sketch is completed, the process waits for the appointment confirmation from the customer company.
+
+Following this, a customer conversation is conducted, and then the specification sheet is written.
+
+After the specification sheet is completed, it is sent to the customer.
+
+The customer then provides feedback, which is received.
+
+Subsequently, project and capacity planning are performed.
+
+Next, standard open-source products are checked.
+
+Based on this review, use cases are defined, and costs are calculated.
+
+A decision is made whether to develop new products or use existing ones.
+
+If existing products are selected, the knowledge management systems are adjusted (target process).
+
+If new products are to be developed, the product is developed (target process).
+
+After the adjustment of the knowledge management systems or the development of the new product, product acceptance is performed with the participation of the customer company.
+
+Customer feedback is then obtained from the customer.
+
+Finally, follow-up projects are identified, and the order is completed.

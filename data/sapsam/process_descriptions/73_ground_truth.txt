@@ -1,0 +1,25 @@
+The loan process begins when a user comes to the library.
+
+First, the user is logged in.
+
+Next, the user's request is determined.
+
+If the user wants to extend media, the process for extending media is initiated.
+
+If yes, the process ends with the confirmation that the media has been extended.
+
+If no, the process concludes with the return of the medium.
+
+If the user wants to borrow a medium, they first select the desired medium.
+
+Then, the medium is searched in the database.
+
+If the medium is available, the user is identified.
+
+After that, the medium is lent, and the process ends.
+
+If the medium is not available, a corresponding message is sent to the library user who does not belong to HTW.
+
+If the user wants to reserve the medium, the loan receives a confirmation, the reservation process is started, and the process ends.
+
+If the loan receives a rejection, the lending process is aborted, and the process ends.

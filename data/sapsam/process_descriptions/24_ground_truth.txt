@@ -1,0 +1,17 @@
+The SoKnow process begins when the marketing department identifies that the existing website is outdated.
+
+First, the marketing department analyzes the current content.
+
+Next, the development department reviews this content.
+
+Subsequently, the development department designs new content and updates existing content.
+
+Once the new content is designed and the existing content is updated, the content is permanently updated, and the process ends with the website being up-to-date.
+
+Simultaneously, the marketing department evaluates the content.
+
+Both tasks are carried out in parallel.
+
+If the content is positively evaluated, management is informed, and the process ends with the website currently needing no improvements.
+
+If the evaluation is negative, the process is repeated starting from the review of the current content.
