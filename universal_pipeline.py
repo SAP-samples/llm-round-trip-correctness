@@ -156,13 +156,15 @@ def main_pipeline(llm, direction, model_path, text_path, example):
         print('--------------------------{}/{}-----------------------------------'.format(i,len(files_to_iterate)))
         try:
             if model_path != 'no':
-                with open(os.path.join(model_path, file), "r") as infile:
+                split_file = '{}.json'.format(file.split('.')[0])
+                with open(os.path.join(model_path, split_file), "r") as infile:
                     model = json.load(infile)
             else:
                 model = ''
 
             if text_path != 'no':
-                with open(os.path.join(text_path, file.replace(".json", ".txt")), "r") as infile:
+                split_file = '{}.txt'.format(file.split('.')[0])
+                with open(os.path.join(text_path, split_file), "r") as infile:
                     description = infile.read()
             else:
                 description = ''
