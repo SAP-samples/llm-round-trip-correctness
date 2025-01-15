@@ -1,0 +1,25 @@
+The SoKnown process begins when a late payment is received in the finance department.
+
+Subsequently, management is informed.
+
+It is checked whether a reminder has already been sent.
+
+If yes, an inquiry is made with the customer, and an inquiry email is sent to the customer company.
+
+If a response is received, an online banking check is performed.
+
+Once the check is completed, the payment is posted, and the process ends with the payment being processed.
+
+If no response is received, a lawyer is notified, and a request for legal assistance is sent to an external lawyer.
+
+Then, the reminder process is run (target process), and the process ends with the payment being processed.
+
+If no reminder has been sent, a reminder is created by the legal department and sent to the customer company.
+
+It is checked whether the payment has been made.
+
+If yes, the reminder process is completed, and the payment is posted as described earlier, ending with the payment being processed.
+
+If no, another reminder is created.
+
+If the third reminder is unsuccessful, the finance department is notified, and the lawyer is also notified as described above.

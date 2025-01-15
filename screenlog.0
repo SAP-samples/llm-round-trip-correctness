@@ -1,0 +1,32 @@
+/Users/I551659/Documents/GitHub/llm-round-trip-correctness/.env
+Traceback (most recent call last):
+  File "/Users/I551659/Documents/GitHub/llm-round-trip-correctness/genai_gpt_pipeline.py", line 15, in <module>
+    from round_trip.llm_connect.gen_ai_llm_call import generate_gpt_with_timeout
+  File "/Users/I551659/Documents/GitHub/llm-round-trip-correctness/round_trip/llm_connect/gen_ai_llm_call.py", line 28, in <module>
+    from gen_ai_hub.proxy.native.openai import chat
+  File "<frozen importlib._bootstrap>", line 1229, in _handle_fromlist
+  File "/Users/I551659/Library/Caches/pypoetry/virtualenvs/llm-round-trip-correctness-q_XCEzyo-py3.11/lib/python3.11/site-packages/gen_ai_hub/proxy/native/openai/__init__.py", line 36, in __getattr__
+    return getattr(_global_client.client, name)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/I551659/Library/Caches/pypoetry/virtualenvs/llm-round-trip-correctness-q_XCEzyo-py3.11/lib/python3.11/site-packages/gen_ai_hub/proxy/native/openai/__init__.py", line 27, in client
+    self._client[proxy_version] = OpenAI()
+                                  ^^^^^^^^
+  File "/Users/I551659/Library/Caches/pypoetry/virtualenvs/llm-round-trip-correctness-q_XCEzyo-py3.11/lib/python3.11/site-packages/gen_ai_hub/proxy/native/openai/clients.py", line 474, in __init__
+    self.proxy_client = proxy_client or get_proxy_client()
+                                        ^^^^^^^^^^^^^^^^^^
+  File "/Users/I551659/Library/Caches/pypoetry/virtualenvs/llm-round-trip-correctness-q_XCEzyo-py3.11/lib/python3.11/site-packages/gen_ai_hub/proxy/core/proxy_clients.py", line 177, in get_proxy_client
+    return catalog.get_proxy_cls(proxy_version)(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/I551659/Library/Caches/pypoetry/virtualenvs/llm-round-trip-correctness-q_XCEzyo-py3.11/lib/python3.11/site-packages/gen_ai_hub/proxy/core/base.py", line 45, in __call__
+    instance = super().__call__(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/I551659/Library/Caches/pypoetry/virtualenvs/llm-round-trip-correctness-q_XCEzyo-py3.11/lib/python3.11/site-packages/pydantic/main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/I551659/Library/Caches/pypoetry/virtualenvs/llm-round-trip-correctness-q_XCEzyo-py3.11/lib/python3.11/site-packages/gen_ai_hub/proxy/gen_ai_hub_proxy/client.py", line 193, in init_client
+    data['ai_core_client'] = AICoreV2Client.from_env(**kwargs)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/I551659/Library/Caches/pypoetry/virtualenvs/llm-round-trip-correctness-q_XCEzyo-py3.11/lib/python3.11/site-packages/ai_core_sdk/ai_core_v2_client.py", line 153, in from_env
+    return AICoreV2Client(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AICoreV2Client.__init__() missing 1 required positional argument: 'base_url'

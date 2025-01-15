@@ -1,0 +1,9 @@
+The SoKnow process begins with the HR department organizing employee interviews.
+
+First, appointment suggestions are sent.
+
+Then, the process branches: on one side, the employee interview is conducted, during which training is assigned, and on the other side, regular inquiries are made to ensure progress.
+
+Simultaneously, the employee must confirm the appointment, participate in the interview, and complete the training.
+
+Finally, the training is completed, and the employee interview is marked as conducted.
