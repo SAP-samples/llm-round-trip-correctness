@@ -26,7 +26,6 @@ ipykernel = "^6.29.4"
 python-dotenv = "^1.0.1"
 datasets = "^2.18.0"
 scikit-learn = "^1.5.0"
-nltk = "^3.9.1"
 
 [tool.poetry.group.dev.dependencies]
 
