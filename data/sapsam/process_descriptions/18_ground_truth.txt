@@ -1,0 +1,23 @@
+The PC assembly process begins with preparing the workplace by providing an anti-static mat, tools, and gloves.
+
+Next, the motherboard is placed on the anti-static mat.
+
+Then, the CPU is inserted into the processor.
+
+In the following step, thermal paste is applied.
+
+Now, it is checked whether the installation is possible.
+
+If the installation is possible, the process ends.
+
+If the installation is not possible, the next steps are decided as follows:
+If no image is displayed, the corresponding troubleshooting step is performed.
+If the hard drive is not recognized, the corresponding troubleshooting step is performed.
+If there is no power, the corresponding troubleshooting step is performed.
+If a boot loop occurs, the corresponding troubleshooting step is performed.
+
+After troubleshooting, it is checked again whether the installation is possible.
+
+If the installation is not possible, the next steps are decided as before, until the installation is possible.
+
+If the installation is possible, the process ends.

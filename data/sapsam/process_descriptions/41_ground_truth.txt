@@ -1,0 +1,21 @@
+The viticulture process in outdoor operations begins with the technical Jane Doe when a task arises.
+
+First, the working time effort is estimated.
+
+Next, the availability of resources is checked.
+
+Then, a field employee is selected and contacted.
+
+It is checked again if the employee is reachable.
+
+If the employee is not reachable, the task is not assigned, and the availability of resources is checked again.
+
+If the employee is reachable, the task is assigned to the employee, and the procedure for task completion is specified.
+
+The field employee receives the task and confirms it.
+
+Afterward, the field employee processes the task and completes it.
+
+Subsequently, a completion report is made.
+
+The completion report is documented by the technical Jane Doe, and the task is processed.
