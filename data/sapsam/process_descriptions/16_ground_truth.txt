@@ -1,0 +1,21 @@
+The learning progress process begins with the start event.
+
+Teachers activate the learning progress in selected objects.
+
+Students click on "Learning Progress" for each object.
+
+After students click on "Learning Progress" for each object, a decision is made whether the learning progress is set manually by the user or automatically by the teacher.
+
+If the learning progress is set manually, it is done by the user.
+
+If it is set automatically, it is done by the teacher.
+
+After students click on "Learning Progress" for each object or teachers activate the learning progress in selected objects, the status of the learning progress is displayed through color markings.
+
+There are different possibilities:
+A red cross means that the course, test, or exercise was not passed.
+A green marking indicates that the task was fully processed.
+A yellow marking means that the task is in progress.
+A gray marking shows that the task has not yet started.
+
+The process then ends.

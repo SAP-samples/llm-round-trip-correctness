@@ -1,0 +1,17 @@
+The purchasing process begins with the customer selecting and buying goods online.
+
+Next, the finance department checks if a creditworthiness check is required.
+
+If a credit check is needed, the necessary information is requested, and the creditworthiness is assessed.
+
+If the customer is deemed creditworthy, the warehouse is informed about the shipping.
+
+If the customer is not deemed creditworthy, they are informed about the rejection, and the process ends.
+
+If no credit check is required or the customer is deemed creditworthy, the warehouse is informed about the shipping and checks if the item is available in stock.
+
+If the item is not available, a reorder is triggered, and the availability is checked again until the item is in stock.
+
+If the item is available, it is packed and shipped, and the customer receives the purchase and shipping confirmation.
+
+The process then ends.

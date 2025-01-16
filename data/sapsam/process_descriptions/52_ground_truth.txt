@@ -1,0 +1,17 @@
+First, the HR clerk retrieves the requirement profile.
+
+Next, the job posting is retrieved.
+
+Then, a co-signature note is created and forwarded.
+
+The section manager reviews the note and decides if there are any comments.
+
+If there are comments, the note is returned to the clerk, who creates and forwards a new co-signature note.
+
+If the section manager has no comments, the note is forwarded to the department head for another review.
+
+If the department head has no comments, the process ends.
+
+If the department head has comments, the note is sent back to the section manager, who creates and forwards a new co-signature note.
+
+The process ends when there are no further comments from the department head.

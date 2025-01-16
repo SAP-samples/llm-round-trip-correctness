@@ -1,0 +1,13 @@
+The library process begins when the student enters the library.
+
+First, the student goes to the PC to search for books.
+
+After some time has passed, the student searches for books and goes to the checkout counter.
+
+There, the library staff checks the student's ID.
+
+It is verified whether the ID is valid.
+
+If the ID is valid, the student receives the books and leaves the library.
+
+If the ID is not valid, the student does not receive the books and leaves the library as well.

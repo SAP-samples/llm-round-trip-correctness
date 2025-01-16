@@ -1,0 +1,25 @@
+First, a bill of materials is created in the warehousing department of Startup TUd-03.
+
+Then, the goods are ordered.
+
+If the supplier sends an inquiry, the question is clarified with the specialist department, and the delivery is awaited.
+
+If the delivery does not occur within five working days, the supplier is contacted to check if immediate shipping is possible.
+
+If immediate shipping is not possible, the process ends with an escalation of delivery issues.
+
+If immediate shipping is possible, the delivery is awaited.
+
+When the parts are delivered by the supplier, the quantity and quality are checked.
+
+If the quantity and quality do not meet the standards, a replacement delivery is requested and communicated to the supplier.
+
+Then, the delivery is awaited again.
+
+If the quantity and quality meet the standards, the goods are stored.
+
+After storing the goods, the sales department transmits the order.
+
+Next, the goods are prepared and packaged.
+
+Finally, the goods are shipped or issued.

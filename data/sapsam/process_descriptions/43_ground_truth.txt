@@ -1,0 +1,21 @@
+The process for the driller begins with an order placed by the customer.
+
+Subsequently, the customer issues the order.
+
+Next, Jane Doe checks the feasibility of the order.
+
+If the order is not feasible, the process is aborted through escalation.
+
+If the order is feasible, it is checked whether an offer is available or if it is a repeat order.
+
+If not, a price calculation is performed, and an offer is created and sent.
+
+After a waiting period, it is checked whether the offer has been accepted.
+
+If the offer is not accepted, the customer is informed that no order confirmation will be issued.
+
+If the offer is accepted, the order is created and entered into production planning.
+
+If an offer is available or it is a repeat order, the order is directly created and entered into production planning.
+
+Finally, the order confirmation is sent, and the process ends with the dispatch of the order confirmation.

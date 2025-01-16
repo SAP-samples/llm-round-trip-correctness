@@ -1,0 +1,16 @@
+The SoKnow process begins with an employee analyzing technology needs.
+
+
+Next, a market analysis is conducted by the employee and, in parallel, developers generate ideas.
+
+After the ideas are found, they are reviewed by the employees.
+
+Following the review of the ideas and the completion of the market analysis, the idea is passed to project management.
+
+Project management then decides whether to approve the idea or not.
+
+If the idea is not approved, it is rejected.
+
+If the idea is approved, this is noted and the process continues.
+
+The process ends with the discovery of new technologies.

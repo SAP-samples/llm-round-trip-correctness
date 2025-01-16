@@ -1,0 +1,29 @@
+The SoKnow process begins with the order intake in the development department.
+
+Next, the knowledge management system is purchased.
+
+Subsequently, adjustment requests from the customer company are received, and the development department makes the adjustments.
+
+After completing the adjustments, a notification is sent to the customer company.
+
+Then, a test group is searched for and tests are conducted.
+
+The test results are evaluated.
+
+If the results are negative, further adjustments are made and tested again.
+
+If the results are positive, test group workshops are conducted.
+
+After the workshops, employees are trained.
+
+Then, the development department is informed about any adjustment requests from the customer company.
+
+If there are adjustment requests, the adjustments are made.
+
+If there are no adjustment requests or the adjustments have been made, the customer is informed that the product is finished.
+
+Next, it is checked whether the adjustments are satisfactory.
+
+If not, the process is repeated from the adjustment stage.
+
+If yes, the knowledge management system is implemented, and the process ends with the completion of the order.

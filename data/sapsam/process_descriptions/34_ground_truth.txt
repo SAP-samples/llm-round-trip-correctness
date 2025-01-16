@@ -1,0 +1,11 @@
+The process at Harro Höfliger Verpackungsmaschinen GmbH begins with the generation of the software and document draft by the Production / Design and Development team.
+
+Next, an overview of the machine is obtained.
+
+Then, several tasks are carried out in parallel: the SPS project is completed by station, the HMI project is completed in stages, and the safety project is completed.
+
+Once all programs are ready, the software is tested.
+
+Afterward, a software design review is conducted.
+
+Finally, the software is ready for commissioning.

@@ -1,0 +1,19 @@
+The process of viticulture in outdoor operations begins when a field employee receives the task "Grape harvest."
+
+Next, information about the field location is received.
+
+Then, the tools are loaded.
+
+After that, the employee drives to the field.
+
+There, the tools are unloaded.
+
+Subsequently, the grape harvest is conducted by hand.
+
+After the grape harvest, the tools are loaded again.
+
+Then, the employee drives to the winery.
+
+There, the tools are unloaded again.
+
+Finally, the task is completed.

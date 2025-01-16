@@ -1,0 +1,15 @@
+The process at SoKnow begins when a conflict occurs with an employee.
+
+The employee then seeks out the mediator.
+
+Next, the HR department listens to the employee and schedules an appointment.
+
+The employee attends the appointment and describes the conflict.
+
+Subsequently, a solution for the conflict is sought.
+
+It is then checked whether the conflict is resolved.
+
+If the conflict is not resolved, a new appointment is scheduled, and the process starts over with finding a conflict resolution.
+
+If the conflict is resolved, the process ends with the conflict being resolved.

@@ -1,0 +1,23 @@
+The process begins with the initiation of a new marketing campaign at SoKnow.
+
+The management starts by planning the focal points.
+
+Next, the marketing department designs ideas and defines the specifications.
+
+Once the specifications are set, an order is sent to the external marketing agency, which is then commissioned.
+
+The agency creates drafts and sends them back to the marketing department, which receives and evaluates the drafts.
+
+The drafts are then put to a vote.
+
+If the vote is negative, the external marketing agency is asked for new drafts, and the drafts are re-evaluated.
+
+If the vote is positive, the management is informed.
+
+The management re-evaluates the drafts.
+
+If the management's evaluation is negative, the external marketing agency is also asked for new drafts, and the drafts are re-evaluated.
+
+If the management's evaluation is positive, the management gives the marketing department the green light, the campaign is conducted, and the external marketing agency is commissioned for the execution.
+
+After the campaign is conducted, the marketing campaign is marked as completed.

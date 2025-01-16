@@ -1,0 +1,18 @@
+The Hotel Evanstonian process begins when an order is received from a hotel guest by the room service manager.
+
+The room service manager creates and forwards the order ticket.
+
+Next, several tasks are carried out in parallel:
+In the kitchen, meals are prepared, while the waiter prepares the cart and non-alcoholic beverages.
+The sommelier checks if wine is desired.
+If yes, the sommelier fetches the wine from the cellar.
+Then, it is checked if other alcoholic beverages are desired.
+If yes, the sommelier prepares these beverages.
+
+All prepared items are then consolidated, and the waiter delivers the desired order to the hotel guest.
+
+After delivery, it is checked if there are no other orders to process.
+
+If this is the case, the waiter debits the customer's account.
+
+Finally, the customer order is completed.
