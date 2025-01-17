@@ -1,4 +1,5 @@
 import os, sys
+import time
 import json
 import logging
 import argparse
@@ -183,13 +184,27 @@ def main_pipeline(llm, direction, model_path, text_path, example):
 
                 try:
                     if description:
+                        start = time.time()
                         text_eval_1 = text_similarity.sts_bert(description, gen_text)
+                        end  = time.time() - start
+                        logger.info(f'test1 {end}')
+
+                        start = time.time()
                         text_eval_2 = text_similarity.text_similarity_alternative(description, gen_text, threshold=0.75)
+                        end  = time.time() - start
+                        logger.info(f'test2 {end}')
                     else:
                         text_eval_1, text_eval_2 = 'N\A'
                     if model:
+                        start = time.time()
                         model_eval_1 = bpmn_similarity.calculate_similarity_scores( model, gen_model, method="dice", similarity_threshold=0.75)[0]["overall"]
+                        end  = time.time() - start
+                        logger.info(f'test3 {end}')
+
+                        start = time.time()
                         model_eval_2 = bpmn_similarity.calculate_similarity_alternative( model, gen_model, method="dice", similarity_threshold=0.75)["overall"]
+                        end  = time.time() - start
+                        logger.info(f'test4 {end}')
                     else:
                         model_eval_1, model_eval_2 = 'N\A'
 

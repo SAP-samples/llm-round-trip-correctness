@@ -4,9 +4,10 @@ from sentence_transformers import SentenceTransformer, util
 import pandas as pd
 import re
 import numpy as np
-
+import time
 
 model = SentenceTransformer('Alibaba-NLP/gte-large-en-v1.5', trust_remote_code=True)
+cache = {}
 
 
 """ this function returns the cosine similarity betweeen 2 documents using TF-IDF """
@@ -19,18 +20,42 @@ def get_cosine(text1,text2):
     cos_sim = round(cos_sim, 2)
     return cos_sim
 
-""" this function returns the cosine similarity betweeen 2 documents using pre-trained BERT model """
-def sts_bert(t1,t2):
-    try:
-        sentences = [t1, t2]
-        embedding_1= model.encode(sentences[0], convert_to_tensor=True)
-        embedding_2 = model.encode(sentences[1], convert_to_tensor=True)
-        score = util.pytorch_cos_sim(embedding_1, embedding_2)
-        score = score.tolist()
-        score = round(score[0][0], 2)
-    except:
-        score = 0
-    return score
+#""" this function returns the cosine similarity betweeen 2 documents using pre-trained BERT model """
+#def sts_bert(t1,t2):
+#    try:
+#        sentences = [t1, t2]
+#        embedding_1= model.encode(sentences[0], convert_to_tensor=True)
+#        embedding_2 = model.encode(sentences[1], convert_to_tensor=True)
+#        score = util.pytorch_cos_sim(embedding_1, embedding_2)
+#        score = score.tolist()
+#        score = round(score[0][0], 2)
+#    except:
+#        score = 0
+#    return score
+
+def sts_bert(t1, t2):
+    """optimized function of bert_cosine. uses a cache to safe time when calculating duplicate similarities
+    reason: for longer inputs bert can be very compute intensive. adding a cache can reduce minutes to seconds
+    """
+
+    sentences = [t1, t2]
+
+    def encode(value):
+        cache_hit = cache.get(value, None)
+        if cache_hit is not None:
+            return cache_hit
+        else:
+            embedding = model.encode(value, convert_to_tensor=True)
+            cache[value] = embedding
+            return embedding
+
+    embedding_1 = encode(sentences[0])
+    embedding_2 = encode(sentences[1])
+    score = util.pytorch_cos_sim(embedding_1, embedding_2)
+    score = score.tolist()
+    return score[0][0]
+
+
 
 """ this function splits plain text into array of sentences """
 def split_into_sentences(paragraph):
@@ -168,9 +193,14 @@ def text_similarity_alternative(file_1, file_2, threshold=0.8):
     Returns:
         float: an overall similarity score.
     """
-    sentences_1 = get_sentences(file_1)
-    sentences_2 = get_sentences(file_2)
+    sentences_1 = split_into_sentences(file_1)
+    sentences_2 = split_into_sentences(file_2)
+    #sentences_1 = get_sentences(file_1)
+    #sentences_2 = get_sentences(file_2)
+    start = time.time()
     adjusted_sen2 = align_sentences(sentences_1, sentences_2, threshold=threshold)
+    end = time.time() - start
+    print(end)
     seq_similarity = sequence_similarity(sentences_1, adjusted_sen2)
     overall_sim = 0.5 * sts_bert(file_1, file_2) + 0.5 * seq_similarity
     return overall_sim
