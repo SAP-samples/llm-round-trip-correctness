@@ -1,0 +1,23 @@
+The process begins with the receipt of an application by the HR department of ACME AG.
+
+After receiving the application, an acknowledgment of receipt is sent to the applicant.
+
+The next step involves checking the applicant, after which the HR manager determines the application status.
+
+If the application status is rejected, a rejection is sent to the applicant, and the process ends with the rejection of the applicant.
+
+If the application is accepted, the HR department sends an invitation to a job interview to the applicant.
+
+Subsequently, the employment contract is prepared.
+
+The job interview is then conducted.
+
+After the interview, it is determined whether the applicant is suitable.
+
+If the applicant is not suitable, a rejection is sent to the applicant, and the process ends with the rejection of the applicant.
+
+If the applicant is deemed suitable, an employment contract is sent to the applicant.
+
+The process then waits for the signed employment contract to be received.
+
+Once the signed contract is received, the process concludes with the availability of the signed employment contract.
