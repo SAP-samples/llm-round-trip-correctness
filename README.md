@@ -1,4 +1,5 @@
-*blinded for submission*
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/model-to-model-evaluation-code)](https://api.reuse.software/info/github.com/SAP-samples/model-to-model-evaluation-code)
+
 # Round-trip-correctness to evaluate BPMN generation
 
 ## Description
@@ -30,13 +31,13 @@ The csv files are written to the results directory. The jupyter notebooks are us
 No known issue.
 
 ## How to obtain support
-*blinded for submission* in this repository if you find a bug or have questions about the content.
+[Create an issue](https://github.com/SAP-samples/model-to-model-evaluation-code/issues) in this repository if you find a bug or have questions about the content.
 
 
 
 ## Contributing
-If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. *blinded for submission* uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
+If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
 
 ## License
-Copyright (c) *blinded for submission* or *blinded for submission*. All rights reserved. This project is licensed under the Apache Software License, version 2.0.
+Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0.
 
