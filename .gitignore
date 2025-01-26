@@ -3,7 +3,7 @@
 __MACOSX/
 
 Temp/
-generated_artefacts/
+# generated_artefacts/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
