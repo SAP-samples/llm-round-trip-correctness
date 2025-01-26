@@ -134,7 +134,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# SAP-SAM Signavio API configuration
+# *blinded for submission* API configuration
 conf.py
 
 # vscode
