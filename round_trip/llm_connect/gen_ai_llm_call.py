@@ -1,9 +1,6 @@
-import concurrent.futures
-import json
-import logging
 import os
 import sys
-from concurrent.futures import ThreadPoolExecutor, TimeoutError
+from concurrent.futures import TimeoutError
 from functools import partial
 
 import dotenv

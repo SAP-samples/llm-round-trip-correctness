@@ -1,5 +1,0 @@
-Zuerst ruft der Sachbearbeiter von ZV-Personal die Tätigkeitsdarstellung ab.
-
-Sobald dies abgeschlossen ist, wird zeitgleich das Anforderungsprofil und eine Stellenausschreibung erstellt.
-
-Anschließend werden die Unterlagen abgelegt under Prozess endet.
