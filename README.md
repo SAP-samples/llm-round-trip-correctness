@@ -4,8 +4,8 @@
 
 ## Description
 This repository tests the idea of a proxy evaluation method for text to BPMN model pipeline.
-The proxy evaluation involves a round-trip pipeline, "text to bpmn to text" and calculating an average text to text similarity in the absence of a ground truth BPMN.
-To show if the proxy method is effective, we first must investigate how the existing BPMN to BPMN evaluation from [model_evaluation](./model_evaluation) module correlates with the proxy text to text method.
+The proxy evaluation involves a round-trip pipeline, "text to bpmn to text" or "bpmn to text to bpmn" and calculating an average similarity metric we call RTC in the absence of a ground truth BPMN/text.
+To show if the proxy method is effective, we first must investigate how the existing BPMN to BPMN evaluation from [model_evaluation](./model_evaluation) module correlates with the text to text similarity methods from [text_evaluation](./text_evaluation).
 This work is inspired by [this](https://arxiv.org/abs/2402.08699) publication on text to code round-tripping.  
 
 
@@ -20,9 +20,13 @@ poetry install
 
 ## Getting started
 
-To run the pipeline, use a command similar to this:
+To run the LLM specific pipeline, use a command similar to this:
 ```shell
 screen -d -m python genai_gpt_pipeline.py --model-path ./data/pet/ground_json --text-path ./data/pet/process_descriptions --example pet --direction t2t 
+```
+or run the LLM agnostic pipeline as:
+```shell
+screen -d -m python universal_pipeline.py --llm gemini --model-path ./data/pet/ground_json --text-path ./data/pet/process_descriptions --example pet --direction t2t 
 ```
 The csv files are written to the results directory. The jupyter notebooks are used to visualize the results. 
 
