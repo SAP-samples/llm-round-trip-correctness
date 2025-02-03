@@ -5,7 +5,7 @@
 ## Description
 This repository tests the idea of a proxy evaluation method for text to BPMN model pipeline.
 The proxy evaluation involves a round-trip pipeline, "text to bpmn to text" or "bpmn to text to bpmn" and calculating an average similarity metric we call RTC in the absence of a ground truth BPMN/text.
-To show if the proxy method is effective, we first must investigate how the existing BPMN to BPMN evaluation from [model_evaluation](./model_evaluation) module correlates with the text to text similarity methods from [text_evaluation](./text_evaluation).
+To show if the proxy method is effective, we first must investigate how the existing BPMN to BPMN evaluation from [model_evaluation](./model_evaluation) module correlates with the text to text similarity methods from [text_evaluation](./text_evaluation) by running the pipelines in this repository. 
 This work is inspired by [this](https://arxiv.org/abs/2402.08699) publication on text to code round-tripping.  
 
 
