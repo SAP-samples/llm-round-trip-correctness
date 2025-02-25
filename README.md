@@ -1,4 +1,4 @@
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/model-to-model-evaluation-code)](https://api.reuse.software/info/github.com/SAP-samples/model-to-model-evaluation-code)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/llm-round-trip-correctness)](https://api.reuse.software/info/github.com/SAP-samples/llm-round-trip-correctness)
 
 # Round-trip-correctness to evaluate BPMN generation
 
